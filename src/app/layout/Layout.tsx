@@ -6,6 +6,7 @@ import {
 
 import Header from './Header';
 import Landing from '../pages/Landing/Landing';
+import Projects from '../pages/Project/Projects';
 import Footer from './Footer';
 
 function Layout() {
@@ -15,6 +16,7 @@ function Layout() {
             <Header />
             <Routes>
                 <Route path="/" element={<Landing />} />
+                <Route path="/projects" element={<Projects />} />
             </Routes>
             <Footer />
         </Router>

@@ -37,7 +37,7 @@ function Header() {
                     <Link to="/" className={classes.activeMenu}>
                         Home
                     </Link>
-                    <Link to="/" className={classes.menu}>
+                    <Link to="/projects" className={classes.menu}>
                         Projects
                     </Link>
                     <Link to="/" className={classes.menu}>
