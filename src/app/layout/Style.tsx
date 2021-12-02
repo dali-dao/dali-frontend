@@ -98,7 +98,8 @@ export const useStyles = makeStyles((theme: Theme) =>
     followTitle: {
         fontSize: 20,
         fontWeight: 'bold',
-        paddingBottom: 15
+        paddingBottom: 15,
+        paddingLeft: 15
     },
     footerMiddle: {
         paddingTop: 60,
@@ -120,15 +121,24 @@ export const useStyles = makeStyles((theme: Theme) =>
         fontSize: 12,
         lineHeight: 3
     },
+    followIcons: {
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
     footerBottomLeft: {
         padding: '30px 0',
         color: '#9e9fa2',
-        textAlign: 'left'
+        textAlign: 'left',
+        fontSize: 13,
+        fontFamily: 'Roboto-Medium'
     },
     footerBottomRight: {
         padding: '30px 0',
         color: '#9e9fa2',
-        textAlign: 'right'
+        textAlign: 'right',
+        fontSize: 13,
+        fontFamily: 'Roboto-Medium'
     }
   })
 );
