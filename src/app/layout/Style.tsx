@@ -25,10 +25,22 @@ export const useStyles = makeStyles((theme: Theme) =>
         textDecoration: 'none',
         color: 'white',
         textTransform: 'uppercase',
-        borderBottom: '2px solid #fff',
+        borderBottom: '2px solid #f7db0e',
         padding: '35px 0'
     },
     menuItems: {
+        display: 'flex',
+        alignItems: 'center',
+        textAlign: 'center'
+    },
+    connectBtn: {
+        background: '#f7db0e',
+        textTransform: 'uppercase',
+        color: 'black',
+        borderRadius: 20,
+        height: 20,
+    },
+    rightItems: {
         display: 'flex',
         alignItems: 'center',
         textAlign: 'center'

@@ -10,7 +10,7 @@ function Header() {
         <div className={classes.header}>
             <Grid container>
                 <Grid item xs={2}>
-                    <img src={Logo} alt="logo" />
+                    <img src={Logo} alt="logo"/>
                 </Grid>
                 <Grid item xs={8} className={classes.menuItems}>
                     <Link to="/" className={classes.activeMenu}>
@@ -34,6 +34,11 @@ function Header() {
                     <Link to="/" className={classes.menu}>
                         Workspace
                     </Link>
+                </Grid>
+                <Grid item xs={2} container className={classes.rightItems}>
+                    <Grid item xs={6} className={classes.connectBtn}>
+                        Connect
+                    </Grid>
                 </Grid>
             </Grid>
         </div>
