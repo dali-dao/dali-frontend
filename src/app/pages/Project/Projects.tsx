@@ -1,5 +1,6 @@
 import Banner from '../../assets/Projects/banner_2.jpg';
 import { useStyles } from "./styles";
+import { Link } from "react-router-dom";
 import {FormControl, Select, MenuItem, InputLabel} from '@material-ui/core';
 
 function Projects() {
@@ -10,8 +11,8 @@ function Projects() {
       <div className={classes.description}>
         <span className={classes.project_banner_title}>PROJECTS ON $DALI</span>
         <p className={classes.project_banner_description}>The Juicebox protocol is open to anyone, and project configurations can vary widely. there are risks associated with interacting with all projects on the protocol. Projects built on the protocol are not endorsed or vetted by JuiceboxDAO, so you should do your own research and understand the risks before committing your funds.</p>
-        <a className={classes.project_banner_tab}>ACTIVE</a>
-        <a className={classes.project_banner_tab}>ARCHIVED</a>
+        <Link to="/projects" className={classes.project_banner_tab}>ACTIVE</Link>
+        <Link to="/projects" className={classes.project_banner_tab}>ARCHIVED</Link>
       </div>
       <div className={classes.project_banner_button_content}>
         <button className={classes.create_project_button}>CREATE PROJECT</button>
@@ -28,6 +29,9 @@ function Projects() {
             <MenuItem value={30}>Thirty</MenuItem>
           </Select>
         </FormControl>
+        <div className={classes.project_list_container}>
+
+        </div>
     </div>
   );
 }
