@@ -25,7 +25,8 @@ export const useStyles = makeStyles((theme: Theme) =>
     },
     project_banner_description: {
       fontSize: '14.1px',
-      lineHeight: '20px'
+      lineHeight: '20px',
+      color: 'grey'
     },
     project_banner_button_content: {
       position: 'absolute',
@@ -43,7 +44,9 @@ export const useStyles = makeStyles((theme: Theme) =>
       marginTop: '10px',
       display: 'block',
       float: 'left',
-      cursor: 'pointer'
+      cursor: 'pointer',
+      textDecoration: 'none',
+      color: '#fff'
     },
     formControl: {
       textAlign: 'left',
@@ -58,7 +61,15 @@ export const useStyles = makeStyles((theme: Theme) =>
       marginTop: theme.spacing(2),
     },
     project_list_container: {
-
+      width: '79%',
+      marginLeft: '12%',
+      marginTop: '25px'
+    },
+    margin_bottom_10: {
+      marginBottom: '10px'
+    },
+    pagination_content: {
+      margin: '40px 0px 50px 8px'
     }
   })
 );
