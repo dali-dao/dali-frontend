@@ -28,7 +28,7 @@ const darkTheme = createTheme({
     type: "dark",
     background: {
       default: "#252930", //trade view container's background
-      paper: "#181A20", //header background
+      paper: "#0f0f1e", //header background
     },
     primary: {
       main: "#161A1E", //trade view component's background

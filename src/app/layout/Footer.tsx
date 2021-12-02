@@ -1,6 +1,10 @@
+import { useStyles } from "./Style";
+
 function Footer() {
+    const classes = useStyles();
+
     return (
-      <div>
+      <div className={classes.footer}>
           Footer
       </div>
     );
