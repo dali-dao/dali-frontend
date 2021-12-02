@@ -1,16 +1,24 @@
+import React from 'react'
 import Banner from '../../assets/Projects/banner_2.jpg';
 import { useStyles } from "./styles";
 import { Link } from "react-router-dom";
-import {FormControl, Select, MenuItem, InputLabel} from '@material-ui/core';
+import {FormControl, Select, MenuItem, InputLabel, Grid} from '@material-ui/core';
+import Pagination from '@material-ui/lab/Pagination';
+import ProjectItem from '../../components/Projects/projectItem';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 function Projects() {
   const classes = useStyles();
+  const projectItem = new Array(24).fill({image: "", name: "ConstitutionDAO", id: "@constitutiondao", price: 77789, date: "01-01-21", desc: "SharkDAO owns Nouns #2,#5,#33.ming..."})
+
   return (
     <div className={classes.project_banner_container}>
       <img src={Banner} alt="banner" className={classes.banner}/>
       <div className={classes.description}>
         <span className={classes.project_banner_title}>PROJECTS ON $DALI</span>
-        <p className={classes.project_banner_description}>The Juicebox protocol is open to anyone, and project configurations can vary widely. there are risks associated with interacting with all projects on the protocol. Projects built on the protocol are not endorsed or vetted by JuiceboxDAO, so you should do your own research and understand the risks before committing your funds.</p>
+        <p className={classes.project_banner_description}>
+        <FontAwesomeIcon icon={'info'} />
+          The Juicebox protocol is open to anyone, and project configurations can vary widely. there are risks associated with interacting with all projects on the protocol. Projects built on the protocol are not endorsed or vetted by JuiceboxDAO, so you should do your own research and understand the risks before committing your funds.</p>
         <Link to="/projects" className={classes.project_banner_tab}>ACTIVE</Link>
         <Link to="/projects" className={classes.project_banner_tab}>ARCHIVED</Link>
       </div>
@@ -29,9 +37,20 @@ function Projects() {
             <MenuItem value={30}>Thirty</MenuItem>
           </Select>
         </FormControl>
-        <div className={classes.project_list_container}>
-
-        </div>
+        <Grid className={classes.project_list_container}>
+          <Grid container>
+          {projectItem.map((item, index) => {
+            return (         
+            <Grid key={index} item xs={4} className={classes.margin_bottom_10}>
+              <ProjectItem image={item.image} name={item.name} id={item.id} price={item.price} date={item.date} desc={item.desc} />
+            </Grid>
+            )
+          })}
+          </Grid>
+          <div>
+            <Pagination className={classes.pagination_content} color="secondary" count={10} variant="outlined" shape="rounded" />
+          </div>
+      </Grid>
     </div>
   );
 }
