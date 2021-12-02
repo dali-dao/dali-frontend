@@ -1,5 +1,5 @@
-import Banner from '../assets/Landing/banner.jpg';
-import { useStyles } from "./Landing_style";
+import Banner from '../../assets/Landing/banner.jpg';
+import { useStyles } from "./styles";
 
 function Landing() {
   const classes = useStyles();

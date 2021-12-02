@@ -5,7 +5,7 @@ import {
   } from "react-router-dom";
 
 import Header from './Header';
-import Landing from '../pages/Landing';
+import Landing from '../pages/Landing/Landing';
 import Footer from './Footer';
 
 function Layout() {

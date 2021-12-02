@@ -39,11 +39,18 @@ export const useStyles = makeStyles((theme: Theme) =>
         color: 'black',
         borderRadius: 20,
         height: 20,
+        fontWeight: 700,
+        display: 'grid',
+        alignItems: 'center'
     },
     rightItems: {
         display: 'flex',
         alignItems: 'center',
         textAlign: 'center'
+    },
+    selectTheme: {
+        borderRadius: 20,
+        border: '1px solid white',
     }
   })
 );
