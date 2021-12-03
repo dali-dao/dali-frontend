@@ -28,7 +28,7 @@ const darkTheme = createTheme({
     type: "dark",
     background: {
       default: "#252930", //trade view container's background
-      paper: "#0f0f1e", //header background
+      paper: "#1c222d", //header background
     },
     primary: {
       main: "#161A1E", //trade view component's background
@@ -38,7 +38,7 @@ const darkTheme = createTheme({
     //trade view font color
     secondary: {
       main: "#848e9c", //gery color
-      dark: "#eaecef", //white color
+      dark: "#fadd0d", //white color
       light: "#f0b90b", //hover color
     },
     //status change color
@@ -68,7 +68,7 @@ const darkTheme = createTheme({
     },
     common: {
       black: "#181a20", //login background
-      white: "#474d57", //input side border
+      white: "#fff", //input side border
     },
     warning: {
       main: "#3C2601", //login notification background
@@ -84,7 +84,7 @@ const lightTheme = createTheme({
     type: "light",
     background: {
       default: "#eef0f2", //trade view container's background
-      paper: "#161A1E", //header background
+      paper: "#999", //header background
     },
     warning: {
       main: "#fef6d8", //login notification background
@@ -99,7 +99,7 @@ const lightTheme = createTheme({
     //trade view font color
     secondary: {
       main: "#707a8a", //gery color
-      dark: "#1e2329", //white color
+      dark: "#f6465d", //white color
       light: "#c99400", //hover color
     },
     error: {

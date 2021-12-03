@@ -4,9 +4,28 @@ import { Link } from "react-router-dom";
 import Logo from '../assets/Landing/logo.png';
 import WbSunnyIcon from '@material-ui/icons/WbSunny';
 import Brightness3Icon from '@material-ui/icons/Brightness3';
+import ReorderIcon from '@material-ui/icons/Reorder';
+import React from "react";
+import { ThemeContext } from "../theme/ThemeProvider";
 
 function Header() {
     const classes = useStyles();
+
+    const darkTheme = "darkTheme";
+    const lightTheme = "lightTheme";
+    const curThemeName = localStorage.getItem("appTheme") || "darkTheme";
+    const setThemeName = React.useContext(ThemeContext);
+    const [theme, setTheme] = React.useState(curThemeName);
+
+    const handleToggleTheme = () => {
+      if (theme === lightTheme) {
+        setThemeName(darkTheme);
+        setTheme(darkTheme);
+      } else {
+        setThemeName(lightTheme);
+        setTheme(lightTheme);
+      }
+    };
 
     return (
         <div className={classes.header}>
@@ -38,14 +57,16 @@ function Header() {
                     </Link>
                 </Grid>
                 <Grid item xs={2} container className={classes.rightItems}>
-                    <Grid item xs={4} className={classes.selectTheme}>
-                        <Brightness3Icon fontSize="small"/>
-                        <WbSunnyIcon fontSize="small"/>
+                    <Grid item xs={3} className={classes.selectTheme}>
+                        <Brightness3Icon fontSize="small" className={classes.brightnessIcon} onClick={handleToggleTheme}/>
+                        <WbSunnyIcon fontSize="small" className={classes.sunIcon} onClick={handleToggleTheme}/>
                     </Grid>
-                    <Grid item xs={5}className={classes.connectBtn}>
+                    <Grid item xs={1}></Grid>
+                    <Grid item xs={4}className={classes.connectBtn}>
                         Connect
                     </Grid>
                     <Grid item xs={3}>
+                        <ReorderIcon fontSize="small"/>
                     </Grid>
                 </Grid>
             </Grid>

@@ -39,3 +39,94 @@
     transform: translateY(0px);
   }
 }
+
+body {
+  font-family: 'Roboto-Bold', 'Roboto-Black', 'Roboto-Italic', 'Roboto-Light', 'Roboto-Medium', 'Roboto-Regular', 'Roboto-Thin';
+  font-family: 'CerebriSansPro-Thin';
+  font-family: 'CerebriSansPro-Regular';
+  font-family: 'CerebriSansPro-Medium';
+  font-family: 'CerebriSansPro-Light';
+  font-family: 'CerebriSansPro-Italic';
+  font-family: 'CerebriSansPro-Black';
+  font-family: 'CerebriSansPro-Bold';
+}
+
+@font-face {
+  font-family: 'Roboto-Bold';
+  src: url(./app/assets/FONTS/Roboto-Bold.ttf);
+}
+
+@font-face {
+  font-family: 'Roboto-Black';
+  src: url(./app/assets/FONTS/Roboto-Black.ttf);
+}
+
+@font-face {
+  font-family: 'Roboto-Italic';
+  src: url(./app/assets/FONTS/Roboto-Italic.ttf);
+}
+
+@font-face {
+  font-family: 'Roboto-Light';
+  src: url(./app/assets/FONTS/Roboto-Light.ttf);
+}
+
+@font-face {
+  font-family: 'Roboto-Medium';
+  src: url(./app/assets/FONTS/Roboto-Medium.ttf);
+}
+
+@font-face {
+  font-family: 'Roboto-Regular';
+  src: url(./app/assets/FONTS/Roboto-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'Roboto-Thin';
+  src: url(./app/assets/FONTS/Roboto-Thin.ttf);
+}
+
+@font-face {
+  font-family: 'CerebriSansPro-Bold';
+  src: url(./app/assets/FONTS/CerebriSansPro-Bold.ttf);
+}
+
+@font-face {
+  font-family: 'CerebriSansPro-ExtraBold';
+  src: url(./app/assets/FONTS/CerebriSansPro-ExtraBold.ttf);
+}
+
+@font-face {
+  font-family: 'CerebriSansPro-ExtraLight';
+  src: url(./app/assets/FONTS/CerebriSansPro-ExtraLight.ttf);
+}
+
+@font-face {
+  font-family: 'CerebriSansPro-Heavy';
+  src: url(./app/assets/FONTS/CerebriSansPro-Heavy.ttf);
+}
+
+@font-face {
+  font-family: 'CerebriSansPro-Light';
+  src: url(./app/assets/FONTS/CerebriSansPro-Light.ttf);
+}
+
+@font-face {
+  font-family: 'CerebriSansPro-Medium';
+  src: url(./app/assets/FONTS/CerebriSansPro-Medium.ttf);
+}
+
+@font-face {
+  font-family: 'CerebriSansPro-Regular';
+  src: url(./app/assets/FONTS/CerebriSansPro-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'CerebriSansPro-SemiBold';
+  src: url(./app/assets/FONTS/CerebriSansPro-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: 'CerebriSansPro-Thin';
+  src: url(./app/assets/FONTS/CerebriSansPro-Thin.ttf);
+}
