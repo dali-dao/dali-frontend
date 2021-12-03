@@ -72,7 +72,8 @@ export const useStyles = makeStyles((theme: Theme) =>
     desc: {
         fontSize: 14,
         color: '#82868c',
-        paddingBottom: 10
+        paddingBottom: 10,
+        fontFamily: 'Roboto-Regular'
     },
     signupBtn: {
         backgroundColor: theme.palette.secondary.dark,

@@ -41,14 +41,7 @@
 }
 
 body {
-  font-family: 'Roboto-Bold', 'Roboto-Black', 'Roboto-Italic', 'Roboto-Light', 'Roboto-Medium', 'Roboto-Regular', 'Roboto-Thin';
-  font-family: 'CerebriSansPro-Thin';
-  font-family: 'CerebriSansPro-Regular';
-  font-family: 'CerebriSansPro-Medium';
-  font-family: 'CerebriSansPro-Light';
-  font-family: 'CerebriSansPro-Italic';
-  font-family: 'CerebriSansPro-Black';
-  font-family: 'CerebriSansPro-Bold';
+  font-family: 'Roboto-Regular', 'Roboto-Bold', 'Roboto-Black', 'Roboto-Italic', 'Roboto-Light', 'Roboto-Medium',  'Roboto-Thin', 'CerebriSansPro-Bold', 'CerebriSansPro-Black', 'CerebriSansPro-Italic', 'CerebriSansPro-Light', 'CerebriSansPro-Medium', 'CerebriSansPro-Regular', 'CerebriSansPro-Thin';
 }
 
 @font-face {
