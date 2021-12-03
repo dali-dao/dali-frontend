@@ -51,15 +51,23 @@ export const useStyles = makeStyles((theme: Theme) =>
     selectTheme: {
         borderRadius: 20,
         border: '1px solid #4b4b56',
-        zoom: 0.9
+        display: 'flex',
+        justifyContent: 'center',
+        padding: 3,
     },
     brightnessIcon:{
         transform: 'rotate(180deg)',
-        cursor: 'pointer'
+        cursor: 'pointer',
+        borderLeft: '1px solid #4b4b56',
+        // backgroundColor: '#29303d',
+        zoom: 0.8,
     },
     sunIcon: {
         transform: 'rotate(180deg)',
-        cursor: 'pointer'
+        cursor: 'pointer',
+        borderRight: '1px solid #4b4b56',
+        color: '#87878f',
+        zoom: 0.8,
     },
     titleDesc: {
         textAlign: 'left'
