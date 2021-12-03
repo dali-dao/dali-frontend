@@ -2,6 +2,7 @@ import { Theme, createStyles, makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import PaymentCard from '../../assets/Landing/payment.png';
 import Grid from '@material-ui/core/Grid';
+import MenuIcon from '@material-ui/icons/Menu';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -26,7 +27,9 @@ const useStyles = makeStyles((theme: Theme) =>
         color: 'yellow',
         fontSize: 14,
         textAlign: 'left',
-        paddingLeft: 10
+        paddingLeft: 10,
+        display: 'flex',
+        alignItems: 'center'
     },
     walletName: {
         fontSize: 15,
@@ -57,7 +60,7 @@ export default function MediaControlCard() {
             </Grid>
             <Grid container item xs={12}>
                 <Grid item xs={3} className={classes.price}>
-                    0.08
+                    <MenuIcon /> 0.08
                 </Grid>
                 <Grid item xs={9} className={classes.address}>
                     0x39889f2cac90aa0342e850428e83debb438a8fbf 

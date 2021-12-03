@@ -6,13 +6,43 @@ import ProjectCard from '../../components/Projects/projectCard';
 import PaymentCard from '../../components/Projects/paymentCard';
 import Blockchain from '../../assets/Landing/blockchain.jpg';
 import Faq from '../../components/faq';
+import PlayCircleFilledIcon from '@material-ui/icons/PlayCircleFilled';
+import { Link } from "react-router-dom";
 
 function Landing() {
   const classes = useStyles();
 
   return (
     <div>
-      <img src={Banner} alt="banner" className={classes.banner}/>
+      <Grid className={classes.section1}> 
+        <img src={Banner} alt="banner" className={classes.banner}/>
+        <Grid className={classes.bannerDesc}>
+          <Grid className={classes.descTitle}>
+            Community funding for <br/> people and projects
+          </Grid>
+          <Grid className={classes.bannerDescription}>
+          Build a community around a project, fund it, and program its spending. Light enough <br/> for a group of friends, powerful enough for a global network of anons.
+          </Grid>
+          <Grid className={classes.bannerList}>
+            <PlayCircleFilledIcon className={classes.playIcon} /> Indie artists, devs, creators
+          </Grid>
+          <Grid className={classes.bannerList}>
+            <PlayCircleFilledIcon className={classes.playIcon} /> Ethereum protocols and DAOs
+          </Grid>
+          <Grid className={classes.bannerList}>
+            <PlayCircleFilledIcon className={classes.playIcon} /> Public goods and services
+          </Grid>
+          <Grid className={classes.bannerList}>
+            <PlayCircleFilledIcon className={classes.playIcon}/> Open source businesses
+          </Grid>
+          <Grid>
+            <div className={classes.designForBtn}>design your project</div>
+          </Grid>
+          <Grid className={classes.smartContract}>
+            Powered by public smart contracts on <Link to="/" className={classes.ethereum}>Ethereum.</Link>
+          </Grid>
+        </Grid>
+      </Grid>
       <Grid className={classes.section2} container>
         <Grid container>
           <Grid item xs={6} className={classes.projectTitle}>
@@ -81,6 +111,10 @@ function Landing() {
       </Grid>
       <Grid className={classes.section4}>
         <img src={Blockchain} alt="blockchain" className={classes.blockchainImg}/>
+        <Grid className={classes.section4Text}>
+        THE JBX PROTOCOL IS UNAUDITED, AND PROJECTS BUILT ON IT MAY BE<br /> VULNERABLE TO BUGS OR EXPLOITS. BE SMART!
+        <div className={classes.designForBtn1}>design your project</div>
+        </Grid>
       </Grid>
       <Grid className={classes.section5}>
         <Grid className={classes.faq}>

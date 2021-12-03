@@ -5,6 +5,7 @@ import TwitterIcon from '@material-ui/icons/Twitter';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import Logo from '../assets/Landing/logo.png';
+import Discord from '../assets/Landing/discord.png';
 
 function Footer() {
     const classes = useStyles();
@@ -27,12 +28,13 @@ function Footer() {
             </Grid>
           </Grid>
           <Grid item xs={1}></Grid>
-          <Grid item xs={3}>
+          <Grid item xs={3} style={{textAlign: 'left'}}>
             <Grid className={classes.followTitle}>FOLLOW US ON</Grid>
-            <Grid>
-              <GitHubIcon fontSize="large"/>
-              <TwitterIcon fontSize="large"/>
-              <InstagramIcon fontSize="large"/>
+            <Grid className={classes.followIcons}>
+              <GitHubIcon fontSize="large" style={{marginRight: 20}}/>
+              <img src={Discord} alt="discord" style={{width: 40, marginRight: 20}}/>
+              <TwitterIcon fontSize="large" style={{marginRight: 20}}/>
+              <InstagramIcon fontSize="large" style={{marginRight: 20}}/>
             </Grid>
           </Grid>
         </Grid>
