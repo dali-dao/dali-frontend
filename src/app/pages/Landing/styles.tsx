@@ -14,7 +14,7 @@ export const useStyles = makeStyles((theme: Theme) =>
     bannerDesc: {
       position: 'absolute',
       top: '15%',
-      left: 200,
+      left: '15%',
       textAlign: 'left'
     },
     descTitle: {
