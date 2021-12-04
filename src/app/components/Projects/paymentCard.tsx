@@ -8,7 +8,6 @@ const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
       display: 'flex',
-      margin: '0 10px 10px 10px',
       padding: 10
     },
     details: {

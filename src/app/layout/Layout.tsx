@@ -7,8 +7,8 @@ import {
 import Header from './Header';
 import Landing from '../pages/Landing/Landing';
 import Projects from '../pages/Project/Projects';
+import ProjectDetail from '../pages/Project/ProjectDetail';
 import Footer from './Footer';
-import Design from '../pages/Design/Design';
 
 function Layout() {
   return (
@@ -18,7 +18,7 @@ function Layout() {
             <Routes>
                 <Route path="/" element={<Landing />} />
                 <Route path="/projects" element={<Projects />} />
-                <Route path="/design" element={<Design />} />
+                <Route path="/project_detail" element={<ProjectDetail />} />
             </Routes>
             <Footer />
         </Router>

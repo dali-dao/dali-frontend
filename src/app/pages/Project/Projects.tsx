@@ -23,7 +23,7 @@ function Projects() {
         <Link to="/projects" className={classes.project_banner_tab}>ARCHIVED</Link>
       </div>
       <div className={classes.project_banner_button_content}>
-        <button className={classes.create_project_button}>CREATE PROJECT</button>
+        <Link to="/create_project" className={classes.create_project_button}>CREATE PROJECT</Link>
       </div>
       <FormControl variant="outlined" className={classes.formControl}>
           <InputLabel id="demo-simple-select-outlined-label">VOLUME</InputLabel>
