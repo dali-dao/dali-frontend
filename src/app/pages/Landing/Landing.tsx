@@ -71,7 +71,7 @@ function Landing() {
       </Grid>
       <Grid className={classes.section3}>
         <Grid className={classes.section3Title}>latest payments</Grid>
-        <Grid container>
+        <Grid container spacing={2}>
           <Grid item xs={6}>
             <PaymentCard />
           </Grid>
