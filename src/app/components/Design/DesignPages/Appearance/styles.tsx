@@ -34,7 +34,8 @@ export const useStyles = makeStyles((theme: Theme) =>
     },
     card: {
       marginBottom: 80,
-      // boxShadow: '0 0 10 10px black'
+      boxShadow: '0 0 10px 10px #0c0f16',
+      borderRadius: 10
     },
     itemDescription: {
       fontSize: 13,

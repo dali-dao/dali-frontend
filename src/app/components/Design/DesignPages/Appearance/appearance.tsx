@@ -29,7 +29,7 @@ function Appearance() {
               <Grid container>
                 <Grid item xs={4} className={classes.label}>Project description * <br/><span className={classes.itemDescription}>A min 300 character description of what your bot does. HTML, CSS and Markdown allowed. Javascript will be removed.</span></Grid>
                 <Grid item xs={8} className={classes.content}>
-                  <BootstrapInput id="bootstrap-input" placeholder="@Specific name here"/>
+                  <BootstrapInput id="description-input" placeholder="@Specific name here" />
                 </Grid>
               </Grid>
               <Grid container>
@@ -77,7 +77,7 @@ function Appearance() {
               <Grid container>
                 <Grid item xs={4} className={classes.label}></Grid>
                 <Grid item xs={8} className={classes.content}>
-                  <button className={classes.saveBtn}>SAVE</button>                   Cancel
+                  <button className={classes.saveBtn}>SAVE</button> Cancel
                 </Grid>
               </Grid>
           </Card>
