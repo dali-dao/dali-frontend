@@ -77,7 +77,7 @@ function Appearance() {
               <Grid container>
                 <Grid item xs={4} className={classes.label}></Grid>
                 <Grid item xs={8} className={classes.content}>
-                  <button className={classes.saveBtn}>SAVE</button> Cancel
+                  <button className={classes.saveBtn}>SAVE</button>     Cancel
                 </Grid>
               </Grid>
           </Card>
