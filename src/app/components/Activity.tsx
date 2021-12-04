@@ -66,7 +66,7 @@ export default function LabTabs() {
         </AppBar>
         <TabPanel value="1" style={{padding: '20px 0px', textAlign: 'left'}}>
           <Grid>
-          <Grid container>
+          <Grid container spacing={2}>
             <Grid item xs={12}>
               <PaymentCard />
             </Grid>

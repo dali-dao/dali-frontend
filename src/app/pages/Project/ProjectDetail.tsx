@@ -106,12 +106,6 @@ function ProjectDetail() {
                 <Button className={classes.manage_button}>Manage</Button>
               </Grid>
             </Grid>
-          <Grid item style={{ marginBottom: 20, height: 'auto'}}>
-            
-          </Grid>
-          <Grid item style={{ marginBottom: 20, height: 'auto'}}>
-            
-            </Grid>
           </Grid>
           
           <Grid className={classes.funding_cycle}>
