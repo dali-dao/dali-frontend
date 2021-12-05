@@ -4,7 +4,6 @@ import DesignPreview from '../../assets/Popup/design_preview.jpg';
 import { Icon } from '@iconify/react'; 
 import { Grid, FormControl, OutlinedInput, InputAdornment, FormHelperText, Button } from '@material-ui/core';
 import ButtonGroup from '../../components/ButtonGroup';
-import Activity from '../../components/Activity';
 import AppBar from '@material-ui/core/AppBar';
 import Tab from '@material-ui/core/Tab';
 import TabContext from '@material-ui/lab/TabContext';
@@ -65,7 +64,9 @@ const useStyles = makeStyles((theme: Theme) => ({
   project_info_3: {
     background: '#1c222d',
     border: '1px solid #2f3540',
-    padding: '20px 20px 10px 45px'
+    padding: '20px 20px 10px 45px',
+    borderBottomRightRadius: 5,
+    borderBottomLeftRadius: 5,
   },
   toke_info_content: {
     marginBottom: 30
@@ -94,7 +95,7 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
   detail_container: {
     border: '1px solid #404a5e',
-    background: '#14171e'
+    background: '#14171e',
   },
   detail_title: {
     padding: '20px',
@@ -177,23 +178,23 @@ export default function LabTabs() {
 
         <Grid container className={classes.project_info_2}>
           <Grid item xs={12} md={12} style={{border: '1px solid #323e50', backgroundColor: '#14171d', height: 'auto', textAlign: 'left'}}>
-              <Grid container style={{marginTop: 20, marginLeft: 20}}>
-                <Grid item xs={12} md={9} sm={9} style={{marginRight: 35}}>
-                  <FormControl style={{width: '100%', float: 'left', marginLeft: '20px' }} variant="outlined">
-                    <OutlinedInput
-                      id="outlined-adornment-weight"
-                      className={classes.input_outline}
-                      endAdornment={<InputAdornment position="end"><ButtonGroup /></InputAdornment>}
-                      aria-describedby="outlined-weight-helper-text"
-                      inputProps={{
-                        'aria-label': 'Receive 0 tokens/$',
-                      }}
-                    />
-                    <FormHelperText style={{marginBottom: 20, marginLeft: 0, color: 'grey'}} id="outlined-weight-helper-text">Receive 0 tokens/$</FormHelperText>
-                  </FormControl>
-                </Grid>
-                <Grid item xs={12} md={2} sm={2} xl={12} style={{textAlign: 'right'}}>
-                  <Button style={{width: '100%', background: 'rgb(247 219 14)', height: 40, color: '#000', borderRadius: 0}} >PAY</Button>
+              <Grid container style={{marginTop: 20}}>
+              <Grid item xs={12} md={10} sm={12} style={{textAlign: 'center'}}>
+                <FormControl style={{width: '90%' }} variant="outlined">
+                  <OutlinedInput
+                    id="outlined-adornment-weight"
+                    className={classes.input_outline}
+                    endAdornment={<InputAdornment position="end"><ButtonGroup /></InputAdornment>}
+                    aria-describedby="outlined-weight-helper-text"
+                    inputProps={{
+                      'aria-label': 'Receive 0 tokens/$',
+                    }}
+                  />
+                  <FormHelperText style={{marginBottom: 20, marginLeft: 0, color: 'grey'}} id="outlined-weight-helper-text">Receive 0 tokens/$</FormHelperText>
+                </FormControl>
+              </Grid>
+                <Grid item xs={12} md={2} sm={12} xl={12} style={{textAlign: 'center', marginBottom: 30}}>
+                  <Button style={{width: '90%', background: 'rgb(247 219 14)', height: 40, color: '#000', borderRadius: 0}} >PAY</Button>
                 </Grid>
               </Grid>
             </Grid>

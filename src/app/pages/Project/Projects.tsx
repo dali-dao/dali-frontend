@@ -61,44 +61,6 @@ function Projects() {
             </div>
         </Grid>
       </Grid>
-      {/* <img src={Banner} alt="banner" className={classes.banner}/>
-      <div className={classes.description}>
-        <span className={classes.project_banner_title}>PROJECTS ON $DALI</span>
-        <p className={classes.project_banner_description}>
-        <FontAwesomeIcon icon={'info'} />
-          The Juicebox protocol is open to anyone, and project configurations can vary widely. there are risks associated with interacting with all projects on the protocol. Projects built on the protocol are not endorsed or vetted by JuiceboxDAO, so you should do your own research and understand the risks before committing your funds.</p>
-        <Link to="/projects" className={classes.project_banner_tab}>ACTIVE</Link>
-        <Link to="/projects" className={classes.project_banner_tab}>ARCHIVED</Link>
-      </div>
-      <div className={classes.project_banner_button_content}>
-        <Link to="/create_project" className={classes.create_project_button}>CREATE PROJECT</Link>
-      </div>
-      <FormControl variant="outlined" className={classes.formControl}>
-          <InputLabel id="demo-simple-select-outlined-label">VOLUME</InputLabel>
-          <Select
-            labelId="demo-simple-select-outlined-label"
-            id="demo-simple-select-outlined"
-            value='1'
-          >
-            <MenuItem value={10}>Ten</MenuItem>
-            <MenuItem value={20}>Twenty</MenuItem>
-            <MenuItem value={30}>Thirty</MenuItem>
-          </Select>
-        </FormControl>
-        <Grid className={classes.project_list_container}>
-          <Grid container>
-          {projectItem.map((item, index) => {
-            return (         
-            <Grid key={index} item xs={4} className={classes.margin_bottom_10}>
-              <ProjectItem image={item.image} name={item.name} id={item.id} price={item.price} date={item.date} desc={item.desc} />
-            </Grid>
-            )
-          })}
-          </Grid>
-          <div>
-            <Pagination className={classes.pagination_content} color="secondary" count={10} variant="outlined" shape="rounded" />
-          </div>
-      </Grid> */}
     </div>
   );
 }
