@@ -6,12 +6,28 @@ import { url } from "inspector";
 //style
 export const useStyles = makeStyles((theme: Theme) =>
   createStyles({
+    banner_content: {
+      height: 200,
+      paddingLeft: 160,
+      paddingRight: 160,
+      position: 'relative'
+    },
+    project_content: {
+
+    },
+    banner_left: {
+      marginTop: 45,
+      position: 'absolute',
+    },
+    banner_right: {
+      position: 'absolute',
+      height: 200,
+      right: '160px',
+      top: 55,
+    },
     banner: {
         width: '100%',
         position: 'relative'
-    },
-    project_banner_container: {
-      position: 'relative'
     },
     description: {
       position: 'absolute',
@@ -30,14 +46,10 @@ export const useStyles = makeStyles((theme: Theme) =>
     },
     project_banner_description: {
       fontSize: '14.1px',
-      lineHeight: '20px',
       color: 'grey',
-      width: '40%'
+      textAlign: 'left'
     },
     project_banner_button_content: {
-      position: 'absolute',
-      top: '55px',
-      right: '150px',
       textAlign: 'left'
     },
     create_project_button: {
@@ -49,22 +61,20 @@ export const useStyles = makeStyles((theme: Theme) =>
       backgroundImage: 'linear-gradient(to right, rgb(238 221 14) 0%, rgb(24 216 211) 100%, rgb(247, 157, 0) 100%)'
     },
     project_banner_tab: {
+      marginTop: '5px',
       marginRight: '50px',
-      marginTop: '10px',
       display: 'block',
       float: 'left',
       cursor: 'pointer',
       textDecoration: 'none',
-      color: '#fff'
+      color: '#fff',
+      fontSize: 14,
+      fontFamily: 'CerebriSansPro-Bold',
     },
     formControl: {
-      textAlign: 'left',
-      width: '220px',
-      top: '120px',
-      right: '145px',
-      margin: theme.spacing(1),
-      minWidth: 120,
-      position: 'absolute !important' as any,
+      width: '100%',
+      marginTop: 65,
+      textAlign: 'left'
     },
     selectEmpty: {
       marginTop: theme.spacing(2),

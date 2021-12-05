@@ -8,7 +8,8 @@ import ButtonGroup from '../../components/ButtonGroup';
 import {VolumeCurrencyChart} from '../../components/VolumeCurrencyChart';
 import FundingCycle from '../../components/FundingCycle';
 import Activity from '../../components/Activity';
-
+// import ProjectDetailBanner from '../../components/ProjectDetailBanner';
+ 
 function ProjectDetail() {
   const classes = useStyles();
 
@@ -117,8 +118,8 @@ function ProjectDetail() {
           <Grid item xs={12} md={12} style={{border: '1px solid #323e50', backgroundColor: '#1a1d24', borderRadius: 5, marginBottom: 20, height: 'auto', textAlign: 'left'}}>
             <Grid item style={{paddingTop: 30, paddingLeft: 20}}><strong>CONTRIBUTE <span style={{color: '#f8dd0c'}}>@spicedao</span></strong></Grid>
             <Grid container style={{marginTop: 20}}>
-              <Grid item xs={12} md={8} sm={8} style={{marginRight: 35}}>
-                <FormControl style={{width: '100%', float: 'left', marginLeft: '20px' }} variant="outlined">
+              <Grid item xs={12} md={8} sm={12} style={{textAlign: 'center'}}>
+                <FormControl style={{width: '90%' }} variant="outlined">
                   <OutlinedInput
                     id="outlined-adornment-weight"
                     className={classes.input_outline}
@@ -131,8 +132,8 @@ function ProjectDetail() {
                   <FormHelperText style={{marginBottom: 20, marginLeft: 0, color: 'grey'}} id="outlined-weight-helper-text">Receive 0 tokens/$</FormHelperText>
                 </FormControl>
               </Grid>
-              <Grid item xs={12} md={3} sm={4} xl={12} style={{textAlign: 'right'}}>
-                <Button style={{width: '100%', background: 'rgb(247 219 14)', height: 40, color: '#000', borderRadius: 0}} >PAY</Button>
+              <Grid item xs={12} md={4} sm={12} xl={12} style={{textAlign: 'center', marginBottom: 30}}>
+                <Button style={{width: '90%', background: 'rgb(247 219 14)', height: 40, color: '#000', borderRadius: 0}} >PAY</Button>
               </Grid>
             </Grid>
           </Grid>
