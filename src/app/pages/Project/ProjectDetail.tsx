@@ -3,7 +3,7 @@ import Banner from '../../assets/Projects/banner_2.jpg';
 import BannerIcon from '../../assets/Projects/lexicon_devil.png';
 import { useStyles } from "./styles";
 import { Icon } from '@iconify/react'; 
-import { Grid, FormControl, OutlinedInput, InputAdornment, FormHelperText, Button, Link } from '@material-ui/core';
+import { Grid, FormControl, OutlinedInput, InputAdornment, FormHelperText, Button } from '@material-ui/core';
 import ButtonGroup from '../../components/ButtonGroup';
 import {VolumeCurrencyChart} from '../../components/VolumeCurrencyChart';
 import FundingCycle from '../../components/FundingCycle';

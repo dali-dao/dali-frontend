@@ -69,7 +69,7 @@ export default function ProjectItem({image, name, id, price, date, desc}: ItemPr
   return (
     <Card className={classes.root}>
         <Grid className={classes.image_content}>
-          <img src={ProjectImage} className={classes.project_image}/>
+          <img src={ProjectImage} alt='project_image' className={classes.project_image}/>
         </Grid>
         <Grid className={classes.details} item xs={12}>
             <Grid container item xs={12}>
