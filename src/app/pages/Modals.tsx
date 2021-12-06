@@ -12,6 +12,7 @@ import ManageDTFToken from '../components/Modal/ManageDTFToken';
 import BurnDTF from '../components/Modal/BurnDTF';
 import ClaimDTF from '../components/Modal/ClaimDTF';
 import Tools from '../components/Modal/Tools';
+import Assets from '../components/Modal/Assets';
 
 const useStyles = makeStyles((theme: Theme) => ({
     divider: {
@@ -46,6 +47,7 @@ function Moals() {
       <Grid className={classes.divider}></Grid>
       <Tools />
       <Grid className={classes.divider}></Grid>
+      <Assets />
     </div>
   );
 }

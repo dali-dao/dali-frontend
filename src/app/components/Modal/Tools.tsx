@@ -68,7 +68,7 @@ export default function Tools() {
       </Grid>
       <Grid container className={classes.project_info_1}>
         <Grid container style={{marginBottom: 20}}>
-          <p style={{width: '100%'}}>TRANSFER STAKED DTF</p>
+          <p style={{fontFamily: 'CerebriSansPro-ExtraBold', width: '100%'}}>TRANSFER STAKED DTF</p>
           <span style={{fontSize: 13, color: '#c5c6ca'}}>Your balance: 0</span>
         </Grid>
         
@@ -108,7 +108,7 @@ export default function Tools() {
       </Grid>
 
       <Grid container className={classes.project_info_1} style={{borderBottomRightRadius: 5, borderBottomLeftRadius: 5}}>
-        <p style={{width: '100%'}}>ADD TO BALANCE</p>
+        <p style={{fontFamily: 'CerebriSansPro-ExtraBold', width: '100%'}}>ADD TO BALANCE</p>
         <span style={{fontSize: 13, color: '#c5c6ca'}}>Add funds to this project's balance without minting tokens.</span>
         <Grid style={{width: '100%', marginTop: 20, marginBottom: 10}}>
           <span style={{fontFamily: 'CerebriSansPro-ExtraBold', marginBottom: 10, display: 'block'}}>AMOUNT</span>
