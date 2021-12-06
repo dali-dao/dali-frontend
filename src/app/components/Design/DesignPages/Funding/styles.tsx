@@ -47,6 +47,7 @@ export const useStyles = makeStyles((theme: Theme) =>
       padding: '15px 50px',
       borderRadius: '5px',
       fontWeight: 'bold',
+      cursor: 'pointer',
       backgroundImage: 'linear-gradient(to right, rgb(238 221 14) 0%, rgb(24 216 211) 100%, rgb(247, 157, 0) 100%)'
     }
   })
