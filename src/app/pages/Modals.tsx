@@ -10,6 +10,8 @@ import WithdrawFunds from '../components/Modal/WithdrawFunds';
 import DistributeReserved from '../components/Modal/DistributeReserved';
 import ManageDTFToken from '../components/Modal/ManageDTFToken';
 import BurnDTF from '../components/Modal/BurnDTF';
+import ClaimDTF from '../components/Modal/ClaimDTF';
+import Tools from '../components/Modal/Tools';
 
 const useStyles = makeStyles((theme: Theme) => ({
     divider: {
@@ -39,6 +41,11 @@ function Moals() {
       <ManageDTFToken />
       <Grid className={classes.divider}></Grid>
       <BurnDTF />
+      <Grid className={classes.divider}></Grid>
+      <ClaimDTF />
+      <Grid className={classes.divider}></Grid>
+      <Tools />
+      <Grid className={classes.divider}></Grid>
     </div>
   );
 }
