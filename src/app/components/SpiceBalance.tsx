@@ -1,6 +1,6 @@
 import { Theme, createStyles, makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
-import PaymentCard from '../../assets/Landing/payment.png';
+import PaymentCard from '../assets/Landing/payment.png';
 import Grid from '@material-ui/core/Grid';
 import MenuIcon from '@material-ui/icons/Menu';
 
@@ -8,7 +8,9 @@ const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
       display: 'flex',
-      padding: 10
+      background: '#2c333f',
+      padding: 10,
+      borderRadius: 5
     },
     details: {
         alignItems: 'center',
@@ -18,13 +20,17 @@ const useStyles = makeStyles((theme: Theme) =>
       flex: '1 0 auto',
     },
     address: {
+        fontSize: 14,
+        color: '#fff',
+        textAlign: 'right'
+    },
+    total: {
         fontSize: 13,
-        color: '#a3a5a7',
+        color: '#c5c5ca',
         textAlign: 'right'
     },
     price: {
-        color: 'yellow',
-        fontSize: 14,
+        fontSize: 12,
         textAlign: 'left',
         paddingLeft: 10,
         display: 'flex',
@@ -32,9 +38,10 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     walletName: {
         fontSize: 15,
-        color: 'white',
+        color: '#fff',
         textAlign: 'left',
-        paddingLeft: 10
+        paddingLeft: 10,
+        fontFamily: 'CerebriSansPro-ExtraBold'
     }
   }),
 );
@@ -51,18 +58,18 @@ export default function MediaControlCard() {
       <Grid className={classes.details} item xs={12}>
           <Grid container item xs={12}>
               <Grid item xs={3} className={classes.walletName}>
-                  @spicedao
+                  demelain.eth
               </Grid>
               <Grid item xs={9} className={classes.address}>
-                  2 minutes ago
+                200,000,000 SPICE (7.96%)
               </Grid>
           </Grid>
           <Grid container item xs={12}>
               <Grid item xs={3} className={classes.price}>
-                  <MenuIcon /> 0.08
+                  Last paid a day ago
               </Grid>
-              <Grid item xs={9} className={classes.address}>
-                  0x39889f2cac90aa0342e850428e83debb438a8fbf 
+              <Grid item xs={9} className={classes.total}>
+                Ξ200    total  contributed 
               </Grid>
           </Grid>
       </Grid>

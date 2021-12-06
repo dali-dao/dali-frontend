@@ -13,6 +13,9 @@ import BurnDTF from '../components/Modal/BurnDTF';
 import ClaimDTF from '../components/Modal/ClaimDTF';
 import Tools from '../components/Modal/Tools';
 import Assets from '../components/Modal/Assets';
+import AddPayout from '../components/Modal/AddPayout';
+import AddTokenReceiver from '../components/Modal/AddTokenReceiver';
+import SpiceHolders from '../components/Modal/SpiceHolders';
 
 const useStyles = makeStyles((theme: Theme) => ({
     divider: {
@@ -48,6 +51,12 @@ function Moals() {
       <Tools />
       <Grid className={classes.divider}></Grid>
       <Assets />
+      <Grid className={classes.divider}></Grid>
+      <AddPayout />
+      <Grid className={classes.divider}></Grid>
+      <AddTokenReceiver />
+      <Grid className={classes.divider}></Grid>
+      <SpiceHolders />
     </div>
   );
 }
