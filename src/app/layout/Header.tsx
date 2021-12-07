@@ -76,10 +76,10 @@ function Header() {
                         <WbSunnyIcon fontSize="small" className={classes.sunIcon} onClick={handleToggleTheme}/>
                     </Grid>
                     <Grid item xs={1}></Grid>
-                    <Grid item xs={4} className={classes.connectBtn} onClick={handleOpen}>
+                    <Grid item xs={5} className={classes.connectBtn} onClick={handleOpen}>
                         Connect
                     </Grid>
-                    <Grid item xs={3}>
+                    <Grid item xs={2}>
                         <ReorderIcon fontSize="small"/>
                     </Grid>
                 </Grid>

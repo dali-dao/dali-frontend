@@ -53,17 +53,17 @@ function Landing() {
               explore more
             </Button>
           </Grid>
-          <Grid container>
-            <Grid item sm={2} md={3}>
+          <Grid container spacing={5}>
+            <Grid item md={3}>
               <ProjectCard />
             </Grid>
-            <Grid item sm={2} md={3}>
+            <Grid item md={3}>
               <ProjectCard />
             </Grid>
-            <Grid item sm={2} md={3}>
+            <Grid item md={3}>
               <ProjectCard />
             </Grid>
-            <Grid item sm={2} md={3}>
+            <Grid item md={3}>
               <ProjectCard />
             </Grid>
           </Grid>

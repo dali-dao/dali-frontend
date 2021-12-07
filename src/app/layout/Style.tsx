@@ -66,7 +66,7 @@ export const useStyles = makeStyles((theme: Theme) =>
         cursor: 'pointer',
         zoom: 0.8,
         color: theme.palette.common.black,
-        paddingLeft: 5
+        padding: '0 5px'
     },
     sunIcon: {
         transform: 'rotate(180deg)',
@@ -74,7 +74,7 @@ export const useStyles = makeStyles((theme: Theme) =>
         borderRight: '1px solid #4b4b56',
         color: theme.palette.common.white,
         zoom: 0.8,
-        paddingRight: 5
+        padding: '0 5px'
     },
     titleDesc: {
         textAlign: 'left'
@@ -99,7 +99,8 @@ export const useStyles = makeStyles((theme: Theme) =>
         alignItems: 'center',
         padding: '10px 20px',
         fontFamily: 'CerebriSansPro-Bold',
-        fontSize: 18
+        fontSize: 16,
+        textTransform: 'uppercase'
     },
     signupInput: {
         paddingRight: 10,
