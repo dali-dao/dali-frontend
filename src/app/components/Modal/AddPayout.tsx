@@ -6,7 +6,6 @@ import CustomSlider from '../Other/CustomSlider';
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
     flexGrow: 1,
-    padding: '10%',
     color: '#fff',
     boxShadow: '3px 3px #0a0b14, -1em 0 0.4em #0d0e18'
   },//common class

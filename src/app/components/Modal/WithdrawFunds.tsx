@@ -6,21 +6,37 @@ import { Icon } from '@iconify/react';
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
     flexGrow: 1,
-    padding: '10%',
     color: '#fff',
     margin: 'auto',
     boxShadow: '0px 0px 10px 10px #0c0f16'
   },
   //common class
-  textLeft: {textAlign: 'left'}, textRight: {textAlign: 'right'}, textCenter: {textAlign: 'center'},
+  textLeft: {textAlign: 'left'}, 
+  textRight: {textAlign: 'right'}, 
+  textCenter: {textAlign: 'center'},
   width100: {width: '100%'},
-  marginTop10:{marginTop: 10},marginTop20:{marginTop: 20},marginTop30:{marginTop: 30},marginTop40:{marginTop: 40},marginTop50:{marginTop: 50},
+  marginTop10:{marginTop: 10},
+  marginTop20:{marginTop: 20},
+  marginTop30:{marginTop: 30},
+  marginTop40:{marginTop: 40},
+  marginTop50:{marginTop: 50},
   marginBottom5:{marginBottom: 5},
   marginBottom10:{marginBottom: 10},
   marginBottom15:{marginBottom: 15},
-  marginBottom20:{marginBottom: 20},marginBottom30:{marginBottom: 30},marginBottom40:{marginBottom: 40},marginBottom50:{marginBottom: 50},
-  marginLeft10:{marginLeft: 10},marginLeft20:{marginLeft: 20},marginLeft30:{marginLeft: 30},marginLeft40:{marginLeft: 40},marginLeft50:{marginLeft: 50},
-  marginRight10:{marginRight: 10},marginRight20:{marginRight: 20},marginRight30:{marginRight: 30},marginRight40:{marginRight: 40},marginRight50:{marginRight: 50},
+  marginBottom20:{marginBottom: 20},
+  marginBottom30:{marginBottom: 30},
+  marginBottom40:{marginBottom: 40},
+  marginBottom50:{marginBottom: 50},
+  marginLeft10:{marginLeft: 10},
+  marginLeft20:{marginLeft: 20},
+  marginLeft30:{marginLeft: 30},
+  marginLeft40:{marginLeft: 40},
+  marginLeft50:{marginLeft: 50},
+  marginRight10:{marginRight: 10},
+  marginRight20:{marginRight: 20},
+  marginRight30:{marginRight: 30},
+  marginRight40:{marginRight: 40},
+  marginRight50:{marginRight: 50},
   fontSize12: {fontSize: 12},
   fontSize15: {fontSize: 15},
   paddingLeft15: {paddingLeft: 15},
@@ -51,10 +67,23 @@ const useStyles = makeStyles((theme: Theme) => ({
     background: '#1c222d',
     border: '1px solid #2f3540',
     padding: '25px 40px',
-    borderBottomRightRadius: 5, borderBottomLeftRadius: 5,
+    borderBottomRightRadius: 5, 
+    borderBottomLeftRadius: 5,
   },
-  left_button: {color: '#fff', border: '1px solid #596275', borderRadius: 5, marginRight: 20, width: 145, height: 50},
-  right_button: {backgroundImage: 'linear-gradient(to right, rgb(238 221 14) 0%, rgb(24 216 211) 100%, rgb(247, 157, 0) 100%)', width: 230, height: 50, color: '#000'},
+  left_button: {
+    color: '#fff', 
+    border: '1px solid #596275', 
+    borderRadius: 5, 
+    marginRight: 20, 
+    width: 145, 
+    height: 50
+  },
+  right_button: {
+    backgroundImage: 'linear-gradient(to right, rgb(238 221 14) 0%, rgb(24 216 211) 100%, rgb(247, 157, 0) 100%)', 
+    width: 230, 
+    height: 50, 
+    color: '#000'
+  },
 
 
   project_price_info: {
@@ -66,27 +95,45 @@ const useStyles = makeStyles((theme: Theme) => ({
     borderRadius: 0,
   },
   total_funds_content: {
-    marginTop: 10, textAlign: 'left'
+    marginTop: 10, 
+    textAlign: 'left'
   },
   jbx_fee_content: {
-    marginBottom: 5, textAlign: 'left'
+    marginBottom: 5, 
+    textAlign: 'left'
   },
   after_fee_content: {
-    textAlign: 'left', marginBottom: 20
+    textAlign: 'left', 
+    marginBottom: 20
   },
-  max_button: {borderRadius: 0, background: '#2f3542'},
+  max_button: {
+    borderRadius: 0, 
+    background: '#2f3542'
+  },
   jbx_fee_input_info: {
-    marginBottom: 20, marginLeft: 0, color: 'grey'
+    marginBottom: 20, 
+    marginLeft: 0, 
+    color: 'grey'
   },
   funds_distribute_content: {
     fontFamily: 'CerebriSansPro-ExtraBold',
-    textAlign: 'left', fontSize: 15,
+    textAlign: 'left', 
+    fontSize: 15,
   },
   funds_user_info_content: {
-    width: '80%', float: 'left', color: '#919398'
+    width: '80%', 
+    float: 'left', 
+    color: '#919398'
   },
-  user_info_desc: {fontSize: 13, width: 115, display: 'block'},
-  user_info_percent: {fontSize: 14, float: 'right'}
+  user_info_desc: {
+    fontSize: 13, 
+    width: 115, 
+    display: 'block'
+  },
+  user_info_percent: {
+    fontSize: 14, 
+    float: 'right'
+  }
 }));
 
 export default function WithdrawFunds() {

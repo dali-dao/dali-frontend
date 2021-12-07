@@ -6,20 +6,36 @@ const useStyles = makeStyles((theme: Theme) => ({
   root: {
     flexGrow: 1,
     margin: 'auto',
-    padding: '10%',
     color: '#fff',
     boxShadow: '0px 0px 10px 10px #0c0f16'
   },
   //common class
-  textLeft: {textAlign: 'left'}, textRight: {textAlign: 'right'}, textCenter: {textAlign: 'center'},
+  textLeft: {textAlign: 'left'}, 
+  textRight: {textAlign: 'right'}, 
+  textCenter: {textAlign: 'center'},
   width100: {width: '100%'},
-  marginTop10:{marginTop: 10},marginTop20:{marginTop: 20},marginTop30:{marginTop: 30},marginTop40:{marginTop: 40},marginTop50:{marginTop: 50},
+  marginTop10:{marginTop: 10},
+  marginTop20:{marginTop: 20},
+  marginTop30:{marginTop: 30},
+  marginTop40:{marginTop: 40},
+  marginTop50:{marginTop: 50},
   marginBottom5:{marginBottom: 5},
   marginBottom10:{marginBottom: 10},
   marginBottom15:{marginBottom: 15},
-  marginBottom20:{marginBottom: 20},marginBottom30:{marginBottom: 30},marginBottom40:{marginBottom: 40},marginBottom50:{marginBottom: 50},
-  marginLeft10:{marginLeft: 10},marginLeft20:{marginLeft: 20},marginLeft30:{marginLeft: 30},marginLeft40:{marginLeft: 40},marginLeft50:{marginLeft: 50},
-  marginRight10:{marginRight: 10},marginRight20:{marginRight: 20},marginRight30:{marginRight: 30},marginRight40:{marginRight: 40},marginRight50:{marginRight: 50},
+  marginBottom20:{marginBottom: 20},
+  marginBottom30:{marginBottom: 30},
+  marginBottom40:{marginBottom: 40},
+  marginBottom50:{marginBottom: 50},
+  marginLeft10:{marginLeft: 10},
+  marginLeft20:{marginLeft: 20},
+  marginLeft30:{marginLeft: 30},
+  marginLeft40:{marginLeft: 40},
+  marginLeft50:{marginLeft: 50},
+  marginRight10:{marginRight: 10},
+  marginRight20:{marginRight: 20},
+  marginRight30:{marginRight: 30},
+  marginRight40:{marginRight: 40},
+  marginRight50:{marginRight: 50},
   fontSize12: {fontSize: 12},
   fontSize15: {fontSize: 15},
   paddingLeft15: {paddingLeft: 15},
@@ -52,8 +68,20 @@ const useStyles = makeStyles((theme: Theme) => ({
     padding: '25px 40px',
     borderBottomRightRadius: 5, borderBottomLeftRadius: 5,
   },
-  left_button: {color: '#fff', border: '1px solid #596275', borderRadius: 5, marginRight: 20, width: 145, height: 50},
-  right_button: {backgroundImage: 'linear-gradient(to right, rgb(238 221 14) 0%, rgb(24 216 211) 100%, rgb(247, 157, 0) 100%)', width: 230, height: 50, color: '#000'},
+  left_button: {
+    color: '#fff', 
+    border: '1px solid #596275', 
+    borderRadius: 5, 
+    marginRight: 20, 
+    width: 145, 
+    height: 50
+  },
+  right_button: {
+    backgroundImage: 'linear-gradient(to right, rgb(238 221 14) 0%, rgb(24 216 211) 100%, rgb(247, 157, 0) 100%)', 
+    width: 230, 
+    height: 50, 
+    color: '#000'
+  },
   project_price_info: {
     fontSize: 13
   }, 
@@ -62,11 +90,31 @@ const useStyles = makeStyles((theme: Theme) => ({
     height: 40,
     borderRadius: 0,
   },
-  balance_content: {textAlign: 'left', marginBottom: 5},
-  dft_first_line: {marginLeft: 10, marginRight: 10},
-  dft_second_line: {marginBottom: 15, textAlign: 'left'},
-  tokens_desc: {width: '100%', color: '#c5c6ca', fontSize: 13, marginBottom: 15, textAlign: 'left'},
-  balance_desc_line: {width: '100%', color: '#c5c6ca', fontSize: 13, textAlign: 'left'}
+  balance_content: {
+    textAlign: 'left', 
+    marginBottom: 5
+  },
+  dft_first_line: {
+    marginLeft: 10, 
+    marginRight: 10
+  },
+  dft_second_line: {
+    marginBottom: 15, 
+    textAlign: 'left'
+  },
+  tokens_desc: {
+    width: '100%', 
+    color: '#c5c6ca', 
+    fontSize: 13, 
+    marginBottom: 15, 
+    textAlign: 'left'
+  },
+  balance_desc_line: {
+    width: '100%', 
+    color: '#c5c6ca', 
+    fontSize: 13, 
+    textAlign: 'left'
+  }
 }));
 
 export default function BurnDTF() {
