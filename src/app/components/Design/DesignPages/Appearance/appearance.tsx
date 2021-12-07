@@ -4,13 +4,18 @@ import Grid from '@material-ui/core/Grid';
 import Card from '@material-ui/core/Card';
 import CardHeader from '@material-ui/core/CardHeader';
 
-function Appearance() {
+interface selectedStepItem {
+  items: boolean[];
+  onSelectItem: (index: number) => void;
+}
+
+function Appearance({items, onSelectItem} : selectedStepItem) {
   const classes = useStyles();
 
   return (
     <div className={classes.root}>
         <Grid className={classes.title}>DESIGN YOUR PROJECT - APPEARANCE</Grid>
-        <Grid><DesignStep /></Grid>
+        <Grid><DesignStep selectedStepItem={items} onSelectItem={onSelectItem}/></Grid>
         <Grid>
           <Card className={classes.card}>
             <CardHeader title="1. APPEARANCE" className={classes.cardHeader}></CardHeader>

@@ -1,6 +1,5 @@
 //material-ui
-import { createStyles, makeStyles, Theme, withStyles, alpha } from "@material-ui/core/styles";
-import InputBase from '@material-ui/core/InputBase';
+import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
 
 //style
 export const useStyles = makeStyles((theme: Theme) =>
@@ -48,44 +47,24 @@ export const useStyles = makeStyles((theme: Theme) =>
       fontWeight: 'bold',
       cursor: 'pointer',
       backgroundImage: 'linear-gradient(to right, rgb(238 221 14) 0%, rgb(24 216 211) 100%, rgb(247, 157, 0) 100%)'
+    },
+    percentLabel: {
+      color: 'white',
+      paddingTop: 10,
+      width: '100%',
+      display: 'flex',
+      justifyContent: 'space-between'
+    },
+    payoutBtn: {
+        backgroundColor: '#3a4553',
+        border: '1px solid #667a93',
+        boxShadow: '3px 3px #0c0f16',
+        padding: '10px 20px',
+        marginTop: 20,
+        borderRadius: 3,
+        color: 'white',
+        width: '200px',
+        cursor: 'pointer'
     }
   })
 );
-
-export const BootstrapInput = withStyles((theme: Theme) =>
-  createStyles({
-    root: {
-      'label + &': {
-        marginTop: theme.spacing(3),
-      },
-      width: '100%'
-    },
-    input: {
-      borderRadius: 4,
-      position: 'relative',
-      backgroundColor: '#141821',
-      border: '1px solid #535b73 ',
-      fontSize: 16,
-      padding: '10px 12px',
-      color: '#7e8085',
-      transition: theme.transitions.create(['border-color', 'box-shadow']),
-      // Use the system font instead of the default Roboto font.
-      fontFamily: [
-        '-apple-system',
-        'BlinkMacSystemFont',
-        '"Segoe UI"',
-        'Roboto',
-        '"Helvetica Neue"',
-        'Arial',
-        'sans-serif',
-        '"Apple Color Emoji"',
-        '"Segoe UI Emoji"',
-        '"Segoe UI Symbol"',
-      ].join(','),
-      '&:focus': {
-        boxShadow: `${alpha(theme.palette.primary.main, 0.25)} 0 0 0 0.2rem`,
-        // borderColor: theme.palette.primary.main,
-      },
-    },
-  }),
-)(InputBase);

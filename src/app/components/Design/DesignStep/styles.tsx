@@ -12,7 +12,7 @@ export const useStyles = makeStyles((theme: Theme) =>
       border: '1px solid #2d353f',
       borderRadius: 10,
       fontFamily: 'CerebriSansPro-Bold',
-      fontSize: 15,
+      fontSize: 13,
       backgroundColor: '#f7db0e',
       color: 'black',
       display: 'flex',
@@ -20,9 +20,10 @@ export const useStyles = makeStyles((theme: Theme) =>
       alignItems: 'center',
       position: 'relative',
       textAlign: 'center',
-      width: 200,
+      width: '98%',
       height: 200,
       padding: 10,
+      cursor: 'pointer',
       '&:before': {
         background: '#f7db0e',
         display: 'inline-block',
@@ -38,7 +39,7 @@ export const useStyles = makeStyles((theme: Theme) =>
       border: '1px solid #2d353f',
       borderRadius: 10,
       fontFamily: 'CerebriSansPro-Bold',
-      fontSize: 15,
+      fontSize: 13,
       backgroundColor: '#1c222d',
       color: 'white',
       display: 'flex',
@@ -46,9 +47,10 @@ export const useStyles = makeStyles((theme: Theme) =>
       alignItems: 'center',
       position: 'relative',
       textAlign: 'center',
-      width: 200,
+      width: '98%',
       height: 200,
       padding: 10,
+      cursor: 'pointer'
     },
     stepComplete: {
       border: '1px solid #2d353f',
@@ -67,14 +69,42 @@ export const useStyles = makeStyles((theme: Theme) =>
       padding: 10,
     },
     itemTitle: {
-      fontSize: 15,
+      fontSize: 13,
       fontFamily: 'CerebriSanPro-Bold',
       fontWeight: 'bold',
       padding: '5px 0 5px 0'
     },
     itemDesc: {
-      fontSize: 13,
+      fontSize: 11,
       fontFamily: 'Roboto-Medium'
     },
+    number: {
+      color: 'white', 
+      border: '2px solid #4b586d', 
+      borderRadius: '50%',
+      backgroundColor: '#2d353f',
+      width: 30,
+      height: 30,
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      position: 'absolute',
+      top: '-15px',
+      right: '42%'
+    },
+    selectedNumber: {
+      color: 'black', 
+      border: '2px solid #4b586d', 
+      borderRadius: '50%',
+      backgroundColor: '#f7db0e',
+      width: 30,
+      height: 30,
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      position: 'absolute',
+      top: '-15px',
+      right: '42%'
+    }
   })
 );

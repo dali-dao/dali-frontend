@@ -20,7 +20,8 @@ export const useStyles = makeStyles((theme: Theme) =>
     descTitle: {
       fontFamily: 'CerebriSansPro-Heavy',
       fontSize: 40,
-      paddingBottom: 20
+      paddingBottom: 20,
+      textTransform: 'uppercase'
     },
     bannerDescription: {
       fontSize: 13,

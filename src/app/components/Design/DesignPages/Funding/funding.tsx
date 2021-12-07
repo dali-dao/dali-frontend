@@ -6,7 +6,12 @@ import Card from '@material-ui/core/Card';
 import CardHeader from '@material-ui/core/CardHeader';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 
-function Funding() {
+interface selectedStepItem {
+  items: boolean[];
+  onSelectItem: (index: number) => void;
+}
+
+function Funding({items, onSelectItem} : selectedStepItem) {
   const classes = useStyles();
 
   const [state, setState] = React.useState({
@@ -22,7 +27,7 @@ function Funding() {
   return (
     <div className={classes.root}>
         <Grid className={classes.title}>DESIGN YOUR PROJECT - FUNDING</Grid>
-        <Grid><DesignStep /></Grid>
+        <Grid><DesignStep selectedStepItem={items} onSelectItem={onSelectItem}/></Grid>
         <Grid>
           <Card className={classes.card}>
             <CardHeader title="2. FUNDING" className={classes.cardHeader}></CardHeader>

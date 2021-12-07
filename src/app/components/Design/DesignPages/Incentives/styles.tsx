@@ -1,6 +1,5 @@
 //material-ui
-import { createStyles, makeStyles, Theme, withStyles, alpha } from "@material-ui/core/styles";
-import InputBase from '@material-ui/core/InputBase';
+import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
 
 //style
 export const useStyles = makeStyles((theme: Theme) =>
@@ -51,41 +50,3 @@ export const useStyles = makeStyles((theme: Theme) =>
     }
   })
 );
-
-export const BootstrapInput = withStyles((theme: Theme) =>
-  createStyles({
-    root: {
-      'label + &': {
-        marginTop: theme.spacing(3),
-      },
-      width: '100%'
-    },
-    input: {
-      borderRadius: 4,
-      position: 'relative',
-      backgroundColor: '#141821',
-      border: '1px solid #535b73 ',
-      fontSize: 16,
-      padding: '10px 12px',
-      color: '#7e8085',
-      transition: theme.transitions.create(['border-color', 'box-shadow']),
-      // Use the system font instead of the default Roboto font.
-      fontFamily: [
-        '-apple-system',
-        'BlinkMacSystemFont',
-        '"Segoe UI"',
-        'Roboto',
-        '"Helvetica Neue"',
-        'Arial',
-        'sans-serif',
-        '"Apple Color Emoji"',
-        '"Segoe UI Emoji"',
-        '"Segoe UI Symbol"',
-      ].join(','),
-      '&:focus': {
-        boxShadow: `${alpha(theme.palette.primary.main, 0.25)} 0 0 0 0.2rem`,
-        // borderColor: theme.palette.primary.main,
-      },
-    },
-  }),
-)(InputBase);
