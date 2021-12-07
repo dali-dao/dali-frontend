@@ -2,7 +2,6 @@ import { Theme, createStyles, makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import PaymentCard from '../assets/Landing/payment.png';
 import Grid from '@material-ui/core/Grid';
-import MenuIcon from '@material-ui/icons/Menu';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
