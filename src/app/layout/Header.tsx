@@ -7,6 +7,10 @@ import Brightness3Icon from '@material-ui/icons/Brightness3';
 import ReorderIcon from '@material-ui/icons/Reorder';
 import React from "react";
 import { ThemeContext } from "../theme/ThemeProvider";
+import Modal from '@material-ui/core/Modal';
+import Backdrop from '@material-ui/core/Backdrop';
+import Fade from '@material-ui/core/Fade';
+import SelectWallet from '../components/Modal/SelectWallet';
 
 function Header() {
     const classes = useStyles();
@@ -25,6 +29,16 @@ function Header() {
         setThemeName(lightTheme);
         setTheme(lightTheme);
       }
+    };
+
+    const [open, setOpen] = React.useState(false);
+
+    const handleOpen = () => {
+        setOpen(true);
+    };
+
+    const handleClose = () => {
+        setOpen(false);
     };
 
     return (
@@ -62,7 +76,7 @@ function Header() {
                         <WbSunnyIcon fontSize="small" className={classes.sunIcon} onClick={handleToggleTheme}/>
                     </Grid>
                     <Grid item xs={1}></Grid>
-                    <Grid item xs={4}className={classes.connectBtn}>
+                    <Grid item xs={4} className={classes.connectBtn} onClick={handleOpen}>
                         Connect
                     </Grid>
                     <Grid item xs={3}>
@@ -70,6 +84,24 @@ function Header() {
                     </Grid>
                 </Grid>
             </Grid>
+            <Modal
+                aria-labelledby="transition-modal-title"
+                aria-describedby="transition-modal-description"
+                className={classes.modal}
+                open={open}
+                onClose={handleClose}
+                closeAfterTransition
+                BackdropComponent={Backdrop}
+                BackdropProps={{
+                    timeout: 500,
+                }}
+            >
+                <Fade in={open}>
+                <div>
+                    <SelectWallet />
+                </div>
+                </Fade>
+            </Modal>
         </div>
     );
 }

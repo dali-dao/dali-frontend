@@ -5,9 +5,11 @@ import GitHubIcon from '@material-ui/icons/GitHub';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import Logo from '../assets/Landing/logo.png';
 import Discord from '../assets/Landing/discord.png';
+import DiscordBlack from '../assets/Landing/discord_black.png';
 
 function Footer() {
     const classes = useStyles();
+    const curThemeName = localStorage.getItem("appTheme") || "darkTheme";
 
     return (
       <div className={classes.footer}>
@@ -31,7 +33,7 @@ function Footer() {
             <Grid className={classes.followTitle}>FOLLOW US ON</Grid>
             <Grid className={classes.followIcons}>
               <GitHubIcon fontSize="large" style={{marginRight: 20}}/>
-              <img src={Discord} alt="discord" style={{width: 40, marginRight: 20}}/>
+              <img src={curThemeName === 'darkTheme' ? Discord : DiscordBlack} alt="discord" style={{width: 40, marginRight: 20}}/>
               <TwitterIcon fontSize="large" style={{marginRight: 20}}/>
               <InstagramIcon fontSize="large" style={{marginRight: 20}}/>
             </Grid>
