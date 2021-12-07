@@ -1,6 +1,5 @@
 import { makeStyles, Theme } from '@material-ui/core/styles';
 import { Grid } from '@material-ui/core';
-
 import HeadsUp from '../components/Modal/HeadsUp';
 import PayDAOTailFung from '../components/Modal/PayDAOTailFung';
 import DesignPreview from '../components/Modal/DesignPreview';
@@ -26,7 +25,7 @@ const useStyles = makeStyles((theme: Theme) => ({
 function Moals() {
     const classes = useStyles();
     return (
-    <div>
+    <div style={{margin: '0px 260px'}}>
       <Grid className={classes.divider}></Grid>
       <DesignPreview />
       <Grid className={classes.divider}></Grid>

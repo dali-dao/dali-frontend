@@ -1,13 +1,6 @@
 import React from 'react';
-import { makeStyles, Theme } from '@material-ui/core/styles';
 import { Grid, TextField, Slider, ThemeProvider } from '@material-ui/core';
 import { createMuiTheme } from '@material-ui/core/styles';
-
-const useStyles = makeStyles((theme: Theme) => ({
-  root: {
-    flexGrow: 1,
-  },
-}));
 
 const muiTheme = createMuiTheme({
   overrides:{
@@ -36,7 +29,6 @@ const muiTheme = createMuiTheme({
 });
 
 export default function CustomSlider() {
-  const classes = useStyles();
   const [value, setValue] = React.useState<number | string | Array<number | string>>(0);
 
   const handleSliderChange = (event: any, newValue: number | number[]) => {

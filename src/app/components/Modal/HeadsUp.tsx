@@ -5,13 +5,18 @@ import { Grid, Button } from '@material-ui/core';
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
     flexGrow: 1,
-    width: '70%',
     margin: 'auto',
-    boxShadow: '3px 3px #0a0b14, -1em 0 0.4em #0d0e18'
+    boxShadow: '0px 0px 10px 10px #0c0f16'
   },
   //common class
-  textLeft: {textAlign: 'left'},
-  textRight: {textAlign: 'right'},
+  textLeft: {textAlign: 'left'}, textRight: {textAlign: 'right'}, textCenter: {textAlign: 'center'},
+  width100: {width: '100%'},
+  marginTop10:{marginTop: 10},marginTop20:{marginTop: 20},marginTop30:{marginTop: 30},marginTop40:{marginTop: 40},marginTop50:{marginTop: 50},
+  marginBottom5:{marginBottom: 5},marginBottom10:{marginBottom: 10},marginBottom20:{marginBottom: 20},marginBottom30:{marginBottom: 30},marginBottom40:{marginBottom: 40},marginBottom50:{marginBottom: 50},
+  marginLeft10:{marginLeft: 10},marginLeft20:{marginLeft: 20},marginLeft30:{marginLeft: 30},marginLeft40:{marginLeft: 40},marginLeft50:{marginLeft: 50},
+  marginRight10:{marginRight: 10},marginRight20:{marginRight: 20},marginRight30:{marginRight: 30},marginRight40:{marginRight: 40},marginRight50:{marginRight: 50},
+  fontSize12: {fontSize: 12},
+  paddingLeft15: {paddingLeft: 15},
   //component class
   modal_header: {
     background: '#2c333f',
@@ -20,17 +25,21 @@ const useStyles = makeStyles((theme: Theme) => ({
     borderTopLeftRadius: 5,
   },
   modal_header_title: {
-    padding: '20px 0px 20px 30px',
+    padding: '25px 40px',
     display: 'block',
     fontSize: 20,
     fontFamily: 'CerebriSansPro-ExtraBold'
+  },
+  project_title: {
+    fontFamily: 'CerebriSansPro-Bold',
+    fontSize: 16
   },
   modal_content: {
     background: '#1c222d',
     border: '1px solid #2f3540',
     display: 'block',
     textAlign: 'left',
-    padding: '20px 20px 10px 30px',
+    padding: '25px 40px',
     borderBottomRightRadius: 5,
     borderBottomLeftRadius: 5,
   },
@@ -47,7 +56,6 @@ const useStyles = makeStyles((theme: Theme) => ({
         background: '#2c333f',
         display: 'block',
         marginTop: 20,
-        marginBottom: 30,
         color: '#fff',
         padding: '10px 40px'
     }

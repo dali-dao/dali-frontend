@@ -1,17 +1,30 @@
 import React from 'react';
 import { makeStyles, Theme } from '@material-ui/core/styles';
-import { Grid, FormControl, OutlinedInput, InputAdornment, FormHelperText, Button, Divider } from '@material-ui/core';
-import { Icon } from '@iconify/react'; 
+import { Grid, Button } from '@material-ui/core';
 
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
     flexGrow: 1,
-    width: '70%',
     margin: 'auto',
-    boxShadow: '3px 3px #0a0b14, -1em 0 0.4em #0d0e18'
-  },//common class
-  textLeft: {textAlign: 'left'},
-  textRight: {textAlign: 'right'},
+    boxShadow: '0px 0px 10px 10px #0c0f16'
+  },
+  //common class
+  textLeft: {textAlign: 'left'}, textRight: {textAlign: 'right'}, textCenter: {textAlign: 'center'},
+  width100: {width: '100%'},
+  marginTop10:{marginTop: 10},marginTop20:{marginTop: 20},marginTop30:{marginTop: 30},marginTop40:{marginTop: 40},marginTop50:{marginTop: 50},
+  marginBottom5:{marginBottom: 5},
+  marginBottom10:{marginBottom: 10},
+  marginBottom15:{marginBottom: 15},
+  marginBottom20:{marginBottom: 20},marginBottom30:{marginBottom: 30},marginBottom40:{marginBottom: 40},marginBottom50:{marginBottom: 50},
+  marginLeft10:{marginLeft: 10},marginLeft20:{marginLeft: 20},marginLeft30:{marginLeft: 30},marginLeft40:{marginLeft: 40},marginLeft50:{marginLeft: 50},
+  marginRight10:{marginRight: 10},marginRight20:{marginRight: 20},marginRight30:{marginRight: 30},marginRight40:{marginRight: 40},marginRight50:{marginRight: 50},
+  fontSize12: {fontSize: 12},
+  fontSize15: {fontSize: 15},
+  paddingLeft15: {paddingLeft: 15},
+  paddingLeft10: {paddingLeft: 10},
+  floatLeft: {
+    float: 'left'
+  },
   //component class
   modal_header: {
     background: '#2c333f',
@@ -20,7 +33,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     borderTopLeftRadius: 5,
   },
   modal_header_title: {
-    padding: '20px 0px 20px 30px',
+    padding: '25px 40px',
     display: 'block',
     fontSize: 20,
     fontFamily: 'CerebriSansPro-ExtraBold'
@@ -28,9 +41,17 @@ const useStyles = makeStyles((theme: Theme) => ({
   project_info_1: {
     background: '#1c222d',
     border: '1px solid #2f3540',
-    padding: '20px 20px 10px 20px',
-    textAlign: 'left'
+    padding: '25px 40px',
   },
+  
+  button_content:{
+    background: '#1c222d',
+    border: '1px solid #2f3540',
+    padding: '25px 40px',
+    borderBottomRightRadius: 5, borderBottomLeftRadius: 5,
+  },
+  left_button: {color: '#fff', border: '1px solid #596275', borderRadius: 5, marginRight: 20, width: 145, height: 50},
+  right_button: {backgroundImage: 'linear-gradient(to right, rgb(238 221 14) 0%, rgb(24 216 211) 100%, rgb(247, 157, 0) 100%)', width: 230, height: 50, color: '#000'},
   project_price_info: {
     fontSize: 13
   }, 
@@ -39,6 +60,11 @@ const useStyles = makeStyles((theme: Theme) => ({
     height: 40,
     borderRadius: 0,
   },
+  balance_content: {textAlign: 'left', marginBottom: 5},
+  dft_first_line: {marginLeft: 10, marginRight: 10},
+  dft_second_line: {marginBottom: 15, textAlign: 'left'},
+  tokens_desc: {width: '100%', color: '#c5c6ca', fontSize: 13, marginBottom: 15, textAlign: 'left'},
+  balance_desc_line: {width: '100%', color: '#c5c6ca', fontSize: 13, textAlign: 'left'}
 }));
 
 export default function BurnDTF() {
@@ -50,29 +76,29 @@ export default function BurnDTF() {
         <strong className={classes.modal_header_title}>Burn DTF tokens for ETH</strong>
       </Grid>
       <Grid container className={classes.project_info_1}>
-        <Grid container xs={12} md={12} className={classes.textLeft} style={{marginBottom: 5}}>
+        <Grid container xs={12} md={12} className={classes.balance_content}>
           <Grid item xs={12} md={10}>
-            <strong className={classes.project_price_info}>Balance<span style={{marginLeft: 10, marginRight: 10}}>:</span>0 DTF</strong>
+            <strong className={classes.project_price_info}>Balance<span className={classes.dft_first_line}>:</span>0 DTF</strong>
           </Grid>
         </Grid>
-        <Grid container xs={12} md={12} className={classes.textLeft} style={{marginBottom: 15}}>
+        <Grid container xs={12} md={12} className={classes.dft_second_line}>
           <Grid item xs={12} md={10}>
-            <strong className={classes.project_price_info}>Currently worth<span style={{marginLeft: 10, marginRight: 10}}>:</span>Ξ0</strong>
+            <strong className={classes.project_price_info}>Currently worth<span className={classes.dft_first_line}>:</span>Ξ0</strong>
           </Grid>
         </Grid>
 
-        <Grid style={{width: '60%', color: '#c5c6ca', fontSize: 13, marginBottom: 15}}>
+        <Grid className={classes.tokens_desc}>
           <span>Tokens can be redeemed for a portion of this project’s ETH overflow, according to the bonding curve rate of the current funding cycle.</span>
-          <span style={{color: '#cdb818', fontSize: 13}}>Tokens are burned when they are redeemed.</span>
+          <span className={classes.balance_content}>Tokens are burned when they are redeemed.</span>
         </Grid>
-        <Grid style={{width: '100%', color: '#c5c6ca', fontSize: 13}}>
+        <Grid className={classes.balance_desc_line}>
           You can redeem tokens once this project has overflow.
         </Grid>
       </Grid>
       
-      <Grid container className={classes.project_info_1} style={{borderBottomRightRadius: 5, borderBottomLeftRadius: 5}}>
-        <Button style={{color: '#fff', border: '1px solid #596275', borderRadius: 5, marginRight: 20, width: 120}}>CANCEL</Button>
-        <Button style={{backgroundImage: 'linear-gradient(to right, rgb(238 221 14) 0%, rgb(24 216 211) 100%, rgb(247, 157, 0) 100%)', width: 200, color: '#000'}}>BURN 0 DTF FOR ETH</Button>
+      <Grid container className={classes.button_content}>
+        <Button className={classes.left_button}>CANCEL</Button>
+        <Button className={classes.right_button}>BURN 0 DTF FOR ETH</Button>
       </Grid>
     </div>
   );

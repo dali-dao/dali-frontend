@@ -1,13 +1,11 @@
 import React from 'react';
 import { makeStyles, Theme } from '@material-ui/core/styles';
-import { Grid, FormControl, Select, TextField, Slider, ThemeProvider, Button } from '@material-ui/core';
-import { createMuiTheme } from '@material-ui/core/styles';
+import { Grid, FormControl, Select, TextField, Button } from '@material-ui/core';
+import CustomSlider from '../Other/CustomSlider';
 
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
     flexGrow: 1,
-    width: '70%',
-    margin: 'auto',
     boxShadow: '3px 3px #0a0b14, -1em 0 0.4em #0d0e18'
   },//common class
   textLeft: {textAlign: 'left'},
@@ -39,30 +37,6 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
 }));
 
-const muiTheme = createMuiTheme({
-  overrides:{
-    MuiSlider: {
-      thumb:{
-        color: "#f7db0e",
-        height: 20,
-        width: 20,
-        border: '2px solid #000'
-      },
-      track: {
-        color: '#425064',
-        height: 10,
-        borderRadius: 5
-      },
-      rail: {
-        color: '#2c333f',
-        height: 10,
-        borderRadius: 5,
-        border: '1px solid #425064'
-      }
-    }
-}
-});
-
 export default function AddPayment() {
   const classes = useStyles();
   const [state, setState] = React.useState<{ age: string | number; name: string }>({
@@ -76,32 +50,6 @@ export default function AddPayment() {
       ...state,
       [name]: event.target.value,
     });
-  };
-
-  const handleBlur = () => {
-    if (value < 0) {
-      setValue(0);
-    } else if (value > 100) {
-      setValue(100);
-    }
-  };
-
-  const [value, setValue] = React.useState<number | string | Array<number | string>>(0);
-
-  const handleSliderChange = (event: any, newValue: number | number[]) => {
-    setValue(newValue);
-  };
-
-  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setValue(event.target.value === '' ? '' : Number(event.target.value));
-  };
-
-  const [selectedDate, setSelectedDate] = React.useState<Date | null>(
-    new Date('2014-08-18T21:11:54'),
-  );
-
-  const handleDateChange = (date: Date | null) => {
-    setSelectedDate(date);
   };
   
   return (
@@ -140,32 +88,7 @@ export default function AddPayment() {
 
         <Grid container style={{marginTop:15}}>
           <Grid item xs={12} md={12}>Percent</Grid>
-          <Grid item xs={12} md={11}>
-            <ThemeProvider theme={muiTheme}>
-              <Slider 
-                style={{width: '97%'}}
-                value={typeof value === 'number' ? value : 0}
-                onChange={handleSliderChange}
-                aria-labelledby="input-slider"
-              />
-            </ThemeProvider>
-          </Grid>
-          <Grid item xs={12} md={1}>
-            <TextField 
-              id="outlined-basic" 
-              variant="outlined" 
-              value={value}
-              onChange={handleInputChange}
-              onBlur={handleBlur}
-              inputProps={{
-                min: 0,
-                max: 100,
-                style: {color: 'white', textAlign: 'center'},
-                type: 'number',
-                'aria-labelledby': 'input-slider',
-              }}
-            />
-          </Grid>
+          <CustomSlider />
         </Grid>
 
         <Grid container style={{marginTop:15}}>

@@ -19,7 +19,7 @@ export default function ImageUpload() {
       </Grid>
       <Grid container style={{border: '1px dotted #9496a4', borderRadius: 4, height: 'auto'}}>
         <Grid item xs={12} md={2}>
-          <img src={NoImage} style={{padding: 15}}></img>
+          <img src={NoImage} style={{padding: 15}} alt=''></img>
         </Grid>
         <Grid container xs={12} md={10} style={{marginTop: 15}}>
           <Grid item xs={12} md={3} sm={12} style={{textAlign: 'center'}}>
