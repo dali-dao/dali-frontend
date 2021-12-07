@@ -21,9 +21,9 @@ function Footer() {
                 <BootstrapInput id="bootstrap-input"/>
               </Grid>
               <Grid item xs={2} style={{display: 'flex'}}>
-                <Button variant="contained" className={classes.signupBtn}>
+                <Grid className={classes.signupBtn}>
                   Sign Up
-                </Button>
+                </Grid>
               </Grid>
             </Grid>
           </Grid>

@@ -92,7 +92,8 @@ export const useStyles = makeStyles((theme: Theme) =>
       alignItems: 'center',
       position: 'absolute',
       top: '-15px',
-      right: '42%'
+      right: '42%',
+      fontSize: 15
     },
     selectedNumber: {
       color: 'black', 
@@ -106,7 +107,8 @@ export const useStyles = makeStyles((theme: Theme) =>
       alignItems: 'center',
       position: 'absolute',
       top: '-15px',
-      right: '42%'
+      right: '42%',
+      fontSize: 15
     }
   })
 );

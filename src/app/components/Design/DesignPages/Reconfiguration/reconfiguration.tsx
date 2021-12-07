@@ -7,15 +7,16 @@ import CardHeader from '@material-ui/core/CardHeader';
 interface selectedStepItem {
   items: boolean[];
   onSelectItem: (index: number) => void;
+  confirmItems: boolean[];
 }
 
-function Reconfiguration({items, onSelectItem}: selectedStepItem) {
+function Reconfiguration({items, onSelectItem, confirmItems}: selectedStepItem) {
   const classes = useStyles();
 
   return (
     <div className={classes.root}>
         <Grid className={classes.title}>DESIGN YOUR PROJECT - RECONFIGURATION</Grid>
-        <Grid><DesignStep selectedStepItem={items} onSelectItem={onSelectItem}/></Grid>
+        <Grid><DesignStep selectedStepItem={items} onSelectItem={onSelectItem} confirmStepItem={confirmItems}/></Grid>
         <Grid>
           <Card className={classes.card}>
             <CardHeader title="5. RECONFIGURATION" className={classes.cardHeader}></CardHeader>

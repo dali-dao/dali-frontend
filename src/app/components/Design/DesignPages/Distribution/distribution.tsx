@@ -7,15 +7,16 @@ import CardHeader from '@material-ui/core/CardHeader';
 interface selectedStepItem {
   items: boolean[];
   onSelectItem: (index: number) => void;
+  confirmItems: boolean[];
 }
 
-function Distribution({items, onSelectItem}: selectedStepItem) {
+function Distribution({items, onSelectItem, confirmItems}: selectedStepItem) {
   const classes = useStyles();
 
   return (
     <div className={classes.root}>
         <Grid className={classes.title}>DESIGN YOUR PROJECT - DISTRIBUTION</Grid>
-        <Grid><DesignStep selectedStepItem={items} onSelectItem={onSelectItem}/></Grid>
+        <Grid><DesignStep selectedStepItem={items} onSelectItem={onSelectItem} confirmStepItem={confirmItems}/></Grid>
         <Grid>
           <Card className={classes.card}>
             <CardHeader title="3. DISTRIBUTION" className={classes.cardHeader}></CardHeader>

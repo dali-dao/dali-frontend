@@ -26,52 +26,50 @@ const darkTheme = createTheme({
   ...baseTheme,
   palette: {
     type: "dark",
+    // Background of the header, footer
     background: {
-      default: "#252930", //trade view container's background
-      paper: "#1c222d", //header background
+      default: "white", 
+      paper: "black", 
+    },
+    // Select the theme in header
+    common: {
+      black: "white", 
+      white: "#87878f", 
     },
     primary: {
-      main: "#161A1E", //trade view component's background
-      dark: "#1e2329", // modal background
-      light: "#1e2329", //dropdown background
+      main: "#fadd0d", 
+      dark: "#fadd0d", 
+      light: "#1e2329", 
     },
-    //trade view font color
     secondary: {
-      main: "#848e9c", //gery color
-      dark: "#fadd0d", //white color
-      light: "#f0b90b", //hover color
+      main: "#848e9c", 
+      dark: "#fadd0d", 
+      light: "#f0b90b", 
     },
-    //status change color
     info: {
-      main: "#03a66d", //green
-      dark: "#f6465d", //red
-      light: "#1e2026", //orderform background
+      main: "#03a66d", 
+      dark: "#f6465d", 
+      light: "#1e2026", 
     },
-    //status change progressbar color
     success: {
-      main: "#0ecb81", //green
-      dark: "#f6465d", //red
-      light: "#2a2d35", //order form input div
+      main: "#0ecb81", 
+      dark: "#f6465d", 
+      light: "#2a2d35",
     },
     error: {
-      main: "#2b313a", //border
-      dark: "#252930", //table border
-      light: "#161a1e", //scrollbar color
-      contrastText: "#2A2D35", //scroll thumb
+      main: "#2b313a", 
+      dark: "#252930", 
+      light: "#161a1e",
+      contrastText: "#2A2D35", 
     },
-    // header font color & trade view statistic main color// header font color
     text: {
-      primary: "#848e9c", //gery color
-      secondary: "#eaecef", //white color
-      hint: "#b7bdc6", //statistic main color
-      disabled: "#f0b90b", //header menu hover and active of font color & font color of Log In, Rigerster Now
-    },
-    common: {
-      black: "#181a20", //login background
-      white: "#fff", //input side border
+      primary: "#848e9c",
+      secondary: "#eaecef",
+      hint: "#b7bdc6", 
+      disabled: "#f0b90b", 
     },
     warning: {
-      main: "#3C2601", //login notification background
+      main: "#3C2601", 
       dark: "#2b3139",
       contrastText: "#fff",
     },
@@ -82,54 +80,52 @@ const lightTheme = createTheme({
   ...baseTheme,
   palette: {
     type: "light",
+    // background of the header, footer
     background: {
-      default: "#eef0f2", //trade view container's background
-      paper: "#999", //header background
+      default: "black", 
+      paper: "white", 
+    },
+    // Select the theme in header
+    common: {
+      black: "#87878f", 
+      white: "black", 
     },
     warning: {
-      main: "#fef6d8", //login notification background
+      main: "#fef6d8", 
       contrastText: "#000",
       dark: "#f5f5f5",
     },
     primary: {
-      main: "#FAFAFA", //trade view component's background
-      dark: "#FFFFFF", //modal background
-      light: "#1e2329", //dropdown background
+      main: "#FAFAFA", 
+      dark: "#FFFFFF", 
+      light: "#1e2329",
     },
-    //trade view font color
     secondary: {
-      main: "#707a8a", //gery color
-      dark: "#f6465d", //white color
-      light: "#c99400", //hover color
+      main: "#707a8a",
+      dark: "#f6465d",
+      light: "#c99400", 
     },
     error: {
-      main: "#fafafa", //border
-      dark: "#cccfd5", //table border
-      light: "#fff", //scrollbar color
-      contrastText: "#eaecef", //scroll thumb
+      main: "#fafafa", 
+      dark: "#cccfd5", 
+      light: "#fff", 
+      contrastText: "#eaecef", 
     },
-    common: {
-      black: "#fff", //login background
-      white: "#eaecef", //input side border
-    },
-    //status change color
     info: {
-      main: "#03a66d", //green
-      dark: "#cf304a", //red
-      light: "#fff", //orderform background
+      main: "#03a66d",
+      dark: "#cf304a", 
+      light: "#fff", 
     },
-    //status change progressbar color
     success: {
-      main: "#0ecb81", //green
-      dark: "#f6465d", //red
-      light: "#f0f1f2", //order form input div
+      main: "#0ecb81", 
+      dark: "#f6465d", 
+      light: "#f0f1f2",
     },
-    // header font color & trade view statistic main color
     text: {
-      primary: "#848e9c", //gery color
-      secondary: "#eaecef", //white color
-      hint: "#474d57", //statistic main color
-      disabled: "#f0b90b", //header menu hover font color & Log In, Rigerster Now's fixed Color
+      primary: "#848e9c", 
+      secondary: "#eaecef", 
+      hint: "#474d57", 
+      disabled: "#f0b90b", 
     },
   },
 });

@@ -7,23 +7,25 @@ export const useStyles = makeStyles((theme: Theme) =>
     header: {
         backgroundColor: theme.palette.background.paper,
         height: 90,
-        fontSize: 12
+        fontSize: 12,
+        color: theme.palette.background.default
     },
     footer: {
         backgroundColor: theme.palette.background.paper,
         height: 600,
-        padding: '60px 160px 30px 160px'
+        padding: '60px 160px 30px 160px',
+        color: theme.palette.background.default
     },
     menu: {
         margin: '0 20px',
         textDecoration: 'none',
-        color: 'white',
+        color: theme.palette.background.default,
         textTransform: 'uppercase'
     },
     activeMenu: {
         margin: '0 20px',
         textDecoration: 'none',
-        color: 'white',
+        color: theme.palette.background.default,
         textTransform: 'uppercase',
         borderBottom: '2px solid #f7db0e',
         padding: '35px 0'
@@ -56,17 +58,16 @@ export const useStyles = makeStyles((theme: Theme) =>
         padding: 3,
     },
     brightnessIcon:{
-        transform: 'rotate(180deg)',
+        transform: 'rotate(135deg)',
         cursor: 'pointer',
-        borderLeft: '1px solid #4b4b56',
-        // backgroundColor: '#29303d',
         zoom: 0.8,
+        color: theme.palette.common.black
     },
     sunIcon: {
         transform: 'rotate(180deg)',
         cursor: 'pointer',
         borderRight: '1px solid #4b4b56',
-        color: '#87878f',
+        color: theme.palette.common.white,
         zoom: 0.8,
     },
     titleDesc: {
@@ -84,8 +85,15 @@ export const useStyles = makeStyles((theme: Theme) =>
         fontFamily: 'Roboto-Regular'
     },
     signupBtn: {
-        backgroundColor: theme.palette.secondary.dark,
-        display: 'flex'
+        backgroundColor: theme.palette.primary.dark,
+        color: 'black',
+        borderRadius: 5,
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        padding: '10px 20px',
+        fontFamily: 'CerebriSansPro-Bold',
+        fontSize: 18
     },
     signupInput: {
         paddingRight: 10,
