@@ -3,6 +3,7 @@ import DesignStep from "../../DesignStep/designStep";
 import Grid from '@material-ui/core/Grid';
 import Card from '@material-ui/core/Card';
 import CardHeader from '@material-ui/core/CardHeader';
+import noImage from '../../../../assets/Popup/no_image.png';
 
 interface selectedStepItem {
   items: boolean[];
@@ -77,7 +78,18 @@ function Appearance({items, onSelectItem, confirmItems} : selectedStepItem) {
               <Grid container>
                 <Grid item xs={4} className={classes.label}>Logo *<br/><span className={classes.itemDescription}>Text displayed on your project’s “pay” button. Leave this blank to use the default.</span></Grid>
                 <Grid item xs={8} className={classes.content}>
-                  
+                  <Grid className={classes.logoContent} container>
+                    <Grid item xs={2}>
+                      <img src={noImage} alt="noImage" />
+                    </Grid>
+                    <Grid item xs={9} container>
+                      <Grid item xs={12}>Add logo image</Grid>
+                      <Grid item xs={12}>
+                        <Grid className={classes.uploadBtn}>Upload logo image</Grid>
+                        <Grid>upload image style like jpg / png images are supported</Grid>
+                      </Grid>
+                    </Grid>
+                  </Grid>
                 </Grid>
               </Grid>
               <Grid container>

@@ -48,6 +48,17 @@ export const useStyles = makeStyles((theme: Theme) =>
       fontWeight: 'bold',
       cursor: 'pointer',
       backgroundImage: 'linear-gradient(to right, rgb(238 221 14) 0%, rgb(24 216 211) 100%, rgb(247, 157, 0) 100%)'
+    },
+    logoContent: {
+      borderRadius: 4,
+      border: '1px solid #535b73 ',
+      padding: '10px 12px',
+      backgroundColor: '#141821',
+    },
+    uploadBtn: {
+      borderRadius: 4,
+      backgroundColor: '#fff',
+      color: 'white'
     }
   })
 );
