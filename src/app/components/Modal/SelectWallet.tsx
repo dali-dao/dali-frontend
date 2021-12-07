@@ -16,22 +16,46 @@ const useStyles = makeStyles((theme: Theme) => ({
   root: {
     flexGrow: 1,
     margin: 'auto',
-    padding: '10%',
     color: '#fff',
     boxShadow: '0px 0px 10px 10px #0c0f16'
   },
   //common class
-  textLeft: {textAlign: 'left'}, textRight: {textAlign: 'right'}, textCenter: {textAlign: 'center'},
+  textLeft: {textAlign: 'left'}, 
+  textRight: {textAlign: 'right'}, 
+  textCenter: {textAlign: 'center'},
   width100: {width: '100%'},
-  marginTop10:{marginTop: 10},marginTop20:{marginTop: 20},marginTop30:{marginTop: 30},marginTop40:{marginTop: 40},marginTop50:{marginTop: 50},
-  marginBottom5:{marginBottom: 5},marginBottom10:{marginBottom: 10},marginBottom20:{marginBottom: 20},marginBottom30:{marginBottom: 30},marginBottom40:{marginBottom: 40},marginBottom50:{marginBottom: 50},
-  marginLeft10:{marginLeft: 10},marginLeft20:{marginLeft: 20},marginLeft30:{marginLeft: 30},marginLeft40:{marginLeft: 40},marginLeft50:{marginLeft: 50},
-  marginRight10:{marginRight: 10},marginRight20:{marginRight: 20},marginRight30:{marginRight: 30},marginRight40:{marginRight: 40},marginRight50:{marginRight: 50},
-  fontSize12: {fontSize: 12},fontSize13: {fontSize: 13},fontSize14: {fontSize: 14},fontSize15: {fontSize: 15},
+  marginTop10:{marginTop: 10},
+  marginTop20:{marginTop: 20},
+  marginTop30:{marginTop: 30},
+  marginTop40:{marginTop: 40},
+  marginTop50:{marginTop: 50},
+  marginBottom5:{marginBottom: 5},
+  marginBottom10:{marginBottom: 10},
+  marginBottom20:{marginBottom: 20},
+  marginBottom30:{marginBottom: 30},
+  marginBottom40:{marginBottom: 40},
+  marginBottom50:{marginBottom: 50},
+  marginLeft10:{marginLeft: 10},
+  marginLeft20:{marginLeft: 20},
+  marginLeft30:{marginLeft: 30},
+  marginLeft40:{marginLeft: 40},
+  marginLeft50:{marginLeft: 50},
+  marginRight10:{marginRight: 10},
+  marginRight20:{marginRight: 20},
+  marginRight30:{marginRight: 30},
+  marginRight40:{marginRight: 40},
+  marginRight50:{marginRight: 50},
+  fontSize12: {fontSize: 12},
+  fontSize13: {fontSize: 13},
+  fontSize14: {fontSize: 14},
+  fontSize15: {fontSize: 15},
   paddingLeft15: {paddingLeft: 15},
   paddingLeft10: {paddingLeft: 10},
   verticalAlignMiddle: {verticalAlign: 'middle'},
-  wallet_header_content: {color: '#919398', textAlign: 'left'},
+  wallet_header_content: {
+    color: '#919398', 
+    textAlign: 'left'
+  },
   //component class
   modal_header: {
     background: '#2c333f',
@@ -54,10 +78,17 @@ const useStyles = makeStyles((theme: Theme) => ({
     width: 35,
     height: 35
   },
-  select_header: {width: '100%', textAlign: 'left', marginBottom: 20},
-  wallet_info_desc: {borderBottomRightRadius: 5, borderBottomLeftRadius: 5,background: '#1c222d',
-  border: '1px solid #2f3540',
-  padding: '25px 40px'},
+  select_header: {
+    width: '100%',
+    textAlign: 'left',
+     marginBottom: 20},
+  wallet_info_desc: {
+    borderBottomRightRadius: 5, 
+    borderBottomLeftRadius: 5,
+    background: '#1c222d',
+    border: '1px solid #2f3540',
+    padding: '25px 40px'
+  },
   wallet_header_title: {
     textAlign: 'left',
     fontFamily: 'CerebriSansPro-ExtraBold'

@@ -13,18 +13,36 @@ import TabPanel from '@material-ui/lab/TabPanel';
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
     flexGrow: 1,
-    padding: '10%',
     color: '#fff',
     margin: 'auto',
     boxShadow: '0px 0px 10px 10px #0c0f16'
   },
   //common class
-  textLeft: {textAlign: 'left'}, textRight: {textAlign: 'right'}, textCenter: {textAlign: 'center'},
+  textLeft: {textAlign: 'left'}, 
+  textRight: {textAlign: 'right'}, 
+  textCenter: {textAlign: 'center'},
   width100: {width: '100%'},
-  marginTop10:{marginTop: 10},marginTop20:{marginTop: 20},marginTop30:{marginTop: 30},marginTop40:{marginTop: 40},marginTop50:{marginTop: 50},
-  marginBottom5:{marginBottom: 5},marginBottom10:{marginBottom: 10},marginBottom20:{marginBottom: 20},marginBottom30:{marginBottom: 30},marginBottom40:{marginBottom: 40},marginBottom50:{marginBottom: 50},
-  marginLeft10:{marginLeft: 10},marginLeft20:{marginLeft: 20},marginLeft30:{marginLeft: 30},marginLeft40:{marginLeft: 40},marginLeft50:{marginLeft: 50},
-  marginRight10:{marginRight: 10},marginRight20:{marginRight: 20},marginRight30:{marginRight: 30},marginRight40:{marginRight: 40},marginRight50:{marginRight: 50},
+  marginTop10:{marginTop: 10},
+  marginTop20:{marginTop: 20},
+  marginTop30:{marginTop: 30},
+  marginTop40:{marginTop: 40},
+  marginTop50:{marginTop: 50},
+  marginBottom5:{marginBottom: 5},
+  marginBottom10:{marginBottom: 10},
+  marginBottom20:{marginBottom: 20},
+  marginBottom30:{marginBottom: 30},
+  marginBottom40:{marginBottom: 40},
+  marginBottom50:{marginBottom: 50},
+  marginLeft10:{marginLeft: 10},
+  marginLeft20:{marginLeft: 20},
+  marginLeft30:{marginLeft: 30},
+  marginLeft40:{marginLeft: 40},
+  marginLeft50:{marginLeft: 50},
+  marginRight10:{marginRight: 10},
+  marginRight20:{marginRight: 20},
+  marginRight30:{marginRight: 30},
+  marginRight40:{marginRight: 40},
+  marginRight50:{marginRight: 50},
   fontSize12: {fontSize: 12},
   paddingLeft15: {paddingLeft: 15},
   //component class
@@ -63,7 +81,9 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
   //Project Info 2
   project_info_2: {
-    padding: '25px 40px', border: '1px solid #323e50', backgroundColor: '#14171d',
+    padding: '25px 40px', 
+    border: '1px solid #323e50', 
+    backgroundColor: '#14171d',
   },
   input_outline: {
     paddingRight: 0,
@@ -123,7 +143,8 @@ const useStyles = makeStyles((theme: Theme) => ({
     borderRadius: 5,
   },
   tab_current: {
-    marginLeft: 'auto', fontFamily: 'CerebriSansPro-Bold', 
+    marginLeft: 'auto', 
+    fontFamily: 'CerebriSansPro-Bold', 
  },
  tab_history: {
   fontFamily: 'CerebriSansPro-Bold', 
@@ -137,64 +158,172 @@ const useStyles = makeStyles((theme: Theme) => ({
    width: '100%'
  },
  pay_content: {
-   height: 'auto', textAlign: 'left'
+   height: 'auto', 
+   textAlign: 'left'
  },
  form_helper_text_label: {
-  marginLeft: 0, color: 'grey'
+  marginLeft: 0, 
+  color: 'grey'
  },
  pay_button: {
-  width: '100%', background: 'rgb(247 219 14)', height: 40, color: '#000', borderRadius: 0
+  width: '100%', 
+  background: 'rgb(247 219 14)', 
+  height: 40, 
+  color: '#000', 
+  borderRadius: 0
  },
  token_title: {
-  fontFamily: 'CerebriSansPro-Bold', fontSize: 16
+  fontFamily: 'CerebriSansPro-Bold', 
+  fontSize: 16
  },
  token_title_content: {
-   textAlign: 'left', marginBottom: 10
+   textAlign: 'left', 
+   marginBottom: 10
  },
  total_supply: {
-   textAlign: 'left', marginBottom: 10, fontSize: 13
+   textAlign: 'left', 
+   marginBottom: 10, 
+   fontSize: 13
  },
  funding_cycle_title: {
-  fontFamily: 'CerebriSansPro-Bold', color: '#fff', paddingTop: 15
+  fontFamily: 'CerebriSansPro-Bold', 
+  color: '#fff', 
+  paddingTop: 15
  },
  icon_style: {
-   verticalAlign: 'middle', marginLeft: 10, color: '#4f545d', marginRight: 10
+   verticalAlign: 'middle', 
+   marginLeft: 10, 
+   color: '#4f545d', 
+   marginRight: 10
  },
  tab_pannel: {
-  padding: '0px', textAlign: 'left'
+  padding: '0px', 
+  textAlign: 'left'
  },
- app_bar_background: {background:'#1c222d'},
- address_info: { marginBottom: 20, fontSize: 12 },
+ app_bar_background: {
+   background:'#1c222d'
+  },
+ address_info: { 
+   marginBottom: 20, 
+   fontSize: 12 },
  funding_cycle_description: {
-  marginBottom: 20, fontSize: 12, color: '#9fa0a4', width: '100%'
+  marginBottom: 20, 
+  fontSize: 12, 
+  color: '#9fa0a4', 
+  width: '100%'
  },
- available_value: {marginRight: 10, fontSize: 14},
- available_header: {fontSize: 13, color: '#858594'},
- distribute_content: {textAlign: 'right'},
+ available_value: {
+   marginRight: 10, 
+   fontSize: 14},
+ available_header: {
+   fontSize: 13, 
+   color: '#858594'
+  },
+ distribute_content: {
+   textAlign: 'right'
+  },
  withdraw_value: {
-  fontSize: 12, color: '#858594', marginBottom: 10
+  fontSize: 12, 
+  color: '#858594',
+  marginBottom: 10
  },
- dft_value: {fontSize: 12, color: '#858594'},
- icon_user: {verticalAlign: 'middle', width: 13, height: 13, marginRight: 5, marginLeft: 10},
- distribute_title: {marginRight: 10, fontSize: 14},
- circle_info: {verticalAlign: 'middle', marginLeft: 10, color: '#858594'},
- user_info_content: {fontSize: 13, marginTop: 10},
- bottom_icon_user:{verticalAlign: 'middle', width: 13, height: 13, marginRight: 5},
- reserved_token_header: {marginRight: 10, fontSize: 14},
- user_name: {fontSize: 13, marginTop: 10},
- eth_percent: {paddingRight: 10, textAlign: 'right', fontSize: 12},
- spice_value: {marginRight: 10, fontSize: 14},
- spice_label: {fontSize: 13, color: '#858594'},
- activity_header:{textAlign: 'left', color: '#fff', width: '80%', paddingTop: 15, marginRight: '100px', fontSize: 16},
- tab_style: {minWidth: 50, fontSize: '12.8px',},
- activity_content: {padding: '0px 0px', textAlign: 'left', width: '100%'},
- user_info_value: {paddingRight: 10, textAlign: 'right', fontSize: 12, paddingTop: 20},
- project_detail_value: {textAlign: 'left', marginTop: 10},
- injuicebox: {textAlign: 'left', marginBottom: 5},
- inwallet: {textAlign: 'left', marginBottom: 5},
- all_asset: {textAlign: 'right', marginTop: 10},
- your_balance: {fontSize: 13, textAlign: 'left'},
- supply_value: {marginLeft: 10, marginRight: 10}
+ dft_value: {
+   fontSize: 12, 
+   color: '#858594'
+  },
+ icon_user: {
+   verticalAlign: 'middle', 
+   width: 13, 
+   height: 13, 
+   marginRight: 5, 
+   marginLeft: 10
+  },
+ distribute_title: {
+   marginRight: 10, 
+   fontSize: 14
+  },
+ circle_info: {
+   verticalAlign: 'middle', 
+   marginLeft: 10, 
+   color: '#858594'
+  },
+ user_info_content: {
+   fontSize: 13, 
+   marginTop: 10
+  },
+ bottom_icon_user:{
+   verticalAlign: 'middle', 
+   width: 13, 
+   height: 13, 
+   marginRight: 5
+  },
+ reserved_token_header: {
+   marginRight: 10, 
+   fontSize: 14
+  },
+ user_name: {
+   fontSize: 13,
+  marginTop: 10
+  },
+ eth_percent: {
+   paddingRight: 10, 
+   textAlign: 'right', 
+   fontSize: 12},
+ spice_value: {
+   marginRight: 10, 
+   fontSize: 14
+  },
+ spice_label: {
+   fontSize: 13, 
+   color: '#858594'
+  },
+ activity_header:{
+   textAlign: 'left', 
+   color: '#fff', 
+   width: '80%', 
+   paddingTop: 15, 
+   marginRight: '100px', 
+   fontSize: 16
+  },
+ tab_style: {
+   minWidth: 50, 
+   fontSize: '12.8px'
+  },
+ activity_content: {
+   padding: '0px 0px', 
+   textAlign: 'left', 
+   width: '100%'
+  },
+ user_info_value: {
+   paddingRight: 10, 
+   textAlign: 'right', 
+   fontSize: 12, 
+   paddingTop: 20
+  },
+ project_detail_value: {
+   textAlign: 'left', 
+   marginTop: 10
+  },
+ injuicebox: {
+   textAlign: 'left', 
+   marginBottom: 5
+  },
+ inwallet: {
+   textAlign: 'left', 
+   marginBottom: 5
+  },
+ all_asset: {
+   textAlign: 'right', 
+   marginTop: 10
+  },
+ your_balance: {
+   fontSize: 13, 
+   textAlign: 'left'
+  },
+ supply_value: {
+   marginLeft: 10, 
+   marginRight: 10
+  }
 }));
 
 export default function DesignPreview() {

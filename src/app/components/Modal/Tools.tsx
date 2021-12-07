@@ -5,21 +5,37 @@ import { Grid, Button, FormControl, OutlinedInput, InputAdornment } from '@mater
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
     flexGrow: 1,
-    padding: '10%',
     color: '#fff',
     margin: 'auto',
     boxShadow: '0px 0px 10px 10px #0c0f16'
   },
   //common class
-  textLeft: {textAlign: 'left'}, textRight: {textAlign: 'right'}, textCenter: {textAlign: 'center'},
+  textLeft: {textAlign: 'left'}, 
+  textRight: {textAlign: 'right'}, 
+  textCenter: {textAlign: 'center'},
   width100: {width: '100%'},
-  marginTop10:{marginTop: 10},marginTop20:{marginTop: 20},marginTop30:{marginTop: 30},marginTop40:{marginTop: 40},marginTop50:{marginTop: 50},
+  marginTop10:{marginTop: 10},
+  marginTop20:{marginTop: 20},
+  marginTop30:{marginTop: 30},
+  marginTop40:{marginTop: 40},
+  marginTop50:{marginTop: 50},
   marginBottom5:{marginBottom: 5},
   marginBottom10:{marginBottom: 10},
   marginBottom15:{marginBottom: 15},
-  marginBottom20:{marginBottom: 20},marginBottom30:{marginBottom: 30},marginBottom40:{marginBottom: 40},marginBottom50:{marginBottom: 50},
-  marginLeft10:{marginLeft: 10},marginLeft20:{marginLeft: 20},marginLeft30:{marginLeft: 30},marginLeft40:{marginLeft: 40},marginLeft50:{marginLeft: 50},
-  marginRight10:{marginRight: 10},marginRight20:{marginRight: 20},marginRight30:{marginRight: 30},marginRight40:{marginRight: 40},marginRight50:{marginRight: 50},
+  marginBottom20:{marginBottom: 20},
+  marginBottom30:{marginBottom: 30},
+  marginBottom40:{marginBottom: 40},
+  marginBottom50:{marginBottom: 50},
+  marginLeft10:{marginLeft: 10},
+  marginLeft20:{marginLeft: 20},
+  marginLeft30:{marginLeft: 30},
+  marginLeft40:{marginLeft: 40},
+  marginLeft50:{marginLeft: 50},
+  marginRight10:{marginRight: 10},
+  marginRight20:{marginRight: 20},
+  marginRight30:{marginRight: 30},
+  marginRight40:{marginRight: 40},
+  marginRight50:{marginRight: 50},
   fontSize12: {fontSize: 12},
   fontSize15: {fontSize: 15},
   paddingLeft15: {paddingLeft: 15},
@@ -51,15 +67,121 @@ const useStyles = makeStyles((theme: Theme) => ({
     background: '#1c222d',
     border: '1px solid #2f3540',
     padding: '25px 40px',
-    borderBottomRightRadius: 5, borderBottomLeftRadius: 5,
+    borderBottomRightRadius: 5, 
+    borderBottomLeftRadius: 5,
   },
-  left_button: {color: '#fff', border: '1px solid #596275', borderRadius: 5, marginRight: 20, width: 145, height: 50},
-  right_button: {backgroundImage: 'linear-gradient(to right, rgb(238 221 14) 0%, rgb(24 216 211) 100%, rgb(247, 157, 0) 100%)', width: 230, height: 50, color: '#000'},
+  left_button: {
+    color: '#fff', 
+    border: '1px solid #596275', 
+    borderRadius: 5, 
+    marginRight: 20, 
+    width: 145, 
+    height: 50
+  },
+  right_button: {
+    backgroundImage: 'linear-gradient(to right, rgb(238 221 14) 0%, rgb(24 216 211) 100%, rgb(247, 157, 0) 100%)', 
+    width: 230, 
+    height: 50, 
+    color: '#000'
+  },
   input_outline: {
     paddingRight: 0,
     height: 40,
     borderRadius: 0,
   },
+  transfer_ownership_header: {
+    fontFamily: 'CerebriSansPro-ExtraBold', 
+    width: '100%'
+  },
+  ownership_info: {
+    fontSize: 13, 
+    color: '#c5c6ca'
+  },
+  ownership_info_addr: {
+    fontSize: 13, 
+    color: '#c5c6ca', 
+    marginLeft: 5
+  },
+  trasfor_content: {
+    width: '100%', 
+    marginTop: 20, 
+    marginBottom: 10
+  },
+  transfor_to_header: {
+    marginBottom: 10, 
+    display: 'block'
+  },
+  transfer_ownership_button: {
+    backgroundImage: 'linear-gradient(to right, rgb(238 221 14) 0%, rgb(24 216 211) 100%, rgb(247, 157, 0) 100%)', 
+    width: 200, 
+    color: '#000',
+    marginTop: 20
+  },
+  skated_dtf_header: {
+    fontFamily: 'CerebriSansPro-ExtraBold', 
+    width: '100%'
+  },
+  balance_value: {
+    fontSize: 13, 
+    color: '#c5c6ca'
+  },
+  amount_label:{
+    fontFamily: 'CerebriSansPro-ExtraBold', 
+    fontSize: 14
+  },
+  input_content: {
+    width: '90%', 
+    marginTop: 10
+  },
+  max_button: {
+    borderRadius: 0, 
+    background: '#2f3542'
+  },
+  transfer_dtf_button: {
+    backgroundImage: 'linear-gradient(to right, rgb(238 221 14) 0%, rgb(24 216 211) 100%, rgb(247, 157, 0) 100%)', 
+    width: 200, 
+    color: '#000',
+    marginTop: 20
+  },
+  to_label: {
+    fontFamily: 'CerebriSansPro-ExtraBold', 
+    fontSize: 14
+  },
+  input_content_form: {
+    width: '100%', 
+    marginTop: 10
+  },
+  add_to_label: {
+    fontFamily: 'CerebriSansPro-ExtraBold', 
+    width: '100%',
+    textAlign: 'left'
+  },
+  add_funds_des: {
+    fontSize: 13, 
+    color: '#c5c6ca'
+  },
+  amount_content: {
+    width: '100%', 
+    marginTop: 20, 
+    marginBottom: 10,
+    textAlign: 'left'
+  },
+  amount_button: {
+    fontFamily: 'CerebriSansPro-ExtraBold', 
+    marginBottom: 10, 
+    display: 'block'
+  },
+  eth_button: {
+    borderRadius: 0, 
+    background: '#2f3542'
+  },
+  add_to_balance_button: {
+    backgroundImage: 'linear-gradient(to right, rgb(238 221 14) 0%, rgb(24 216 211) 100%, rgb(247, 157, 0) 100%)', 
+    width: 200, 
+    color: '#000', 
+    marginTop: 20,
+    textAlign: 'left'
+  }
 }));
 
 export default function Tools() {
@@ -71,13 +193,13 @@ export default function Tools() {
         <strong className={classes.modal_header_title}>Tools</strong>
       </Grid>
       <Grid container className={classes.project_info_1}>
-        <p style={{fontFamily: 'CerebriSansPro-ExtraBold', width: '100%'}}>TRANSFER OWNERSHIP</p>
-        <span style={{fontSize: 13, color: '#c5c6ca'}}>Current owner</span>
-        <span style={{fontSize: 13, color: '#c5c6ca', marginLeft: 5}}>:</span>
-        <span style={{fontSize: 13, color: '#c5c6ca', marginLeft: 5}}>0xf5C3BfF123277e4d620740C85DaafF0aF60AeF84</span>
-        <Grid style={{width: '100%', marginTop: 20, marginBottom: 10}}>
-          <span style={{marginBottom: 10, display: 'block'}}>TO</span>
-          <FormControl style={{width: '100%' }} variant="outlined">
+        <p className={classes.transfer_ownership_header}>TRANSFER OWNERSHIP</p>
+        <span className={classes.ownership_info}>Current owner</span>
+        <span className={classes.ownership_info_addr}>:</span>
+        <span className={classes.ownership_info_addr}>0xf5C3BfF123277e4d620740C85DaafF0aF60AeF84</span>
+        <Grid className={classes.trasfor_content}>
+          <span className={classes.transfor_to_header}>TO</span>
+          <FormControl className={classes.width100} variant="outlined">
             <OutlinedInput
               id="outlined-adornment-weight"
               className={classes.input_outline}
@@ -88,23 +210,22 @@ export default function Tools() {
               placeholder={'125USD'}
             />
           </FormControl>
-          <Button style={{backgroundImage: 'linear-gradient(to right, rgb(238 221 14) 0%, rgb(24 216 211) 100%, rgb(247, 157, 0) 100%)', width: 200, color: '#000', marginTop: 20}}>TRANSFER OWNERSHIP</Button>
+          <Button className={classes.transfer_ownership_button}>TRANSFER OWNERSHIP</Button>
         </Grid>
       </Grid>
       <Grid container className={classes.project_info_1}>
-        <Grid container style={{marginBottom: 20}}>
-          <p style={{fontFamily: 'CerebriSansPro-ExtraBold', width: '100%'}}>TRANSFER STAKED DTF</p>
-          <span style={{fontSize: 13, color: '#c5c6ca'}}>Your balance: 0</span>
+        <Grid container className={classes.marginBottom20}>
+          <p className={classes.skated_dtf_header}>TRANSFER STAKED DTF</p>
+          <span className={classes.balance_value}>Your balance: 0</span>
         </Grid>
-        
 
         <Grid item xs={12} md={5}>
-          <span style={{fontFamily: 'CerebriSansPro-ExtraBold', fontSize: 14}}>AMOUNT</span>
-          <FormControl style={{width: '90%', marginTop: 10 }} variant="outlined">
+          <span className={classes.amount_label}>AMOUNT</span>
+          <FormControl className={classes.input_content} variant="outlined">
             <OutlinedInput
               id="outlined-adornment-weight"
               className={classes.input_outline}
-              endAdornment={<InputAdornment position="end"><Button style={{borderRadius: 0, background: '#2f3542'}}>MAX</Button></InputAdornment>}
+              endAdornment={<InputAdornment position="end"><Button className={classes.max_button}>MAX</Button></InputAdornment>}
               aria-describedby="outlined-weight-helper-text"
               inputProps={{
                 'aria-label': 'Ξ10.95 after 0% JBX fee',
@@ -112,12 +233,11 @@ export default function Tools() {
               placeholder={'125USD'}
             />
           </FormControl>
-          <Button 
-          style={{backgroundImage: 'linear-gradient(to right, rgb(238 221 14) 0%, rgb(24 216 211) 100%, rgb(247, 157, 0) 100%)', width: 200, color: '#000', marginTop: 20}}>TRANSFER DTF</Button>
+          <Button className={classes.transfer_dtf_button} >TRANSFER DTF</Button>
         </Grid>
         <Grid item xs={12} md={7}>
-          <span style={{fontFamily: 'CerebriSansPro-ExtraBold', fontSize: 14}}>TO</span>
-          <FormControl style={{width: '100%', marginTop: 10 }} variant="outlined">
+          <span className={classes.to_label}>TO</span>
+          <FormControl className={classes.input_content_form} variant="outlined">
             <OutlinedInput
               id="outlined-adornment-weight"
               className={classes.input_outline}
@@ -132,16 +252,16 @@ export default function Tools() {
         </Grid>
       </Grid>
 
-      <Grid container className={classes.project_info_1} style={{borderBottomRightRadius: 5, borderBottomLeftRadius: 5}}>
-        <p style={{fontFamily: 'CerebriSansPro-ExtraBold', width: '100%'}}>ADD TO BALANCE</p>
-        <span style={{fontSize: 13, color: '#c5c6ca'}}>Add funds to this project's balance without minting tokens.</span>
-        <Grid style={{width: '100%', marginTop: 20, marginBottom: 10}}>
-          <span style={{fontFamily: 'CerebriSansPro-ExtraBold', marginBottom: 10, display: 'block'}}>AMOUNT</span>
-          <FormControl style={{width: '100%' }} variant="outlined">
+      <Grid container className={classes.button_content}>
+        <p className={classes.add_to_label}>ADD TO BALANCE</p>
+        <span className={classes.add_funds_des}>Add funds to this project's balance without minting tokens.</span>
+        <Grid className={classes.amount_content}>
+          <span className={classes.amount_button}>AMOUNT</span>
+          <FormControl className={classes.width100} variant="outlined">
             <OutlinedInput
               id="outlined-adornment-weight"
               className={classes.input_outline}
-              endAdornment={<InputAdornment position="end"><Button style={{borderRadius: 0, background: '#2f3542'}}>ETH</Button></InputAdornment>}
+              endAdornment={<InputAdornment position="end"><Button className={classes.eth_button}>ETH</Button></InputAdornment>}
               aria-describedby="outlined-weight-helper-text"
               inputProps={{
                 'aria-label': 'Ξ10.95 after 0% JBX fee',
@@ -149,7 +269,7 @@ export default function Tools() {
               placeholder={'125USD'}
             />
           </FormControl>
-          <Button style={{backgroundImage: 'linear-gradient(to right, rgb(238 221 14) 0%, rgb(24 216 211) 100%, rgb(247, 157, 0) 100%)', width: 200, color: '#000', marginTop: 20}}>ADD TO BALANCE</Button>
+          <Button className={classes.add_to_balance_button}>ADD TO BALANCE</Button>
         </Grid>
       </Grid>
     </div>
