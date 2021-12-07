@@ -113,9 +113,10 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
   transfer_ownership_button: {
     backgroundImage: 'linear-gradient(to right, rgb(238 221 14) 0%, rgb(24 216 211) 100%, rgb(247, 157, 0) 100%)', 
-    width: 200, 
     color: '#000',
-    marginTop: 20
+    marginTop: 20,
+    width: 230, 
+    height: 50, 
   },
   skated_dtf_header: {
     fontFamily: 'CerebriSansPro-ExtraBold', 
@@ -139,9 +140,10 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
   transfer_dtf_button: {
     backgroundImage: 'linear-gradient(to right, rgb(238 221 14) 0%, rgb(24 216 211) 100%, rgb(247, 157, 0) 100%)', 
-    width: 200, 
     color: '#000',
-    marginTop: 20
+    marginTop: 20,
+    width: 230, 
+    height: 50, 
   },
   to_label: {
     fontFamily: 'CerebriSansPro-ExtraBold', 
@@ -177,9 +179,10 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
   add_to_balance_button: {
     backgroundImage: 'linear-gradient(to right, rgb(238 221 14) 0%, rgb(24 216 211) 100%, rgb(247, 157, 0) 100%)', 
-    width: 200, 
     color: '#000', 
     marginTop: 20,
+    width: 230, 
+    height: 50, 
     textAlign: 'left'
   }
 }));

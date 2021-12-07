@@ -159,14 +159,14 @@ const useStyles = makeStyles((theme: Theme) => ({
     border: '1px solid #596275', 
     borderRadius: 5, 
     marginRight: 20, 
-    width: 120, 
-    height: 45
+    width: 230, 
+    height: 50
   },
   pay_button: {
     backgroundImage: 'linear-gradient(to right, rgb(238 221 14) 0%, rgb(24 216 211) 100%, rgb(247, 157, 0) 100%)', 
-    width: 120, 
+    width: 230, 
     color: '#000', 
-    height: 45
+    height: 50
   },
   erc20_content: {
     color: '#999ba0', 

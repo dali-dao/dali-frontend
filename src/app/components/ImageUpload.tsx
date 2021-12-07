@@ -23,7 +23,7 @@ export default function ImageUpload() {
         </Grid>
         <Grid container xs={12} md={10} style={{marginTop: 15}}>
           <Grid item xs={12} md={3} sm={12} style={{textAlign: 'center'}}>
-            <Button style={{width: '90%',padding: 15, background: '#3c4755'}}>Upload logo image</Button>
+            <Button style={{width: '80%',padding: 10, marginTop: 5, background: '#3c4755'}}>Upload logo image</Button>
           </Grid>
           <Grid item xs={12} md={9} style={{marginTop: 15, textAlign: 'left', marginBottom: 15}}>
             <span style={{color: '#727285'}}>upload image style like jpg / png images are supported</span>

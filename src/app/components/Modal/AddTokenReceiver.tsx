@@ -6,12 +6,44 @@ import CustomSlider from '../Other/CustomSlider';
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
     flexGrow: 1,
-    color: '#fff',
     margin: 'auto',
-    boxShadow: '3px 3px #0a0b14, -1em 0 0.4em #0d0e18'
-  },//common class
-  textLeft: {textAlign: 'left'},
-  textRight: {textAlign: 'right'},
+    color: '#fff',
+    boxShadow: '0px 0px 10px 10px #0c0f16'
+  },
+  //common class
+  textLeft: {textAlign: 'left'}, 
+  textRight: {textAlign: 'right'}, 
+  textCenter: {textAlign: 'center'},
+  width100: {width: '100%'},
+  marginTop10:{marginTop: 10},
+  marginTop20:{marginTop: 20},
+  marginTop30:{marginTop: 30},
+  marginTop40:{marginTop: 40},
+  marginTop50:{marginTop: 50},
+  marginBottom5:{marginBottom: 5},
+  marginBottom10:{marginBottom: 10},
+  marginBottom15:{marginBottom: 15},
+  marginBottom20:{marginBottom: 20},
+  marginBottom30:{marginBottom: 30},
+  marginBottom40:{marginBottom: 40},
+  marginBottom50:{marginBottom: 50},
+  marginLeft10:{marginLeft: 10},
+  marginLeft20:{marginLeft: 20},
+  marginLeft30:{marginLeft: 30},
+  marginLeft40:{marginLeft: 40},
+  marginLeft50:{marginLeft: 50},
+  marginRight10:{marginRight: 10},
+  marginRight20:{marginRight: 20},
+  marginRight30:{marginRight: 30},
+  marginRight40:{marginRight: 40},
+  marginRight50:{marginRight: 50},
+  fontSize12: {fontSize: 12},
+  fontSize15: {fontSize: 15},
+  paddingLeft15: {paddingLeft: 15},
+  paddingLeft10: {paddingLeft: 10},
+  floatLeft: {
+    float: 'left'
+  },
   //component class
   modal_header: {
     background: '#2c333f',
@@ -20,7 +52,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     borderTopLeftRadius: 5,
   },
   modal_header_title: {
-    padding: '20px 0px 20px 30px',
+    padding: '25px 40px',
     display: 'block',
     fontSize: 20,
     fontFamily: 'CerebriSansPro-ExtraBold'
@@ -28,15 +60,48 @@ const useStyles = makeStyles((theme: Theme) => ({
   project_info_1: {
     background: '#1c222d',
     border: '1px solid #2f3540',
-    padding: '20px 20px 10px 20px',
+    padding: '25px 40px',
     textAlign: 'left'
+  },
+  
+  button_content:{
+    background: '#1c222d',
+    border: '1px solid #2f3540',
+    padding: '25px 40px',
+    borderBottomRightRadius: 5, 
+    borderBottomLeftRadius: 5,
+  },
+  left_button: {
+    color: '#fff', 
+    border: '1px solid #596275',
+    borderRadius: 5, 
+    marginRight: 20, 
+    width: 145, 
+    height: 50
+  },
+  right_button: {
+    backgroundImage: 'linear-gradient(to right, rgb(238 221 14) 0%, rgb(24 216 211) 100%, rgb(247, 157, 0) 100%)', 
+    width: 230, 
+    height: 50, 
+    color: '#000'
   },
   formControl: {
     width: '100%',
     marginBottom: 15
   },
-  selectEmpty: {
+  beneficiary_text: {
+    width: '100%', 
+    marginTop: 10
   },
+  address_receive_token_desc: {
+    color: '#c5c5ca', 
+    fontSize: 15, 
+    marginTop: 10
+  },
+  locked_desc: {
+    color: '#c5c5ca', 
+    fontSize: 14
+  }
 }));
 
 export default function AddTokenReceiver() {
@@ -48,29 +113,29 @@ export default function AddTokenReceiver() {
         <strong className={classes.modal_header_title}>Add token receiver</strong>
       </Grid>
       <Grid container className={classes.project_info_1}>
-        <Grid container style={{marginTop:15}}>
+        <Grid container className={classes.marginTop20}>
           <span>Beneficiary</span>
-          <TextField style={{width: '100%', marginTop: 10}} id="outlined-basic" label="Juicebox Project" variant="outlined" />
-          <span style={{color: '#c5c5ca', fontSize: 15, marginTop: 10}}>The address that should receive the tokens.</span>
+          <TextField className={classes.beneficiary_text} id="outlined-basic" label="Juicebox Project" variant="outlined" />
+          <span className={classes.address_receive_token_desc}>The address that should receive the tokens.</span>
         </Grid>
 
-        <Grid container style={{marginTop:15}}>
+        <Grid container className={classes.marginTop20}>
           <Grid item xs={12} md={12}>Percent</Grid>
           <CustomSlider />
         </Grid>
 
-        <Grid container style={{marginTop:15}}>
+        <Grid container className={classes.marginTop20}>
           <Grid item xs={12} md={12}>Lock until</Grid>
           <Grid item xs={12} md={3}>
            
           </Grid>
-          <Grid style={{color: '#c5c5ca', fontSize: 14}} item xs={12} md={12}>If locked, this can't be edited or removed until the lock expires or the funding cycle is reconfigured.</Grid>
+          <Grid className={classes.locked_desc} item xs={12} md={12}>If locked, this can't be edited or removed until the lock expires or the funding cycle is reconfigured.</Grid>
         </Grid>
       </Grid>
       
-      <Grid container className={classes.project_info_1} style={{borderBottomRightRadius: 5, borderBottomLeftRadius: 5}}>
-        <Button style={{color: '#fff', border: '1px solid #596275', borderRadius: 5, marginRight: 20, width: 120}}>CANCEL</Button>
-        <Button style={{backgroundImage: 'linear-gradient(to right, rgb(238 221 14) 0%, rgb(24 216 211) 100%, rgb(247, 157, 0) 100%)', width: 200, color: '#000'}}>OK</Button>
+      <Grid container className={classes.button_content}>
+        <Button className={classes.left_button}>CANCEL</Button>
+        <Button className={classes.right_button}>OK</Button>
       </Grid>
     </div>
   );
