@@ -6,6 +6,8 @@ import ImageUpload from '../ImageUpload';
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
     flexGrow: 1,
+    padding: '10%',
+    color: '#fff',
     margin: 'auto',
     boxShadow: '0px 0px 10px 10px #0c0f16'
   },
@@ -87,7 +89,7 @@ const useStyles = makeStyles((theme: Theme) => ({
 
 }));
 
-export default function HeadsUp() {
+export default function PayDAOTailFung() {
   const classes = useStyles();
   const [inputedCount, setInputCount] = React.useState(0);
 

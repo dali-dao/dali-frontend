@@ -6,6 +6,8 @@ import MetaMask from '../../assets/Popup/metamask.png';
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
     flexGrow: 1,
+    padding: '10%',
+    color: '#fff',
     margin: 'auto',
     boxShadow: '0px 0px 10px 10px #0c0f16'
   },
@@ -51,7 +53,7 @@ const useStyles = makeStyles((theme: Theme) => ({
   open_meta_mask: {backgroundImage: 'linear-gradient(to right, rgb(238 221 14) 0%, rgb(24 216 211) 100%, rgb(247, 157, 0) 100%)', width: 230, height: 50, color: '#000'},
 }));
 
-export default function LabTabs() {
+export default function OpenWallet() {
   const classes = useStyles();
   
   return (

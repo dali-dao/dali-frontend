@@ -7,7 +7,8 @@ import SpiceBalance from '../../components/SpiceBalance';
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
     flexGrow: 1,
-    width: '70%',
+    padding: '10%',
+    color: '#fff',
     margin: 'auto',
     boxShadow: '3px 3px #0a0b14, -1em 0 0.4em #0d0e18'
   },//common class

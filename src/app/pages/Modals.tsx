@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme: Theme) => ({
 function Moals() {
     const classes = useStyles();
     return (
-    <div style={{margin: '0px 260px'}}>
+    <div>
       <Grid className={classes.divider}></Grid>
       <DesignPreview />
       <Grid className={classes.divider}></Grid>

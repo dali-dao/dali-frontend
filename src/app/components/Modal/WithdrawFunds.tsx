@@ -6,6 +6,8 @@ import { Icon } from '@iconify/react';
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
     flexGrow: 1,
+    padding: '10%',
+    color: '#fff',
     margin: 'auto',
     boxShadow: '0px 0px 10px 10px #0c0f16'
   },
