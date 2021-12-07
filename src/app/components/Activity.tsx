@@ -41,6 +41,31 @@ const useStyles = makeStyles((theme: Theme) => ({
     border: '1px solid #6f727a',
     background: '#191d26',
     borderRadius: 5
+  },
+  app_bar: {
+    backgroundColor: '#10141b'
+  },
+  activity_title: {
+    color: '#fff', 
+    paddingTop: 15, 
+    marginRight: '100px', 
+    fontSize: 16
+  },
+  icon_info_1: {
+    verticalAlign: 'middle', 
+    marginLeft: 10
+  },
+  pay_tab_title: {
+    minWidth: 50, 
+    fontSize: '12.8px'
+  },
+  tab_label: {
+    minWidth: 100, 
+    fontSize: '12.8px'
+  },
+  tab_pannel: {
+    padding: '20px 0px', 
+    textAlign: 'left'
   }
 }));
 
@@ -55,16 +80,16 @@ export default function LabTabs() {
   return (
     <div className={classes.root}>
       <TabContext value={value}>
-        <AppBar position="static" elevation={0} style={{backgroundColor: '#10141b'}}>
-          <TabList onChange={handleChange} aria-label="simple tabs example" classes={{ indicator: classes.indicator }}>
-            <span style={{color: '#fff', paddingTop: 15, marginRight: '100px', fontSize: 16}}>ACTIVITY <Icon icon="si-glyph:circle-info" style={{verticalAlign: 'middle', marginLeft: 10}}/></span>
-            <Tab label="PAY" value="1" style={{minWidth: 50, fontSize: '12.8px'}} />
-            <Tab label="REDEEM" value="2" style={{minWidth: 100, fontSize: '12.8px'}}  />
-            <Tab label="WITHDRAW" value="3" style={{minWidth: 100, fontSize: '12.8px'}}  />
-            <Tab label="RESERVES" value="4" style={{minWidth: 100, fontSize: '12.8px'}}  />
+        <AppBar position="static" elevation={0} className={classes.app_bar}>
+          <TabList onChange={handleChange} aria-label="Tab" classes={{ indicator: classes.indicator }}>
+            <span className={classes.activity_title}>ACTIVITY <Icon icon="si-glyph:circle-info" className={classes.icon_info_1}/></span>
+            <Tab label="PAY" value="1" className={classes.pay_tab_title} />
+            <Tab label="REDEEM" value="2" className={classes.tab_label}  />
+            <Tab label="WITHDRAW" value="3" className={classes.tab_label}  />
+            <Tab label="RESERVES" value="4" className={classes.tab_label}  />
           </TabList>
         </AppBar>
-        <TabPanel value="1" style={{padding: '20px 0px', textAlign: 'left'}}>
+        <TabPanel value="1" className={classes.tab_pannel}>
           <Grid>
           <Grid container spacing={2}>
             <Grid item xs={12}>

@@ -40,6 +40,105 @@ const useStyles = makeStyles((theme: Theme) => ({
     border: '1px solid #6f727a',
     background: '#191d26',
     borderRadius: 5
+  },
+  app_bar_style: {
+    backgroundColor: '#10141b'
+  },
+  tab_title: {
+    color: '#fff', 
+    paddingTop: 15, 
+    marginRight: '100px'
+  },
+  icon_style:{
+    verticalAlign: 'middle', 
+    marginLeft: 10
+  },
+  tab_pannel_content: {
+    padding: '20px 0px', 
+    textAlign: 'left'
+  },
+  duration_content: {
+    marginLeft: 20, 
+    marginBottom: 20
+  },
+  fontSize12: {
+    fontSize: 12
+  },
+  fontSize13: {
+    fontSize: 13
+  },
+  padding20: {
+    padding: 20
+  },
+  marginLeft20: {
+    marginLeft: 20
+  },
+  address_desc_title: {
+    marginLeft: 20, 
+    marginBottom: 20, 
+    fontSize: 12
+  },
+  address_desc: {
+    marginLeft: 20, 
+    marginBottom: 20, 
+    fontSize: 12, 
+    color: '#9fa0a4', 
+    width: '93%'
+  },
+  value_0: {
+    marginRight: 10, 
+    fontSize: 14
+  },
+  distribute_button_content: {
+    padding: 10, 
+    textAlign: 'right'
+  },
+  available_style: {
+    fontSize: 13, 
+    color: '#858594'
+  },
+  withdrawn_cotent: {
+    fontSize: 12, 
+    color: '#858594', 
+    marginLeft: 20, 
+    marginBottom: 10
+  },
+  withdrawn_right_content: {
+    fontSize: 12, 
+    color: '#858594', 
+    marginLeft: 20, 
+    marginBottom: 30
+  },
+  owner_info: {
+    verticalAlign: 'middle', 
+    width: 13, 
+    height: 13, 
+    marginRight: 5, 
+    marginLeft: 10
+  },
+  icon_circle_info: {
+    verticalAlign: 'middle',
+     marginLeft: 10, 
+     color: '#858594'
+  },
+  percent_value: {
+    paddingRight: 10, 
+    textAlign: 'right', 
+    fontSize: 12, 
+    paddingTop: 20
+  },
+  eth_content: {
+    padding: 20, 
+    fontSize: 13
+  },
+  eth_info: {
+    verticalAlign: 'middle', 
+    width: 13, 
+    height: 13, 
+    marginRight: 5
+  },
+  tab_style: {
+    color: '#fff'
   }
 }));
 
@@ -54,75 +153,75 @@ export default function LabTabs() {
   return (
     <div className={classes.root}>
       <TabContext value={value}>
-        <AppBar position="static" elevation={0} style={{backgroundColor: '#10141b'}}>
-          <TabList onChange={handleChange} aria-label="simple tabs example" classes={{ indicator: classes.indicator }}>
-          <span style={{color: '#fff', paddingTop: 15, marginRight: '100px'}}>FUNDING CYCLE <Icon icon="si-glyph:circle-info" style={{verticalAlign: 'middle', marginLeft: 10}}/></span>
-            <Tab label="CURRENT" value="1" />
-            <Tab label="HISTORY" value="2" />
+        <AppBar position="static" elevation={0} className={classes.app_bar_style}>
+          <TabList onChange={handleChange} aria-label="Tab" classes={{ indicator: classes.indicator }}>
+          <span className={classes.tab_title}>FUNDING CYCLE <Icon icon="si-glyph:circle-info" className={classes.icon_style}/></span>
+            <Tab label="CURRENT" className={classes.tab_style} value="1" />
+            <Tab label="HISTORY" className={classes.tab_style} value="2" />
           </TabList>
         </AppBar>
-        <TabPanel value="1" style={{padding: '20px 0px', textAlign: 'left'}}>
+        <TabPanel value="1" className={classes.tab_pannel_content}>
           <Grid container className={classes.detail_container}>
             <Grid item xs={12} md={12} className={classes.detail_title}><strong>DETAILS</strong></Grid>
-            <Grid container style={{marginLeft: 20, marginBottom: 20}}>
-              <Grid item xs={12} md={3} style={{fontSize: 12}}>
+            <Grid container className={classes.duration_content}>
+              <Grid item xs={12} md={3} className={classes.fontSize12}>
                 <strong>Duration: Not set</strong>
               </Grid>
-              <Grid item xs={12} md={3} style={{fontSize: 12}}>
-                <strong>Reserved</strong><Icon icon="si-glyph:circle-info" style={{verticalAlign: 'middle', marginLeft: 10}}/><strong>: 0%</strong>
+              <Grid item xs={12} md={3} className={classes.fontSize12}>
+                <strong>Reserved</strong><Icon icon="si-glyph:circle-info" className={classes.icon_style}/><strong>: 0%</strong>
               </Grid>
-              <Grid item xs={12} md={4} style={{fontSize: 12}}>
-                <strong>Reconfiguration strategy</strong> <Icon icon="si-glyph:circle-info" style={{verticalAlign: 'middle', marginLeft: 10}}/><strong>: 0%</strong>
+              <Grid item xs={12} md={4} className={classes.fontSize12}>
+                <strong>Reconfiguration strategy</strong> <Icon icon="si-glyph:circle-info" className={classes.icon_style}/><strong>: 0%</strong>
               </Grid>
             </Grid>
-            <Grid style={{marginLeft: 20, marginBottom: 20, fontSize: 12}}>
+            <Grid className={classes.address_desc_title}>
               Address : 0x0000000000000000000000000000000000000000
             </Grid>
-            <Grid style={{marginLeft: 20, marginBottom: 20, fontSize: 12, color: '#9fa0a4', width: '93%'}}>
+            <Grid className={classes.address_desc}>
               Any reconfiguration to an upcoming funding cycle will take effect once the current cycle ends. A project with no strategy may be vulnerable to being Any reconfiguration to an upcoming funding cycle will take effect once the current cycle ends. A project with no strategy may be vulnerable to being Any reconfiguration to an upcoming funding cycle will take effect once the current cycle ends. A project with no strategy may be vulnerable to being Any reconfiguration to an upcoming funding cycle will take effect once the current cycle ends.  Any reconfiguration to an upcoming funding cycle will take effect once the current cycle ends. A project with no strategy may be vulnerable to being Any reconfiguration to an upcoming funding cycle will take effect once the current cycle ends. A project with no strategy may be vulnerable to being Any reconfiguration to an upcoming funding cycle will take effect once the current cycle ends. A project with no strategy may be vulnerable to being Any reconfiguration to an upcoming funding cycle will take effect once the current cycle ends. 
             </Grid>
           </Grid>
           <Grid container className={classes.available_container}>
-            <Grid item xs={12} md={7} style={{padding: 20}}>
-              <strong style={{marginRight: 10, fontSize: 14}}>$0</strong>
-              <span style={{fontSize: 13, color: '#858594'}}>AVAILABLE<Icon icon="si-glyph:circle-info" style={{verticalAlign: 'middle', marginLeft: 10}}/></span>
+            <Grid item xs={12} md={7} className={classes.padding20}>
+              <strong className={classes.value_0}>$0</strong>
+              <span className={classes.available_style}>AVAILABLE<Icon icon="si-glyph:circle-info" className={classes.icon_style}/></span>
             </Grid>
-            <Grid item xs={12} md={5} style={{padding: 10, textAlign: 'right'}}>
+            <Grid item xs={12} md={5} className={classes.distribute_button_content}>
               <Button className={classes.distribute_button}>Distribute</Button>
             </Grid>
-            <Grid item xs={12} md={12} style={{fontSize: 12, color: '#858594', marginLeft: 20, marginBottom: 10}}>
+            <Grid item xs={12} md={12} className={classes.withdrawn_cotent}>
               $11,511,594 withdrawn
             </Grid>
-            <Grid item xs={12} md={12} style={{fontSize: 12, color: '#858594', marginLeft: 20, marginBottom: 30}}>
+            <Grid item xs={12} md={12} className={classes.withdrawn_right_content}>
               <span>Ξ2,465.1400</span> 
-              <Icon icon="websymbol:user" style={{verticalAlign: 'middle', width: 13, height: 13, marginRight: 5, marginLeft: 10}} /> <span>owner bala</span>
+              <Icon icon="websymbol:user" className={classes.owner_info}/> <span>owner bala</span>
             </Grid>
-            <Grid item xs={12} md={12} style={{marginLeft: 20}}>
-              <strong style={{marginRight: 10, fontSize: 14}}>Distribution <Icon icon="si-glyph:circle-info" style={{verticalAlign: 'middle', marginLeft: 10, color: '#858594'}}/></strong>
+            <Grid item xs={12} md={12} className={classes.marginLeft20}>
+              <strong className={classes.value_0}>Distribution <Icon icon="si-glyph:circle-info" className={classes.icon_circle_info}/></strong>
             </Grid>
-            <Grid item xs={12} md={7} style={{padding: 20, fontSize: 13}}>
-            <span><Icon icon="websymbol:user" style={{verticalAlign: 'middle', width: 13, height: 13, marginRight: 5}} /> dunedao.eth</span>
+            <Grid item xs={12} md={7} className={classes.eth_content}>
+            <span><Icon icon="websymbol:user" className={classes.icon_circle_info}/> dunedao.eth</span>
             </Grid>
-            <Grid item xs={12} md={5} style={{paddingRight: 10, textAlign: 'right', fontSize: 12, paddingTop: 20}}>
+            <Grid item xs={12} md={5} className={classes.percent_value}>
               <strong>100%</strong>
             </Grid>
           </Grid>
           <Grid container className={classes.available_container}>
-            <Grid item xs={12} md={7} style={{padding: 20}}>
-              <strong style={{marginRight: 10, fontSize: 14}}>Reserved tokens (100%)</strong>
-              <Icon icon="si-glyph:circle-info" style={{verticalAlign: 'middle', marginLeft: 10, color: '#858594'}}/>
+            <Grid item xs={12} md={7} className={classes.padding20}>
+              <strong className={classes.value_0}>Reserved tokens (100%)</strong>
+              <Icon icon="si-glyph:circle-info" className={classes.icon_circle_info}/>
             </Grid>
-            <Grid item xs={12} md={7} style={{padding: 20, fontSize: 13}}>
-            <span><Icon icon="websymbol:user" style={{verticalAlign: 'middle', width: 13, height: 13, marginRight: 5}} /> dunedao.eth</span>
+            <Grid item xs={12} md={7} className={classes.eth_content}>
+            <span><Icon icon="websymbol:user" className={classes.eth_info}/> dunedao.eth</span>
             </Grid>
-            <Grid item xs={12} md={5} style={{paddingRight: 10, textAlign: 'right', fontSize: 12, paddingTop: 20}}>
+            <Grid item xs={12} md={5} className={classes.percent_value}>
               <strong>100%</strong>
             </Grid>
-            <Grid item xs={12} md={7} style={{padding: 20}}>
-              <strong style={{marginRight: 10, fontSize: 14}}>0</strong>
-              <span style={{fontSize: 13, color: '#858594'}}>SPICE</span>
+            <Grid item xs={12} md={7} className={classes.padding20}>
+              <strong className={classes.value_0}>0</strong>
+              <span className={classes.available_style}>SPICE</span>
             </Grid>
-            <Grid item xs={12} md={5} style={{padding: 10, textAlign: 'right'}}>
+            <Grid item xs={12} md={5} className={classes.distribute_button_content}>
               <Button className={classes.distribute_button}>Distribute</Button>
             </Grid>
           </Grid>
