@@ -15,23 +15,23 @@ export const useStyles = makeStyles((theme: Theme) =>
       position: 'absolute',
       top: '15%',
       left: '15%',
-      textAlign: 'left'
+      textAlign: 'left',
     },
     descTitle: {
       fontFamily: 'CerebriSansPro-Heavy',
       fontSize: 40,
-      paddingBottom: 20,
+      paddingBottom: 10,
       textTransform: 'uppercase'
     },
     bannerDescription: {
       fontSize: 13,
-      paddingBottom: 20
+      paddingBottom: 10,
+      color: '#808193'
     },
     bannerList: {
       display: 'flex',
       fontFamily: 'Roboto-Bold',
       fontSize: 16,
-      paddingBottom: 10
     },
     designForBtn: {
       padding: '15px 30px',
@@ -43,7 +43,7 @@ export const useStyles = makeStyles((theme: Theme) =>
       color: 'black',
       width: 200,
       textAlign: 'center',
-      margin: '15px 0 25px 0'
+      margin: '15px 0 15px 0'
     },
     smartContract: {  
       paddingTop: 10,

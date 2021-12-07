@@ -5,7 +5,7 @@ import InputBase from '@material-ui/core/InputBase';
 export const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     header: {
-        backgroundColor: theme.palette.background.paper,
+        backgroundColor: theme.palette.primary.light,
         height: 90,
         fontSize: 12,
         color: theme.palette.background.default
@@ -43,7 +43,11 @@ export const useStyles = makeStyles((theme: Theme) =>
         height: 20,
         fontWeight: 700,
         display: 'grid',
-        alignItems: 'center'
+        alignItems: 'center',
+        cursor: 'pointer',
+        '&:hover': {
+            backgroundImage: 'linear-gradient(to right, rgb(238 221 14) 0%, rgb(24 216 211) 100%, rgb(247, 157, 0) 100%)'
+        }
     },
     rightItems: {
         display: 'flex',
@@ -61,7 +65,8 @@ export const useStyles = makeStyles((theme: Theme) =>
         transform: 'rotate(135deg)',
         cursor: 'pointer',
         zoom: 0.8,
-        color: theme.palette.common.black
+        color: theme.palette.common.black,
+        padding: '0 5px'
     },
     sunIcon: {
         transform: 'rotate(180deg)',
@@ -69,6 +74,7 @@ export const useStyles = makeStyles((theme: Theme) =>
         borderRight: '1px solid #4b4b56',
         color: theme.palette.common.white,
         zoom: 0.8,
+        padding: '0 5px'
     },
     titleDesc: {
         textAlign: 'left'
@@ -86,14 +92,15 @@ export const useStyles = makeStyles((theme: Theme) =>
     },
     signupBtn: {
         backgroundColor: theme.palette.primary.dark,
-        color: 'black',
+        color: theme.palette.background.paper,
         borderRadius: 5,
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
         padding: '10px 20px',
         fontFamily: 'CerebriSansPro-Bold',
-        fontSize: 18
+        fontSize: 16,
+        textTransform: 'uppercase'
     },
     signupInput: {
         paddingRight: 10,
@@ -147,7 +154,12 @@ export const useStyles = makeStyles((theme: Theme) =>
         textAlign: 'right',
         fontSize: 13,
         fontFamily: 'Roboto-Medium'
-    }
+    },
+    modal: {
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
   })
 );
 
@@ -162,7 +174,7 @@ export const BootstrapInput = withStyles((theme: Theme) =>
     input: {
       borderRadius: 4,
       position: 'relative',
-      backgroundColor: theme.palette.common.white,
+      backgroundColor: theme.palette.background.default,
       border: '1px solid #ced4da',
       fontSize: 16,
       padding: '10px 12px',

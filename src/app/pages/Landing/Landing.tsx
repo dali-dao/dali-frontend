@@ -14,14 +14,14 @@ function Landing() {
 
   return (
     <div>
-      <Grid className={classes.section1}> 
+      <Grid className={classes.section1} container> 
         <img src={Banner} alt="banner" className={classes.banner}/>
-        <Grid className={classes.bannerDesc}>
+        <Grid className={classes.bannerDesc} item xs={5}>
           <Grid className={classes.descTitle}>
-            Community funding for <br/> people and projects
+            Community funding for people and projects
           </Grid>
           <Grid className={classes.bannerDescription}>
-          Build a community around a project, fund it, and program its spending. Light enough <br/> for a group of friends, powerful enough for a global network of anons.
+          Build a community around a project, fund it, and program its spending. Light enough for a group of friends, powerful enough for a global network of anons.
           </Grid>
           <Grid className={classes.bannerList}>
             <PlayCircleFilledIcon className={classes.playIcon} /> Indie artists, devs, creators
@@ -53,17 +53,17 @@ function Landing() {
               explore more
             </Button>
           </Grid>
-          <Grid container>
-            <Grid item sm={2} md={3}>
+          <Grid container spacing={5}>
+            <Grid item md={3}>
               <ProjectCard />
             </Grid>
-            <Grid item sm={2} md={3}>
+            <Grid item md={3}>
               <ProjectCard />
             </Grid>
-            <Grid item sm={2} md={3}>
+            <Grid item md={3}>
               <ProjectCard />
             </Grid>
-            <Grid item sm={2} md={3}>
+            <Grid item md={3}>
               <ProjectCard />
             </Grid>
           </Grid>

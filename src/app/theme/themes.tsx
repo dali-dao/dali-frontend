@@ -29,7 +29,7 @@ const darkTheme = createTheme({
     // Background of the header, footer
     background: {
       default: "white", 
-      paper: "black", 
+      paper: "#1c222d", 
     },
     // Select the theme in header
     common: {
@@ -39,7 +39,7 @@ const darkTheme = createTheme({
     primary: {
       main: "#fadd0d", 
       dark: "#fadd0d", 
-      light: "#1e2329", 
+      light: "#0f0f1e", // header's background
     },
     secondary: {
       main: "#848e9c", 
@@ -90,15 +90,15 @@ const lightTheme = createTheme({
       black: "#87878f", 
       white: "black", 
     },
+    primary: {
+      main: "#FAFAFA", 
+      dark: "black", 
+      light: "white", // header's background
+    },
     warning: {
       main: "#fef6d8", 
       contrastText: "#000",
       dark: "#f5f5f5",
-    },
-    primary: {
-      main: "#FAFAFA", 
-      dark: "#FFFFFF", 
-      light: "#1e2329",
     },
     secondary: {
       main: "#707a8a",
