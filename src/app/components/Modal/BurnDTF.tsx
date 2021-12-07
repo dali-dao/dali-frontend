@@ -6,6 +6,8 @@ const useStyles = makeStyles((theme: Theme) => ({
   root: {
     flexGrow: 1,
     margin: 'auto',
+    padding: '10%',
+    color: '#fff',
     boxShadow: '0px 0px 10px 10px #0c0f16'
   },
   //common class

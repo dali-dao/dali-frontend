@@ -1,6 +1,6 @@
 import React from 'react';
 import { makeStyles, Theme } from '@material-ui/core/styles';
-import DesignPreview from '../../assets/Popup/design_preview.jpg';
+import DesignPreviewImg from '../../assets/Popup/design_preview.jpg';
 import { Icon } from '@iconify/react'; 
 import { Grid, FormControl, OutlinedInput, InputAdornment, FormHelperText, Button } from '@material-ui/core';
 import ButtonGroup from '../../components/ButtonGroup';
@@ -13,6 +13,8 @@ import TabPanel from '@material-ui/lab/TabPanel';
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
     flexGrow: 1,
+    padding: '10%',
+    color: '#fff',
     margin: 'auto',
     boxShadow: '0px 0px 10px 10px #0c0f16'
   },
@@ -195,7 +197,7 @@ const useStyles = makeStyles((theme: Theme) => ({
  supply_value: {marginLeft: 10, marginRight: 10}
 }));
 
-export default function LabTabs() {
+export default function DesignPreview() {
   const classes = useStyles();
   const [value, setValue] = React.useState('1');
 
@@ -211,7 +213,7 @@ export default function LabTabs() {
       <Grid container>
         <Grid container item className={classes.project_info_1}>
           <Grid item xs={12} md={2} className={classes.textLeft}>
-            <img src={DesignPreview} className={classes.project_image} alt="design_preview"/>
+            <img src={DesignPreviewImg} className={classes.project_image} alt="design_preview"/>
           </Grid>
           <Grid container xs={12} md={10} className={classes.paddingLeft15}>
             <Grid item xs={12} md={12} className={classes.textLeft}>
