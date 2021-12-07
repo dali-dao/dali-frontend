@@ -20,10 +20,11 @@ export const useStyles = makeStyles((theme: Theme) =>
       alignItems: 'center',
       position: 'relative',
       textAlign: 'center',
-      width: '98%',
+      width: '100%',
       height: 200,
       padding: 10,
       cursor: 'pointer',
+      wordBreak: 'break-all',
       '&:before': {
         background: '#f7db0e',
         display: 'inline-block',
@@ -47,10 +48,11 @@ export const useStyles = makeStyles((theme: Theme) =>
       alignItems: 'center',
       position: 'relative',
       textAlign: 'center',
-      width: '98%',
+      width: '100%',
       height: 200,
       padding: 10,
-      cursor: 'pointer'
+      cursor: 'pointer',
+      wordBreak: 'break-all',
     },
     stepComplete: {
       border: '1px solid #2d353f',
