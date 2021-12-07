@@ -48,6 +48,29 @@ export const useStyles = makeStyles((theme: Theme) =>
       fontWeight: 'bold',
       cursor: 'pointer',
       backgroundImage: 'linear-gradient(to right, rgb(238 221 14) 0%, rgb(24 216 211) 100%, rgb(247, 157, 0) 100%)'
+    },
+    logoContent: {
+      borderRadius: 4,
+      border: '1px solid #535b73 ',
+      padding: '10px 12px',
+      backgroundColor: '#141821',
+      fontSize: 13,
+    },
+    uploadBtn: {
+      borderRadius: 4,
+      backgroundColor: '#3c4755',
+      color: 'white',
+      padding: '5px 10px',
+      marginRight: 20,
+      fontSize: 12,
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      height: 40
+    },
+    logoTitle: {
+      display: 'flex',
+      alignItems: 'center'
     }
   })
 );

@@ -3,6 +3,7 @@ import DesignStep from "../../DesignStep/designStep";
 import Grid from '@material-ui/core/Grid';
 import Card from '@material-ui/core/Card';
 import CardHeader from '@material-ui/core/CardHeader';
+import Slider from '../../../Other/CustomSlider';
 
 interface selectedStepItem {
   items: boolean[];
@@ -29,6 +30,7 @@ function Incentives({items, onSelectItem, confirmItems}: selectedStepItem) {
               <Grid container>
                 <Grid item xs={4} className={classes.label}>Discount rate</Grid>
                 <Grid item xs={8} className={classes.content}>
+                    <Slider />
                     The ratio of tokens rewarded per payment amount will decrease by this percentage with each new funding cycle. A higher discount rate will incentivize supporters to pay your project earlier than later.
                     <br/><br/>
                     Bonding curve disabled while no funding target is set.
@@ -36,8 +38,8 @@ function Incentives({items, onSelectItem, confirmItems}: selectedStepItem) {
               </Grid>
               <Grid container>
                 <Grid item xs={4} className={classes.label}>Bonding curve rate</Grid>
-                <Grid item xs={8} className={classes.content}>
-                  <Grid></Grid>
+                <Grid container item xs={8} className={classes.content}>
+                  <Grid xs={12} item><Slider /></Grid>
                   <Grid>
                       <Grid item xs={3}></Grid>
                       <Grid item xs={9}>

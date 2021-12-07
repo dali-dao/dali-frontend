@@ -3,6 +3,7 @@ import DesignStep from "../../DesignStep/designStep";
 import Grid from '@material-ui/core/Grid';
 import Card from '@material-ui/core/Card';
 import CardHeader from '@material-ui/core/CardHeader';
+import noImage from '../../../../assets/Popup/no_image.png';
 
 interface selectedStepItem {
   items: boolean[];
@@ -35,7 +36,7 @@ function Appearance({items, onSelectItem, confirmItems} : selectedStepItem) {
               <Grid container>
                 <Grid item xs={4} className={classes.label}>Project description * <br/><span className={classes.itemDescription}>A min 300 character description of what your bot does. HTML, CSS and Markdown allowed. Javascript will be removed.</span></Grid>
                 <Grid item xs={8} className={classes.content}>
-                  <BootstrapInput id="description-input" placeholder="@Specific name here" />
+                  <BootstrapInput id="description-input" placeholder="@Specific name here" style={{height: 30}}/>
                 </Grid>
               </Grid>
               <Grid container>
@@ -77,7 +78,18 @@ function Appearance({items, onSelectItem, confirmItems} : selectedStepItem) {
               <Grid container>
                 <Grid item xs={4} className={classes.label}>Logo *<br/><span className={classes.itemDescription}>Text displayed on your project’s “pay” button. Leave this blank to use the default.</span></Grid>
                 <Grid item xs={8} className={classes.content}>
-                  
+                  <Grid className={classes.logoContent} container>
+                    <Grid item xs={2}>
+                      <img src={noImage} alt="noImage" style={{width: 70}}/>
+                    </Grid>
+                    <Grid item xs={10} container>
+                      <Grid item xs={12} className={classes.logoTitle}>Add logo image</Grid>
+                      <Grid item xs={12} container>
+                        <Grid item xs={4} className={classes.uploadBtn}>Upload logo image</Grid>
+                        <Grid item xs={7}>upload image style like jpg / png images are supported</Grid>
+                      </Grid>
+                    </Grid>
+                  </Grid>
                 </Grid>
               </Grid>
               <Grid container>
