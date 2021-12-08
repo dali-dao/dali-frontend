@@ -10,12 +10,23 @@ import { Icon } from '@iconify/react';
 function Projects() {
   const classes = useStyles();
   const projectItem = new Array(24).fill({image: "", name: "ConstitutionDAO", id: "@constitutiondao", price: 77789, date: "01-01-21", desc: "SharkDAO owns Nouns #2,#5,#33.ming..."})
+  const [state, setState] = React.useState<{ age: string | number; name: string }>({
+    age: '',
+    name: 'hai',
+  });
 
+  const handleChange = (event: React.ChangeEvent<{ name?: string; value: unknown }>) => {
+    const name = event.target.name as keyof typeof state;
+    setState({
+      ...state,
+      [name]: event.target.value,
+    });
+  };
   return (
     <div>
       <Grid container className={classes.banner_content} >
         <img alt='banner' src={Banner} className={classes.image_banner}></img>
-        <Grid container spacing={5} className={classes.banner_text_content}>
+        <Grid container spacing={2} className={classes.banner_text_content}>
           <Grid item xs={12} md={9}>
             <Grid item >
               <span className={classes.project_banner_title}>PROJECTS ON $DALI</span>
@@ -43,16 +54,21 @@ function Projects() {
           </Grid>
           <Grid item xs={12} md={3}>
             <Grid item >
-              <FormControl variant="outlined" className={classes.formControl}>
-              <InputLabel id="demo-simple-select-outlined-label">VOLUME</InputLabel>
+            <FormControl variant="outlined" className={classes.formControl}>
+              <InputLabel htmlFor="outlined-volume-native-simple">Volume</InputLabel>
               <Select
-                labelId="demo-simple-select-outlined-label"
-                id="demo-simple-select-outlined"
-                value='1'
+                native
+                value={state.age}
+                onChange={handleChange}
+                label="Volume"
+                inputProps={{
+                  name: 'Volume',
+                  id: 'outlined-volume-native-simple',
+                }}
               >
-                <MenuItem value={10}>Ten</MenuItem>
-                <MenuItem value={20}>Twenty</MenuItem>
-                <MenuItem value={30}>Thirty</MenuItem>
+                <option value={10} style={{height: 50, padding: 50}}>Ten</option>
+                <option value={20}>Twenty</option>
+                <option value={30}>Thirty</option>
               </Select>
             </FormControl>
             </Grid>

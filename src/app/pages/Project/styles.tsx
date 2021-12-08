@@ -28,7 +28,7 @@ export const useStyles = makeStyles((theme: Theme) =>
       margin: 'auto',
       position: 'absolute',
       top: '12%',
-      left: '8%'
+      left: '11%'
     },
     banner: {
         width: '100%',
@@ -69,7 +69,19 @@ export const useStyles = makeStyles((theme: Theme) =>
     },
     image_banner: {
       width: '100%',
-      height: 265
+      height: 230,
+      "@media (max-width: 1105px)": {
+        minHeight: "250px",
+      },
+      "@media (max-width: 960px)": {
+        minHeight: "350px",
+      },
+      "@media (max-width: 835px)": {
+        minHeight: "370px",
+      },
+      "@media (max-width: 627px)": {
+        minHeight: "400px",
+      },
     },
     project_banner_tab: {
       marginTop: '5px',
