@@ -12,18 +12,16 @@ export const useStyles = makeStyles((theme: Theme) =>
     },
     footer: {
         backgroundColor: theme.palette.background.paper,
-        height: 600,
+        height: 'auto',
         padding: '60px 160px 30px 160px',
         color: theme.palette.background.default
     },
     menu: {
-        margin: '0 20px',
         textDecoration: 'none',
         color: theme.palette.background.default,
         textTransform: 'uppercase'
     },
     activeMenu: {
-        margin: '0 20px',
         textDecoration: 'none',
         color: theme.palette.background.default,
         textTransform: 'uppercase',
@@ -85,7 +83,8 @@ export const useStyles = makeStyles((theme: Theme) =>
         paddingRight: 10
     },
     titleDesc: {
-        textAlign: 'left'
+        textAlign: 'left',
+        marginTop: 20
     },
     title: {
         fontSize: 20,
@@ -122,7 +121,6 @@ export const useStyles = makeStyles((theme: Theme) =>
         fontSize: 20,
         fontWeight: 'bold',
         paddingBottom: 15,
-        paddingLeft: 15
     },
     footerMiddle: {
         paddingTop: 60,

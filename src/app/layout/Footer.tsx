@@ -14,14 +14,14 @@ function Footer() {
     return (
       <div className={classes.footer}>
         <Grid container className={classes.signupSection}>
-          <Grid item xs={8} className={classes.titleDesc}>
+          <Grid item xs={12} md={8} className={classes.titleDesc}>
             <Grid className={classes.title}>STAY IN THE LOOP</Grid>
             <Grid className={classes.desc}>Join our mailing list to stay in the loop with our newest feature releases, NFT <br/> drops, and tips and tricks for navigating OpenSea.</Grid>
             <Grid container item xs={12}>
-              <Grid item xs={10} className={classes.signupInput}>
+              <Grid item xs={12} sm={7} className={classes.signupInput}>
                 <BootstrapInput id="bootstrap-input"/>
               </Grid>
-              <Grid item xs={2} style={{display: 'flex'}}>
+              <Grid item xs={12} sm={5} style={{display: 'flex'}}>
                 <Grid className={classes.signupBtn}>
                   Sign Up
                 </Grid>
@@ -29,7 +29,7 @@ function Footer() {
             </Grid>
           </Grid>
           <Grid item xs={1}></Grid>
-          <Grid item xs={3} style={{textAlign: 'left'}}>
+          <Grid item xs={12} md={3} style={{textAlign: 'left', marginTop: 20}}>
             <Grid className={classes.followTitle}>FOLLOW US ON</Grid>
             <Grid className={classes.followIcons}>
               <GitHubIcon fontSize="large" style={{marginRight: 20}}/>
@@ -40,14 +40,14 @@ function Footer() {
           </Grid>
         </Grid>
         <Grid className={classes.footerMiddle} container>
-          <Grid item xs={4}>
+          <Grid item xs={12} md={4}>
             <img src={Logo} alt="logo" />
             <p className={classes.footerMiddleDesc1}>
               Users fund your project by paying to use your app or service, or as a patron or investor by making a payment directly to your project’s smart contract (like on this app). For users paying through your app, you should route those funds through the Juicebox smart contracts so they receive Tokens in return.ers paying througurn.ers paying througurn.ers paying through your app, you should route those funds through the Juicebox smart contracts.
             </p>
           </Grid>
-          <Grid item xs={1}></Grid>
-          <Grid item xs={2}>
+          <Grid item md={1}></Grid>
+          <Grid item xs={4} md={2}>
             <Grid className={classes.footerMiddleTitle}>
               QUIK LIKNKS
             </Grid>
@@ -60,7 +60,7 @@ function Footer() {
               Flash Loans
             </Grid>
           </Grid>
-          <Grid item xs={2}>
+          <Grid item xs={4} md={2}>
             <Grid className={classes.footerMiddleTitle}>
               RESOURCES
             </Grid>
@@ -73,7 +73,7 @@ function Footer() {
               Branding
             </Grid>
           </Grid>
-          <Grid item xs={2}>
+          <Grid item xs={4} md={2}>
             <Grid className={classes.footerMiddleTitle}>
               SUPPORT
             </Grid>

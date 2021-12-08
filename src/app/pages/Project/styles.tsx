@@ -9,6 +9,8 @@ export const useStyles = makeStyles((theme: Theme) =>
       position: 'relative',
     },
     project_content: {
+      paddingLeft: 150,
+      paddingRight: 150
     },
     width100:{
       width: '100%'
@@ -55,11 +57,13 @@ export const useStyles = makeStyles((theme: Theme) =>
       textAlign: 'left'
     },
     project_banner_button_content: {
-      textAlign: 'right'
+      textAlign: 'right',
+      width: '54%'
     },
     create_project_button: {
+      fontSize: 13,
       display: 'block',
-      padding: 15,
+      padding: '15px 20px',
       textAlign: 'center',
       borderRadius: '5px',
       fontWeight: 'bold',
@@ -108,15 +112,13 @@ export const useStyles = makeStyles((theme: Theme) =>
       fontFamily: 'CerebriSansPro-Bold',
     },
     formControl: {
-      width: '100%',
+      width: '54%',
       textAlign: 'left'
     },
     selectEmpty: {
       marginTop: theme.spacing(2),
     },
     project_list_container: {
-      width: '83%',
-      margin: 'auto',
       marginTop: 30
     },
     margin_bottom_10: {

@@ -12,6 +12,7 @@ import Backdrop from '@material-ui/core/Backdrop';
 import Fade from '@material-ui/core/Fade';
 import SelectWallet from '../components/Modal/SelectWallet';
 import { Icon } from '@iconify/react'; 
+import {useLocation} from 'react-router-dom';
 
 function Header() {
     const classes = useStyles();
@@ -21,6 +22,9 @@ function Header() {
     const curThemeName = localStorage.getItem("appTheme") || "darkTheme";
     const setThemeName = React.useContext(ThemeContext);
     const [theme, setTheme] = React.useState(curThemeName);
+
+    const location_path = useLocation();
+    console.log(location_path.pathname);
 
     const handleToggleTheme = () => {
       if (theme === lightTheme) {
@@ -50,27 +54,27 @@ function Header() {
                 </Grid>
                 <Grid container xs={12} md={7} className={classes.menuItems}>
                     <Grid item xs={2} md={1}>
-                        <Link to="/" className={classes.activeMenu}>
+                        <Link to="/" className={(location_path.pathname == '/') ? classes.activeMenu : classes.menu}>
                             Home
                         </Link>
                     </Grid>
                     <Grid item xs={3} md={1}>
-                        <Link to="/projects" className={classes.menu}>
+                        <Link to="/projects" className={(location_path.pathname == '/projects') ? classes.activeMenu : classes.menu}>
                             Projects
                         </Link>
                     </Grid>
                     <Grid item xs={2} md={1}>
-                        <Link to="/faq" className={classes.menu}>
+                        <Link to="/faq" className={(location_path.pathname == '/faq') ? classes.activeMenu : classes.menu}>
                             Faq
                         </Link>
                     </Grid>
                     <Grid item xs={3} md={1}>
-                        <Link to="/docs" className={classes.menu}>
+                        <Link to="/docs" className={(location_path.pathname == '/docs') ? classes.activeMenu : classes.menu}>
                             Docs
                         </Link>
                     </Grid>
                     <Grid item xs={2} md={1}>
-                        <Link to="/discord" className={classes.menu}>
+                        <Link to="/discord" className={(location_path.pathname == '/discord') ? classes.activeMenu : classes.menu}>
                             Discord
                         </Link>
                     </Grid>
