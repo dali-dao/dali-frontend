@@ -14,7 +14,17 @@ import { makeStyles, Theme } from '@material-ui/core/styles';
 const useStyles = makeStyles((theme: Theme) => ({
   button_style: {
     background: '#2b353f', 
-    borderRadius: 0
+    borderRadius: 0,
+    borderColor: '#2b353f !important',
+    color: 'grey'
+  },
+  button_toggle_style: {
+    background: '#2b353f', 
+    borderRadius: 0,
+    borderColor: '#2b353f !important',
+    width: 25,
+    minWidth: 20,
+    color: 'grey'
   }
 }));
 
@@ -57,7 +67,7 @@ export default function SplitButton() {
           <Button className={classes.button_style} onClick={handleClick}>{options[selectedIndex]}</Button>
           <Button
             color="primary"
-            className={classes.button_style} 
+            className={classes.button_toggle_style} 
             size="small"
             aria-controls={open ? 'split-button-menu' : undefined}
             aria-expanded={open ? 'true' : undefined}

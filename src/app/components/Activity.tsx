@@ -13,16 +13,16 @@ const useStyles = makeStyles((theme: Theme) => ({
   root: {
     flexGrow: 1,
     background: '#10141b',
-    border: '0px',
+    border: '0',
   },
   indicator: {
     backgroundColor: '#fcdd0c',
-    height: 1
+    height: 1,
   },
   tabs: {
     "& .MuiTabs-indicator": {
       backgroundColor: '#10141b'
-    }
+    },
   },
   detail_container: {
     border: '1px solid #404a5e',
@@ -56,17 +56,20 @@ const useStyles = makeStyles((theme: Theme) => ({
     marginLeft: 10
   },
   pay_tab_title: {
-    minWidth: 50, 
-    fontSize: '12.8px'
+    minWidth: 30, 
+    fontSize: '12.8px',
+    color: '#fff',
+    marginRight: 'auto'
   },
   tab_label: {
-    minWidth: 100, 
-    fontSize: '12.8px'
+    minWidth: 50, 
+    fontSize: '12.8px',
+    color: '#fff'
   },
   tab_pannel: {
     padding: '20px 0px', 
     textAlign: 'left'
-  }
+  },
 }));
 
 export default function LabTabs() {
@@ -81,7 +84,7 @@ export default function LabTabs() {
     <div className={classes.root}>
       <TabContext value={value}>
         <AppBar position="static" elevation={0} className={classes.app_bar}>
-          <TabList onChange={handleChange} aria-label="Tab" classes={{ indicator: classes.indicator }}>
+          <TabList onChange={handleChange} aria-label="Tab" style={{borderBottom: '1px solid grey'}} classes={{ indicator: classes.indicator}}>
             <span className={classes.activity_title}>ACTIVITY <Icon icon="si-glyph:circle-info" className={classes.icon_info_1}/></span>
             <Tab label="PAY" value="1" className={classes.pay_tab_title} />
             <Tab label="REDEEM" value="2" className={classes.tab_label}  />

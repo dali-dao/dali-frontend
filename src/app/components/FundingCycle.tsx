@@ -47,14 +47,14 @@ const useStyles = makeStyles((theme: Theme) => ({
   tab_title: {
     color: '#fff', 
     paddingTop: 15, 
-    marginRight: '100px'
+    marginRight: '210px'
   },
   icon_style:{
     verticalAlign: 'middle', 
     marginLeft: 10
   },
   tab_pannel_content: {
-    padding: '20px 0px', 
+    padding: '0px 0px', 
     textAlign: 'left'
   },
   duration_content: {
@@ -138,7 +138,10 @@ const useStyles = makeStyles((theme: Theme) => ({
     marginRight: 5
   },
   tab_style: {
-    color: '#fff'
+    color: '#fff',
+    width: 60,
+    marginRight: 'auto',
+    minWidth: 50
   }
 }));
 
