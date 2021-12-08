@@ -41,10 +41,21 @@ const darkTheme = createTheme({
       dark: "#fadd0d", 
       light: "#0f0f1e", // header's background
     },
+    warning: {
+      main: "#3C2601", 
+      dark: "#2b3139",
+      contrastText: "#fff",
+    },
     secondary: {
       main: "#848e9c", 
       dark: "#fadd0d", 
       light: "#f0b90b", 
+    },
+    error: {
+      main: "#2b313a", 
+      dark: "#252930", 
+      light: "#161a1e",
+      contrastText: "#2A2D35", 
     },
     info: {
       main: "#03a66d", 
@@ -56,22 +67,11 @@ const darkTheme = createTheme({
       dark: "#f6465d", 
       light: "#2a2d35",
     },
-    error: {
-      main: "#2b313a", 
-      dark: "#252930", 
-      light: "#161a1e",
-      contrastText: "#2A2D35", 
-    },
     text: {
       primary: "#848e9c",
       secondary: "#eaecef",
       hint: "#b7bdc6", 
       disabled: "#f0b90b", 
-    },
-    warning: {
-      main: "#3C2601", 
-      dark: "#2b3139",
-      contrastText: "#fff",
     },
   },
 });

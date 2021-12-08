@@ -11,21 +11,29 @@ import ProjectDetail from '../pages/Project/ProjectDetail';
 import Footer from './Footer';
 import Design from '../pages/Design/Design';
 import Modals from '../pages/Modals';
+// import { UseWalletProvider } from "use-wallet";
 
 function Layout() {
   return (
     <div>
+      {/* <UseWalletProvider
+        chainId={56}
+        connectors={{
+          walletconnect: { rpcUrl: "https://rinkeby.etherscan.io" },
+        }}
+      > */}
         <Router>
             <Header />
             <Routes>
                 <Route path="/" element={<Landing />} />
                 <Route path="/projects" element={<Projects />} />
-                <Route path="/project_detail" element={<ProjectDetail />} />
+                <Route path="/detail" element={<ProjectDetail />} />
                 <Route path="/design" element={<Design />} />
                 <Route path="/modals" element={<Modals />} />
             </Routes>
             <Footer />
         </Router>
+      {/* </UseWalletProvider> */}
     </div>
   );
 }

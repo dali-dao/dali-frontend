@@ -54,21 +54,21 @@ function Header() {
                     <Link to="/projects" className={classes.menu}>
                         Projects
                     </Link>
-                    <Link to="/" className={classes.menu}>
+                    <Link to="/faq" className={classes.menu}>
                         Faq
                     </Link>
-                    <Link to="/" className={classes.menu}>
+                    <Link to="/docs" className={classes.menu}>
                         Docs
                     </Link>
-                    <Link to="/" className={classes.menu}>
+                    {/* <Link to="/" className={classes.menu}>
                         Blog
-                    </Link>
-                    <Link to="/" className={classes.menu}>
+                    </Link> */}
+                    <Link to="/discord" className={classes.menu}>
                         Discord
                     </Link>
-                    <Link to="/" className={classes.menu}>
+                    {/* <Link to="/" className={classes.menu}>
                         Workspace
-                    </Link>
+                    </Link> */}
                 </Grid>
                 <Grid item xs={2} container className={classes.rightItems}>
                     <Grid item xs={3} className={classes.selectTheme}>
@@ -97,7 +97,7 @@ function Header() {
                 }}
             >
                 <Fade in={open}>
-                <div>
+                <div style={{width: '60%'}}>
                     <SelectWallet />
                 </div>
                 </Fade>

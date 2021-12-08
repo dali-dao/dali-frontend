@@ -127,6 +127,9 @@ export const useStyles = makeStyles((theme: Theme) =>
     },
     faqBox: {
       padding: '0 10px 10px 10px'
+    },
+    linkDetail: {
+      textDecoration: 'none'
     }
   })
 );

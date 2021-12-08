@@ -30,6 +30,7 @@ export const useStyles = makeStyles((theme: Theme) =>
       backgroundColor: '#1c222d',
       padding: '25px 40px 25px 40px',
       borderBottom: '1px solid #2c333f',
+      fontSize: 13
     },
     card: {
       marginBottom: 80,

@@ -49,22 +49,32 @@ function Landing() {
             projects using dali
           </Grid>
           <Grid item xs={6} className={classes.exploreMore}>
-            <Button variant="outlined" color="secondary" className={classes.exploreMoreBtn}>
-              explore more
-            </Button>
+            <Link to='/projects' className={classes.linkDetail}>
+              <Button variant="outlined" color="secondary" className={classes.exploreMoreBtn}>
+                explore more
+              </Button>
+            </Link>
           </Grid>
           <Grid container spacing={5}>
             <Grid item md={3}>
-              <ProjectCard />
+              <Link to='/detail' className={classes.linkDetail}>
+                <ProjectCard />
+              </Link>
             </Grid>
             <Grid item md={3}>
-              <ProjectCard />
+              <Link to='/detail' className={classes.linkDetail}>
+                <ProjectCard />
+              </Link>
             </Grid>
             <Grid item md={3}>
-              <ProjectCard />
+              <Link to='/detail' className={classes.linkDetail} >
+                <ProjectCard />
+              </Link>
             </Grid>
             <Grid item md={3}>
-              <ProjectCard />
+              <Link to='/detail' className={classes.linkDetail} >
+                <ProjectCard />
+              </Link>
             </Grid>
           </Grid>
         </Grid>

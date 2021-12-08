@@ -42,6 +42,9 @@ const useStyles = makeStyles({
     marginBottom: 10,
     display: 'flex',
     alignItems: 'center'
+  },
+  imgStyle: {
+    width: '100%'
   }
 });
 
@@ -51,7 +54,7 @@ export default function MediaCard() {
   return (
     <Card className={classes.root}>
       <CardActionArea>
-        <img src={Card1} alt="projects" />
+        <img src={Card1} alt="projects" className={classes.imgStyle}/>
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2" className={classes.cardTitle}>
             ConstitutionDAO
