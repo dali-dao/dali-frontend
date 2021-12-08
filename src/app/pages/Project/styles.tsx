@@ -304,5 +304,8 @@ export const useStyles = makeStyles((theme: Theme) =>
       verticalAlign: 'middle',
       marginRight: 10
     },
+    project_detail_link: {
+      textDecoration: 'none'
+    }
   })
 );

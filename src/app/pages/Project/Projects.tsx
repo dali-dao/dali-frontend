@@ -30,7 +30,7 @@ function Projects() {
           <Grid item xs={12} md={3}>
             <Grid item >
               <Grid className={classes.project_banner_button_content}>
-                <Link to="/design" className={classes.create_project_button}>CREATE PROJECT
+                <Link to="/projects" className={classes.create_project_button}>CREATE PROJECT
                 </Link>
               </Grid>
             </Grid>
@@ -64,8 +64,10 @@ function Projects() {
             <Grid container>
             {projectItem.map((item, index) => {
               return (         
-              <Grid key={index} item xs={4} className={classes.margin_bottom_10}>
-                <ProjectItem image={item.image} name={item.name} id={item.id} price={item.price} date={item.date} desc={item.desc} />
+              <Grid key={index} item xs={4} className={classes.margin_bottom_10}> 
+                <Link to='/detail' className={classes.project_detail_link}>
+                  <ProjectItem image={item.image} name={item.name} id={item.id} price={item.price} date={item.date} desc={item.desc} />
+                </Link>
               </Grid>
               )
             })}
