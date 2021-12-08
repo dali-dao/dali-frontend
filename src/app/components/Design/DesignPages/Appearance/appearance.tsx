@@ -36,7 +36,7 @@ function Appearance({items, onSelectItem, confirmItems} : selectedStepItem) {
               <Grid container>
                 <Grid item xs={4} className={classes.label}>Project description * <br/><span className={classes.itemDescription}>A min 300 character description of what your bot does. HTML, CSS and Markdown allowed. Javascript will be removed.</span></Grid>
                 <Grid item xs={8} className={classes.content}>
-                  <BootstrapInput id="description-input" placeholder="@Specific name here" />
+                  <BootstrapInput id="description-input" placeholder="@Specific name here" style={{height: 30}}/>
                 </Grid>
               </Grid>
               <Grid container>
@@ -80,13 +80,13 @@ function Appearance({items, onSelectItem, confirmItems} : selectedStepItem) {
                 <Grid item xs={8} className={classes.content}>
                   <Grid className={classes.logoContent} container>
                     <Grid item xs={2}>
-                      <img src={noImage} alt="noImage" />
+                      <img src={noImage} alt="noImage" style={{width: 70}}/>
                     </Grid>
-                    <Grid item xs={9} container>
-                      <Grid item xs={12}>Add logo image</Grid>
-                      <Grid item xs={12}>
-                        <Grid className={classes.uploadBtn}>Upload logo image</Grid>
-                        <Grid>upload image style like jpg / png images are supported</Grid>
+                    <Grid item xs={10} container>
+                      <Grid item xs={12} className={classes.logoTitle}>Add logo image</Grid>
+                      <Grid item xs={12} container>
+                        <Grid item xs={4} className={classes.uploadBtn}>Upload logo image</Grid>
+                        <Grid item xs={7}>upload image style like jpg / png images are supported</Grid>
                       </Grid>
                     </Grid>
                   </Grid>
