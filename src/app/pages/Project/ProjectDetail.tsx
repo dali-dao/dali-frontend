@@ -36,7 +36,7 @@ function ProjectDetail() {
           ID:5246794565 <Icon icon="dashicons:admin-tools" color="white" />
         </Grid>
       </Grid>
-      <Grid container justifyContent="center" className={classes.main_content} spacing={8}>
+      <Grid container justifyContent="center" className={classes.main_content} spacing={3}>
         <Grid item xs={12} md={6}>
           <Grid item style={{border: '1px solid #323e50', backgroundColor: '#1a1d24', borderRadius: 5, marginBottom: 20, height: 'auto'}}>
             <Grid xs={12} md={12} className={classes.detail_first_row}>

@@ -6,13 +6,12 @@ import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
 export const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     banner_content: {
-      height: 200,
-      paddingLeft: 160,
-      paddingRight: 160,
       position: 'relative'
     },
     project_content: {
-
+    },
+    width100:{
+      width: '100%'
     },
     banner_left: {
       marginTop: 45,
@@ -23,6 +22,13 @@ export const useStyles = makeStyles((theme: Theme) =>
       height: 200,
       right: '160px',
       top: 55,
+    },
+    banner_text_content: {
+      width: '84%',
+      margin: 'auto',
+      position: 'absolute',
+      top: '12%',
+      left: '8%'
     },
     banner: {
         width: '100%',
@@ -49,15 +55,21 @@ export const useStyles = makeStyles((theme: Theme) =>
       textAlign: 'left'
     },
     project_banner_button_content: {
-      textAlign: 'left'
+      textAlign: 'right'
     },
     create_project_button: {
-      padding: '20px 50px',
+      display: 'block',
+      padding: 15,
+      textAlign: 'center',
       borderRadius: '5px',
       fontWeight: 'bold',
       textDecoration: 'none',
       color: '#000',
       backgroundImage: 'linear-gradient(to right, rgb(238 221 14) 0%, rgb(24 216 211) 100%, rgb(247, 157, 0) 100%)'
+    },
+    image_banner: {
+      width: '100%',
+      height: 265
     },
     project_banner_tab: {
       marginTop: '5px',
@@ -70,18 +82,30 @@ export const useStyles = makeStyles((theme: Theme) =>
       fontSize: 14,
       fontFamily: 'CerebriSansPro-Bold',
     },
+    project_banner_tab_active: {
+      borderBottom: '3px solid #d3dc26',
+      height: 50,
+      marginTop: '5px',
+      marginRight: '50px',
+      display: 'block',
+      float: 'left',
+      cursor: 'pointer',
+      textDecoration: 'none',
+      color: '#fff',
+      fontSize: 14,
+      fontFamily: 'CerebriSansPro-Bold',
+    },
     formControl: {
       width: '100%',
-      marginTop: 65,
       textAlign: 'left'
     },
     selectEmpty: {
       marginTop: theme.spacing(2),
     },
     project_list_container: {
-      width: '79%',
-      marginLeft: '12%',
-      marginTop: '25px'
+      width: '83%',
+      margin: 'auto',
+      marginTop: 30
     },
     margin_bottom_10: {
       marginBottom: '10px'
@@ -186,7 +210,9 @@ export const useStyles = makeStyles((theme: Theme) =>
     TextRight: {
       textAlign: 'right'
     },
-
+    font13: {
+      fontSize: 13
+    },
     //end
     holders_button: {
       border: '1px solid #2b3242',
@@ -273,6 +299,10 @@ export const useStyles = makeStyles((theme: Theme) =>
     },
     funding_cycle: {
       marginTop: 30
-    }
+    },
+    circle_info: {
+      verticalAlign: 'middle',
+      marginRight: 10
+    },
   })
 );

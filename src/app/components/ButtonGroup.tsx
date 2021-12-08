@@ -9,10 +9,29 @@ import Paper from '@material-ui/core/Paper';
 import Popper from '@material-ui/core/Popper';
 import MenuItem from '@material-ui/core/MenuItem';
 import MenuList from '@material-ui/core/MenuList';
+import { makeStyles, Theme } from '@material-ui/core/styles';
+
+const useStyles = makeStyles((theme: Theme) => ({
+  button_style: {
+    background: '#2b353f', 
+    borderRadius: 0,
+    borderColor: '#2b353f !important',
+    color: 'grey'
+  },
+  button_toggle_style: {
+    background: '#2b353f', 
+    borderRadius: 0,
+    borderColor: '#2b353f !important',
+    width: 25,
+    minWidth: 20,
+    color: 'grey'
+  }
+}));
 
 const options = ['USD', 'ETH'];
 
 export default function SplitButton() {
+  const classes = useStyles();
   const [open, setOpen] = React.useState(false);
   const anchorRef = React.useRef<HTMLDivElement>(null);
   const [selectedIndex, setSelectedIndex] = React.useState(1);
@@ -45,10 +64,10 @@ export default function SplitButton() {
     <Grid container direction="column" alignItems="center">
       <Grid item xs={12}>
         <ButtonGroup variant="contained" color="primary" ref={anchorRef} aria-label="split button">
-          <Button style={{background: '#2b353f', borderRadius: 0}} onClick={handleClick}>{options[selectedIndex]}</Button>
+          <Button className={classes.button_style} onClick={handleClick}>{options[selectedIndex]}</Button>
           <Button
             color="primary"
-            style={{background: '#2b353f', borderRadius: 0}} 
+            className={classes.button_toggle_style} 
             size="small"
             aria-controls={open ? 'split-button-menu' : undefined}
             aria-expanded={open ? 'true' : undefined}
