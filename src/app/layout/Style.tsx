@@ -6,7 +6,7 @@ export const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     header: {
         backgroundColor: theme.palette.primary.light,
-        height: 90,
+        height: 'calc(100% - 50px)',
         fontSize: 12,
         color: theme.palette.background.default
     },
@@ -28,20 +28,23 @@ export const useStyles = makeStyles((theme: Theme) =>
         color: theme.palette.background.default,
         textTransform: 'uppercase',
         borderBottom: '2px solid #f7db0e',
-        padding: '35px 0'
+        padding: '25px 0'
     },
     menuItems: {
         display: 'flex',
         alignItems: 'center',
-        textAlign: 'center'
+        textAlign: 'center',
+        marginTop: 20,
+        marginBottom: 20
     },
     connectBtn: {
         background: '#f7db0e',
         textTransform: 'uppercase',
         color: 'black',
         borderRadius: 20,
-        height: 20,
+        height: 30,
         fontWeight: 700,
+        width: 95,
         display: 'grid',
         alignItems: 'center',
         cursor: 'pointer',
@@ -52,29 +55,34 @@ export const useStyles = makeStyles((theme: Theme) =>
     rightItems: {
         display: 'flex',
         alignItems: 'center',
-        textAlign: 'center'
+        textAlign: 'center',
+        justifyContent: 'right',
+        marginTop: '20px !important',
+        marginBottom: '20px !important',
     },
     selectTheme: {
         borderRadius: 20,
         border: '1px solid #4b4b56',
-        display: 'flex',
+        width: 65,
+        height: 30,
         justifyContent: 'center',
-        padding: 3,
     },
-    brightnessIcon:{
-        transform: 'rotate(135deg)',
+    moon_style:{
         cursor: 'pointer',
-        zoom: 0.8,
-        color: theme.palette.common.black,
-        padding: '0 5px'
+        border: '1px solid #4b4b56',
+        padding: 5,
+        borderTopLeftRadius: 20,
+        borderBottomLeftRadius: 20,
+        paddingLeft: 10,
+        background: '#29303d'
     },
-    sunIcon: {
-        transform: 'rotate(180deg)',
+    sun_style: {
         cursor: 'pointer',
-        borderRight: '1px solid #4b4b56',
-        color: theme.palette.common.white,
-        zoom: 0.8,
-        padding: '0 5px'
+        border: '1px solid #4b4b56',
+        padding: 5,
+        borderTopRightRadius: 20,
+        borderBottomRightRadius: 20,
+        paddingRight: 10
     },
     titleDesc: {
         textAlign: 'left'
