@@ -8,14 +8,44 @@ import ButtonGroup from '../../components/ButtonGroup';
 import {VolumeCurrencyChart} from '../../components/VolumeCurrencyChart';
 import FundingCycle from '../../components/FundingCycle';
 import Activity from '../../components/Activity';
-// import ProjectDetailBanner from '../../components/ProjectDetailBanner';
- 
+
 function ProjectDetail() {
   const classes = useStyles();
 
   return (
     <Grid container>
-      <Grid container>
+      <Grid container className={classes.banner_content} >
+        <img alt='banner' src={Banner} className={classes.image_banner}></img>
+        <Grid container spacing={2} className={classes.project_detail_banner}>
+          <Grid container >
+            <Grid item xs={12} md={2}>
+              <img src={BannerIcon} alt="bannericon" className={classes.banner_icon}/>
+            </Grid>
+            <Grid item xs={12} md={6}>
+              <span className={classes.project_banner_title}>PROJECTS ON $DALI</span>
+              <p className={classes.TextLeft}>
+                <Icon icon="websymbol:user" style={{verticalAlign: 'middle', width: 16, height: 18}} /> <span style={{fontWeight: 'bold', fontSize: 14, marginRight: 20}}>@spicedao</span>
+                <Icon icon="fontisto:world" style={{verticalAlign: 'middle', width: 16, height: 18}}  /> <span style={{fontWeight: 'bold', fontSize: 14, marginRight: 20}}>dune.foundation</span>
+                <Icon icon="el:twitter" style={{verticalAlign: 'middle', width: 16, height: 18}}  color="white" /> <span style={{fontWeight: 'bold', fontSize: 14, marginRight: 20}}>@TheSpiceDAO</span>
+                <Icon icon="akar-icons:discord-fill" style={{verticalAlign: 'middle', width: 16, height: 18}}  color="white" /> <span style={{fontWeight: 'bold', fontSize: 14}}>Discord</span>
+              </p>
+              <Grid item xs={12} md={9} className={classes.project_banner_description} justifyContent="center">
+                  <span className={classes.font13}>
+                    Pellentesque neque risus, auctor ac nisl in, dictum rhoncus libero. 
+                    Cras eget rhoncus dolor, commodo pharetra leo. 
+                    Pellentesque neque risus, apharetra leo. Pellentesque neque risus, apharetra leo.
+                  </span>
+              </Grid>
+            </Grid>
+            <Grid item xs={12} md={2} className={classes.marginTopAuto}>
+              <Grid className={classes.detail_banner_right}>
+                ID:5246794565 <Icon icon="dashicons:admin-tools" color="white" />
+              </Grid>
+            </Grid>
+          </Grid>
+        </Grid>
+      </Grid>
+      {/* <Grid container>
         <Grid container className={classes.banner_left_description}>
           <img src={Banner} alt="banner" className={classes.banner}/>
           <Grid container className={classes.banner_description}>
@@ -35,7 +65,7 @@ function ProjectDetail() {
         <Grid className={classes.detail_banner_right}>
           ID:5246794565 <Icon icon="dashicons:admin-tools" color="white" />
         </Grid>
-      </Grid>
+      </Grid> */}
       <Grid container justifyContent="center" className={classes.main_content} spacing={3}>
         <Grid item xs={12} md={6}>
           <Grid item style={{border: '1px solid #323e50', backgroundColor: '#1a1d24', borderRadius: 5, marginBottom: 20, height: 'auto'}}>

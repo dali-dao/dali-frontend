@@ -2,10 +2,10 @@ import React from 'react'
 import Banner from '../../assets/Projects/banner_2.jpg';
 import { useStyles } from "./styles";
 import { Link } from "react-router-dom";
-import {FormControl, Select, MenuItem, InputLabel, Grid} from '@material-ui/core';
+import {FormControl, Select, InputLabel, Grid} from '@material-ui/core';
 import Pagination from '@material-ui/lab/Pagination';
 import ProjectItem from '../../components/Projects/projectItem';
-import { Icon } from '@iconify/react'; 
+import { Icon } from '@iconify/react';
 
 function Projects() {
   const classes = useStyles();

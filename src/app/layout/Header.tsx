@@ -2,8 +2,6 @@ import { useStyles } from "./Style";
 import Grid from '@material-ui/core/Grid';
 import { Link } from "react-router-dom";
 import Logo from '../assets/Landing/logo.png';
-import WbSunnyIcon from '@material-ui/icons/WbSunny';
-import Brightness3Icon from '@material-ui/icons/Brightness3';
 import ReorderIcon from '@material-ui/icons/Reorder';
 import React from "react";
 import { ThemeContext } from "../theme/ThemeProvider";
@@ -24,7 +22,6 @@ function Header() {
     const [theme, setTheme] = React.useState(curThemeName);
 
     const location_path = useLocation();
-    console.log(location_path.pathname);
 
     const handleToggleTheme = () => {
       if (theme === lightTheme) {
@@ -54,27 +51,27 @@ function Header() {
                 </Grid>
                 <Grid container xs={12} md={7} className={classes.menuItems}>
                     <Grid item xs={2} md={1}>
-                        <Link to="/" className={(location_path.pathname == '/') ? classes.activeMenu : classes.menu}>
+                        <Link to="/" className={(location_path.pathname === '/') ? classes.activeMenu : classes.menu}>
                             Home
                         </Link>
                     </Grid>
                     <Grid item xs={3} md={1}>
-                        <Link to="/projects" className={(location_path.pathname == '/projects') ? classes.activeMenu : classes.menu}>
+                        <Link to="/projects" className={(location_path.pathname === '/projects') ? classes.activeMenu : classes.menu}>
                             Projects
                         </Link>
                     </Grid>
                     <Grid item xs={2} md={1}>
-                        <Link to="/faq" className={(location_path.pathname == '/faq') ? classes.activeMenu : classes.menu}>
+                        <Link to="/faq" className={(location_path.pathname === '/faq') ? classes.activeMenu : classes.menu}>
                             Faq
                         </Link>
                     </Grid>
                     <Grid item xs={3} md={1}>
-                        <Link to="/docs" className={(location_path.pathname == '/docs') ? classes.activeMenu : classes.menu}>
+                        <Link to="/docs" className={(location_path.pathname === '/docs') ? classes.activeMenu : classes.menu}>
                             Docs
                         </Link>
                     </Grid>
                     <Grid item xs={2} md={1}>
-                        <Link to="/discord" className={(location_path.pathname == '/discord') ? classes.activeMenu : classes.menu}>
+                        <Link to="/discord" className={(location_path.pathname === '/discord') ? classes.activeMenu : classes.menu}>
                             Discord
                         </Link>
                     </Grid>

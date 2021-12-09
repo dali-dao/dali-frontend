@@ -32,6 +32,11 @@ export const useStyles = makeStyles((theme: Theme) =>
       top: '12%',
       left: '11%'
     },
+    project_detail_banner: {
+      position: 'absolute',
+      top: '15%',
+      left: '8%'
+    },
     banner: {
         width: '100%',
         position: 'relative'
@@ -137,10 +142,6 @@ export const useStyles = makeStyles((theme: Theme) =>
       width: '80%'
     },
     banner_icon: {
-      width: '10%',
-      maxWidth: '100%',
-      height: '100%',
-      float: 'left'
     },
     detail_banner_description: {
       top: '-25px',
@@ -164,13 +165,15 @@ export const useStyles = makeStyles((theme: Theme) =>
     marginRight10: {
       marginRight: 10
     },
+    marginTopAuto: {
+      marginTop: 'auto',
+    },
     detail_banner_right: {
       border: '1px solid grey',
       padding: '10px 15px',
       borderRadius: '5px',
-      position: 'absolute',
-      right: '12%',
-      top: '230px'
+      textAlign: 'center',
+      width: '75%'
     },
     detail_content: {
       margin: '3% 11%',
