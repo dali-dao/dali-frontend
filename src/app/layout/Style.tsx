@@ -27,7 +27,7 @@ export const useStyles = makeStyles((theme: Theme) =>
     follow_content: {
         textAlign: 'left',
         "@media (max-width: 960px)": {
-            marginTop: 20
+            marginTop: '20px !important'
         },
         
     },
@@ -99,7 +99,10 @@ export const useStyles = makeStyles((theme: Theme) =>
     },
     titleDesc: {
         textAlign: 'left',
-        marginBottom: 20
+        marginBottom: 20,
+        "@media (max-width: 960px)": {
+            textAlign: 'center'
+        },
     },
     title: {
         fontSize: 20,
@@ -136,12 +139,25 @@ export const useStyles = makeStyles((theme: Theme) =>
         fontSize: 20,
         fontWeight: 'bold',
         paddingBottom: 15,
+        "@media (max-width: 960px)": {
+            textAlign: 'center'
+        },
+    },
+    sign_input_content: {
+        justifyContent: 'left',
+        "@media (max-width: 960px)": {
+            justifyContent: 'center',
+            marginLeft: 50
+        },
     },
     footerMiddle: {
         paddingTop: 60,
         textAlign: 'left',
         paddingBottom: 40,
-        borderBottom: '1px solid #2c313c'
+        borderBottom: '1px solid #2c313c',
+        "@media (max-width: 960px)": {
+            textAlign: 'center'
+        },
     },
     footerMiddleTitle: {
         fontSize: 20,

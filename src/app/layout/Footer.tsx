@@ -17,11 +17,11 @@ function Footer() {
           <Grid container item xs={12} md={8} className={classes.titleDesc}>
             <Grid item xs={12} className={classes.title}>STAY IN THE LOOP</Grid>
             <Grid item xs={12} className={classes.desc}>Join our mailing list to stay in the loop with our newest feature releases, NFT <br/> drops, and tips and tricks for navigating OpenSea.</Grid>
-            <Grid container item xs={12} >
-              <Grid item xs={7} sm={7} className={classes.signupInput}>
+            <Grid container item xs={12} className={classes.sign_input_content}>
+              <Grid item xs={6} sm={5} className={classes.signupInput}>
                 <BootstrapInput id="bootstrap-input"/>
               </Grid>
-              <Grid item xs={5} sm={5} style={{display: 'flex'}}>
+              <Grid item xs={4} sm={3} style={{display: 'flex'}}>
                 <Grid className={classes.signupBtn}>
                   Sign Up
                 </Grid>
