@@ -20,7 +20,8 @@ const useStyles = makeStyles((theme: Theme) =>
     address: {
         fontSize: 13,
         color: '#a3a5a7',
-        textAlign: 'right'
+        textAlign: 'right',
+        wordBreak: 'break-all'
     },
     price: {
         color: 'yellow',

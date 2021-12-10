@@ -79,14 +79,14 @@ function Appearance({items, onSelectItem, confirmItems} : selectedStepItem) {
                 <Grid item xs={4} className={classes.label}>Logo *<br/><span className={classes.itemDescription}>Text displayed on your project’s “pay” button. Leave this blank to use the default.</span></Grid>
                 <Grid item xs={8} className={classes.content}>
                   <Grid className={classes.logoContent} container>
-                    <Grid item xs={2}>
+                    <Grid item xs={12} md={2}>
                       <img src={noImage} alt="noImage" style={{width: 70}}/>
                     </Grid>
-                    <Grid item xs={10} container>
+                    <Grid item xs={12} md={10} container>
                       <Grid item xs={12} className={classes.logoTitle}>Add logo image</Grid>
                       <Grid item xs={12} container>
-                        <Grid item xs={4} className={classes.uploadBtn}>Upload logo image</Grid>
-                        <Grid item xs={7}>upload image style like jpg / png images are supported</Grid>
+                        <Grid item xs={12} md={4} className={classes.uploadBtn}>Upload logo image</Grid>
+                        <Grid item xs={12} md={7}>upload image style like jpg / png images are supported</Grid>
                       </Grid>
                     </Grid>
                   </Grid>

@@ -1,4 +1,4 @@
-import React from 'react';
+import { useCallback } from 'react'
 import { makeStyles, Theme } from '@material-ui/core/styles';
 import { Grid } from '@material-ui/core';
 import MetaMask from '../../assets/Popup/metamask.png';
@@ -11,6 +11,8 @@ import Lattiz from '../../assets/Popup/lattiz.png';
 import Ledgez from '../../assets/Popup/ledgez.png';
 import Opera from '../../assets/Popup/opera.png';
 import WalletConnect from '../../assets/Popup/walletconnect.png';
+// import Web3Modal from 'web3modal';
+// import { useSelector } from 'react-redux';
 
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
@@ -20,37 +22,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     boxShadow: '0px 0px 10px 10px #0c0f16'
   },
   //common class
-  textLeft: {textAlign: 'left'}, 
-  textRight: {textAlign: 'right'}, 
-  textCenter: {textAlign: 'center'},
-  width100: {width: '100%'},
-  marginTop10:{marginTop: 10},
-  marginTop20:{marginTop: 20},
-  marginTop30:{marginTop: 30},
-  marginTop40:{marginTop: 40},
-  marginTop50:{marginTop: 50},
-  marginBottom5:{marginBottom: 5},
-  marginBottom10:{marginBottom: 10},
-  marginBottom20:{marginBottom: 20},
-  marginBottom30:{marginBottom: 30},
-  marginBottom40:{marginBottom: 40},
-  marginBottom50:{marginBottom: 50},
-  marginLeft10:{marginLeft: 10},
-  marginLeft20:{marginLeft: 20},
-  marginLeft30:{marginLeft: 30},
-  marginLeft40:{marginLeft: 40},
-  marginLeft50:{marginLeft: 50},
-  marginRight10:{marginRight: 10},
-  marginRight20:{marginRight: 20},
-  marginRight30:{marginRight: 30},
-  marginRight40:{marginRight: 40},
-  marginRight50:{marginRight: 50},
-  fontSize12: {fontSize: 12},
-  fontSize13: {fontSize: 13},
-  fontSize14: {fontSize: 14},
-  fontSize15: {fontSize: 15},
-  paddingLeft15: {paddingLeft: 15},
-  paddingLeft10: {paddingLeft: 10},
+  marginLeft10: {marginLeft: 10},
   verticalAlignMiddle: {verticalAlign: 'middle'},
   wallet_header_content: {
     color: '#919398', 
@@ -100,11 +72,53 @@ const useStyles = makeStyles((theme: Theme) => ({
     padding: '25px 40px',
     fontFamily: 'CerebriSansPro-ExtraBold'
   },
+  wallets: {
+    cursor: 'pointer',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: 10,
+    fontSize: 12,
+    borderRadius: 10,
+    '&:hover': {
+      boxShadow: '0 0 10px 10px #555'
+    }
+  }
 }));
 
 export default function SelectWallet() {
   const classes = useStyles();
+
+  // const { authenticated } = useSelector((state: RootState) => state.auth)
+
+  // const [state, dispatch] = useReducer(reducer, initialState)
+  // const { provider, web3Provider, address, chainId } = state
   
+  const connect = useCallback(async function () {
+  //   // This is the initial `provider` that is returned when
+  //   // using web3Modal to connect. Can be MetaMask or WalletConnect.
+  //   const provider = await web3Modal.connect()
+
+  //   // We plug the initial `provider` into ethers.js and get back
+  //   // a Web3Provider. This will add on methods from ethers.js and
+  //   // event listeners such as `.on()` will be different.
+  //   const web3Provider = new providers.Web3Provider(provider)
+
+  //   const signer = web3Provider.getSigner()
+  //   const address = await signer.getAddress()
+  //   localStorage.setItem('connectedAddress', address)
+
+  //   const network = await web3Provider.getNetwork()
+
+  //   dispatch({
+  //     type: 'SET_WEB3_PROVIDER',
+  //     provider,
+  //     web3Provider,
+  //     address,
+  //     chainId: network.chainId
+  //   })
+  }, [])
+
   return (
     <div className={classes.root}>
       <Grid className={classes.modal_header}>
@@ -112,34 +126,34 @@ export default function SelectWallet() {
       </Grid>
       <Grid container className={classes.wallet_image_content}>
         <strong className={classes.select_header}>Please select a wallet to connect to this dapp:</strong>
-        <Grid item xs={12} md={3} className={classes.marginBottom30}>
+        <Grid item xs={12} sm={6} md={3} className={classes.wallets} onClick={connect}>
           <img alt='metamask' src={MetaMask} className={classes.verticalAlignMiddle}></img><span className={classes.marginLeft10}>Metamask</span>
         </Grid>
-        <Grid item xs={12} md={3} className={classes.marginBottom30}>
+        <Grid item xs={12} sm={6} md={3} className={classes.wallets}>
           <img className={classes.verticalAlignMiddle} alt='Trezor' src={Trezor}></img><span  className={classes.marginLeft10}>Trezor</span>
         </Grid>
-        <Grid item xs={12} md={3} style={{marginBottom: 30}}>
+        <Grid item xs={12} sm={6} md={3} className={classes.wallets}>
           <img alt='CoinbaseWallet' src={CoinbaseWallet} className={classes.verticalAlignMiddle}></img><span  className={classes.marginLeft10}>Coinbase Wallet</span>
         </Grid>
-        <Grid item xs={12} md={3} style={{marginBottom: 30}}>
+        <Grid item xs={12} sm={6} md={3} className={classes.wallets}>
           <img alt='Opera' src={Opera} className={classes.verticalAlignMiddle}></img><span  className={classes.marginLeft10}>Opera</span>
         </Grid>
-        <Grid item xs={12} md={3} style={{marginBottom: 30}}>
+        <Grid item xs={12} sm={6} md={3} className={classes.wallets}>
           <img alt='Ledgez' src={Ledgez} className={classes.verticalAlignMiddle}></img><span  className={classes.marginLeft10}>Ledgez</span>
         </Grid>
-        <Grid item xs={12} md={3} style={{marginBottom: 30}}>
+        <Grid item xs={12} sm={6} md={3} className={classes.wallets}>
           <img alt='WalletConnect' src={WalletConnect} className={classes.verticalAlignMiddle}></img><span  className={classes.marginLeft10}>Walletconnect</span>
         </Grid>
-        <Grid item xs={12} md={3} style={{marginBottom: 30}}>
+        <Grid item xs={12} sm={6} md={3} className={classes.wallets}>
           <img alt='KeyStone' src={KeyStone} className={classes.verticalAlignMiddle}></img><span  className={classes.marginLeft10}>Keystone</span>
         </Grid>
-        <Grid item xs={12} md={3} style={{marginBottom: 30}}>
+        <Grid item xs={12} sm={6} md={3} className={classes.wallets}>
           <img alt='Lattiz' src={Lattiz} className={classes.verticalAlignMiddle}></img><span  className={classes.marginLeft10}>Lattiz</span>
         </Grid>
-        <Grid item xs={12} md={3} style={{marginBottom: 30}}>
+        <Grid item xs={12} sm={6} md={3} className={classes.wallets}>
           <img alt='GnezisSafe' src={GnezisSafe} className={classes.verticalAlignMiddle}></img><span  className={classes.marginLeft10}>Gnezis safe</span>
         </Grid>
-        <Grid item xs={12} md={3}>
+        <Grid item xs={12} sm={6} md={3} className={classes.wallets}>
           <img alt='Autherium' src={Autherium} className={classes.verticalAlignMiddle}></img><span  className={classes.marginLeft10}>Autherium</span>
         </Grid>
       </Grid>

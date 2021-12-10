@@ -36,7 +36,9 @@ function Landing() {
             <PlayCircleFilledIcon className={classes.playIcon}/> Open source businesses
           </Grid>
           <Grid>
-            <div className={classes.designForBtn}>design your project</div>
+            <Link to="/design" style={{textDecoration: 'none'}}>
+              <div className={classes.designForBtn}>design your project</div>
+            </Link>
           </Grid>
           <Grid className={classes.smartContract}>
             Powered by public smart contracts on <Link to="/" className={classes.ethereum}>Ethereum.</Link>
@@ -55,7 +57,7 @@ function Landing() {
               </Button>
             </Link>
           </Grid>
-          <Grid container spacing={5}>
+          <Grid container spacing={2} style={{justifyContent: 'center'}}>
             <Grid item md={3}>
               <Link to='/detail' className={classes.linkDetail}>
                 <ProjectCard />
@@ -82,34 +84,34 @@ function Landing() {
       <Grid className={classes.section3}>
         <Grid className={classes.section3Title}>latest payments</Grid>
         <Grid container spacing={2}>
-          <Grid item xs={6}>
+          <Grid item xs={12} sm={6} md={6}>
             <PaymentCard />
           </Grid>
-          <Grid item xs={6}>
+          <Grid item xs={12} sm={6} md={6}>
             <PaymentCard />
           </Grid>
-          <Grid item xs={6}>
+          <Grid item xs={12} sm={6} md={6}>
             <PaymentCard />
           </Grid>
-          <Grid item xs={6}>
+          <Grid item xs={12} sm={6} md={6}>
             <PaymentCard />
           </Grid>
-          <Grid item xs={6}>
+          <Grid item xs={12} sm={6} md={6}>
             <PaymentCard />
           </Grid>
-          <Grid item xs={6}>
+          <Grid item xs={12} sm={6} md={6}>
             <PaymentCard />
           </Grid>
-          <Grid item xs={6}>
+          <Grid item xs={12} sm={6} md={6}>
             <PaymentCard />
           </Grid>
-          <Grid item xs={6}>
+          <Grid item xs={12} sm={6} md={6}>
             <PaymentCard />
           </Grid>
-          <Grid item xs={6}>
+          <Grid item xs={12} sm={6} md={6}>
             <PaymentCard />
           </Grid>
-          <Grid item xs={6}>
+          <Grid item xs={12} sm={6} md={6}>
             <PaymentCard />
           </Grid>
         </Grid>
@@ -123,7 +125,9 @@ function Landing() {
         <img src={Blockchain} alt="blockchain" className={classes.blockchainImg}/>
         <Grid className={classes.section4Text}>
         THE JBX PROTOCOL IS UNAUDITED, AND PROJECTS BUILT ON IT MAY BE<br /> VULNERABLE TO BUGS OR EXPLOITS. BE SMART!
-        <div className={classes.designForBtn1}>design your project</div>
+        <Link to="/design" style={{textDecoration: 'none'}}>
+          <div className={classes.designForBtn1}>design your project</div>
+        </Link>
         </Grid>
       </Grid>
       <Grid className={classes.section5}>
@@ -131,34 +135,34 @@ function Landing() {
           frequently asked questions
         </Grid>
         <Grid container>
-          <Grid item xs={6} className={classes.faqBox}>
+          <Grid item xs={12} sm={6} md={6} className={classes.faqBox}>
             <Faq />
           </Grid>
-          <Grid item xs={6} className={classes.faqBox}>
+          <Grid item xs={12} sm={6} md={6} className={classes.faqBox}>
             <Faq />
           </Grid>
-          <Grid item xs={6} className={classes.faqBox}>
+          <Grid item xs={12} sm={6} md={6} className={classes.faqBox}>
             <Faq />
           </Grid>
-          <Grid item xs={6} className={classes.faqBox}>
+          <Grid item xs={12} sm={6} md={6} className={classes.faqBox}>
             <Faq />
           </Grid>
-          <Grid item xs={6} className={classes.faqBox}>
+          <Grid item xs={12} sm={6} md={6} className={classes.faqBox}>
             <Faq />
           </Grid>
-          <Grid item xs={6} className={classes.faqBox}>
+          <Grid item xs={12} sm={6} md={6} className={classes.faqBox}>
             <Faq />
           </Grid>
-          <Grid item xs={6} className={classes.faqBox}>
+          <Grid item xs={12} sm={6} md={6} className={classes.faqBox}>
             <Faq />
           </Grid>
-          <Grid item xs={6} className={classes.faqBox}>
+          <Grid item xs={12} sm={6} md={6} className={classes.faqBox}>
             <Faq />
           </Grid>
-          <Grid item xs={6} className={classes.faqBox}>
+          <Grid item xs={12} sm={6} md={6} className={classes.faqBox}>
             <Faq />
           </Grid>
-          <Grid item xs={6} className={classes.faqBox}>
+          <Grid item xs={12} sm={6} md={6} className={classes.faqBox}>
             <Faq />
           </Grid>
         </Grid>

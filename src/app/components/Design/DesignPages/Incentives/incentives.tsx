@@ -42,8 +42,8 @@ function Incentives({items, onSelectItem, confirmItems}: selectedStepItem) {
                 <Grid container item xs={8} className={classes.content}>
                   <Grid xs={12} item><Slider /></Grid>
                   <Grid item xs={12} container style={{paddingTop: 10}}>
-                      <Grid item xs={4}><img src={Chart} alt="chart"/></Grid>
-                      <Grid item xs={8} style={{textAlign: 'justify'}}>
+                      <Grid item xs={12} sm={12} md={4}><img src={Chart} alt="chart"/></Grid>
+                      <Grid item xs={12} sm={12} md={8} style={{textAlign: 'justify'}}>
                         his rate determines the amount of overflow that each token can be redeemed for at any given time. On a lower bonding curve, redeeming a token increases the value of each remaining token, creating an incentive to hodl tokens longer than others. A bonding curve of 100% means all tokens will have equal value regardless of when they are redeemed. his rate determines the amount of overflow that each token can be redeemed for at any given time. On a lower bonding curve, redeeming a token increases the value of each remaining token, creating an incentive to hodl tokens longer than others. A bonding curve of 100% means all tokens will have equal value regardless of when they are redeemed.
                       </Grid>
                   </Grid>

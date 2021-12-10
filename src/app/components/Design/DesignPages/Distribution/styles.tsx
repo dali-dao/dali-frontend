@@ -60,6 +60,11 @@ export const useStyles = makeStyles((theme: Theme) =>
         color: 'white',
         width: '200px',
         cursor: 'pointer'
+    },
+    modal: {
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
     }
   })
 );

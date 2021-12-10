@@ -73,7 +73,8 @@ export const useStyles = makeStyles((theme: Theme) =>
     delayContentValue: {
       fontSize: 13,
       fontFamily: 'Roboto-Bold',
-      color: '#c7c8ca'
+      color: '#c7c8ca',
+      wordBreak: 'break-all'
     },
     delayContentOption: {
       width: 30,
