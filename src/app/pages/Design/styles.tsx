@@ -12,7 +12,10 @@ export const useStyles = makeStyles((theme: Theme) =>
     },
     container: {
         padding: '0 160px 0 160px',
-        textAlign: 'left'
+        textAlign: 'left',
+        "@media (max-width: 1205px)": {
+          padding: '0px 10px 0px 10px',
+        }
     }
   })
 );

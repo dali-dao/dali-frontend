@@ -3,6 +3,11 @@ import DesignStep from "../../DesignStep/designStep";
 import Grid from '@material-ui/core/Grid';
 import Card from '@material-ui/core/Card';
 import CardHeader from '@material-ui/core/CardHeader';
+import AddTokenReceiver from '../../../Modal/AddTokenReceiver';
+import Modal from '@material-ui/core/Modal';
+import React from "react";
+import Backdrop from '@material-ui/core/Backdrop';
+import Fade from '@material-ui/core/Fade';
 
 interface selectedStepItem {
   items: boolean[];
@@ -13,9 +18,19 @@ interface selectedStepItem {
 function ReservedTokens({items, onSelectItem, confirmItems}: selectedStepItem) {
   const classes = useStyles();
 
+  const [open, setOpen] = React.useState(false);
+
+  const handleOpen = () => {
+      setOpen(true);
+  };
+
+  const handleClose = () => {
+      setOpen(false);
+  };
+
   return (
     <div className={classes.root}>
-        <Grid className={classes.title}>DESIGN YOUR PROJECT - RESERVED TOKENS</Grid>
+      <Grid className={classes.title}>DESIGN YOUR PROJECT - RESERVED TOKENS</Grid>
         <Grid><DesignStep selectedStepItem={items} onSelectItem={onSelectItem} confirmStepItem={confirmItems}/></Grid>
         <Grid>
           <Card className={classes.card}>
@@ -45,7 +60,7 @@ function ReservedTokens({items, onSelectItem, confirmItems}: selectedStepItem) {
                         <span>100.00 % to</span>
                     </Grid>
                     <Grid>
-                        <button className={classes.payoutBtn}>ADD A PAYOUT</button>
+                        <button className={classes.payoutBtn} onClick={handleOpen}>ADD A PAYOUT</button>
                     </Grid>
                     <Grid>
                         Automatically distribute a portion of your project’s reserved tokens to other Juicebox projects or ETH wallets.
@@ -60,6 +75,24 @@ function ReservedTokens({items, onSelectItem, confirmItems}: selectedStepItem) {
               </Grid>
           </Card>
         </Grid>
+        <Modal
+            aria-labelledby="transition-modal-title"
+            aria-describedby="transition-modal-description"
+            className={classes.modal}
+            open={open}
+            onClose={handleClose}
+            closeAfterTransition
+            BackdropComponent={Backdrop}
+            BackdropProps={{
+                timeout: 500,
+            }}
+        >
+            <Fade in={open}>
+            <div style={{width: '60%'}}>
+                <AddTokenReceiver />
+            </div>
+            </Fade>
+        </Modal>
     </div>
   );
 }

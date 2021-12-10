@@ -61,10 +61,16 @@ export const useStyles = makeStyles((theme: Theme) =>
         boxShadow: '3px 3px #0c0f16',
         padding: '10px 20px',
         marginTop: 20,
+        marginBottom: 20,
         borderRadius: 3,
         color: 'white',
         width: '200px',
         cursor: 'pointer'
-    }
+    },
+    modal: {
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
   })
 );
