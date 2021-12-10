@@ -14,14 +14,14 @@ function Footer() {
     return (
       <div className={classes.footer}>
         <Grid container className={classes.signupSection}>
-          <Grid item xs={12} md={8} className={classes.titleDesc}>
-            <Grid className={classes.title}>STAY IN THE LOOP</Grid>
-            <Grid className={classes.desc}>Join our mailing list to stay in the loop with our newest feature releases, NFT <br/> drops, and tips and tricks for navigating OpenSea.</Grid>
-            <Grid container item xs={12}>
-              <Grid item xs={12} sm={7} className={classes.signupInput}>
+          <Grid container item xs={12} md={8} className={classes.titleDesc}>
+            <Grid item xs={12} className={classes.title}>STAY IN THE LOOP</Grid>
+            <Grid item xs={12} className={classes.desc}>Join our mailing list to stay in the loop with our newest feature releases, NFT <br/> drops, and tips and tricks for navigating OpenSea.</Grid>
+            <Grid container item xs={12} >
+              <Grid item xs={7} sm={7} className={classes.signupInput}>
                 <BootstrapInput id="bootstrap-input"/>
               </Grid>
-              <Grid item xs={12} sm={5} style={{display: 'flex'}}>
+              <Grid item xs={5} sm={5} style={{display: 'flex'}}>
                 <Grid className={classes.signupBtn}>
                   Sign Up
                 </Grid>
@@ -29,7 +29,7 @@ function Footer() {
             </Grid>
           </Grid>
           <Grid item xs={1}></Grid>
-          <Grid item xs={12} md={3} style={{textAlign: 'left', marginTop: 20}}>
+          <Grid item xs={12} md={3} className={classes.follow_content}>
             <Grid className={classes.followTitle}>FOLLOW US ON</Grid>
             <Grid className={classes.followIcons}>
               <GitHubIcon fontSize="large" style={{marginRight: 20}}/>

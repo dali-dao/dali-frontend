@@ -14,7 +14,22 @@ export const useStyles = makeStyles((theme: Theme) =>
         backgroundColor: theme.palette.background.paper,
         height: 'auto',
         padding: '60px 160px 30px 160px',
-        color: theme.palette.background.default
+        color: theme.palette.background.default,
+        "@media (max-width: 1280px)": {
+            paddingLeft: 50,
+            paddingRight: 50,
+        },
+        "@media (max-width: 1120px)": {
+            paddingLeft: 20,
+            paddingRight: 20,
+        },
+    },
+    follow_content: {
+        textAlign: 'left',
+        "@media (max-width: 960px)": {
+            marginTop: 20
+        },
+        
     },
     menu: {
         textDecoration: 'none',
@@ -84,7 +99,7 @@ export const useStyles = makeStyles((theme: Theme) =>
     },
     titleDesc: {
         textAlign: 'left',
-        marginTop: 20
+        marginBottom: 20
     },
     title: {
         fontSize: 20,

@@ -8,58 +8,52 @@ const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
       display: 'flex',
-      margin: '0 10px 10px 10px',
-      padding: 10, 
-      fontSize: 12
+      fontSize: 12,
+      border: '1px solid grey',
+      background: '#1c222d',
+      borderRadius: '10px',
+      padding: '10px'
     },
     details: {
-      alignItems: 'center',
-      display: 'grid'
+      textAlign: 'left',
+      paddingLeft: 10
     },
     content: {
-      flex: '1 0 auto',
     },
     account_info: {
       color: '#a3a5a7',
-      textAlign: 'left',
-      padding: 10
+      marginBottom: 5
     },
     project_description: {
       color: '#a3a5a7',
-      textAlign: 'left',
-      marginLeft: '10px'
+      marginTop: 5
     },
     price: {
       color: 'yellow',
       fontSize: 15,
-      paddingLeft: 5,
     },
     project_date: {
-      paddingTop: 2,
-      textAlign: 'left'
+      color: '#a3a5a7',
     },
     project_name: {
       fontSize: 17,
       color: 'white',
-      textAlign: 'left',
-      paddingLeft: 10,
+      fontFamily: 'CerebriSansPro-ExtraBold',
       marginBottom: 10,
-      fontFamily: 'CerebriSansPro-ExtraBold'
+      marginTop: 10
     },
     image_content: {
-      width: '150px',
     },
     project_image: {
-      width: '100%',
+      width: '100%'
     },
     padding10: {
-      padding: 10
     },
     icon_style: {
-      paddingLeft: 10
+      color: '#a3a5a7',
+      marginRight: 10
     },
     textLeft: {
-      textAlign: 'left'
     }
   }),
 );
@@ -77,29 +71,29 @@ export default function ProjectItem({image, name, id, price, date, desc}: ItemPr
   const classes = useStyles();
 
   return (
-    <Card className={classes.root}>
-      <Grid className={classes.image_content}>
+    <Grid container className={classes.root}>
+      <Grid item xs={12} md={4} className={classes.image_content}>
         <img src={ProjectImage} alt='project_image' className={classes.project_image}/>
       </Grid>
-      <Grid className={classes.details} item xs={12}>
+      <Grid className={classes.details} item xs={12} md={8}>
           <Grid container item xs={12}>
               <Grid item xs={12} className={classes.project_name}>
                 {name}
               </Grid>
               <Grid container className={classes.account_info}>
-                <Grid item xs={12} md={7}>
+                <Grid item xs={7} md={7} sm={7}>
                   {id}
                 </Grid>
-                <Grid item xs={12} md={5}>
+                <Grid item xs={5} md={5} sm={5}>
                   <Icon icon="mdi:discord" inline={true} /> Discord
                 </Grid>
               </Grid>
           </Grid>
           <Grid container item xs={12}>
-            <Grid item xs={12} md={5} className={classes.textLeft}>
+            <Grid item xs={7} md={5} sm={7} className={classes.textLeft}>
               <span className={classes.icon_style}>Ξ</span><span className={classes.price}>{price}</span>
             </Grid>
-            <Grid item xs={12} md={5} className={classes.project_date}>
+            <Grid item xs={5} md={5} sm={5} className={classes.project_date}>
               <span>since {date}</span>
             </Grid>
           </Grid>
@@ -109,6 +103,6 @@ export default function ProjectItem({image, name, id, price, date, desc}: ItemPr
             </Grid>
           </Grid>
       </Grid>
-    </Card>
+    </Grid>
   );
 }

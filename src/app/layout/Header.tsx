@@ -45,18 +45,18 @@ function Header() {
 
     return (
         <div className={classes.header}>
-            <Grid container>
+            <Grid container spacing={2}>
                 <Grid item xs={12} md={2}>
                     <img src={Logo} alt="logo"/>
                 </Grid>
                 <Grid container xs={12} md={7} className={classes.menuItems}>
-                    <Grid item xs={2} md={1}>
+                    <Grid item xs={2} md={1} sm={2}>
                         <Link to="/" className={(location_path.pathname === '/') ? classes.activeMenu : classes.menu}>
                             Home
                         </Link>
                     </Grid>
-                    <Grid item xs={3} md={1}>
-                        <Link to="/projects" className={(location_path.pathname === '/projects') ? classes.activeMenu : classes.menu}>
+                    <Grid item xs={3} md={2}>
+                        <Link to="/projects" className={(location_path.pathname === '/projects' || location_path.pathname === '/detail' || location_path.pathname === '/design') ? classes.activeMenu : classes.menu}>
                             Projects
                         </Link>
                     </Grid>

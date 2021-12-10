@@ -10,7 +10,15 @@ export const useStyles = makeStyles((theme: Theme) =>
     },
     project_content: {
       paddingLeft: 150,
-      paddingRight: 150
+      paddingRight: 150,
+      "@media (max-width: 1280px)": {
+        paddingLeft: 50,
+        paddingRight: 50,
+      },
+      "@media (max-width: 1120px)": {
+        paddingLeft: 20,
+        paddingRight: 20,
+      },
     },
     width100:{
       width: '100%'
@@ -26,11 +34,27 @@ export const useStyles = makeStyles((theme: Theme) =>
       top: 55,
     },
     banner_text_content: {
-      width: '84%',
-      margin: 'auto',
+      width: '100%',
       position: 'absolute',
       top: '12%',
-      left: '11%'
+      paddingLeft: 150,
+      paddingRight: 150,
+      "@media (max-width: 1280px)": {
+        paddingLeft: 50,
+        paddingRight: 50,
+      },
+      "@media (max-width: 1120px)": {
+        paddingLeft: 20,
+        paddingRight: 20,
+      },
+    },
+    create_button_content: {
+      justifyContent: 'flex-end',
+      
+      "@media (max-width: 960px)": {
+        justifyContent: 'center',
+        marginBottom: 20
+      },
     },
     project_detail_banner: {
       position: 'absolute',
@@ -62,7 +86,7 @@ export const useStyles = makeStyles((theme: Theme) =>
       textAlign: 'left'
     },
     project_banner_button_content: {
-      textAlign: 'right',
+      textAlign: 'center',
       width: '54%'
     },
     create_project_button: {
@@ -83,13 +107,10 @@ export const useStyles = makeStyles((theme: Theme) =>
         minHeight: "250px",
       },
       "@media (max-width: 960px)": {
-        minHeight: "350px",
+        minHeight: "300px",
       },
-      "@media (max-width: 835px)": {
-        minHeight: "370px",
-      },
-      "@media (max-width: 627px)": {
-        minHeight: "400px",
+      "@media (max-width: 710px)": {
+        minHeight: "320px",
       },
     },
     project_banner_tab: {

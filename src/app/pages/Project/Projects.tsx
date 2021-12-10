@@ -9,7 +9,7 @@ import { Icon } from '@iconify/react';
 
 function Projects() {
   const classes = useStyles();
-  const projectItem = new Array(24).fill({image: "", name: "ConstitutionDAO", id: "@constitutiondao", price: 77789, date: "01-01-21", desc: "SharkDAO owns Nouns #2,#5,#33.ming..."})
+  const projectItem = new Array(24).fill({image: "", name: "ConstitutionDAO", id: "@constitutiondao", price: 77789, date: "01-01-21", desc: "SharkDAO owns Nouns #2,#5,#33"})
   const [state, setState] = React.useState<{ age: string | number; name: string }>({
     age: '',
     name: 'hai',
@@ -26,8 +26,8 @@ function Projects() {
     <div>
       <Grid container className={classes.banner_content} >
         <img alt='banner' src={Banner} className={classes.image_banner}></img>
-        <Grid container spacing={2} className={classes.banner_text_content}>
-          <Grid item xs={12} md={8}>
+        <Grid container className={classes.banner_text_content}>
+          <Grid item xs={12} md={8} style={{marginBottom: 22}}>
             <Grid item >
               <span className={classes.project_banner_title}>PROJECTS ON $DALI</span>
               <p className={classes.project_banner_description}>
@@ -39,21 +39,21 @@ function Projects() {
             </Grid>
           </Grid>
           <Grid item xs={12} md={4}>
-            <Grid container justifyContent="center">
+            <Grid container className={classes.create_button_content} justifyContent="flex-end">
               <Grid item className={classes.project_banner_button_content}>
                 <Link to="/projects" className={classes.create_project_button}>CREATE PROJECT
                 </Link>
               </Grid>
             </Grid>
           </Grid>
-          <Grid item xs={12} md={8}>
+          <Grid item xs={12} md={8} sm={6}>
             <Grid container >
-              <Link to="/projects" className={classes.project_banner_tab}>ACTIVE</Link>
+              <Link to="/projects" className={classes.project_banner_tab_active}>ACTIVE</Link>
               <Link to="/projects" className={classes.project_banner_tab}>ARCHIVED</Link>
             </Grid>
           </Grid>
-          <Grid item xs={12} md={4}>
-            <Grid container justifyContent="center" >
+          <Grid item xs={12} md={4} sm={6}>
+            <Grid container justifyContent="flex-end" >
               <FormControl variant="outlined" className={classes.formControl}>
                 <InputLabel htmlFor="outlined-volume-native-simple">Volume</InputLabel>
                 <Select
@@ -77,10 +77,10 @@ function Projects() {
       </Grid>
       <Grid className={classes.project_content}>
         <Grid className={classes.project_list_container}>
-            <Grid container>
+            <Grid container spacing={1}>
               {projectItem.map((item, index) => {
                 return (         
-                <Grid key={index} item xs={4} className={classes.margin_bottom_10}> 
+                <Grid key={index} item xs={12} md={4} sm={6} className={classes.margin_bottom_10} > 
                   <Link to='/detail' className={classes.project_detail_link}>
                     <ProjectItem image={item.image} name={item.name} id={item.id} price={item.price} date={item.date} desc={item.desc} />
                   </Link>
