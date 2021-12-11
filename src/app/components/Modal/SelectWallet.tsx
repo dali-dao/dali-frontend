@@ -10,8 +10,6 @@ import Lattiz from '../../assets/Popup/lattiz.png';
 import Ledgez from '../../assets/Popup/ledgez.png';
 import Opera from '../../assets/Popup/opera.png';
 import WalletConnect from '../../assets/Popup/walletconnect.png';
-import Web3Modal from 'web3modal';
-
 
 const useStyles = makeStyles((theme: Theme) => ({
   root: {

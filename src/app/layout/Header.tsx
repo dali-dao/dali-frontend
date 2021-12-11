@@ -56,23 +56,23 @@ function Header() {
     }
 
     const connect = useCallback(async function () {
-        const provider = await web3Modal.connect()
-        const web3Provider = new providers.Web3Provider(provider)
+        const provider = await web3Modal.connect();
+        const web3Provider = new providers.Web3Provider(provider);
     
-        const signer = web3Provider.getSigner()
-        const address = await signer.getAddress()
-        localStorage.setItem('connectedAddress', address)
-        setOpen(false)
-        setConnectState(true)
-    }, [])
+        const signer = web3Provider.getSigner();
+        const address = await signer.getAddress();
+        localStorage.setItem('connectedAddress', address);
+        setOpen(false);
+        setConnectState(true);
+    }, []);
 
-    const disconnect = () => {
-        web3Modal.clearCachedProvider()
+    function disconnect() {
+        web3Modal.clearCachedProvider();
         //   if (provider?.disconnect && typeof provider.disconnect === 'function') {
         //     provider.disconnect()
         //   }
         localStorage.setItem('connectedAddress', '');
-        setConnectState(false)
+        setConnectState(false);
     }
 
     return (
