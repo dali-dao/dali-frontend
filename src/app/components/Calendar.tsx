@@ -1,11 +1,11 @@
 import 'date-fns';
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
-// import DateFnsUtils from '@date-io/date-fns';
-// import {
-//   MuiPickersUtilsProvider,
-//   KeyboardDatePicker,
-// } from '@material-ui/pickers';
+import DateFnsUtils from '@date-io/date-fns';
+import {
+  MuiPickersUtilsProvider,
+  KeyboardDatePicker,
+} from '@material-ui/pickers';
 
 export default function Calendar() {
   // The first commit of Material-UI
@@ -18,9 +18,9 @@ export default function Calendar() {
   };
 
   return (
-    // <MuiPickersUtilsProvider utils={DateFnsUtils}>
+    <MuiPickersUtilsProvider utils={DateFnsUtils}>
       <Grid container justifyContent="space-around">
-        {/* <KeyboardDatePicker
+        <KeyboardDatePicker
           disableToolbar
           variant="inline"
           format="MM/dd/yyyy"
@@ -32,7 +32,7 @@ export default function Calendar() {
           KeyboardButtonProps={{
             'aria-label': 'change date',
           }}
-        /> */}
+        />
       </Grid>
     // </MuiPickersUtilsProvider>
   );

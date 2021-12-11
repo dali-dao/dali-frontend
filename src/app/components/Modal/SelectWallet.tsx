@@ -11,8 +11,8 @@ import Lattiz from '../../assets/Popup/lattiz.png';
 import Ledgez from '../../assets/Popup/ledgez.png';
 import Opera from '../../assets/Popup/opera.png';
 import WalletConnect from '../../assets/Popup/walletconnect.png';
-// import Web3Modal from 'web3modal';
-// import { useSelector } from 'react-redux';
+import Web3Modal from 'web3modal';
+import { providers } from 'ethers'
 
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
@@ -76,7 +76,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     cursor: 'pointer',
     display: 'flex',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'left',
     padding: 10,
     fontSize: 12,
     borderRadius: 10,
@@ -86,37 +86,28 @@ const useStyles = makeStyles((theme: Theme) => ({
   }
 }));
 
+const providerOptions = {}
+
+let web3Modal: any
+if (typeof window !== 'undefined') {
+  web3Modal = new Web3Modal({
+    network: 'mainnet', // optional
+    cacheProvider: true,
+    providerOptions // required
+  })
+}
+
 export default function SelectWallet() {
   const classes = useStyles();
 
-  // const { authenticated } = useSelector((state: RootState) => state.auth)
-
-  // const [state, dispatch] = useReducer(reducer, initialState)
-  // const { provider, web3Provider, address, chainId } = state
-  
   const connect = useCallback(async function () {
-  //   // This is the initial `provider` that is returned when
-  //   // using web3Modal to connect. Can be MetaMask or WalletConnect.
-  //   const provider = await web3Modal.connect()
+    const provider = await web3Modal.connect()
+    const web3Provider = new providers.Web3Provider(provider)
 
-  //   // We plug the initial `provider` into ethers.js and get back
-  //   // a Web3Provider. This will add on methods from ethers.js and
-  //   // event listeners such as `.on()` will be different.
-  //   const web3Provider = new providers.Web3Provider(provider)
+    const signer = web3Provider.getSigner()
+    const address = await signer.getAddress()
+    localStorage.setItem('connectedAddress', address)
 
-  //   const signer = web3Provider.getSigner()
-  //   const address = await signer.getAddress()
-  //   localStorage.setItem('connectedAddress', address)
-
-  //   const network = await web3Provider.getNetwork()
-
-  //   dispatch({
-  //     type: 'SET_WEB3_PROVIDER',
-  //     provider,
-  //     web3Provider,
-  //     address,
-  //     chainId: network.chainId
-  //   })
   }, [])
 
   return (

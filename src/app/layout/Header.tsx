@@ -11,6 +11,8 @@ import Fade from '@material-ui/core/Fade';
 import SelectWallet from '../components/Modal/SelectWallet';
 import { Icon } from '@iconify/react'; 
 import {useLocation} from 'react-router-dom';
+import Web3Modal from 'web3modal';
+import { useCallback } from 'react';
 
 function Header() {
     const classes = useStyles();
@@ -45,7 +47,7 @@ function Header() {
 
     return (
         <div className={classes.header}>
-            <Grid container spacing={2}>
+            <Grid container>
                 <Grid item xs={12} md={2}>
                     <img src={Logo} alt="logo"/>
                 </Grid>
@@ -89,11 +91,11 @@ function Header() {
                             <Icon icon="bi:moon-fill" className={classes.moon_style} onClick={handleToggleTheme} />
                         </span>
                         <span>
-                        <Icon icon="bx:bxs-sun" className={classes.sun_style} />
+                        <Icon icon="bx:bxs-sun" className={classes.sun_style} onClick={handleToggleTheme}/>
                         </span>
                     </Grid>
                     <Grid item xs={8} md={5} sm={6} className={classes.connectBtn} onClick={handleOpen}>
-                        Connect
+                        { localStorage.getItem('connectedAddress') === '' ? 'Connect' : localStorage.getItem('connectedAddress')?.substring(0, 10) + '...' }
                     </Grid>
                     <Grid item xs={2} md={2} sm={3}>
                         <ReorderIcon fontSize="small"/>

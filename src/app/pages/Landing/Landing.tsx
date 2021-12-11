@@ -41,7 +41,7 @@ function Landing() {
             </Link>
           </Grid>
           <Grid className={classes.smartContract}>
-            Powered by public smart contracts on <Link to="/" className={classes.ethereum}>Ethereum.</Link>
+            Powered by public smart contracts on <a href="https://ethereum.org/en/what-is-ethereum/" className={classes.ethereum} target="_blank" rel="noreferrer">Ethereum.</a>
           </Grid>
         </Grid>
       </Grid>

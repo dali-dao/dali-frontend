@@ -3,7 +3,7 @@ import {
     Routes,
     Route,
   } from "react-router-dom";
-
+// import React from "react";
 import Header from './Header';
 import Landing from '../pages/Landing/Landing';
 import Projects from '../pages/Project/Projects';
@@ -16,24 +16,26 @@ import Modals from '../pages/Modals';
 function Layout() {
   return (
     <div>
-      {/* <UseWalletProvider
-        chainId={56}
-        connectors={{
-          walletconnect: { rpcUrl: "https://rinkeby.etherscan.io" },
-        }}
-      > */}
-        <Router>
-            <Header />
-            <Routes>
-                <Route path="/" element={<Landing />} />
-                <Route path="/projects" element={<Projects />} />
-                <Route path="/detail" element={<ProjectDetail />} />
-                <Route path="/design" element={<Design />} />
-                <Route path="/modals" element={<Modals />} />
-            </Routes>
-            <Footer />
-        </Router>
-      {/* </UseWalletProvider> */}
+      {/* <React.Fragment>
+        <UseWalletProvider
+          chainId={56}
+          connectors={{
+            walletconnect: { rpcUrl: "https://rinkeby.etherscan.io" },
+          }}
+        > */}
+          <Router>
+              <Header />
+              <Routes>
+                  <Route path="/" element={<Landing />} />
+                  <Route path="/projects" element={<Projects />} />
+                  <Route path="/detail" element={<ProjectDetail />} />
+                  <Route path="/design" element={<Design />} />
+                  <Route path="/modals" element={<Modals />} />
+              </Routes>
+              <Footer />
+          </Router>
+        {/* </UseWalletProvider>
+      </React.Fragment> */}
     </div>
   );
 }
