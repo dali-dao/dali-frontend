@@ -24,10 +24,10 @@ function ProjectDetail() {
             <Grid item xs={12} md={8}>
               <span className={classes.project_banner_title}>PROJECTS ON $DALI</span>
               <p className={classes.project_info_desc}>
-                <Icon icon="websymbol:user" style={{verticalAlign: 'middle', width: 16, height: 18}} /> <span style={{fontWeight: 'bold', fontSize: 14, marginRight: 20}}>@spicedao</span>
-                <Icon icon="fontisto:world" style={{verticalAlign: 'middle', width: 16, height: 18}}  /> <span style={{fontWeight: 'bold', fontSize: 14, marginRight: 20}}>dune.foundation</span>
-                <Icon icon="el:twitter" style={{verticalAlign: 'middle', width: 16, height: 18}}  color="white" /> <span style={{fontWeight: 'bold', fontSize: 14, marginRight: 20}}>@TheSpiceDAO</span>
-                <Icon icon="akar-icons:discord-fill" style={{verticalAlign: 'middle', width: 16, height: 18}}  color="white" /> <span style={{fontWeight: 'bold', fontSize: 14}}>Discord</span>
+                <Icon icon="websymbol:user" className={classes.detail_banner_icon} /> <span className={classes.detail_banner_user_info}>@spicedao</span>
+                <Icon icon="fontisto:world" className={classes.detail_banner_icon}  /> <span className={classes.detail_banner_user_info}>dune.foundation</span>
+                <Icon icon="el:twitter" className={classes.detail_banner_icon}  color="white" /> <span className={classes.detail_banner_user_info}>@TheSpiceDAO</span>
+                <Icon icon="akar-icons:discord-fill" className={classes.detail_banner_icon}  color="white" /> <span className={classes.detail_banner_icon_style}>Discord</span>
               </p>
               <Grid item xs={12} md={9} className={classes.project_banner_description} justifyContent="center">
                   <span className={classes.font13}>
@@ -47,7 +47,7 @@ function ProjectDetail() {
       </Grid>
       <Grid container justifyContent="center" className={classes.main_content}>
         <Grid item xs={12} md={6} className={classes.padding10}>
-          <Grid item style={{border: '1px solid #323e50', backgroundColor: '#1a1d24', borderRadius: 5, marginBottom: 20, height: 'auto'}}>
+          <Grid item className={classes.volume_content}>
             <Grid xs={12} md={12} className={classes.detail_first_row}>
               <span className={classes.detail_info_left}>Volume    <Icon icon="si-glyph:circle-info" className={classes.verticalMiddle}/>
               </span>
@@ -71,12 +71,12 @@ function ProjectDetail() {
             </Grid>
           </Grid>
 
-          <Grid item style={{border: '1px solid #323e50', backgroundColor: '#1a1d24', borderRadius: 5, marginBottom: 30, height: 'auto'}}>
+          <Grid item className={classes.volume_currency_content}>
             <VolumeCurrencyChart />
           </Grid>
           
           <Grid container>
-            <Grid item xs={12} md={6} style={{marginBottom: 20}} className={classes.TextLeft}>
+            <Grid item xs={12} md={6} className={classes.spice_token_title}>
                 SPICE TOKENS   <Icon icon="si-glyph:circle-info" className={classes.verticalMiddle}/>
             </Grid>
             <Grid container xs={12} md={10} className={classes.breakWord}>
