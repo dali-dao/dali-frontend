@@ -49,7 +49,9 @@ const useStyles = makeStyles((theme: Theme) => ({
     color: '#fff', 
     paddingTop: 15, 
     marginRight: '100px', 
-    fontSize: 16
+    fontSize: 16,
+    width: '100%',
+    textAlign: 'left'
   },
   icon_info_1: {
     verticalAlign: 'middle', 
@@ -59,7 +61,6 @@ const useStyles = makeStyles((theme: Theme) => ({
     minWidth: 30, 
     fontSize: '12.8px',
     color: '#fff',
-    marginRight: 'auto'
   },
   tab_label: {
     minWidth: 50, 

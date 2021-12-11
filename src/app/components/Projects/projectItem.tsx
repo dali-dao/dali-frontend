@@ -1,6 +1,5 @@
 import { Theme, createStyles, makeStyles } from '@material-ui/core/styles';
 import { Icon } from '@iconify/react';
-import Card from '@material-ui/core/Card';
 import Grid from '@material-ui/core/Grid';
 import ProjectImage from '../../assets/Projects/project_1.png';
 

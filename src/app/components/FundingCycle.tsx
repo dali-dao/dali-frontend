@@ -51,7 +51,7 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
   icon_style:{
     verticalAlign: 'middle', 
-    marginLeft: 10
+    marginLeft: 5
   },
   tab_pannel_content: {
     padding: '0px 0px', 
@@ -128,8 +128,9 @@ const useStyles = makeStyles((theme: Theme) => ({
     paddingTop: 20
   },
   eth_content: {
-    padding: 20, 
-    fontSize: 13
+    padding: '20px 20px 20px 10px', 
+    fontSize: 13,
+    textAlign: 'left'
   },
   eth_info: {
     verticalAlign: 'middle', 
@@ -173,7 +174,7 @@ export default function LabTabs() {
               <Grid item xs={12} md={3} className={classes.fontSize12}>
                 <strong>Reserved</strong><Icon icon="si-glyph:circle-info" className={classes.icon_style}/><strong>: 0%</strong>
               </Grid>
-              <Grid item xs={12} md={4} className={classes.fontSize12}>
+              <Grid item xs={12} md={6} className={classes.fontSize12}>
                 <strong>Reconfiguration strategy</strong> <Icon icon="si-glyph:circle-info" className={classes.icon_style}/><strong>: 0%</strong>
               </Grid>
             </Grid>
@@ -202,10 +203,10 @@ export default function LabTabs() {
             <Grid item xs={12} md={12} className={classes.marginLeft20}>
               <strong className={classes.value_0}>Distribution <Icon icon="si-glyph:circle-info" className={classes.icon_circle_info}/></strong>
             </Grid>
-            <Grid item xs={12} md={7} className={classes.eth_content}>
+            <Grid item xs={7} md={7} className={classes.eth_content}>
             <span><Icon icon="websymbol:user" className={classes.icon_circle_info}/> dunedao.eth</span>
             </Grid>
-            <Grid item xs={12} md={5} className={classes.percent_value}>
+            <Grid item xs={5} md={5} className={classes.percent_value}>
               <strong>100%</strong>
             </Grid>
           </Grid>
@@ -214,10 +215,10 @@ export default function LabTabs() {
               <strong className={classes.value_0}>Reserved tokens (100%)</strong>
               <Icon icon="si-glyph:circle-info" className={classes.icon_circle_info}/>
             </Grid>
-            <Grid item xs={12} md={7} className={classes.eth_content}>
+            <Grid item xs={7} md={7} className={classes.eth_content}>
             <span><Icon icon="websymbol:user" className={classes.eth_info}/> dunedao.eth</span>
             </Grid>
-            <Grid item xs={12} md={5} className={classes.percent_value}>
+            <Grid item xs={5} md={5} className={classes.percent_value}>
               <strong>100%</strong>
             </Grid>
             <Grid item xs={12} md={7} className={classes.padding20}>

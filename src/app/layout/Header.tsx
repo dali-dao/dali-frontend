@@ -45,7 +45,7 @@ function Header() {
 
     return (
         <div className={classes.header}>
-            <Grid container spacing={2}>
+            <Grid container>
                 <Grid item xs={12} md={2}>
                     <img src={Logo} alt="logo"/>
                 </Grid>

@@ -59,7 +59,16 @@ export const useStyles = makeStyles((theme: Theme) =>
     project_detail_banner: {
       position: 'absolute',
       top: '15%',
-      left: '8%'
+      paddingLeft: 150,
+      paddingRight: 150,
+      "@media (max-width: 1280px)": {
+        paddingLeft: 50,
+        paddingRight: 50,
+      },
+      "@media (max-width: 1120px)": {
+        paddingLeft: 20,
+        paddingRight: 20,
+      },
     },
     banner: {
         width: '100%',
@@ -78,7 +87,10 @@ export const useStyles = makeStyles((theme: Theme) =>
       display: 'block',
       fontSize: '28px',
       fontFamily: 'CerebriSansPro-Heavy',
-      textAlign: 'left'
+      textAlign: 'left',
+      "@media (max-width: 960px)": {
+        textAlign: 'center'
+      }
     },
     project_banner_description: {
       fontSize: '14.1px',
@@ -111,6 +123,16 @@ export const useStyles = makeStyles((theme: Theme) =>
       },
       "@media (max-width: 710px)": {
         minHeight: "320px",
+      },
+    },
+    detail_image_banner: {
+      width: '100%',
+      height: 230,
+      "@media (max-width: 960px)": {
+        minHeight: "400px",
+      },
+      "@media (max-width: 710px)": {
+        minHeight: "420px",
       },
     },
     project_banner_tab: {
@@ -177,8 +199,19 @@ export const useStyles = makeStyles((theme: Theme) =>
       marginLeft: 30
     },
     main_content: {
-      margin: '0px 128px',
-      height: 'auto'
+      height: 'auto',
+      marginTop: 15,
+      marginBottom: 15,
+      paddingLeft: 140,
+      paddingRight: 140,
+      "@media (max-width: 1280px)": {
+        paddingLeft: 40,
+        paddingRight: 40,
+      },
+      "@media (max-width: 1120px)": {
+        paddingLeft: 10,
+        paddingRight: 10,
+      },
     },
     contact_info: {
       marginTop: 10
@@ -189,12 +222,23 @@ export const useStyles = makeStyles((theme: Theme) =>
     marginTopAuto: {
       marginTop: 'auto',
     },
+    project_info_desc: {
+      textAlign: 'left',
+      "@media (max-width: 960px)": {
+        textAlign: 'center'
+      },
+    },
     detail_banner_right: {
       border: '1px solid grey',
-      padding: '10px 15px',
+      padding: '10px 10px',
       borderRadius: '5px',
       textAlign: 'center',
-      width: '75%'
+      "@media (max-width: 960px)": {
+        marginTop: 10,
+      },
+    },
+    padding10: {
+      padding: 10
     },
     detail_content: {
       margin: '3% 11%',
@@ -344,6 +388,15 @@ export const useStyles = makeStyles((theme: Theme) =>
     },
     project_detail_link: {
       textDecoration: 'none'
+    },
+    breakWord: {
+      wordBreak: 'break-all'
+    },
+    banner_icon_content: {
+      textAlign: 'left',
+      '@media (max-width: 960px)': {
+        textAlign: 'center'
+      }
     }
   })
 );
