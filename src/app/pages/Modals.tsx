@@ -33,7 +33,7 @@ function Moals() {
       <Grid className={classes.divider}></Grid>
       <PayDAOTailFung />
       <Grid className={classes.divider}></Grid>
-      <SelectWallet />
+      
       <Grid className={classes.divider}></Grid>
       <OpenWallet />
       <Grid className={classes.divider}></Grid>

@@ -1,4 +1,3 @@
-import { useCallback } from 'react'
 import { makeStyles, Theme } from '@material-ui/core/styles';
 import { Grid } from '@material-ui/core';
 import MetaMask from '../../assets/Popup/metamask.png';
@@ -12,7 +11,7 @@ import Ledgez from '../../assets/Popup/ledgez.png';
 import Opera from '../../assets/Popup/opera.png';
 import WalletConnect from '../../assets/Popup/walletconnect.png';
 import Web3Modal from 'web3modal';
-import { providers } from 'ethers'
+
 
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
@@ -86,29 +85,12 @@ const useStyles = makeStyles((theme: Theme) => ({
   }
 }));
 
-const providerOptions = {}
-
-let web3Modal: any
-if (typeof window !== 'undefined') {
-  web3Modal = new Web3Modal({
-    network: 'mainnet', // optional
-    cacheProvider: true,
-    providerOptions // required
-  })
+interface connectType {
+  connect: () => void;
 }
 
-export default function SelectWallet() {
+export default function SelectWallet({connect}: connectType) {
   const classes = useStyles();
-
-  const connect = useCallback(async function () {
-    const provider = await web3Modal.connect()
-    const web3Provider = new providers.Web3Provider(provider)
-
-    const signer = web3Provider.getSigner()
-    const address = await signer.getAddress()
-    localStorage.setItem('connectedAddress', address)
-
-  }, [])
 
   return (
     <div className={classes.root}>
