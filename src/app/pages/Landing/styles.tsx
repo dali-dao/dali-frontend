@@ -1,12 +1,15 @@
-/** @format */
-
 //material-ui
 import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
 //style
 export const useStyles = makeStyles((theme: Theme) =>
   createStyles({
+    root: {
+      color: theme.palette.error.light,
+      backgroundColor: theme.palette.background.default,
+      borderColor: theme.palette.info.main
+    },
     section1: {
-      position: 'relative'
+      position: 'relative',
     },
     banner: {
       width: '100%'
@@ -22,6 +25,7 @@ export const useStyles = makeStyles((theme: Theme) =>
       fontSize: 40,
       paddingBottom: 10,
       textTransform: 'uppercase',
+      color: 'white', // no change by theme
       "@media (max-width: 1305px)": {
         fontSize: 20,
         paddingBottom: 5
@@ -40,6 +44,7 @@ export const useStyles = makeStyles((theme: Theme) =>
       display: 'flex',
       fontFamily: 'Roboto-Bold',
       fontSize: 16,
+      color: 'white',
       "@media (max-width: 1305px)": {
         fontSize: 13,
       },
@@ -71,7 +76,7 @@ export const useStyles = makeStyles((theme: Theme) =>
       }
     },
     ethereum: {
-      color: 'yellow'
+      color: theme.palette.error.dark
     },
     playIcon: {
       paddingRight: 10
@@ -80,7 +85,7 @@ export const useStyles = makeStyles((theme: Theme) =>
       padding: '80px 160px 100px 160px',
       "@media (max-width: 905px)": {
         padding: '80px 10px 100px 10px'
-      }
+      },
     },
     projectTitle: {
       textTransform: 'uppercase',
@@ -94,10 +99,11 @@ export const useStyles = makeStyles((theme: Theme) =>
     },
     exploreMoreBtn: {
       textTransform: 'uppercase',
+      borderColor: `1px solid ${theme.palette.info.main}`
     },
     section3: {
       padding: '70px 160px 70px 160px',
-      backgroundColor: '#151a22',
+      backgroundColor: theme.palette.info.light,
       "@media (max-width: 905px)": {
         padding: '70px 10px 70px 10px',
       }
@@ -110,7 +116,7 @@ export const useStyles = makeStyles((theme: Theme) =>
     },
     section3Btn: {
       textTransform: 'uppercase',
-      paddingTop: 40
+      paddingTop: 40,
     },
     section4: {
       position: 'relative',
@@ -124,6 +130,7 @@ export const useStyles = makeStyles((theme: Theme) =>
       fontFamily: 'CerebriSansPro-Bold',
       fontSize: 18,
       lineHeight: 1.5,
+      color: 'white', // no change by theme
       "@media (max-width: 905px)": {
         fontSize: 13,
         lineHeight: 1,
@@ -155,7 +162,6 @@ export const useStyles = makeStyles((theme: Theme) =>
       fontSize: 21,
       fontFamily: 'CerebriSansPro-ExtraBold',
       marginBottom: 40,
-      backgroundColor: '#10141b'
     },
     viewFaqBtn: {
       marginTop: 50

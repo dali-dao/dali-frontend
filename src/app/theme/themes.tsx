@@ -22,110 +22,145 @@ var baseTheme = createTheme({
   },
 });
 
-const darkTheme = createTheme({
+const lightTheme = createTheme({
   ...baseTheme,
+  /*
+  * Background
+  */
   palette: {
-    type: "dark",
-    // Background of the header, footer
+    type: "light",
+    /*
+    * Background
+    */
     background: {
-      default: "white", 
-      paper: "#1c222d", 
+      default: "#f5f6fa", // main background
+      paper: "#fff", // footer background, step right, step top
     },
-    // Select the theme in header
     common: {
-      black: "white", 
-      white: "#87878f", 
+      black: "#fff", // header background
+      white: "#f5f6fa", // step left side background
     },
     primary: {
-      main: "#fadd0d", 
-      dark: "#fadd0d", 
-      light: "#0f0f1e", // header's background
+      main: "#f5f6fa", // step content header title
+      dark: "#d7deed", // box shadow
+      light: "#2c333f", // step conent number
+    },
+    // project Detail
+    secondary: {
+      main: "#fff", // detail volume
+      dark: "#fff", // activity project detail
+      light: "#fff", // contribute 
     },
     warning: {
-      main: "#3C2601", 
-      dark: "#2b3139",
-      contrastText: "#fff",
+      main: "#fff", // funding cycle
+      // landing page
+      contrastText: "#f5f6fa", // latest payments, faq card foreground
+      dark: "#13204c", // moon background
     },
-    secondary: {
-      main: "#848e9c", 
-      dark: "#fadd0d", 
-      light: "#f0b90b", 
+    /*
+    * Border
+    */
+    info: {
+      main: "#ced7e8", // grey
+      dark: "#f7db0e", // yellow
+      // landing page / latest payment background
+      light: "#fff", // latest payment background
+    },
+    /*
+    * Font
+    */
+    success: {
+      main: "#525571", // grey strong
+      dark: "#416cf7", // yellow -> blue
+      light: "#c6c6d3", // grey thin
     },
     error: {
-      main: "#2b313a", 
-      dark: "#252930", 
-      light: "#161a1e",
-      contrastText: "#2A2D35", 
+      main: "#f5f6fa", // white, input background -> grey thin
+      dark: "#fff", // yellow -> white
+      light: "#13204c", // footer color
+      // stepper selected background yellow -> grey
+      contrastText: "#536279", 
     },
-    info: {
-      main: "#03a66d", 
-      dark: "#f6465d", 
-      light: "#1e2026", 
-    },
-    success: {
-      main: "#0ecb81", 
-      dark: "#f6465d", 
-      light: "#2a2d35",
-    },
+    /*
+    * Button
+    */
     text: {
-      primary: "#848e9c",
-      secondary: "#eaecef",
-      hint: "#b7bdc6", 
-      disabled: "#f0b90b", 
+      primary: "#3a4553", // step 4 button foreground
+      secondary: "#f7db0e", // yellow
+      // landing latest payment 
+      hint: "#f5f6fa", 
+      // step font-color black -> white
+      disabled: "white", 
     },
   },
 });
 
-const lightTheme = createTheme({
+const darkTheme = createTheme({
   ...baseTheme,
   palette: {
-    type: "light",
-    // background of the header, footer
+    type: "dark",
+    /*
+    * Background
+    */
     background: {
-      default: "black", 
-      paper: "white", 
+      default: "#10141b", // main background
+      paper: "#1c222d", // footer background, step right, step top
     },
-    // Select the theme in header
     common: {
-      black: "#87878f", 
-      white: "black", 
+      black: "#0f0f1e", // header background
+      white: "#242b36", // step left side background
     },
     primary: {
-      main: "#FAFAFA", 
-      dark: "black", 
-      light: "white", // header's background
+      main: "#2c333f", // step content header title
+      dark: "#0b0c13", // box shadow
+      light: "#f7db0e", // step conent number
+    },
+    // project Detail
+    secondary: {
+      main: "#1a1d24", // detail volume
+      dark: "#131720", // activity project detail
+      light: "#212630", // contribute 
     },
     warning: {
-      main: "#fef6d8", 
-      contrastText: "#000",
-      dark: "#f5f5f5",
+      main: "#222733", // funding cycle
+      // landing page
+      contrastText: "#151a22", // latest payments, faq card foreground
+      dark: "#29303d", // moon background
     },
-    secondary: {
-      main: "#707a8a",
-      dark: "#f6465d",
-      light: "#c99400", 
+    /*
+    * Border Color
+    */
+    info: {
+      main: "#474f5f", // grey
+      dark: "#f7db0e", // yellow
+      // landing page / latest payment background
+      light: "#151a22", // latest payment background
+    },
+    /*
+    * Font Color
+    */
+    success: {
+      main: "#858594", // grey strong
+      dark: "#f7db0e", // yellow -> blue
+      light: "#9fa0a4", // grey thin
     },
     error: {
-      main: "#fafafa", 
-      dark: "#cccfd5", 
-      light: "#fff", 
-      contrastText: "#eaecef", 
+      main: "#fff", // white, input background grey-thin
+      dark: "#f7db0e", // yellow -> white
+      light: "#fff", // footer color
+      // stepper selected background yellow -> grey
+      contrastText: "#f7db0e", 
     },
-    info: {
-      main: "#03a66d",
-      dark: "#cf304a", 
-      light: "#fff", 
-    },
-    success: {
-      main: "#0ecb81", 
-      dark: "#f6465d", 
-      light: "#f0f1f2",
-    },
+    /*
+    * Button
+    */
     text: {
-      primary: "#848e9c", 
-      secondary: "#eaecef", 
-      hint: "#474d57", 
-      disabled: "#f0b90b", 
+      primary: "#3a4553", // step 4 button foreground
+      secondary: "#f7db0e", // yellow
+      // landing latest payment foreground
+      hint: "#1c222d", 
+      // step font-color black -> white
+      disabled: "black", 
     },
   },
 });

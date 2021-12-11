@@ -8,7 +8,8 @@ const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
       display: 'flex',
-      padding: 10
+      padding: 10,
+      backgroundColor: theme.palette.text.hint
     },
     details: {
         alignItems: 'center',
@@ -24,7 +25,7 @@ const useStyles = makeStyles((theme: Theme) =>
         wordBreak: 'break-all'
     },
     price: {
-        color: 'yellow',
+        color: theme.palette.success.dark,
         fontSize: 14,
         textAlign: 'left',
         paddingLeft: 10,
@@ -33,7 +34,7 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     walletName: {
         fontSize: 15,
-        color: 'white',
+        color: theme.palette.error.light,
         textAlign: 'left',
         paddingLeft: 10
     }
@@ -42,7 +43,6 @@ const useStyles = makeStyles((theme: Theme) =>
 
 export default function MediaControlCard() {
   const classes = useStyles();
-//   const theme = useTheme();
 
   return (
     <Card className={classes.root}>
