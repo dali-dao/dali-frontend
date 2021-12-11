@@ -8,7 +8,8 @@ const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
       display: 'flex',
-      padding: 10
+      padding: 10,
+      backgroundColor: theme.palette.background.default
     },
     details: {
         alignItems: 'center',
@@ -42,7 +43,6 @@ const useStyles = makeStyles((theme: Theme) =>
 
 export default function MediaControlCard() {
   const classes = useStyles();
-//   const theme = useTheme();
 
   return (
     <Card className={classes.root}>

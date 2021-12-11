@@ -5,16 +5,16 @@ import InputBase from '@material-ui/core/InputBase';
 export const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     header: {
-        backgroundColor: theme.palette.primary.light,
-        height: 'calc(100% - 50px)',
+        backgroundColor: theme.palette.common.black,
+        // height: 'calc(100% - 50px)',
         fontSize: 12,
-        color: theme.palette.background.default
+        color: theme.palette.success.main
     },
     footer: {
         backgroundColor: theme.palette.background.paper,
         height: 'auto',
         padding: '60px 160px 30px 160px',
-        color: theme.palette.background.default,
+        color: theme.palette.error.main,
         "@media (max-width: 1280px)": {
             paddingLeft: 50,
             paddingRight: 50,
@@ -33,12 +33,12 @@ export const useStyles = makeStyles((theme: Theme) =>
     },
     menu: {
         textDecoration: 'none',
-        color: theme.palette.background.default,
+        color: theme.palette.success.main,
         textTransform: 'uppercase'
     },
     activeMenu: {
         textDecoration: 'none',
-        color: theme.palette.background.default,
+        color: theme.palette.success.main,
         textTransform: 'uppercase',
         borderBottom: '2px solid #f7db0e',
         padding: '25px 0'
@@ -116,7 +116,7 @@ export const useStyles = makeStyles((theme: Theme) =>
         fontFamily: 'Roboto-Regular'
     },
     signupBtn: {
-        backgroundColor: theme.palette.primary.dark,
+        backgroundColor: theme.palette.text.secondary,
         color: theme.palette.background.paper,
         borderRadius: 5,
         display: 'flex',
@@ -211,7 +211,7 @@ export const BootstrapInput = withStyles((theme: Theme) =>
     input: {
       borderRadius: 4,
       position: 'relative',
-      backgroundColor: theme.palette.background.default,
+      backgroundColor: theme.palette.error.main,
       border: '1px solid #ced4da',
       fontSize: 16,
       padding: '10px 12px',

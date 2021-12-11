@@ -8,7 +8,8 @@ export const useStyles = makeStyles((theme: Theme) =>
     root: {
         backgroundImage: `url(${Banner})`,
         backgroundRepeat: 'no-repeat',
-        backgroundColor: '#10141b'
+        backgroundColor: theme.palette.background.default,
+        color: theme.palette.error.main
     },
     container: {
         padding: '0 160px 0 160px',

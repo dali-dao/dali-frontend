@@ -13,7 +13,7 @@ function Landing() {
   const classes = useStyles();
 
   return (
-    <div>
+    <div className={classes.root}>
       <Grid className={classes.section1} container> 
         <img src={Banner} alt="banner" className={classes.banner}/>
         <Grid className={classes.bannerDesc} item xs={5}>

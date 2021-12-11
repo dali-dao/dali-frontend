@@ -20,17 +20,17 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     secondaryHeading: {
       fontSize: theme.typography.pxToRem(15),
-      color: theme.palette.text.secondary,
+      color: theme.palette.error.main,
     },
     accordion: {
       border: '1px solid #2d3443',
       borderRadius: 10
     },
     accordionSummary: {
-      backgroundColor: '#151a22'
+      color: theme.palette.success.main,
     },
     accordionDetails: {
-      backgroundColor: '#151a22'
+      color: theme.palette.success.main,
     }
   }),
 );

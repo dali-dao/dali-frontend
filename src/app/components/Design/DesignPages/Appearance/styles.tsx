@@ -6,7 +6,7 @@ import InputBase from '@material-ui/core/InputBase';
 export const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
-      color: 'white'
+      // color: 'white'
     },
     title: {
       fontFamily: 'CerebriSansPro-Heavy',
@@ -14,18 +14,18 @@ export const useStyles = makeStyles((theme: Theme) =>
       paddingTop: 50
     },
     cardHeader: {
-      backgroundColor: '#2c333f',
+      backgroundColor: theme.palette.primary.main,
       borderBottom: '1px solid #4a5262',
       fontFamily: 'CerebriSansPro-ExtraBold',
       fontSize: 20,
-      color: 'white'
+      color: theme.palette.error.main
     },
     label: {
       padding: 25,
       borderBottom: '1px solid #2c333f',
-      backgroundColor: '#242b36',
+      backgroundColor: theme.palette.common.white,
       fontSize: 18,
-      color: 'white'
+      color: theme.palette.error.main
     },
     content: {
       backgroundColor: '#1c222d',
@@ -34,7 +34,7 @@ export const useStyles = makeStyles((theme: Theme) =>
     },
     card: {
       marginBottom: 80,
-      boxShadow: '0 0 10px 10px #0c0f16',
+      boxShadow: `0 0 10px 10px ${theme.palette.primary.dark}`,
       borderRadius: 10
     },
     itemDescription: {

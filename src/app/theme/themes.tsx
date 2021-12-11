@@ -34,7 +34,7 @@ const lightTheme = createTheme({
     */
     background: {
       default: "#f5f6fa", // main background
-      paper: "#536279", // footer background, step right, step top.
+      paper: "#536279", // footer background, step right, step top, latest payment background
     },
     common: {
       black: "#fff", // header background
@@ -73,20 +73,20 @@ const lightTheme = createTheme({
       dark: "#416cf7", // yellow -> blue
       light: "#c6c6d3", // grey thin
     },
+    error: {
+      main: "#525571", // white, input background -> grey strong
+      dark: "#cccfd5", 
+      light: "#fff", 
+      contrastText: "#eaecef", 
+    },
     /*
     * Button
     */
     text: {
       primary: "#3a4553", // step 4 button foreground
-      secondary: "#eaecef", 
+      secondary: "#f7db0e", // yellow
       hint: "#474d57", 
       disabled: "#f0b90b", 
-    },
-    error: {
-      main: "#fafafa", 
-      dark: "#cccfd5", 
-      light: "#fff", 
-      contrastText: "#eaecef", 
     },
   },
 });
@@ -100,7 +100,7 @@ const darkTheme = createTheme({
     */
     background: {
       default: "#10141b", // main background
-      paper: "#1c222d", // footer background, step right, step top.
+      paper: "#1c222d", // footer background, step right, step top, latest payment background
     },
     common: {
       black: "#0f0f1e", // header background
@@ -124,7 +124,7 @@ const darkTheme = createTheme({
       dark: "#1c222d", // moon background
     },
     /*
-    * Border
+    * Border Color
     */
     info: {
       main: "#474f5f", // grey
@@ -132,27 +132,27 @@ const darkTheme = createTheme({
       light: "#f7db0e",
     },
     /*
-    * Font
+    * Font Color
     */
     success: {
       main: "#858594", // grey strong
       dark: "#f7db0e", // yellow
       light: "#9fa0a4", // grey thin
     },
+    error: {
+      main: "#fff", // white, input background
+      dark: "#cccfd5", 
+      light: "#fff", 
+      contrastText: "#eaecef", 
+    },
     /*
     * Button
     */
     text: {
       primary: "#3a4553", // step 4 button foreground
-      secondary: "#eaecef", 
+      secondary: "#f7db0e", // yellow
       hint: "#474d57", 
       disabled: "#f0b90b", 
-    },
-    error: {
-      main: "#fafafa", 
-      dark: "#cccfd5", 
-      light: "#fff", 
-      contrastText: "#eaecef", 
     },
   },
 });

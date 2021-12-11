@@ -2,11 +2,16 @@
 
 //material-ui
 import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
+import ConnectToAuthereum from "web3modal/dist/providers/connectors/authereum";
 //style
 export const useStyles = makeStyles((theme: Theme) =>
   createStyles({
+    root: {
+      color: theme.palette.error.main,
+      backgroundColor: theme.palette.background.default,
+    },
     section1: {
-      position: 'relative'
+      position: 'relative',
     },
     banner: {
       width: '100%'
@@ -80,7 +85,7 @@ export const useStyles = makeStyles((theme: Theme) =>
       padding: '80px 160px 100px 160px',
       "@media (max-width: 905px)": {
         padding: '80px 10px 100px 10px'
-      }
+      },
     },
     projectTitle: {
       textTransform: 'uppercase',
@@ -97,7 +102,7 @@ export const useStyles = makeStyles((theme: Theme) =>
     },
     section3: {
       padding: '70px 160px 70px 160px',
-      backgroundColor: '#151a22',
+      backgroundColor: theme.palette.background.paper,
       "@media (max-width: 905px)": {
         padding: '70px 10px 70px 10px',
       }
