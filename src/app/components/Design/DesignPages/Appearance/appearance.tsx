@@ -1,4 +1,4 @@
-import { useStyles, BootstrapInput } from "./styles";
+import { useStyles, BootstrapInput } from "../../../../pages/Design/styles";
 import DesignStep from "../../DesignStep/designStep";
 import Grid from '@material-ui/core/Grid';
 import Card from '@material-ui/core/Card';

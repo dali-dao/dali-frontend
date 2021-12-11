@@ -78,7 +78,7 @@ export const useStyles = makeStyles((theme: Theme) =>
       }
     },
     ethereum: {
-      color: 'yellow'
+      color: theme.palette.error.dark
     },
     playIcon: {
       paddingRight: 10

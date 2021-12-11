@@ -34,7 +34,7 @@ const lightTheme = createTheme({
     */
     background: {
       default: "#f5f6fa", // main background
-      paper: "#536279", // footer background, step right, step top, latest payment background
+      paper: "#fff", // footer background, step right, step top, latest payment background
     },
     common: {
       black: "#fff", // header background
@@ -75,7 +75,7 @@ const lightTheme = createTheme({
     },
     error: {
       main: "#525571", // white, input background -> grey strong
-      dark: "#cccfd5", 
+      dark: "#fff", // yellow -> white
       light: "#fff", 
       contrastText: "#eaecef", 
     },
@@ -141,7 +141,7 @@ const darkTheme = createTheme({
     },
     error: {
       main: "#fff", // white, input background
-      dark: "#cccfd5", 
+      dark: "#f7db0e", // yellow -> white
       light: "#fff", 
       contrastText: "#eaecef", 
     },
