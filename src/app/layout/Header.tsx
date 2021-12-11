@@ -11,8 +11,6 @@ import Fade from '@material-ui/core/Fade';
 import SelectWallet from '../components/Modal/SelectWallet';
 import { Icon } from '@iconify/react'; 
 import {useLocation} from 'react-router-dom';
-import Web3Modal from 'web3modal';
-import { useCallback } from 'react';
 
 function Header() {
     const classes = useStyles();
