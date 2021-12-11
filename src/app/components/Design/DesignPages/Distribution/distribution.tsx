@@ -73,7 +73,7 @@ function Distribution({items, onSelectItem, confirmItems}: selectedStepItem) {
             }}
         >
             <Fade in={open}>
-            <div style={{width: '60%'}}>
+            <div style={{width: '50%'}}>
                 <AddAPayout />
             </div>
             </Fade>

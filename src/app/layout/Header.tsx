@@ -3,7 +3,7 @@ import Grid from '@material-ui/core/Grid';
 import { Link } from "react-router-dom";
 import Logo from '../assets/Landing/logo.png';
 import ReorderIcon from '@material-ui/icons/Reorder';
-import React from "react";
+import React, { useCallback } from "react";
 import { ThemeContext } from "../theme/ThemeProvider";
 import Modal from '@material-ui/core/Modal';
 import Backdrop from '@material-ui/core/Backdrop';
@@ -11,6 +11,8 @@ import Fade from '@material-ui/core/Fade';
 import SelectWallet from '../components/Modal/SelectWallet';
 import { Icon } from '@iconify/react'; 
 import {useLocation} from 'react-router-dom';
+import { providers } from 'ethers'
+import Web3Modal from 'web3modal'
 
 function Header() {
     const classes = useStyles();
@@ -20,7 +22,7 @@ function Header() {
     const curThemeName = localStorage.getItem("appTheme") || "darkTheme";
     const setThemeName = React.useContext(ThemeContext);
     const [theme, setTheme] = React.useState(curThemeName);
-
+    const [ connectState, setConnectState ] = React.useState(false);
     const location_path = useLocation();
 
     const handleToggleTheme = () => {
@@ -42,6 +44,36 @@ function Header() {
     const handleClose = () => {
         setOpen(false);
     };
+
+    const providerOptions = {}
+    let web3Modal: any;
+    if (typeof window !== 'undefined') {
+        web3Modal = new Web3Modal({
+            network: 'mainnet', // optional
+            cacheProvider: true,
+            providerOptions // required
+        })
+    }
+
+    const connect = useCallback(async function () {
+        const provider = await web3Modal.connect();
+        const web3Provider = new providers.Web3Provider(provider);
+    
+        const signer = web3Provider.getSigner();
+        const address = await signer.getAddress();
+        localStorage.setItem('connectedAddress', address);
+        setOpen(false);
+        setConnectState(true);
+    }, []);
+
+    function disconnect() {
+        web3Modal.clearCachedProvider();
+        //   if (provider?.disconnect && typeof provider.disconnect === 'function') {
+        //     provider.disconnect()
+        //   }
+        localStorage.setItem('connectedAddress', '');
+        setConnectState(false);
+    }
 
     return (
         <div className={classes.header}>
@@ -89,11 +121,11 @@ function Header() {
                             <Icon icon="bi:moon-fill" className={classes.moon_style} onClick={handleToggleTheme} />
                         </span>
                         <span>
-                        <Icon icon="bx:bxs-sun" className={classes.sun_style} />
+                        <Icon icon="bx:bxs-sun" className={classes.sun_style} onClick={handleToggleTheme}/>
                         </span>
                     </Grid>
-                    <Grid item xs={8} md={5} sm={6} className={classes.connectBtn} onClick={handleOpen}>
-                        Connect
+                    <Grid item xs={8} md={5} sm={6} className={classes.connectBtn} onClick={connectState === false ? handleOpen : disconnect}>
+                        { connectState === false ? 'Connect' : localStorage.getItem('connectedAddress')?.substring(0, 10) + '...' }
                     </Grid>
                     <Grid item xs={2} md={2} sm={3}>
                         <ReorderIcon fontSize="small"/>
@@ -114,7 +146,7 @@ function Header() {
             >
                 <Fade in={open}>
                 <div style={{width: '60%'}}>
-                    <SelectWallet />
+                    <SelectWallet connect={connect} />
                 </div>
                 </Fade>
             </Modal>

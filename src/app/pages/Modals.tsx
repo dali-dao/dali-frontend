@@ -3,7 +3,6 @@ import { Grid } from '@material-ui/core';
 import HeadsUp from '../components/Modal/HeadsUp';
 import PayDAOTailFung from '../components/Modal/PayDAOTailFung';
 import DesignPreview from '../components/Modal/DesignPreview';
-import SelectWallet from '../components/Modal/SelectWallet';
 import OpenWallet from '../components/Modal/OpenWallet';
 import WithdrawFunds from '../components/Modal/WithdrawFunds';
 import DistributeReserved from '../components/Modal/DistributeReserved';
@@ -33,7 +32,7 @@ function Moals() {
       <Grid className={classes.divider}></Grid>
       <PayDAOTailFung />
       <Grid className={classes.divider}></Grid>
-      <SelectWallet />
+      
       <Grid className={classes.divider}></Grid>
       <OpenWallet />
       <Grid className={classes.divider}></Grid>
