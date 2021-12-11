@@ -27,6 +27,7 @@ export const useStyles = makeStyles((theme: Theme) =>
       fontSize: 40,
       paddingBottom: 10,
       textTransform: 'uppercase',
+      color: 'white',
       "@media (max-width: 1305px)": {
         fontSize: 20,
         paddingBottom: 5
@@ -45,6 +46,7 @@ export const useStyles = makeStyles((theme: Theme) =>
       display: 'flex',
       fontFamily: 'Roboto-Bold',
       fontSize: 16,
+      color: 'white',
       "@media (max-width: 1305px)": {
         fontSize: 13,
       },
