@@ -74,7 +74,7 @@ const lightTheme = createTheme({
       light: "#c6c6d3", // grey thin
     },
     error: {
-      main: "#525571", // white, input background -> grey strong
+      main: "#c6c6d3", // white, input background -> grey thin
       dark: "#fff", // yellow -> white
       light: "#fff", 
       contrastText: "#eaecef", 
@@ -140,7 +140,7 @@ const darkTheme = createTheme({
       light: "#9fa0a4", // grey thin
     },
     error: {
-      main: "#fff", // white, input background
+      main: "#fff", // white, input background grey-thin
       dark: "#f7db0e", // yellow -> white
       light: "#fff", 
       contrastText: "#eaecef", 

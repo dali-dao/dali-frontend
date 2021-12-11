@@ -23,7 +23,8 @@ export const useStyles = makeStyles((theme: Theme) =>
     title: {
       fontFamily: 'CerebriSansPro-Heavy',
       fontSize: 25,
-      paddingTop: 50
+      paddingTop: 50,
+      color: 'white'
     },
     cardHeader: {
       backgroundColor: theme.palette.primary.main,
@@ -43,6 +44,7 @@ export const useStyles = makeStyles((theme: Theme) =>
       backgroundColor: theme.palette.background.paper,
       padding: '25px 40px 25px 40px',
       borderBottom: '1px solid #2c333f',
+      fontSize: 12
     },
     card: {
       marginBottom: 80,
@@ -52,7 +54,7 @@ export const useStyles = makeStyles((theme: Theme) =>
     itemDescription: {
       fontSize: 13,
       color: '#727285',
-      borderBottom: '1px solid #2c333f',
+      // borderBottom: '1px solid #2c333f',
     },
     saveBtn: {
       padding: '15px 50px',
@@ -100,7 +102,8 @@ export const useStyles = makeStyles((theme: Theme) =>
       borderRadius: 3,
       color: 'white',
       width: '200px',
-      cursor: 'pointer'
+      cursor: 'pointer',
+      marginBottom: 10
     },
     modal: {
       display: 'flex',
