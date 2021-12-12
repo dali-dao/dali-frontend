@@ -397,6 +397,42 @@ export const useStyles = makeStyles((theme: Theme) =>
       '@media (max-width: 960px)': {
         textAlign: 'center'
       }
+    },
+    detail_banner_icon: {
+      verticalAlign: 'middle', 
+      width: 16, 
+      height: 18
+    },
+    detail_banner_user_info: {
+      fontWeight: 'bold', 
+      fontSize: 14, 
+      marginRight: 20
+    },
+    detail_banner_icon_style: {
+      fontWeight: 'bold', 
+      fontSize: 14
+    },
+    volume_content: {
+      border: '1px solid #323e50', 
+      backgroundColor: '#1a1d24', 
+      borderRadius: 5, 
+      marginBottom: 20, 
+      height: 'auto'
+    },
+    volume_currency_content: {
+      border: '1px solid #323e50', 
+      backgroundColor: '#1a1d24', 
+      borderRadius: 5, 
+      marginBottom: 30, 
+      height: 'auto'
+    },
+    spice_token_title: {
+      marginBottom: 20,
+      textAlign: 'left'
+    },
+    holder_buttn_style: {
+      marginBottom: 10,
+      textAlign: 'right'
     }
   })
 );
