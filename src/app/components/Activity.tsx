@@ -48,7 +48,7 @@ const useStyles = makeStyles((theme: Theme) => ({
   activity_title: {
     color: '#fff', 
     paddingTop: 15, 
-    marginRight: '100px', 
+    paddingLeft: 20,
     fontSize: 16,
     width: '100%',
     textAlign: 'left'
@@ -68,7 +68,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     color: '#fff'
   },
   tab_pannel: {
-    padding: '20px 0px', 
+    padding: '20px 20px', 
     textAlign: 'left'
   },
 }));
