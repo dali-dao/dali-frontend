@@ -14,7 +14,7 @@ export const useStyles = makeStyles((theme: Theme) =>
         backgroundColor: theme.palette.background.paper,
         height: 'auto',
         padding: '60px 160px 30px 160px',
-        color: theme.palette.error.main,
+        color: theme.palette.error.light,
         "@media (max-width: 1280px)": {
             paddingLeft: 50,
             paddingRight: 50,
@@ -51,7 +51,7 @@ export const useStyles = makeStyles((theme: Theme) =>
         marginBottom: 20
     },
     connectBtn: {
-        background: '#f7db0e',
+        background: '#f7db0e', // no change by theme
         textTransform: 'uppercase',
         color: 'black',
         borderRadius: 20,
@@ -61,6 +61,7 @@ export const useStyles = makeStyles((theme: Theme) =>
         display: 'grid',
         alignItems: 'center',
         cursor: 'pointer',
+        boxShadow: `2px 2px 2px 2px ${theme.palette.primary.dark}`,
         '&:hover': {
             backgroundImage: 'linear-gradient(to right, rgb(238 221 14) 0%, rgb(24 216 211) 100%, rgb(247, 157, 0) 100%)'
         }
@@ -87,7 +88,8 @@ export const useStyles = makeStyles((theme: Theme) =>
         borderTopLeftRadius: 20,
         borderBottomLeftRadius: 20,
         paddingLeft: 10,
-        background: '#29303d'
+        color: 'white', // no change by theme
+        background: theme.palette.warning.dark
     },
     sun_style: {
         cursor: 'pointer',
@@ -95,7 +97,8 @@ export const useStyles = makeStyles((theme: Theme) =>
         padding: 5,
         borderTopRightRadius: 20,
         borderBottomRightRadius: 20,
-        paddingRight: 10
+        paddingRight: 10,
+        backgroundColor: theme.palette.background.default
     },
     titleDesc: {
         textAlign: 'left',
@@ -117,7 +120,7 @@ export const useStyles = makeStyles((theme: Theme) =>
     },
     signupBtn: {
         backgroundColor: theme.palette.text.secondary,
-        color: theme.palette.background.paper,
+        color: 'black', // no change by theme
         borderRadius: 5,
         display: 'flex',
         justifyContent: 'center',
@@ -133,7 +136,7 @@ export const useStyles = makeStyles((theme: Theme) =>
     },
     signupSection: {
         paddingBottom: 50,
-        borderBottom: '1px solid #2c313c'
+        borderBottom: `1px solid ${theme.palette.info.main}`
     },
     followTitle: {
         fontSize: 20,
@@ -154,7 +157,7 @@ export const useStyles = makeStyles((theme: Theme) =>
         paddingTop: 60,
         textAlign: 'left',
         paddingBottom: 40,
-        borderBottom: '1px solid #2c313c',
+        borderBottom: `1px solid ${theme.palette.info.main}`,
         "@media (max-width: 960px)": {
             textAlign: 'center'
         },

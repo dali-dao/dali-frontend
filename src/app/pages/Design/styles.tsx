@@ -11,7 +11,7 @@ export const useStyles = makeStyles((theme: Theme) =>
         backgroundImage: `url(${Banner})`,
         backgroundRepeat: 'no-repeat',
         backgroundColor: theme.palette.background.default,
-        color: theme.palette.error.main
+        color: theme.palette.error.light,
     },
     container: {
         padding: '0 160px 10px 160px',
@@ -24,27 +24,28 @@ export const useStyles = makeStyles((theme: Theme) =>
       fontFamily: 'CerebriSansPro-Heavy',
       fontSize: 25,
       paddingTop: 50,
-      color: 'white'
+      color: 'white' // no change by theme
     },
     cardHeader: {
       backgroundColor: theme.palette.primary.main,
-      borderBottom: '1px solid #4a5262',
+      borderBottom: `1px solid ${theme.palette.info.main}`,
       fontFamily: 'CerebriSansPro-ExtraBold',
       fontSize: 20,
-      color: theme.palette.error.main
+      color: theme.palette.error.light,
     },
     label: {
       padding: 25,
-      borderBottom: '1px solid #2c333f',
+      borderBottom: `1px solid ${theme.palette.info.main}`,
       backgroundColor: theme.palette.common.white,
       fontSize: 18,
-      color: theme.palette.error.main
+      color: theme.palette.error.light,
     },
     content: {
       backgroundColor: theme.palette.background.paper,
       padding: '25px 40px 25px 40px',
-      borderBottom: '1px solid #2c333f',
-      fontSize: 12
+      borderBottom: `1px solid ${theme.palette.info.main}`,
+      fontSize: 12,
+      color: theme.palette.success.main
     },
     card: {
       marginBottom: 80,
@@ -54,7 +55,7 @@ export const useStyles = makeStyles((theme: Theme) =>
     itemDescription: {
       fontSize: 13,
       color: '#727285',
-      // borderBottom: '1px solid #2c333f',
+      // borderBottom: `1px solid ${theme.palette.info.main}`,
     },
     saveBtn: {
       padding: '15px 50px',
@@ -87,20 +88,20 @@ export const useStyles = makeStyles((theme: Theme) =>
       alignItems: 'center'
     },
     percentLabel: {
-      color: 'white',
+      // color: 'white',
       paddingTop: 10,
       width: '100%',
       display: 'flex',
       justifyContent: 'space-between'
     },
     payoutBtn: {
-      backgroundColor: '#3a4553',
+      backgroundColor: theme.palette.background.paper,
       border: '1px solid #667a93',
-      boxShadow: '3px 3px #0c0f16',
+      boxShadow: `3px 3px ${theme.palette.primary.dark}`,
       padding: '10px 20px',
       marginTop: 20,
       borderRadius: 3,
-      color: 'white',
+      color: theme.palette.error.light,
       width: '200px',
       cursor: 'pointer',
       marginBottom: 10

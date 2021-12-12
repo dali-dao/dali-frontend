@@ -52,7 +52,7 @@ function Landing() {
           </Grid>
           <Grid item xs={6} className={classes.exploreMore}>
             <Link to='/projects' className={classes.linkDetail}>
-              <Button variant="outlined" color="secondary" className={classes.exploreMoreBtn}>
+              <Button variant="outlined" className={classes.exploreMoreBtn}>
                 explore more
               </Button>
             </Link>
@@ -116,7 +116,7 @@ function Landing() {
           </Grid>
         </Grid>
         <Grid className={classes.section3Btn}>
-          <Button variant="outlined" color="secondary" className={classes.exploreMoreBtn}>
+          <Button variant="outlined" className={classes.exploreMoreBtn}>
             view more
           </Button>
         </Grid>
@@ -167,7 +167,7 @@ function Landing() {
           </Grid>
         </Grid>
         <Grid className={classes.viewFaqBtn}>
-          <Button variant="outlined" color="secondary" className={classes.exploreMoreBtn}>
+          <Button variant="outlined" className={classes.exploreMoreBtn}>
             view more faqs
           </Button>
         </Grid>

@@ -34,7 +34,7 @@ const lightTheme = createTheme({
     */
     background: {
       default: "#f5f6fa", // main background
-      paper: "#fff", // footer background, step right, step top, latest payment background
+      paper: "#fff", // footer background, step right, step top
     },
     common: {
       black: "#fff", // header background
@@ -63,7 +63,8 @@ const lightTheme = createTheme({
     info: {
       main: "#ced7e8", // grey
       dark: "#f7db0e", // yellow
-      light: "#f7db0e",
+      // landing page / latest payment background
+      light: "#fff", // latest payment background
     },
     /*
     * Font
@@ -74,10 +75,11 @@ const lightTheme = createTheme({
       light: "#c6c6d3", // grey thin
     },
     error: {
-      main: "#c6c6d3", // white, input background -> grey thin
+      main: "#f5f6fa", // white, input background -> grey thin
       dark: "#fff", // yellow -> white
-      light: "#fff", 
-      contrastText: "#eaecef", 
+      light: "#13204c", // footer color
+      // stepper selected background yellow -> grey
+      contrastText: "#536279", 
     },
     /*
     * Button
@@ -85,8 +87,10 @@ const lightTheme = createTheme({
     text: {
       primary: "#3a4553", // step 4 button foreground
       secondary: "#f7db0e", // yellow
-      hint: "#474d57", 
-      disabled: "#f0b90b", 
+      // landing latest payment 
+      hint: "#f5f6fa", 
+      // step font-color black -> white
+      disabled: "white", 
     },
   },
 });
@@ -100,7 +104,7 @@ const darkTheme = createTheme({
     */
     background: {
       default: "#10141b", // main background
-      paper: "#1c222d", // footer background, step right, step top, latest payment background
+      paper: "#1c222d", // footer background, step right, step top
     },
     common: {
       black: "#0f0f1e", // header background
@@ -121,7 +125,7 @@ const darkTheme = createTheme({
       main: "#222733", // funding cycle
       // landing page
       contrastText: "#151a22", // latest payments, faq card foreground
-      dark: "#1c222d", // moon background
+      dark: "#29303d", // moon background
     },
     /*
     * Border Color
@@ -129,21 +133,23 @@ const darkTheme = createTheme({
     info: {
       main: "#474f5f", // grey
       dark: "#f7db0e", // yellow
-      light: "#f7db0e",
+      // landing page / latest payment background
+      light: "#151a22", // latest payment background
     },
     /*
     * Font Color
     */
     success: {
       main: "#858594", // grey strong
-      dark: "#f7db0e", // yellow
+      dark: "#f7db0e", // yellow -> blue
       light: "#9fa0a4", // grey thin
     },
     error: {
       main: "#fff", // white, input background grey-thin
       dark: "#f7db0e", // yellow -> white
-      light: "#fff", 
-      contrastText: "#eaecef", 
+      light: "#fff", // footer color
+      // stepper selected background yellow -> grey
+      contrastText: "#f7db0e", 
     },
     /*
     * Button
@@ -151,8 +157,10 @@ const darkTheme = createTheme({
     text: {
       primary: "#3a4553", // step 4 button foreground
       secondary: "#f7db0e", // yellow
-      hint: "#474d57", 
-      disabled: "#f0b90b", 
+      // landing latest payment foreground
+      hint: "#1c222d", 
+      // step font-color black -> white
+      disabled: "black", 
     },
   },
 });

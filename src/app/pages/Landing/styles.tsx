@@ -7,8 +7,9 @@ import ConnectToAuthereum from "web3modal/dist/providers/connectors/authereum";
 export const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
-      color: theme.palette.error.main,
+      color: theme.palette.error.light,
       backgroundColor: theme.palette.background.default,
+      borderColor: theme.palette.info.main
     },
     section1: {
       position: 'relative',
@@ -27,7 +28,7 @@ export const useStyles = makeStyles((theme: Theme) =>
       fontSize: 40,
       paddingBottom: 10,
       textTransform: 'uppercase',
-      color: 'white',
+      color: 'white', // no change by theme
       "@media (max-width: 1305px)": {
         fontSize: 20,
         paddingBottom: 5
@@ -101,10 +102,11 @@ export const useStyles = makeStyles((theme: Theme) =>
     },
     exploreMoreBtn: {
       textTransform: 'uppercase',
+      borderColor: `1px solid ${theme.palette.info.main}`
     },
     section3: {
       padding: '70px 160px 70px 160px',
-      backgroundColor: theme.palette.background.paper,
+      backgroundColor: theme.palette.info.light,
       "@media (max-width: 905px)": {
         padding: '70px 10px 70px 10px',
       }
@@ -117,7 +119,7 @@ export const useStyles = makeStyles((theme: Theme) =>
     },
     section3Btn: {
       textTransform: 'uppercase',
-      paddingTop: 40
+      paddingTop: 40,
     },
     section4: {
       position: 'relative',
@@ -131,6 +133,7 @@ export const useStyles = makeStyles((theme: Theme) =>
       fontFamily: 'CerebriSansPro-Bold',
       fontSize: 18,
       lineHeight: 1.5,
+      color: 'white', // no change by theme
       "@media (max-width: 905px)": {
         fontSize: 13,
         lineHeight: 1,
@@ -162,7 +165,6 @@ export const useStyles = makeStyles((theme: Theme) =>
       fontSize: 21,
       fontFamily: 'CerebriSansPro-ExtraBold',
       marginBottom: 40,
-      backgroundColor: '#10141b'
     },
     viewFaqBtn: {
       marginTop: 50
