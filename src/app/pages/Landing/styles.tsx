@@ -1,8 +1,5 @@
-/** @format */
-
 //material-ui
 import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
-import ConnectToAuthereum from "web3modal/dist/providers/connectors/authereum";
 //style
 export const useStyles = makeStyles((theme: Theme) =>
   createStyles({
