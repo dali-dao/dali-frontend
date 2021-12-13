@@ -73,6 +73,7 @@ const lightTheme = createTheme({
       main: "#525571", // grey strong
       dark: "#416cf7", // yellow -> blue
       light: "#c6c6d3", // grey thin
+      contrastText: ''
     },
     error: {
       main: "#f5f6fa", // white, input background -> grey thin
@@ -143,6 +144,7 @@ const darkTheme = createTheme({
       main: "#858594", // grey strong
       dark: "#f7db0e", // yellow -> blue
       light: "#9fa0a4", // grey thin
+      contrastText: ''
     },
     error: {
       main: "#fff", // white, input background grey-thin
