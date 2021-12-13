@@ -2,14 +2,14 @@ import React from 'react'
 import Banner from '../../assets/Projects/banner_2.jpg';
 import { useStyles } from "./styles";
 import { Link } from "react-router-dom";
-import {FormControl, Select, InputLabel, Grid} from '@material-ui/core';
+import {FormControl, Select, Grid} from '@material-ui/core';
 import Pagination from '@material-ui/lab/Pagination';
 import ProjectItem from '../../components/Projects/projectItem';
 import { Icon } from '@iconify/react';
 
 function Projects() {
   const classes = useStyles();
-  const projectItem = new Array(3).fill({image: "", name: "ConstitutionDAO", id: "@constitutiondao", price: 77789, date: "01-01-21", desc: "SharkDAO owns Nouns #2,#5,#33"})
+  const projectItem = new Array(24).fill({image: "", name: "ConstitutionDAO", id: "@constitutiondao", price: 77789, date: "01-01-21", desc: "SharkDAO owns Nouns #2,#5,#33"})
   const [state, setState] = React.useState<{ age: string | number; name: string }>({
     age: '',
     name: 'hai',
