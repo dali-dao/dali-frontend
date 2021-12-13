@@ -11,7 +11,7 @@ import { Grid, Button } from '@material-ui/core';
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
     flexGrow: 1,
-    background: '#10141b',
+    background: theme.palette.background.default,
     border: '0px',
   },
   indicator: {
@@ -24,29 +24,30 @@ const useStyles = makeStyles((theme: Theme) => ({
     }
   },
   detail_container: {
-    border: '1px solid #404a5e',
-    background: '#222733'
+    border: `1px solid ${theme.palette.info.main}`,
+    backgroundColor: theme.palette.common.white, 
   },
   detail_title: {
     padding: '20px',
-    fontSize: 14
+    fontSize: 14,
+    color: theme.palette.success.main
   },
   available_container: {
-    border: '1px solid #404a5e',
-    background: '#222733',
+    border: `1px solid ${theme.palette.info.main}`,
+    backgroundColor: theme.palette.common.white, 
     marginTop: 15,
   },
   distribute_button: {
-    border: '1px solid #6f727a',
-    background: '#191d26',
-    borderRadius: 5
+    borderRadius: 5,
+    border: `1px solid ${theme.palette.info.main}`,
+    background: theme.palette.background.default,
+    color: theme.palette.info.main
   },
   app_bar_style: {
-    backgroundColor: '#10141b',
-    paddingLeft: 20,
+    backgroundColor: theme.palette.background.default,
   },
   tab_title: {
-    color: '#fff', 
+    color: theme.palette.error.light,
     paddingTop: 15, 
   },
   icon_style:{
@@ -55,11 +56,12 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
   tab_pannel_content: {
     padding: '0px 0px', 
-    textAlign: 'left'
+    textAlign: 'left',
   },
   duration_content: {
     marginLeft: 20, 
-    marginBottom: 20
+    marginBottom: 20,
+    color: theme.palette.success.main
   },
   fontSize12: {
     fontSize: 12
@@ -76,7 +78,12 @@ const useStyles = makeStyles((theme: Theme) => ({
   address_desc_title: {
     marginLeft: 20, 
     marginBottom: 20, 
-    fontSize: 12
+    fontSize: 12,
+    color: theme.palette.success.main
+  },
+  price_available: {
+    color: theme.palette.success.contrastText,
+    paddingRight: 5
   },
   address_desc: {
     marginLeft: 20, 
@@ -87,7 +94,8 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
   value_0: {
     marginRight: 10, 
-    fontSize: 14
+    fontSize: 14,
+    color: theme.palette.error.light
   },
   distribute_button_content: {
     padding: 10, 
@@ -118,19 +126,20 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
   icon_circle_info: {
     verticalAlign: 'middle',
-     marginLeft: 10, 
      color: '#858594'
   },
   percent_value: {
     paddingRight: 10, 
     textAlign: 'right', 
     fontSize: 12, 
-    paddingTop: 20
+    paddingTop: 20,
+    color: theme.palette.error.light
   },
   eth_content: {
-    padding: '20px 20px 20px 10px', 
+    padding: '20px 20px 20px 20px', 
     fontSize: 13,
-    textAlign: 'left'
+    textAlign: 'left',
+    color: theme.palette.error.light
   },
   eth_info: {
     verticalAlign: 'middle', 
@@ -139,13 +148,13 @@ const useStyles = makeStyles((theme: Theme) => ({
     marginRight: 5
   },
   tab_style_current: {
-    color: '#fff',
+    color: theme.palette.success.contrastText,
     width: 80,
     marginLeft: 'auto',
     minWidth: 50
   },
   tab_style_history: {
-    color: '#fff',
+    color: theme.palette.success.contrastText,
     width: 80,
     minWidth: 50
   }
@@ -192,7 +201,7 @@ export default function LabTabs() {
           </Grid>
           <Grid container className={classes.available_container}>
             <Grid item xs={12} md={7} className={classes.padding20}>
-              <strong className={classes.value_0}>$0</strong>
+              <strong className={classes.price_available}>$0</strong>
               <span className={classes.available_style}>AVAILABLE<Icon icon="si-glyph:circle-info" className={classes.icon_style}/></span>
             </Grid>
             <Grid item xs={12} md={5} className={classes.distribute_button_content}>
@@ -227,7 +236,7 @@ export default function LabTabs() {
               <strong>100%</strong>
             </Grid>
             <Grid item xs={12} md={7} className={classes.padding20}>
-              <strong className={classes.value_0}>0</strong>
+              <strong className={classes.price_available}>0</strong>
               <span className={classes.available_style}>SPICE</span>
             </Grid>
             <Grid item xs={12} md={5} className={classes.distribute_button_content}>

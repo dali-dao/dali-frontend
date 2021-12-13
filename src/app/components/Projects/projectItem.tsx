@@ -8,8 +8,7 @@ const useStyles = makeStyles((theme: Theme) =>
     root: {
       display: 'flex',
       fontSize: 12,
-      border: '1px solid grey',
-      background: '#1c222d',
+      background: theme.palette.background.paper,
       borderRadius: '10px',
       padding: '10px'
     },
@@ -20,23 +19,23 @@ const useStyles = makeStyles((theme: Theme) =>
     content: {
     },
     account_info: {
-      color: '#a3a5a7',
+      color: theme.palette.success.main,
       marginBottom: 5
     },
     project_description: {
-      color: '#a3a5a7',
+      color: theme.palette.success.light,
       marginTop: 5
     },
     price: {
-      color: 'yellow',
+      color: theme.palette.success.dark,
       fontSize: 15,
     },
     project_date: {
-      color: '#a3a5a7',
+      color: theme.palette.success.main,
     },
     project_name: {
       fontSize: 17,
-      color: 'white',
+      color: theme.palette.error.light,
       fontFamily: 'CerebriSansPro-ExtraBold',
       marginBottom: 10,
       marginTop: 10

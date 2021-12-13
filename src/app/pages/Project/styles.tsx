@@ -88,13 +88,14 @@ export const useStyles = makeStyles((theme: Theme) =>
       fontSize: '28px',
       fontFamily: 'CerebriSansPro-Heavy',
       textAlign: 'left',
+      color: '#fff',
       "@media (max-width: 960px)": {
         textAlign: 'center'
       }
     },
     project_banner_description: {
       fontSize: '14.1px',
-      color: 'grey',
+      color: theme.palette.success.main,
       textAlign: 'left'
     },
     project_banner_button_content: {
@@ -161,19 +162,26 @@ export const useStyles = makeStyles((theme: Theme) =>
     },
     formControl: {
       width: '54%',
-      textAlign: 'left'
+      textAlign: 'left',
+      background: '#283039',
+      border: '1px solid #535b73',
+      borderRadius: 5,
+      color: '#9b9da0'
     },
     selectEmpty: {
       marginTop: theme.spacing(2),
     },
     project_list_container: {
-      marginTop: 30
     },
     margin_bottom_10: {
       marginBottom: '10px'
     },
+    list_content: {
+      background: theme.palette.background.default,
+      paddingTop: 30
+    },
     pagination_content: {
-      margin: '40px 0px 50px 8px'
+      padding: '20px 0px'
     },
     banner_left_description: {
       position: 'relative'
@@ -219,19 +227,50 @@ export const useStyles = makeStyles((theme: Theme) =>
     marginRight10: {
       marginRight: 10
     },
+    marginTop20: {
+      marginTop: 20
+    },
     marginTopAuto: {
       marginTop: 'auto',
     },
     project_info_desc: {
       textAlign: 'left',
+      color: '#fff',
       "@media (max-width: 960px)": {
         textAlign: 'center'
       },
+    },
+    receive_token_control: {
+      width: '90%'
+    },
+    helper_text: {
+      marginBottom: 20, 
+      marginLeft: 0, 
+      color: 'grey'
+    },
+    pay_button_content: {
+      textAlign: 'center', 
+      marginBottom: 30
+    },
+    pay_button_style: {
+      width: '90%', 
+      background: 'rgb(247 219 14)', 
+      height: 40, 
+      color: '#000', 
+      borderRadius: 0
+    },
+    activity_content: {
+      backgroundColor: '#1a1d24', 
+      borderRadius: 5, 
+      marginBottom: 20, 
+      height: 'auto', 
+      textAlign: 'left'
     },
     detail_banner_right: {
       border: '1px solid grey',
       padding: '10px 10px',
       borderRadius: '5px',
+      color: '#fff',
       textAlign: 'center',
       "@media (max-width: 960px)": {
         marginTop: 10,
@@ -273,10 +312,12 @@ export const useStyles = makeStyles((theme: Theme) =>
       fontFamily: 'Roboto-Medium'
     },
     detail_row: {
+      color: theme.palette.success.main,
       padding: '5px 20px'
     },
     detail_first_row: {
       marginTop: 20,
+      color: theme.palette.success.main,
       padding: '5px 20px'
     },
     //common Class
@@ -297,8 +338,8 @@ export const useStyles = makeStyles((theme: Theme) =>
     },
     //end
     holders_button: {
-      border: '1px solid #2b3242',
-      background: '#10141b'
+      border: `1px solid ${theme.palette.info.main}`,
+      background: theme.palette.background.default
     },
     manage_button: {
       background: '#454d5c',
@@ -306,15 +347,29 @@ export const useStyles = makeStyles((theme: Theme) =>
       padding: '5px 10px',
       border: '1px solid #2b3242',
     },
+    holder_button_content: {
+      marginBottom: 10,
+      textAlign: 'right'
+    },
     detail_address: {
       color: '#9b9c9e',
       textAlign: 'left',
       fontSize: 13,
       marginRight: 45
     },
+    address_container: {
+      textAlign: 'left',
+      color: theme.palette.success.main,
+      marginBottom: 10
+    },
+    supply_container: {
+      textAlign: 'left',
+      marginBottom: 10,
+      color: theme.palette.success.main
+    },
     detail_address_value: {
       fontSize: 13,
-      marginLeft: 10
+      marginLeft: 10,
     },
     detail_supply: {
       color: '#9b9c9e',
@@ -322,7 +377,13 @@ export const useStyles = makeStyles((theme: Theme) =>
       fontSize: 13,
       marginRight: 20
     },
+    balance_container: {
+      marginBottom: 10,
+      textAlign: 'left',
+      color: theme.palette.success.main
+    },
     detail_supply_value: {
+      color: theme.palette.success.main,
       fontSize: 13,
       marginLeft: 10
     },
@@ -346,10 +407,11 @@ export const useStyles = makeStyles((theme: Theme) =>
     },
     detail_last_row: {
       marginBottom: 20,
-      padding: '5px 20px'
+      padding: '5px 20px',
+      color: theme.palette.success.main
     },
     detail_info_price: {
-      color: 'yellow',
+      color: theme.palette.success.dark,
       marginLeft: 10
     },
     currency_input: {
@@ -374,6 +436,7 @@ export const useStyles = makeStyles((theme: Theme) =>
       paddingRight: 0,
       height: 40,
       borderRadius: 0,
+      border: '1px solid #474f5f'
     },
     chart_content: {
       marginTop: 20, 
@@ -408,13 +471,33 @@ export const useStyles = makeStyles((theme: Theme) =>
       fontSize: 14, 
       marginRight: 20
     },
+    contribute_content: {
+      borderRadius: 5, 
+      marginBottom: 20, 
+      height: 'auto', 
+      textAlign: 'left',
+      border: `1px solid ${theme.palette.info.main}`,
+      backgroundColor: theme.palette.secondary.main, 
+    },
+    contribute_header_title: {
+      paddingTop: 20, 
+      paddingBottom: 10, 
+      paddingLeft: 20,
+      color: theme.palette.error.light
+    },
+    contribute_addr: {
+      color: theme.palette.success.dark
+    },
     detail_banner_icon_style: {
       fontWeight: 'bold', 
       fontSize: 14
     },
+    project_detail_container: {
+      background: theme.palette.background.default
+    },
     volume_content: {
-      border: '1px solid #323e50', 
-      backgroundColor: '#1a1d24', 
+      border: `1px solid ${theme.palette.info.main}`,
+      backgroundColor: theme.palette.secondary.main, 
       borderRadius: 5, 
       marginBottom: 20, 
       height: 'auto'
@@ -428,7 +511,8 @@ export const useStyles = makeStyles((theme: Theme) =>
     },
     spice_token_title: {
       marginBottom: 20,
-      textAlign: 'left'
+      textAlign: 'left',
+      color: theme.palette.error.light
     },
     holder_buttn_style: {
       marginBottom: 10,

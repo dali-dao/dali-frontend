@@ -9,7 +9,7 @@ import { Icon } from '@iconify/react';
 
 function Projects() {
   const classes = useStyles();
-  const projectItem = new Array(24).fill({image: "", name: "ConstitutionDAO", id: "@constitutiondao", price: 77789, date: "01-01-21", desc: "SharkDAO owns Nouns #2,#5,#33"})
+  const projectItem = new Array(3).fill({image: "", name: "ConstitutionDAO", id: "@constitutiondao", price: 77789, date: "01-01-21", desc: "SharkDAO owns Nouns #2,#5,#33"})
   const [state, setState] = React.useState<{ age: string | number; name: string }>({
     age: '',
     name: 'hai',
@@ -41,7 +41,7 @@ function Projects() {
           <Grid item xs={12} md={4}>
             <Grid container className={classes.create_button_content} justifyContent="flex-end">
               <Grid item className={classes.project_banner_button_content}>
-                <Link to="/projects" className={classes.create_project_button}>CREATE PROJECT
+                <Link to="/design" className={classes.create_project_button}>CREATE PROJECT
                 </Link>
               </Grid>
             </Grid>
@@ -55,18 +55,18 @@ function Projects() {
           <Grid item xs={12} md={4} sm={6}>
             <Grid container justifyContent="flex-end" >
               <FormControl variant="outlined" className={classes.formControl}>
-                <InputLabel htmlFor="outlined-volume-native-simple">Volume</InputLabel>
                 <Select
                   native
                   value={state.age}
                   onChange={handleChange}
-                  label="Volume"
                   inputProps={{
-                    name: 'Volume',
-                    id: 'outlined-volume-native-simple',
+                    name: 'age',
+                    id: 'outlined-age-native-simple',
                   }}
+                  style={{color: '#9b9da0'}}
                 >
-                  <option value={10} style={{height: 50, padding: 50}}>Ten</option>
+                  <option value={0}>Volume</option>
+                  <option value={10}>Ten</option>
                   <option value={20}>Twenty</option>
                   <option value={30}>Thirty</option>
                 </Select>
@@ -75,22 +75,24 @@ function Projects() {
           </Grid>
         </Grid>
       </Grid>
-      <Grid className={classes.project_content}>
-        <Grid className={classes.project_list_container}>
-            <Grid container spacing={1}>
-              {projectItem.map((item, index) => {
-                return (         
-                <Grid key={index} item xs={12} md={4} sm={6} className={classes.margin_bottom_10} > 
-                  <Link to='/detail' className={classes.project_detail_link}>
-                    <ProjectItem image={item.image} name={item.name} id={item.id} price={item.price} date={item.date} desc={item.desc} />
-                  </Link>
-                </Grid>
-                )
-              })}
-            </Grid>
-            <div>
-              <Pagination className={classes.pagination_content} color="secondary" count={10} variant="outlined" shape="rounded" />
-            </div>
+      <Grid className={classes.list_content}>
+        <Grid className={classes.project_content}>
+          <Grid className={classes.project_list_container}>
+              <Grid container spacing={1}>
+                {projectItem.map((item, index) => {
+                  return (         
+                  <Grid key={index} item xs={12} md={4} sm={6} className={classes.margin_bottom_10} > 
+                    <Link to='/detail' className={classes.project_detail_link}>
+                      <ProjectItem image={item.image} name={item.name} id={item.id} price={item.price} date={item.date} desc={item.desc} />
+                    </Link>
+                  </Grid>
+                  )
+                })}
+              </Grid>
+              <div>
+                <Pagination className={classes.pagination_content} color="secondary" count={10} variant="outlined" shape="rounded" />
+              </div>
+          </Grid>
         </Grid>
       </Grid>
     </div>

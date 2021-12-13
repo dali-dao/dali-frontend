@@ -13,7 +13,7 @@ function ProjectDetail() {
   const classes = useStyles();
 
   return (
-    <Grid container>
+    <Grid container className={classes.project_detail_container}>
       <Grid container className={classes.banner_content} >
         <img alt='banner' src={Banner} className={classes.detail_image_banner}></img>
         <Grid container className={classes.project_detail_banner}>
@@ -49,7 +49,8 @@ function ProjectDetail() {
         <Grid item xs={12} md={6} className={classes.padding10}>
           <Grid item className={classes.volume_content}>
             <Grid xs={12} md={12} className={classes.detail_first_row}>
-              <span className={classes.detail_info_left}>Volume    <Icon icon="si-glyph:circle-info" className={classes.verticalMiddle}/>
+              <span className={classes.detail_info_left}>Volume    
+              <Icon icon="si-glyph:circle-info" className={classes.verticalMiddle}/>
               </span>
               <span className={classes.detail_info_right}>Ξ45,5689</span>
             </Grid>
@@ -80,20 +81,20 @@ function ProjectDetail() {
                 SPICE TOKENS   <Icon icon="si-glyph:circle-info" className={classes.verticalMiddle}/>
             </Grid>
             <Grid container xs={12} md={10} className={classes.breakWord}>
-              <Grid item xs={12} md={12} className={classes.TextLeft} style={{marginBottom: 10}}>
+              <Grid item xs={12} md={12} className={classes.address_container}>
                 <span className={classes.detail_address}>Address</span>
                 <span>:</span> 
                 <span className={classes.detail_address_value}>
                   0x9b6dB7597a74602a5A806E33408e7E2DAFa58193
                 </span>
               </Grid>
-              <Grid item xs={12} md={12} className={classes.TextLeft} style={{marginBottom: 10}}>
+              <Grid item xs={12} md={12} className={classes.supply_container}>
                 <span className={classes.detail_supply}>Total supply</span>
                 <span>:</span> 
                 <span className={classes.detail_supply_value}>
                 2,510,791,7020</span>
               </Grid>
-              <Grid item xs={12} md={12} className={classes.TextLeft} style={{marginBottom: 10}}>
+              <Grid item xs={12} md={12} className={classes.balance_container}>
                 <span className={classes.detail_balance}>Your balance</span>
                 <span>:</span> 
                 <span className={classes.detail_balance_value}>
@@ -109,7 +110,7 @@ function ProjectDetail() {
               </Grid>
             </Grid>
             <Grid container xs={12} md={2}>
-              <Grid item xs={12} md={12} style={{marginBottom: 10}} className={classes.TextRight}>
+              <Grid item xs={12} md={12} className={classes.holder_button_content}>
                 <Button className={classes.holders_button}>Holders</Button>
               </Grid>
               <Grid item xs={12} md={12} className={classes.TextRight}>
@@ -124,11 +125,11 @@ function ProjectDetail() {
         </Grid>
         {/* Right Content */}
         <Grid item xs={12} md={6} className={classes.padding10}>
-          <Grid item xs={12} md={12} style={{border: '1px solid #323e50', backgroundColor: '#1a1d24', borderRadius: 5, marginBottom: 20, height: 'auto', textAlign: 'left'}}>
-            <Grid item style={{paddingTop: 30, paddingLeft: 20}}><strong>CONTRIBUTE <span style={{color: '#f8dd0c'}}>@spicedao</span></strong></Grid>
-            <Grid container style={{marginTop: 20}}>
-              <Grid item xs={12} md={8} sm={12} style={{textAlign: 'center'}}>
-                <FormControl style={{width: '90%' }} variant="outlined">
+          <Grid item xs={12} md={12} className={classes.contribute_content}>
+            <Grid item className={classes.contribute_header_title} ><strong>CONTRIBUTE <span className={classes.contribute_addr}>@spicedao</span></strong></Grid>
+            <Grid container className={classes.marginTop20}>
+              <Grid item xs={12} md={8} sm={12} className={classes.TextCenter} >
+                <FormControl className={classes.receive_token_control}  variant="outlined">
                   <OutlinedInput
                     id="outlined-adornment-weight"
                     className={classes.input_outline}
@@ -138,15 +139,15 @@ function ProjectDetail() {
                       'aria-label': 'Receive 0 tokens/$',
                     }}
                   />
-                  <FormHelperText style={{marginBottom: 20, marginLeft: 0, color: 'grey'}} id="outlined-weight-helper-text">Receive 0 tokens/$</FormHelperText>
+                  <FormHelperText className={classes.helper_text} id="outlined-weight-helper-text">Receive 0 tokens/$</FormHelperText>
                 </FormControl>
               </Grid>
-              <Grid item xs={12} md={4} sm={12} xl={12} style={{textAlign: 'center', marginBottom: 30}}>
-                <Button style={{width: '90%', background: 'rgb(247 219 14)', height: 40, color: '#000', borderRadius: 0}} >PAY</Button>
+              <Grid item xs={12} md={4} sm={12} xl={12} className={classes.pay_button_content}>
+                <Button className={classes.pay_button_style} >PAY</Button>
               </Grid>
             </Grid>
           </Grid>
-          <Grid item xs={12} md={12} style={{ backgroundColor: '#1a1d24', borderRadius: 5, marginBottom: 20, height: 'auto', textAlign: 'left' }}>
+          <Grid item xs={12} md={12} className={classes.activity_content}>
             <Activity />
           </Grid>
         </Grid>

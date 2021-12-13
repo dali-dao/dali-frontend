@@ -43,10 +43,11 @@ const useStyles = makeStyles((theme: Theme) => ({
     borderRadius: 5
   },
   app_bar: {
-    backgroundColor: '#10141b'
+    backgroundColor: theme.palette.background.default,
+    borderBottom: '1px solid grey'
   },
   activity_title: {
-    color: '#fff', 
+    color: theme.palette.error.light,
     paddingTop: 15, 
     paddingLeft: 20,
     fontSize: 16,
@@ -60,16 +61,17 @@ const useStyles = makeStyles((theme: Theme) => ({
   pay_tab_title: {
     minWidth: 30, 
     fontSize: '12.8px',
-    color: '#fff',
+    color: theme.palette.success.contrastText,
   },
   tab_label: {
     minWidth: 50, 
     fontSize: '12.8px',
-    color: '#fff'
+    color: theme.palette.success.contrastText,
   },
   tab_pannel: {
-    padding: '20px 20px', 
-    textAlign: 'left'
+    padding: '20px 0px', 
+    textAlign: 'left',
+    background: theme.palette.background.default
   },
 }));
 
@@ -85,7 +87,7 @@ export default function LabTabs() {
     <div className={classes.root}>
       <TabContext value={value}>
         <AppBar position="static" elevation={0} className={classes.app_bar}>
-          <TabList onChange={handleChange} aria-label="Tab" style={{borderBottom: '1px solid grey'}} classes={{ indicator: classes.indicator}}>
+          <TabList onChange={handleChange} aria-label="Tab" classes={{ indicator: classes.indicator}}>
             <span className={classes.activity_title}>ACTIVITY <Icon icon="si-glyph:circle-info" className={classes.icon_info_1}/></span>
             <Tab label="PAY" value="1" className={classes.pay_tab_title} />
             <Tab label="REDEEM" value="2" className={classes.tab_label}  />

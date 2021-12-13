@@ -13,15 +13,15 @@ import { makeStyles, Theme } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme: Theme) => ({
   button_style: {
-    background: '#2b353f', 
+    background: '#454d5c', 
     borderRadius: 0,
-    borderColor: '#2b353f !important',
+    borderColor: '#454d5c !important',
     color: 'grey'
   },
   button_toggle_style: {
-    background: '#2b353f', 
+    background: '#454d5c', 
     borderRadius: 0,
-    borderColor: '#2b353f !important',
+    borderColor: '#454d5c !important',
     width: 25,
     minWidth: 20,
     color: 'grey'
