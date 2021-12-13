@@ -65,7 +65,7 @@ function Header() {
         localStorage.setItem('connectedAddress', address);
         setOpen(false);
         setConnectState(true);
-    }, []);
+    }, [web3Modal]);
 
     function disconnect() {
         web3Modal.clearCachedProvider();
