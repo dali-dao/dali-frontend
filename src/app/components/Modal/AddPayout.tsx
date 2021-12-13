@@ -2,6 +2,7 @@ import React from 'react';
 import { makeStyles, Theme } from '@material-ui/core/styles';
 import { Grid, FormControl, Select, TextField, Button } from '@material-ui/core';
 import CustomSlider from '../Other/CustomSlider';
+import Calendar from '../../components/Calendar';
 
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
@@ -81,7 +82,7 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
   right_button: {
     backgroundImage: 'linear-gradient(to right, rgb(238 221 14) 0%, rgb(24 216 211) 100%, rgb(247, 157, 0) 100%)', 
-    width: 230, 
+    width: 145, 
     height: 50, 
     color: '#000'
   },
@@ -103,6 +104,9 @@ const useStyles = makeStyles((theme: Theme) => ({
     color: '#c5c5ca', 
     fontSize: 15, 
     marginTop: 10
+  },
+  calendar: {
+    padding: '10px 0px'
   }
 }));
 
@@ -162,8 +166,8 @@ export default function AddPayout() {
 
         <Grid container className={classes.marginTop20}>
           <Grid item xs={12} md={12}>Lock until</Grid>
-          <Grid item xs={12} md={3}>
-            
+          <Grid item xs={12} md={3} className={classes.calendar}>
+            <Calendar />
           </Grid>
           <Grid className={classes.lock_until_desc} item xs={12} md={12}>If locked, this can't be edited or removed until the lock expires or the funding cycle is reconfigured.</Grid>
         </Grid>

@@ -1,7 +1,7 @@
-import React from 'react';
 import { makeStyles, Theme } from '@material-ui/core/styles';
 import { Grid, TextField, Button } from '@material-ui/core';
 import CustomSlider from '../Other/CustomSlider';
+import Calendar from '../../components/Calendar';
 
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
@@ -15,32 +15,7 @@ const useStyles = makeStyles((theme: Theme) => ({
   textRight: {textAlign: 'right'}, 
   textCenter: {textAlign: 'center'},
   width100: {width: '100%'},
-  marginTop10:{marginTop: 10},
   marginTop20:{marginTop: 20},
-  marginTop30:{marginTop: 30},
-  marginTop40:{marginTop: 40},
-  marginTop50:{marginTop: 50},
-  marginBottom5:{marginBottom: 5},
-  marginBottom10:{marginBottom: 10},
-  marginBottom15:{marginBottom: 15},
-  marginBottom20:{marginBottom: 20},
-  marginBottom30:{marginBottom: 30},
-  marginBottom40:{marginBottom: 40},
-  marginBottom50:{marginBottom: 50},
-  marginLeft10:{marginLeft: 10},
-  marginLeft20:{marginLeft: 20},
-  marginLeft30:{marginLeft: 30},
-  marginLeft40:{marginLeft: 40},
-  marginLeft50:{marginLeft: 50},
-  marginRight10:{marginRight: 10},
-  marginRight20:{marginRight: 20},
-  marginRight30:{marginRight: 30},
-  marginRight40:{marginRight: 40},
-  marginRight50:{marginRight: 50},
-  fontSize12: {fontSize: 12},
-  fontSize15: {fontSize: 15},
-  paddingLeft15: {paddingLeft: 15},
-  paddingLeft10: {paddingLeft: 10},
   floatLeft: {
     float: 'left'
   },
@@ -81,7 +56,7 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
   right_button: {
     backgroundImage: 'linear-gradient(to right, rgb(238 221 14) 0%, rgb(24 216 211) 100%, rgb(247, 157, 0) 100%)', 
-    width: 230, 
+    width: 145, 
     height: 50, 
     color: '#000'
   },
@@ -101,6 +76,9 @@ const useStyles = makeStyles((theme: Theme) => ({
   locked_desc: {
     color: '#c5c5ca', 
     fontSize: 14
+  },
+  calendar: {
+    padding: '10px 0px'
   }
 }));
 
@@ -126,8 +104,8 @@ export default function AddTokenReceiver() {
 
         <Grid container className={classes.marginTop20}>
           <Grid item xs={12} md={12}>Lock until</Grid>
-          <Grid item xs={12} md={3}>
-           
+          <Grid item xs={12} md={3} className={classes.calendar}>
+            <Calendar/>
           </Grid>
           <Grid className={classes.locked_desc} item xs={12} md={12}>If locked, this can't be edited or removed until the lock expires or the funding cycle is reconfigured.</Grid>
         </Grid>

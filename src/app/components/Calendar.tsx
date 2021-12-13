@@ -1,39 +1,35 @@
-import 'date-fns';
 import React from 'react';
-import Grid from '@material-ui/core/Grid';
-import DateFnsUtils from '@date-io/date-fns';
-import {
-  MuiPickersUtilsProvider,
-  KeyboardDatePicker,
-} from '@material-ui/pickers';
+import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
+import TextField from '@material-ui/core/TextField';
 
-export default function Calendar() {
-  // The first commit of Material-UI
-  const [selectedDate, setSelectedDate] = React.useState<Date | null>(
-    new Date('2021-12-10T21:11:54'),
-  );
+const useStyles = makeStyles((theme: Theme) =>
+  createStyles({
+    container: {
+      display: 'flex',
+      flexWrap: 'wrap',
+    },
+    textField: {
+      marginLeft: theme.spacing(1),
+      marginRight: theme.spacing(1),
+      width: 200,
+    },
+  }),
+);
 
-  const handleDateChange = (date: Date | null) => {
-    setSelectedDate(date);
-  };
+export default function DatePickers() {
+  const classes = useStyles();
 
   return (
-    <MuiPickersUtilsProvider utils={DateFnsUtils}>
-      <Grid container justifyContent="space-around">
-        <KeyboardDatePicker
-          disableToolbar
-          variant="inline"
-          format="MM/dd/yyyy"
-          margin="normal"
-          id="date-picker-inline"
-          label="Date picker inline"
-          value={selectedDate}
-          onChange={handleDateChange}
-          KeyboardButtonProps={{
-            'aria-label': 'change date',
-          }}
-        />
-      </Grid>
-    // </MuiPickersUtilsProvider>
+    <form className={classes.container} noValidate>
+      <TextField
+        id="date"
+        type="date"
+        defaultValue='2021-12-12'
+        className={classes.textField}
+        InputLabelProps={{
+          shrink: true,
+        }}
+      />
+    </form>
   );
 }
