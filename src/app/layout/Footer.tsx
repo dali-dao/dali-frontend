@@ -4,8 +4,8 @@ import TwitterIcon from '@material-ui/icons/Twitter';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import Logo from '../assets/Landing/logo.png';
-import Discord from '../assets/Landing/discord.png';
-import DiscordBlack from '../assets/Landing/discord_black.png';
+import LogoBlack from '../assets/Landing/logo_black.png';
+import { Icon } from '@iconify/react'; 
 
 function Footer() {
     const classes = useStyles();
@@ -33,7 +33,7 @@ function Footer() {
             <Grid className={classes.followTitle}>FOLLOW US ON</Grid>
             <Grid className={classes.followIcons}>
               <GitHubIcon fontSize="large" style={{marginRight: 20}}/>
-              <img src={curThemeName === 'darkTheme' ? Discord : DiscordBlack} alt="discord" style={{width: 40, marginRight: 20}}/>
+              <Icon icon="fa-brands:discord" width="40px" style={{marginRight: 20}}/>
               <TwitterIcon fontSize="large" style={{marginRight: 20}}/>
               <InstagramIcon fontSize="large" style={{marginRight: 20}}/>
             </Grid>
@@ -41,7 +41,7 @@ function Footer() {
         </Grid>
         <Grid className={classes.footerMiddle} container>
           <Grid item xs={12} md={4}>
-            <img src={Logo} alt="logo" />
+            <img src={curThemeName === 'darkTheme' ? Logo : LogoBlack } alt="logo" />
             <p className={classes.footerMiddleDesc1}>
               Users fund your project by paying to use your app or service, or as a patron or investor by making a payment directly to your project’s smart contract (like on this app). For users paying through your app, you should route those funds through the Juicebox smart contracts so they receive Tokens in return.ers paying througurn.ers paying througurn.ers paying through your app, you should route those funds through the Juicebox smart contracts.
             </p>

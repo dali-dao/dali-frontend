@@ -37,13 +37,15 @@ const useStyles = makeStyles((theme: Theme) =>
     constitution: {
       marginTop: 10,
       display: 'flex',
-      alignItems: 'center'
+      alignItems: 'center',
+      color: '#82868c'
     },
     value: {
       marginTop: 10,
       marginBottom: 10,
       display: 'flex',
-      alignItems: 'center'
+      alignItems: 'center',
+      color: '#82868c'
     },
     imgStyle: {
       width: '100%'

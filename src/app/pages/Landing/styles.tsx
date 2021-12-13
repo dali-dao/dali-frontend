@@ -99,7 +99,8 @@ export const useStyles = makeStyles((theme: Theme) =>
     },
     exploreMoreBtn: {
       textTransform: 'uppercase',
-      borderColor: `1px solid ${theme.palette.info.main}`
+      color: theme.palette.success.main,
+      border: `1px solid ${theme.palette.success.main}`
     },
     section3: {
       padding: '70px 160px 70px 160px',

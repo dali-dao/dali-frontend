@@ -116,7 +116,8 @@ export const useStyles = makeStyles((theme: Theme) =>
       border: '3px solid #667a93',
       borderRadius: 5,
       padding: '30px 20px 30px 0',
-      marginTop: 24
+      marginTop: 24,
+      backgroundColor: theme.palette.common.white
     },
     delayContentLeft: {
       display: 'flex',
@@ -125,7 +126,7 @@ export const useStyles = makeStyles((theme: Theme) =>
     delayContentTitle: {
       fontSize: 18,
       fontFamily: 'Roboto-Bold',
-      color: 'white'
+      color: theme.palette.error.light
     },
     delayContentDesc: {
       fontSize: 13,

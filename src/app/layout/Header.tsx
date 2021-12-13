@@ -2,6 +2,7 @@ import { useStyles } from "./Style";
 import Grid from '@material-ui/core/Grid';
 import { Link } from "react-router-dom";
 import Logo from '../assets/Landing/logo.png';
+import LogoBlack from '../assets/Landing/logo_black.png';
 import ReorderIcon from '@material-ui/icons/Reorder';
 import React, { useCallback } from "react";
 import { ThemeContext } from "../theme/ThemeProvider";
@@ -79,7 +80,7 @@ function Header() {
         <div className={classes.header}>
             <Grid container>
                 <Grid item xs={12} md={2}>
-                    <img src={Logo} alt="logo"/>
+                    <img src={curThemeName === 'darkTheme' ? Logo : LogoBlack} alt="logo"/>
                 </Grid>
                 <Grid container xs={12} md={7} className={classes.menuItems}>
                     <Grid item xs={2} md={1} sm={2}>
