@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     flexGrow: 1,
     margin: 'auto',
     color: theme.palette.error.light,
-    boxShadow: `0px 0px 10px 10px ${theme.palette.info.main}`
+    boxShadow: `0px 0px 10px 10px ${theme.palette.primary.dark}`
   },
   marginLeft10: {marginLeft: 10},
   verticalAlignMiddle: {verticalAlign: 'middle'},
@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     textAlign: 'left'
   },
   modal_header: {
-    background: theme.palette.background.paper,
+    background: theme.palette.common.white,
     textAlign: 'left',
     borderTopRightRadius: 5,
     borderTopLeftRadius: 5,
@@ -82,7 +82,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     fontSize: 12,
     borderRadius: 10,
     '&:hover': {
-      boxShadow: `0 0 10px 10px ${theme.palette.info.main}`
+      boxShadow: `0 0 10px 10px ${theme.palette.primary.dark}`
     }
   }
 }));

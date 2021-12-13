@@ -8,49 +8,27 @@ const useStyles = makeStyles((theme: Theme) => ({
   root: {
     flexGrow: 1,
     margin: 'auto',
-    color: '#fff',
-    boxShadow: '0px 0px 10px 10px #0c0f16'
+    color: theme.palette.error.light,
+    boxShadow: `0px 0px 10px 10px ${theme.palette.primary.dark}`,
+    marginTop: 150,
+    marginBottom: 50
   },
   //common class
   textLeft: {textAlign: 'left'}, 
   textRight: {textAlign: 'right'}, 
   textCenter: {textAlign: 'center'},
   width100: {width: '100%'},
-  marginTop10:{marginTop: 10},
   marginTop20:{marginTop: 20},
-  marginTop30:{marginTop: 30},
-  marginTop40:{marginTop: 40},
-  marginTop50:{marginTop: 50},
-  marginBottom5:{marginBottom: 5},
-  marginBottom10:{marginBottom: 10},
-  marginBottom15:{marginBottom: 15},
-  marginBottom20:{marginBottom: 20},
-  marginBottom30:{marginBottom: 30},
-  marginBottom40:{marginBottom: 40},
-  marginBottom50:{marginBottom: 50},
-  marginLeft10:{marginLeft: 10},
-  marginLeft20:{marginLeft: 20},
-  marginLeft30:{marginLeft: 30},
-  marginLeft40:{marginLeft: 40},
-  marginLeft50:{marginLeft: 50},
-  marginRight10:{marginRight: 10},
-  marginRight20:{marginRight: 20},
-  marginRight30:{marginRight: 30},
-  marginRight40:{marginRight: 40},
-  marginRight50:{marginRight: 50},
-  fontSize12: {fontSize: 12},
-  fontSize15: {fontSize: 15},
-  paddingLeft15: {paddingLeft: 15},
-  paddingLeft10: {paddingLeft: 10},
   floatLeft: {
     float: 'left'
   },
   //component class
   modal_header: {
-    background: '#2c333f',
+    background: theme.palette.common.white,
     textAlign: 'left',
     borderTopRightRadius: 5,
     borderTopLeftRadius: 5,
+    borderBottom: `1px solid ${theme.palette.info.main}`,
   },
   modal_header_title: {
     padding: '25px 40px',
@@ -59,26 +37,25 @@ const useStyles = makeStyles((theme: Theme) => ({
     fontFamily: 'CerebriSansPro-ExtraBold'
   },
   project_info_1: {
-    background: '#1c222d',
-    border: '1px solid #2f3540',
+    background: theme.palette.background.paper,
     padding: '25px 40px',
-    textAlign: 'left'
+    textAlign: 'left',
+    borderBottom: `1px solid ${theme.palette.info.main}`,
   },
   
   button_content:{
-    background: '#1c222d',
-    border: '1px solid #2f3540',
+    background: theme.palette.background.paper,
     padding: '25px 40px',
     borderBottomRightRadius: 5, 
     borderBottomLeftRadius: 5,
   },
   left_button: {
-    color: '#fff', 
-    border: '1px solid #596275',
+    border: `1px solid ${theme.palette.info.main}`,
     borderRadius: 5, 
     marginRight: 20, 
     width: 145, 
-    height: 50
+    height: 50,
+    color: theme.palette.error.light,
   },
   right_button: {
     backgroundImage: 'linear-gradient(to right, rgb(238 221 14) 0%, rgb(24 216 211) 100%, rgb(247, 157, 0) 100%)', 
@@ -94,11 +71,12 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
   project_handle_lb: {
     width: '100%', 
-    marginTop: 10
+    marginTop: 10,
+    color: '#c5c5ca'
   },
   lock_until_desc: {
     color: '#c5c5ca', 
-    fontSize: 14
+    fontSize: 13
   },
   address_lb: {
     color: '#c5c5ca', 
@@ -150,12 +128,12 @@ export default function AddPayout() {
 
         <Grid container>
           <span>* Project handle</span>
-          <TextField className={classes.project_handle_lb} id="outlined-basic" label="Juicebox Project" variant="outlined" />
+          <TextField className={classes.project_handle_lb} id="outlined-basic" variant="outlined" color="secondary" label="project name"/>
         </Grid>
 
         <Grid container className={classes.marginTop20}>
           <span>Address</span>
-          <TextField className={classes.project_handle_lb} id="outlined-basic" label="Juicebox Project" variant="outlined" />
+          <TextField className={classes.project_handle_lb} id="outlined-basic" variant="outlined" label="address" />
           <span className={classes.address_lb}>The address that should receive the tokens minted from paying this project.</span>
         </Grid>
 

@@ -66,7 +66,7 @@ export default function CustomSlider() {
           onChange={handleInputChange}
           onBlur={handleBlur}
           inputProps={{
-            style: {color: 'white', textAlign: 'center', fontSize: 16, width: '90%', height: 40, padding: '0'},
+            style: {color: '#666', textAlign: 'center', fontSize: 16, width: '90%', height: 40, padding: '0'},
             type: 'text',
             'aria-labelledby': 'input-slider',
           }}

@@ -110,6 +110,7 @@ export const useStyles = makeStyles((theme: Theme) =>
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
+      overflow: 'auto',
     },
     delayContent: {
       border: '3px solid #667a93',

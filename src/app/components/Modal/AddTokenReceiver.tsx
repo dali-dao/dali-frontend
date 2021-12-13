@@ -7,8 +7,8 @@ const useStyles = makeStyles((theme: Theme) => ({
   root: {
     flexGrow: 1,
     margin: 'auto',
-    color: '#fff',
-    boxShadow: '0px 0px 10px 10px #0c0f16'
+    color: theme.palette.error.light,
+    boxShadow: `0px 0px 10px 10px ${theme.palette.primary.dark}`
   },
   //common class
   textLeft: {textAlign: 'left'}, 
@@ -21,10 +21,11 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
   //component class
   modal_header: {
-    background: '#2c333f',
+    background: theme.palette.common.white,
     textAlign: 'left',
     borderTopRightRadius: 5,
     borderTopLeftRadius: 5,
+    borderBottom: `1px solid ${theme.palette.info.main}`,
   },
   modal_header_title: {
     padding: '25px 40px',
@@ -33,26 +34,26 @@ const useStyles = makeStyles((theme: Theme) => ({
     fontFamily: 'CerebriSansPro-ExtraBold'
   },
   project_info_1: {
-    background: '#1c222d',
-    border: '1px solid #2f3540',
+    background: theme.palette.background.paper,
+    borderBottom: `1px solid ${theme.palette.info.main}`,
     padding: '25px 40px',
     textAlign: 'left'
   },
   
   button_content:{
-    background: '#1c222d',
-    border: '1px solid #2f3540',
+    background: theme.palette.background.paper,
+    borderBottom: `1px solid ${theme.palette.info.main}`,
     padding: '25px 40px',
     borderBottomRightRadius: 5, 
     borderBottomLeftRadius: 5,
   },
   left_button: {
-    color: '#fff', 
     border: '1px solid #596275',
     borderRadius: 5, 
     marginRight: 20, 
     width: 145, 
-    height: 50
+    height: 50,
+    color: theme.palette.error.light
   },
   right_button: {
     backgroundImage: 'linear-gradient(to right, rgb(238 221 14) 0%, rgb(24 216 211) 100%, rgb(247, 157, 0) 100%)', 
@@ -66,7 +67,8 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
   beneficiary_text: {
     width: '100%', 
-    marginTop: 10
+    marginTop: 10,
+    color: theme.palette.error.light
   },
   address_receive_token_desc: {
     color: '#c5c5ca', 
@@ -93,7 +95,7 @@ export default function AddTokenReceiver() {
       <Grid container className={classes.project_info_1}>
         <Grid container className={classes.marginTop20}>
           <span>Beneficiary</span>
-          <TextField className={classes.beneficiary_text} id="outlined-basic" label="Juicebox Project" variant="outlined" />
+          <TextField className={classes.beneficiary_text} label="Juicebox Project" variant="outlined" />
           <span className={classes.address_receive_token_desc}>The address that should receive the tokens.</span>
         </Grid>
 

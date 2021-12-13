@@ -13,9 +13,11 @@ import TabPanel from '@material-ui/lab/TabPanel';
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
     flexGrow: 1,
-    color: '#fff',
+    color: theme.palette.error.light,
     margin: 'auto',
-    boxShadow: '0px 0px 10px 10px #0c0f16'
+    boxShadow: `0px 0px 10px 10px ${theme.palette.primary.dark}`,
+    marginTop: 1050,
+    marginBottom: 50
   },
   //common class
   textLeft: {textAlign: 'left'}, 
@@ -24,30 +26,18 @@ const useStyles = makeStyles((theme: Theme) => ({
   width100: {width: '100%'},
   marginTop10:{marginTop: 10},
   marginTop20:{marginTop: 20},
-  marginTop30:{marginTop: 30},
-  marginTop40:{marginTop: 40},
-  marginTop50:{marginTop: 50},
   marginBottom5:{marginBottom: 5},
   marginBottom10:{marginBottom: 10},
   marginBottom20:{marginBottom: 20},
-  marginBottom30:{marginBottom: 30},
-  marginBottom40:{marginBottom: 40},
-  marginBottom50:{marginBottom: 50},
   marginLeft10:{marginLeft: 10},
   marginLeft20:{marginLeft: 20},
-  marginLeft30:{marginLeft: 30},
-  marginLeft40:{marginLeft: 40},
-  marginLeft50:{marginLeft: 50},
   marginRight10:{marginRight: 10},
   marginRight20:{marginRight: 20},
-  marginRight30:{marginRight: 30},
-  marginRight40:{marginRight: 40},
-  marginRight50:{marginRight: 50},
   fontSize12: {fontSize: 12},
   paddingLeft15: {paddingLeft: 15},
   //component class
   modal_header: {
-    background: '#2c333f',
+    background: theme.palette.common.white,
     textAlign: 'left',
     borderTopRightRadius: 5,
     borderTopLeftRadius: 5,
@@ -56,11 +46,12 @@ const useStyles = makeStyles((theme: Theme) => ({
     padding: '25px 40px',
     display: 'block',
     fontSize: 20,
-    fontFamily: 'CerebriSansPro-ExtraBold'
+    fontFamily: 'CerebriSansPro-ExtraBold',
+    borderBottom: `1px solid ${theme.palette.info.main}`,
   },
   project_info_1: {
-    background: '#1c222d',
-    border: '1px solid #2f3540',
+    background: theme.palette.background.paper,
+    borderBottom: `1px solid ${theme.palette.info.main}`,
     padding: '25px 40px',
   },
   project_title: {
@@ -82,8 +73,8 @@ const useStyles = makeStyles((theme: Theme) => ({
   //Project Info 2
   project_info_2: {
     padding: '25px 40px', 
-    border: '1px solid #323e50', 
-    backgroundColor: '#14171d',
+    borderBottom: `1px solid ${theme.palette.info.main}`,
+    background: theme.palette.common.white,
   },
   input_outline: {
     paddingRight: 0,
@@ -92,7 +83,7 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
   project_info_3: {
     background: '#1c222d',
-    border: '1px solid #2f3540',
+    borderBottom: `1px solid ${theme.palette.info.main}`,
     padding: '20px 20px 10px 45px',
     borderBottomRightRadius: 5,
     borderBottomLeftRadius: 5,
@@ -100,7 +91,6 @@ const useStyles = makeStyles((theme: Theme) => ({
   toke_info_content: {
     marginBottom: 30
   },
-  funding_cycle: {},
   activity: {
     marginTop: 20
   },
@@ -111,7 +101,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     background: '#454d5c',
     color: '#fff',
     padding: '5px 10px',
-    border: '1px solid #2b3242',
+    borderBottom: `1px solid ${theme.palette.info.main}`,
   },
   indicator: {
     backgroundColor: '#fcdd0c',
@@ -123,8 +113,8 @@ const useStyles = makeStyles((theme: Theme) => ({
     }
   },
   detail_container: {
-    border: '1px solid #404a5e',
-    background: '#14171e',
+    border: `1px solid ${theme.palette.info.main}`,
+    background: theme.palette.common.white,
     padding: 20
   },
   detail_title: {
@@ -132,13 +122,13 @@ const useStyles = makeStyles((theme: Theme) => ({
     marginBottom: 15
   },
   available_container: {
-    border: '1px solid #404a5e',
-    background: '#14171e',
+    border: `1px solid ${theme.palette.info.main}`,
+    background: theme.palette.common.white,
     marginTop: 15,
     padding: 20
   },
   distribute_button: {
-    border: '1px solid #6f727a',
+    border: `1px solid ${theme.palette.info.main}`,
     background: '#272c36',
     borderRadius: 5,
   },
@@ -150,8 +140,8 @@ const useStyles = makeStyles((theme: Theme) => ({
   fontFamily: 'CerebriSansPro-Bold', 
  },
  no_activity: {
-  border: '1px solid #404a5e',
-  background: '#14171e',
+  border: `1px solid ${theme.palette.info.main}`,
+  background: theme.palette.background.default,
   height: '100px'
  },
  project_image: {
@@ -187,7 +177,7 @@ const useStyles = makeStyles((theme: Theme) => ({
  },
  funding_cycle_title: {
   fontFamily: 'CerebriSansPro-Bold', 
-  color: '#fff', 
+  color: theme.palette.error.light, 
   paddingTop: 15
  },
  icon_style: {
@@ -198,10 +188,10 @@ const useStyles = makeStyles((theme: Theme) => ({
  },
  tab_pannel: {
   padding: '0px', 
-  textAlign: 'left'
+  textAlign: 'left',
  },
- app_bar_background: {
-   background:'#1c222d'
+  app_bar_background: {
+    background: theme.palette.background.paper,
   },
  address_info: { 
    marginBottom: 20, 
@@ -279,7 +269,7 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
  activity_header:{
    textAlign: 'left', 
-   color: '#fff', 
+   color: theme.palette.error.light, 
    width: '80%', 
    paddingTop: 15, 
    marginRight: '100px', 
@@ -292,7 +282,7 @@ const useStyles = makeStyles((theme: Theme) => ({
  activity_content: {
    padding: '0px 0px', 
    textAlign: 'left', 
-   width: '100%'
+   width: '100%',
   },
  user_info_value: {
    paddingRight: 10, 
@@ -415,7 +405,7 @@ export default function DesignPreview() {
               <Button className={classes.manage_button}>Manage</Button>
             </Grid>
           </Grid>
-          <Grid container className={classes.funding_cycle}>
+          <Grid container>
             <TabContext value={value}>
               <AppBar position="static" elevation={0} className={classes.app_bar_background}>
                 <TabList onChange={handleChange} aria-label="simple tabs example" classes={{ indicator: classes.indicator }}>

@@ -5,6 +5,11 @@ import Card from '@material-ui/core/Card';
 import CardHeader from '@material-ui/core/CardHeader';
 import Slider from '../../../Other/CustomSlider';
 import Chart from '../../../../assets/Design/chart.png';
+import DesignPreview from '../../../Modal/DesignPreview';
+import Modal from '@material-ui/core/Modal';
+import React from "react";
+import Backdrop from '@material-ui/core/Backdrop';
+import Fade from '@material-ui/core/Fade';
 
 interface selectedStepItem {
   items: boolean[];
@@ -14,6 +19,15 @@ interface selectedStepItem {
 
 function Incentives({items, onSelectItem, confirmItems}: selectedStepItem) {
   const classes = useStyles();
+  const [open, setOpen] = React.useState(false);
+
+  const handleOpen = () => {
+      setOpen(true);
+  };
+
+  const handleClose = () => {
+      setOpen(false);
+  };
 
   return (
     <div className={classes.root}>
@@ -52,11 +66,29 @@ function Incentives({items, onSelectItem, confirmItems}: selectedStepItem) {
               <Grid container>
                 <Grid item xs={4} className={classes.label}></Grid>
                 <Grid item xs={8} className={classes.content}>
-                  <button className={classes.saveBtn}>SAVE</button> Cancel
+                  <button className={classes.saveBtn} onClick={handleOpen}>SAVE</button> Cancel
                 </Grid>
               </Grid>
           </Card>
         </Grid>
+        <Modal
+            aria-labelledby="transition-modal-title"
+            aria-describedby="transition-modal-description"
+            className={classes.modal}
+            open={open}
+            onClose={handleClose}
+            closeAfterTransition
+            BackdropComponent={Backdrop}
+            BackdropProps={{
+                timeout: 500,
+            }}
+        >
+            <Fade in={open}>
+            <div style={{width: '50%'}}>
+                <DesignPreview />
+            </div>
+            </Fade>
+        </Modal>
     </div>
   );
 }
