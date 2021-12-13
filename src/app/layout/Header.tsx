@@ -68,7 +68,7 @@ function Header() {
     }, [web3Modal]);
 
     function disconnect() {
-        web3Modal.clearCachedProvider();
+        web3Modal.clearCachedProvider(); 
         //   if (provider?.disconnect && typeof provider.disconnect === 'function') {
         //     provider.disconnect()
         //   }
