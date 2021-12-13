@@ -20,10 +20,11 @@ const useStyles = makeStyles((theme: Theme) => ({
     marginBottom: 10
   },
   upload_img_button: {
-    width: '80%',
+    marginTop: 15,
+    height: 50,
     padding: 10, 
-    marginTop: 5, 
-    background: '#3c4755'
+    background: theme.palette.primary.main,
+    color: theme.palette.error.light,
   },
   path_info: {
     marginTop: 15, 
@@ -31,12 +32,19 @@ const useStyles = makeStyles((theme: Theme) => ({
     marginBottom: 15
   },
   path_color: {
-    color: '#727285'
+    color: '#727285',
+    marginLeft: 10,
+    display: 'inline-block',
+    verticalAlign: 'middle',
+    paddingTop: 15
   },
   path_info_content: {
     border: '1px dotted #9496a4', 
     borderRadius: 4, 
     height: 'auto'
+  },
+  add_image_title: {
+    color: theme.palette.error.light,
   }
 }));
 
@@ -46,19 +54,15 @@ export default function ImageUpload() {
   return (
     <div className={classes.root}>
       <Grid item className={classes.marginBottom10}>
-        <strong>Add Image</strong>
+        <strong className={classes.add_image_title}>Add Image</strong>
       </Grid>
       <Grid container className={classes.path_info_content}>
         <Grid item xs={12} md={2}>
           <img src={NoImage} className={classes.padding15} alt=''></img>
         </Grid>
-        <Grid container xs={12} md={10} className={classes.marginTop5}>
-          <Grid item xs={12} md={3} sm={12} className={classes.textCenter}>
-            <Button className={classes.upload_img_button}>Upload logo image</Button>
-          </Grid>
-          <Grid item xs={12} md={9} className={classes.path_info}>
-            <span className={classes.path_color}>upload image style like jpg / png images are supported</span>
-          </Grid>
+        <Grid item xs={12} md={10} sm={12}>
+          <Button className={classes.upload_img_button}>Upload logo image</Button>
+          <span className={classes.path_color}>upload image style like jpg / png images are supported</span>
         </Grid>
       </Grid>
     </div>

@@ -8,7 +8,33 @@ const useStyles = makeStyles((theme: Theme) => ({
     flexGrow: 1,
     color: '#fff',
     margin: 'auto',
-    boxShadow: '0px 0px 10px 10px #0c0f16'
+    boxShadow: `0px 0px 10px 10px ${theme.palette.primary.dark}`,
+    borderRadius: 5,
+  },
+  modal_header: {
+    border: `1px solid ${theme.palette.info.main}`,
+    background: theme.palette.primary.main,
+    textAlign: 'left',
+    borderTopRightRadius: 5,
+    borderTopLeftRadius: 5,
+  },
+  modal_header_title: {
+    padding: '25px 40px',
+    display: 'block',
+    fontSize: 20,
+    fontFamily: 'CerebriSansPro-ExtraBold',
+    color: theme.palette.error.light
+  },
+  modal_content: {
+    background: theme.palette.background.paper,
+    border: `1px solid ${theme.palette.info.main}`,
+    display: 'block',
+    textAlign: 'left',
+    padding: '25px 40px',
+  },
+  modal_description_header: {
+    color: '#919398',
+    fontSize: 13
   },
   //common class
   width100: {
@@ -20,79 +46,63 @@ const useStyles = makeStyles((theme: Theme) => ({
   paddingLeft10: {
     paddingLeft: 10
   },
-  //component class
-  modal_header: {
-    background: '#2c333f',
-    textAlign: 'left',
-    borderTopRightRadius: 5,
-    borderTopLeftRadius: 5,
-  },
-  modal_header_title: {
-    padding: '25px 40px',
-    display: 'block',
-    fontSize: 20,
-    fontFamily: 'CerebriSansPro-ExtraBold'
-  },
-  modal_content: {
-    background: '#1c222d',
-    border: '1px solid #2f3540',
-    padding: '25px 40px',
-    display: 'block',
-    textAlign: 'left',
-  },
-  modal_description_header: {
-    color: '#919398',
-    fontSize: 13
-  },
   notice_content: {
+    color: theme.palette.error.light,
     fontFamily: 'CerebriSansPro-ExtraBold',
     fontSize: 15,
     marginTop: 30, 
   },
   table_content: {
-    border: '1px solid #596275',
+    border: `1px solid ${theme.palette.info.main}`,
     borderRadius: 3,
     marginTop: 15
   },
   payamount_td: {
-    borderBottom: '1px solid #596275', 
-    borderRight: '1px solid #596275', 
+    borderBottom: `1px solid ${theme.palette.info.main}`,
+    borderRight: `1px solid ${theme.palette.info.main}`,
+    color: theme.palette.error.light,
     fontSize: 15, 
     padding: 15, 
-    backgroundColor: '#262d37'
+    backgroundColor: theme.palette.primary.main,
   },
   payamount_td_value: {
-    borderBottom: '1px solid #596275', 
+    borderBottom: `1px solid ${theme.palette.info.main}`,
     padding: 15, 
-    backgroundColor: '#2c333f', 
+    color: theme.palette.error.light,
+    backgroundColor: theme.palette.primary.main, 
     fontSize: 14
   },
   dft_td: {
-    borderBottom: '1px solid #596275', 
-    borderRight: '1px solid #596275',
+    borderBottom: `1px solid ${theme.palette.info.main}`,
+    borderRight: `1px solid ${theme.palette.info.main}`,
     padding:'30px 0px 0px 15px', 
+    color: theme.palette.error.light,
     fontSize: 15, 
-    backgroundColor: '#262d37'
+    backgroundColor: theme.palette.primary.main,
   },
   dft_value:{
-    borderBottom: '1px solid #596275', 
+    borderBottom: `1px solid ${theme.palette.info.main}`,
     padding: 15, 
-    backgroundColor: '#2c333f', 
+    color: theme.palette.error.light,
+    backgroundColor: theme.palette.primary.main, 
     fontSize: 14
   },
   dft_reserved: {
-    borderRight: '1px solid #596275', 
+    borderRight: `1px solid ${theme.palette.info.main}`,
+    color: theme.palette.error.light,
     padding: 15, 
-    backgroundColor: '#262d37', 
+    backgroundColor: theme.palette.primary.main, 
     fontSize: 15
   },
   dft_reserved_2: {
     padding: 15, 
-    backgroundColor: '#2c333f', 
+    color: theme.palette.error.light,
+    backgroundColor: theme.palette.primary.main, 
     fontSize: 14
   },
   memo_title: {
     fontFamily: 'CerebriSansPro-ExtraBold', 
+    color: theme.palette.error.light,
     fontSize: 15, 
     marginBottom: 10
   },
@@ -103,13 +113,14 @@ const useStyles = makeStyles((theme: Theme) => ({
     marginTop: 10
   },
   textArea_content:{
+    backgroundColor: theme.palette.primary.main, 
     height: 90, 
-    color: '#fff', 
+    border: `1px solid ${theme.palette.info.main}`,
+    color: theme.palette.error.light,
     resize: 'none', 
     paddingLeft: 16, 
     paddingTop: 20, 
     width: '98%', 
-    background: '#0f101d'
   },
   textArea_character: {
     textAlign: 'right', 
@@ -120,6 +131,7 @@ const useStyles = makeStyles((theme: Theme) => ({
   receive_erc20: {
     fontFamily: 'CerebriSansPro-ExtraBold', 
     fontSize: 15, 
+    color: theme.palette.error.light,
     marginBottom: 10
   },
   receive_content: {
@@ -127,8 +139,8 @@ const useStyles = makeStyles((theme: Theme) => ({
     marginBottom: 20
   },
   cancel_button: {
-    color: '#fff', 
-    border: '1px solid #596275', 
+    border: '1px solid #ced7e8', 
+    color: theme.palette.error.light,
     borderRadius: 5, 
     marginRight: 20, 
     width: 230, 
@@ -144,11 +156,11 @@ const useStyles = makeStyles((theme: Theme) => ({
     color: '#999ba0', 
     fontSize: 13
   },
-  
   button_content:{
-    background: '#1c222d',
-    border: '1px solid #2f3540',
+    background: theme.palette.background.paper,
+    border: `1px solid ${theme.palette.info.main}`,
     padding: '25px 40px',
+    borderTop: 0,
     borderBottomRightRadius: 5, 
     borderBottomLeftRadius: 5,
   }
@@ -221,11 +233,13 @@ export default function PayDAOTailFung() {
         </Grid>
 
         <Grid container className={classes.receive_content}>
-          <Grid className={classes.receive_erc20}>Receive ERC20</Grid>
+          <Grid className={classes.receive_erc20}>
+            Receive ERC20
+          </Grid>
           <Grid container>
             <FormControlLabel
               className={classes.erc20_content}
-              control={<Checkbox checked={state.checkedA} onChange={handleChange} name="checkedA" className={classes.paddingLeft10} />}
+              control={<Checkbox checked={state.checkedA} onChange={handleChange} name="checkedA"  />}
               label="Check this to mint DTF ERC20 to your wallet. Leave unchecked to have your token balance tracked by Juicebox, saving gas on this transaction. You can always claim your ERC20 tokens later."
             />
           </Grid>
