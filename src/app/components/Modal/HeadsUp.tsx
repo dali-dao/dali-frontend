@@ -9,35 +9,6 @@ const useStyles = makeStyles((theme: Theme) => ({
     margin: 'auto',
     boxShadow: '0px 0px 10px 10px #0c0f16'
   },
-  //common class
-  textLeft: {textAlign: 'left'}, 
-  textRight: {textAlign: 'right'}, 
-  textCenter: {textAlign: 'center'},
-  width100: {width: '100%'},
-  marginTop10:{marginTop: 10},
-  marginTop20:{marginTop: 20},
-  marginTop30:{marginTop: 30},
-  marginTop40:{marginTop: 40},
-  marginTop50:{marginTop: 50},
-  marginBottom5:{marginBottom: 5},
-  marginBottom10:{marginBottom: 10},
-  marginBottom20:{marginBottom: 20},
-  marginBottom30:{marginBottom: 30},
-  marginBottom40:{marginBottom: 40},
-  marginBottom50:{marginBottom: 50},
-  marginLeft10:{marginLeft: 10},
-  marginLeft20:{marginLeft: 20},
-  marginLeft30:{marginLeft: 30},
-  marginLeft40:{marginLeft: 40},
-  marginLeft50:{marginLeft: 50},
-  marginRight10:{marginRight: 10},
-  marginRight20:{marginRight: 20},
-  marginRight30:{marginRight: 30},
-  marginRight40:{marginRight: 40},
-  marginRight50:{marginRight: 50},
-  fontSize12: {fontSize: 12},
-  paddingLeft15: {paddingLeft: 15},
-  //component class
   modal_header: {
     background: '#2c333f',
     textAlign: 'left',
@@ -49,10 +20,6 @@ const useStyles = makeStyles((theme: Theme) => ({
     display: 'block',
     fontSize: 20,
     fontFamily: 'CerebriSansPro-ExtraBold'
-  },
-  project_title: {
-    fontFamily: 'CerebriSansPro-Bold',
-    fontSize: 16
   },
   modal_content: {
     background: '#1c222d',

@@ -11,36 +11,12 @@ const useStyles = makeStyles((theme: Theme) => ({
     boxShadow: '0px 0px 10px 10px #0c0f16'
   },
   //common class
-  textLeft: {textAlign: 'left'}, 
-  textRight: {textAlign: 'right'}, 
-  textCenter: {textAlign: 'center'},
-  width100: {width: '100%'},
-  marginTop10:{marginTop: 10},
-  marginTop20:{marginTop: 20},
-  marginTop30:{marginTop: 30},
-  marginTop40:{marginTop: 40},
-  marginTop50:{marginTop: 50},
-  marginBottom5:{marginBottom: 5},
-  marginBottom10:{marginBottom: 10},
-  marginBottom15:{marginBottom: 15},
-  marginBottom20:{marginBottom: 20},
-  marginBottom30:{marginBottom: 30},
-  marginBottom40:{marginBottom: 40},
-  marginBottom50:{marginBottom: 50},
-  marginLeft10:{marginLeft: 10},
-  marginLeft20:{marginLeft: 20},
-  marginLeft30:{marginLeft: 30},
-  marginLeft40:{marginLeft: 40},
-  marginLeft50:{marginLeft: 50},
-  marginRight10:{marginRight: 10},
-  marginRight20:{marginRight: 20},
-  marginRight30:{marginRight: 30},
-  marginRight40:{marginRight: 40},
-  marginRight50:{marginRight: 50},
-  fontSize12: {fontSize: 12},
-  fontSize15: {fontSize: 15},
-  paddingLeft15: {paddingLeft: 15},
-  paddingLeft10: {paddingLeft: 10},
+  textRight: {
+    textAlign: 'right'
+  }, 
+  width100: {
+    width: '100%'
+  },
   floatLeft: {
     float: 'left'
   },
@@ -89,11 +65,6 @@ const useStyles = makeStyles((theme: Theme) => ({
     fontSize: 13,
     fontFamily: 'CerebriSansPro-ExtraBold'
   }, 
-  input_outline: {
-    paddingRight: 0,
-    height: 40,
-    borderRadius: 0,
-  },
   available_content:{
     marginBottom: 5, 
     textAlign: 'left'

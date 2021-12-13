@@ -21,8 +21,12 @@ const useStyles = makeStyles((theme: Theme) => ({
     color: theme.palette.error.light,
     boxShadow: `0px 0px 10px 10px ${theme.palette.primary.dark}`
   },
-  marginLeft10: {marginLeft: 10},
-  verticalAlignMiddle: {verticalAlign: 'middle'},
+  marginLeft10: {
+    marginLeft: 10
+  },
+  verticalAlignMiddle: {
+    verticalAlign: 'middle'
+  },
   wallet_header_content: {
     color: '#919398', 
     textAlign: 'left'
@@ -40,15 +44,6 @@ const useStyles = makeStyles((theme: Theme) => ({
     fontSize: 20,
     fontFamily: 'CerebriSansPro-ExtraBold',
     textTransform: 'uppercase'
-  },
-  // project_info_1: {
-  //   background: '#1c222d',
-  //   border: '1px solid #2f3540',
-  //   padding: '25px 40px',
-  // },
-  icon_size: {
-    width: 35,
-    height: 35
   },
   select_header: {
     width: '100%',

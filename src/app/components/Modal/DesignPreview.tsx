@@ -24,13 +24,10 @@ const useStyles = makeStyles((theme: Theme) => ({
   textRight: {textAlign: 'right'}, 
   textCenter: {textAlign: 'center'},
   width100: {width: '100%'},
-  marginTop10:{marginTop: 10},
   marginTop20:{marginTop: 20},
   marginBottom5:{marginBottom: 5},
-  marginBottom10:{marginBottom: 10},
   marginBottom20:{marginBottom: 20},
   marginLeft10:{marginLeft: 10},
-  marginLeft20:{marginLeft: 20},
   marginRight10:{marginRight: 10},
   marginRight20:{marginRight: 20},
   fontSize12: {fontSize: 12},
@@ -80,13 +77,6 @@ const useStyles = makeStyles((theme: Theme) => ({
     paddingRight: 0,
     height: 40,
     borderRadius: 0,
-  },
-  project_info_3: {
-    background: '#1c222d',
-    borderBottom: `1px solid ${theme.palette.info.main}`,
-    padding: '20px 20px 10px 45px',
-    borderBottomRightRadius: 5,
-    borderBottomLeftRadius: 5,
   },
   toke_info_content: {
     marginBottom: 30
@@ -251,14 +241,6 @@ const useStyles = makeStyles((theme: Theme) => ({
    marginRight: 10, 
    fontSize: 14
   },
- user_name: {
-   fontSize: 13,
-  marginTop: 10
-  },
- eth_percent: {
-   paddingRight: 10, 
-   textAlign: 'right', 
-   fontSize: 12},
  spice_value: {
    marginRight: 10, 
    fontSize: 14
