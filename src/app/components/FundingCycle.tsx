@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
   indicator: {
     backgroundColor: '#fcdd0c',
-    height: 1
+    height: 1,
   },
   tabs: {
     "& .MuiTabs-indicator": {
@@ -42,12 +42,12 @@ const useStyles = makeStyles((theme: Theme) => ({
     borderRadius: 5
   },
   app_bar_style: {
-    backgroundColor: '#10141b'
+    backgroundColor: '#10141b',
+    paddingLeft: 20,
   },
   tab_title: {
     color: '#fff', 
     paddingTop: 15, 
-    marginRight: '210px'
   },
   icon_style:{
     verticalAlign: 'middle', 
@@ -138,10 +138,15 @@ const useStyles = makeStyles((theme: Theme) => ({
     height: 13, 
     marginRight: 5
   },
-  tab_style: {
+  tab_style_current: {
     color: '#fff',
-    width: 60,
-    marginRight: 'auto',
+    width: 80,
+    marginLeft: 'auto',
+    minWidth: 50
+  },
+  tab_style_history: {
+    color: '#fff',
+    width: 80,
     minWidth: 50
   }
 }));
@@ -159,9 +164,9 @@ export default function LabTabs() {
       <TabContext value={value}>
         <AppBar position="static" elevation={0} className={classes.app_bar_style}>
           <TabList onChange={handleChange} aria-label="Tab" classes={{ indicator: classes.indicator }}>
-          <span className={classes.tab_title}>FUNDING CYCLE <Icon icon="si-glyph:circle-info" className={classes.icon_style}/></span>
-            <Tab label="CURRENT" className={classes.tab_style} value="1" />
-            <Tab label="HISTORY" className={classes.tab_style} value="2" />
+            <span className={classes.tab_title}>FUNDING CYCLE <Icon icon="si-glyph:circle-info" className={classes.icon_style}/></span>
+            <Tab label="CURRENT" className={classes.tab_style_current} value="1" />
+            <Tab label="HISTORY" className={classes.tab_style_history} value="2" />
           </TabList>
         </AppBar>
         <TabPanel value="1" className={classes.tab_pannel_content}>
