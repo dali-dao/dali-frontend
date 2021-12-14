@@ -8,6 +8,7 @@ import TabPanel from '@material-ui/lab/TabPanel';
 import { Icon } from '@iconify/react'; 
 import { Grid } from '@material-ui/core';
 import PaymentCard from './Projects/paymentCard';
+import Pagination from '@material-ui/lab/Pagination';
 
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
@@ -49,7 +50,6 @@ const useStyles = makeStyles((theme: Theme) => ({
   activity_title: {
     color: theme.palette.error.light,
     paddingTop: 15, 
-    paddingLeft: 20,
     fontSize: 16,
     width: '100%',
     textAlign: 'left'
@@ -71,6 +71,9 @@ const useStyles = makeStyles((theme: Theme) => ({
   tab_pannel: {
     padding: '20px 0px', 
     textAlign: 'left',
+    background: theme.palette.background.default
+  },
+  pagination_content: {
     background: theme.palette.background.default
   },
 }));
@@ -133,6 +136,7 @@ export default function LabTabs() {
         </TabPanel>
         <TabPanel value="2">Item Two</TabPanel>
       </TabContext>
+      <Pagination className={classes.pagination_content} color="secondary" count={10} variant="outlined" shape="rounded" />
     </div>
   );
 }

@@ -9,7 +9,8 @@ const useStyles = makeStyles((theme: Theme) =>
       display: 'flex',
       background: '#2c333f',
       padding: 10,
-      borderRadius: 5
+      borderRadius: 5,
+      marginBottom: 10
     },
     details: {
         alignItems: 'center',

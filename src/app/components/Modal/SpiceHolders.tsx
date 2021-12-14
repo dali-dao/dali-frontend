@@ -12,8 +12,8 @@ const useStyles = makeStyles((theme: Theme) => ({
     boxShadow: '0px 0px 10px 10px #0c0f16'
   },
   //common class
-  textCenter: {
-    textAlign: 'center'
+  textRight: {
+    textAlign: 'right'
   },
   marginBottom20:{
     marginBottom: 20
@@ -125,17 +125,22 @@ export default function SpiceHolders() {
             </Select>
           </FormControl>
         </Grid>
-        <Grid item xs={12} md={1} className={classes.textCenter}>
+        <Grid item xs={12} md={1} className={classes.textRight}>
           <Button className={classes.asset_button}>
             <Icon className={classes.fontSize25} icon="bi:sort-alpha-down" />
           </Button>
         </Grid>
-        <Grid item xs={12} md={1} className={classes.textCenter}>
+        <Grid item xs={12} md={1} className={classes.textRight}>
           <Button className={classes.asset_button}>
             <Icon className={classes.fontSize25} icon="el:download-alt" />
           </Button>
         </Grid>
-        <Grid item xs={12} md={12}>
+        <Grid item xs={12} md={12} >
+          <SpiceBalance/>
+          <SpiceBalance />
+          <SpiceBalance />
+          <SpiceBalance />
+          <SpiceBalance />
           <SpiceBalance />
         </Grid>
       </Grid>
