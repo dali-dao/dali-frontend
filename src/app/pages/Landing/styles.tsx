@@ -57,7 +57,6 @@ export const useStyles = makeStyles((theme: Theme) =>
       backgroundImage: 'linear-gradient(to right, rgb(238 221 14) 0%, rgb(24 216 211) 100%, rgb(247, 157, 0) 100%)',
       textTransform: 'uppercase',
       color: 'black',
-      width: 200,
       textAlign: 'center',
       margin: '15px 0 15px 0',
       cursor: 'pointer',
