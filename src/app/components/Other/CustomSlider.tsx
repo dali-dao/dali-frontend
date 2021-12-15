@@ -1,8 +1,8 @@
 import React from 'react';
 import { Grid, TextField, Slider, ThemeProvider } from '@material-ui/core';
-import { createMuiTheme } from '@material-ui/core/styles';
+import { createTheme } from '@material-ui/core/styles';
 
-const muiTheme = createMuiTheme({
+const muiTheme = createTheme({
   overrides:{
     MuiSlider: {
       thumb:{

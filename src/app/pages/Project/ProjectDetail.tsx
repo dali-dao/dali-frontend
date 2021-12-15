@@ -49,25 +49,25 @@ function ProjectDetail() {
       <Grid container justifyContent="center" className={classes.main_content}>
         <Grid item xs={12} md={6} className={classes.padding10}>
           <Grid item className={classes.volume_content}>
-            <Grid xs={12} md={12} className={classes.detail_first_row}>
+            <Grid item xs={12} md={12} className={classes.detail_first_row}>
               <span className={classes.detail_info_left}>Volume    
               <Icon icon="si-glyph:circle-info" className={classes.circl_info_font}/>
               </span>
               <span className={classes.detail_info_right}>Ξ45,5689</span>
             </Grid>
-            <Grid xs={12} md={12} className={classes.detail_row}>
+            <Grid item xs={12} md={12} className={classes.detail_row}>
               <span className={classes.detail_info_left}>
                 In Juicebox   <Icon icon="si-glyph:circle-info" className={classes.circl_info_font}/>
               </span>
               <span className={classes.detail_info_right}>Ξ0<span className={classes.detail_info_price}>$45678.56</span></span>
             </Grid>
-            <Grid xs={12} md={12} className={classes.detail_row}>
+            <Grid item xs={12} md={12} className={classes.detail_row}>
               <span className={classes.detail_info_left}>
                 In wallet   <Icon icon="si-glyph:circle-info" className={classes.circl_info_font}/>
               </span>
               <span className={classes.detail_info_right}>0 JBX + Ξ45678 5.563</span>
             </Grid>
-            <Grid xs={12} md={12} className={classes.detail_last_row}>
+            <Grid item xs={12} md={12} className={classes.detail_last_row}>
               <span className={classes.detail_info_right}>ALL ASSETS   <Icon icon="si-glyph:circle-info" className={classes.circl_info_font}/>
               </span>
             </Grid>
@@ -81,7 +81,7 @@ function ProjectDetail() {
             <Grid item xs={12} md={6} className={classes.spice_token_title}>
                 SPICE TOKENS   <Icon icon="si-glyph:circle-info" className={classes.verticalMiddle}/>
             </Grid>
-            <Grid container xs={12} md={10} className={classes.breakWord}>
+            <Grid container item xs={12} md={10} className={classes.breakWord}>
               <Grid item xs={12} md={12} className={classes.address_container}>
                 <span className={classes.detail_address}>Address</span>
                 <span>:</span> 
@@ -110,7 +110,7 @@ function ProjectDetail() {
                 </Grid>
               </Grid>
             </Grid>
-            <Grid container xs={12} md={2}>
+            <Grid container item xs={12} md={2}>
               <Grid item xs={12} md={12} className={classes.holder_button_content}>
                 <Button className={classes.holders_button}>Holders</Button>
               </Grid>
