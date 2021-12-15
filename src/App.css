@@ -39,7 +39,7 @@
 }
 
 body {
-  font-family: 'Roboto-Regular', 'Roboto-Bold', 'Roboto-Black', 'Roboto-Italic', 'Roboto-Light', 'Roboto-Medium',  'Roboto-Thin', 'CerebriSansPro-Bold', 'CerebriSansPro-Black', 'CerebriSansPro-Italic', 'CerebriSansPro-Light', 'CerebriSansPro-Medium', 'CerebriSansPro-Regular', 'CerebriSansPro-Thin';
+  font-family: 'Roboto', 'Roboto-Regular', 'Roboto-Bold', 'Roboto-Black', 'Roboto-Italic', 'Roboto-Light', 'Roboto-Medium',  'Roboto-Thin', 'CerebriSansPro-Bold', 'CerebriSansPro-Black', 'CerebriSansPro-Italic', 'CerebriSansPro-Light', 'CerebriSansPro-Medium', 'CerebriSansPro-Regular', 'CerebriSansPro-Thin';
 }
 
 @font-face {
@@ -69,6 +69,11 @@ body {
 
 @font-face {
   font-family: 'Roboto-Regular';
+  src: url(./app/assets/FONTS/Roboto-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'Roboto';
   src: url(./app/assets/FONTS/Roboto-Regular.ttf);
 }
 
