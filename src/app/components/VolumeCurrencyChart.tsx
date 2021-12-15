@@ -1,7 +1,6 @@
-import React, { Component } from 'react';
 import Highcharts from 'highcharts';
 import {
-  HighchartsChart, Chart, withHighcharts, XAxis, YAxis, Title, Subtitle, Legend, LineSeries, Caption
+  HighchartsChart, Chart, withHighcharts, XAxis, YAxis, Title, Subtitle, LineSeries, Caption
 } from 'react-jsx-highcharts';
 
 const plotOptions = {

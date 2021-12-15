@@ -8,7 +8,6 @@ import ButtonGroup from '../../components/ButtonGroup';
 import VolumeCurrencyChart from '../../components/VolumeCurrencyChart';
 import FundingCycle from '../../components/FundingCycle';
 import Activity from '../../components/Activity';
-import { theme } from 'highcharts';
 
 function ProjectDetail() {
   const classes = useStyles();
