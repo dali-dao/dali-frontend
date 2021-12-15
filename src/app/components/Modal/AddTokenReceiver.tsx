@@ -42,7 +42,6 @@ const useStyles = makeStyles((theme: Theme) => ({
   
   button_content:{
     background: theme.palette.background.paper,
-    borderBottom: `1px solid ${theme.palette.info.main}`,
     padding: '25px 40px',
     borderBottomRightRadius: 5, 
     borderBottomLeftRadius: 5,

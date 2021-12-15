@@ -1,24 +1,24 @@
 //material-ui
 import { createStyles, makeStyles, Theme, withStyles, alpha } from "@material-ui/core/styles";
-import Banner from '../../assets/Projects/banner_2.jpg';
 import InputBase from '@material-ui/core/InputBase';
 import Switch, { SwitchClassKey, SwitchProps } from '@material-ui/core/Switch';
+import Banner from '../../assets/Projects/banner_2.jpg';
 
 //style
 export const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
-        backgroundImage: `url(${Banner})`,
-        backgroundRepeat: 'no-repeat',
-        backgroundColor: theme.palette.background.default,
-        color: theme.palette.error.light,
+      backgroundImage: `url(${Banner})`,
+      backgroundRepeat: 'no-repeat',
+      backgroundColor: theme.palette.background.default,
+      color: theme.palette.error.light,
     },
     container: {
-        padding: '0 160px 10px 160px',
-        textAlign: 'left',
-        "@media (max-width: 1205px)": {
-          padding: '0px 10px 0px 10px',
-        }
+      padding: '0 160px 10px 160px',
+      textAlign: 'left',
+      "@media (max-width: 1205px)": {
+        padding: '0px 10px 0px 10px',
+      }
     },
     title: {
       fontFamily: 'CerebriSansPro-Heavy',
@@ -39,6 +39,7 @@ export const useStyles = makeStyles((theme: Theme) =>
       backgroundColor: theme.palette.common.white,
       fontSize: 18,
       color: theme.palette.error.light,
+      fontFamily: 'Roboto-Bold'
     },
     content: {
       backgroundColor: theme.palette.background.paper,
@@ -62,7 +63,13 @@ export const useStyles = makeStyles((theme: Theme) =>
       borderRadius: '5px',
       fontWeight: 'bold',
       cursor: 'pointer',
+      boxShadow: '1px 1px 1px 1px #10141b',
       backgroundImage: 'linear-gradient(to right, rgb(238 221 14) 0%, rgb(24 216 211) 100%, rgb(247, 157, 0) 100%)'
+    },
+    cancelBtn: {
+      fontFamily: 'Roboto-Bold',
+      marginLeft: 25,
+      fontSize: 16
     },
     logoContent: {
       borderRadius: 4,
@@ -156,6 +163,9 @@ export const useStyles = makeStyles((theme: Theme) =>
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'center'
+    },
+    titleFontFamily: {
+      fontFamily: 'CerebriSansPro-ExtraBold'
     }
   })
 );

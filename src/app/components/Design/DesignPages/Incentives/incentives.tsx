@@ -30,12 +30,12 @@ function Incentives({items, onSelectItem, confirmItems}: selectedStepItem) {
   };
 
   return (
-    <div className={classes.root}>
+    <div>
         <Grid className={classes.title}>DESIGN YOUR PROJECT - INCENTIVES</Grid>
         <Grid><DesignStep selectedStepItem={items} onSelectItem={onSelectItem} confirmStepItem={confirmItems}/></Grid>
         <Grid>
           <Card className={classes.card}>
-            <CardHeader title="6. INCENTIVES" className={classes.cardHeader}></CardHeader>
+            <CardHeader title="6. INCENTIVES" classes={{ title: classes.titleFontFamily }} className={classes.cardHeader}></CardHeader>
               <Grid container>
                 <Grid item xs={4} className={classes.label}>Keyword here</Grid>
                 <Grid item xs={8} className={classes.content}>
@@ -66,7 +66,7 @@ function Incentives({items, onSelectItem, confirmItems}: selectedStepItem) {
               <Grid container>
                 <Grid item xs={4} className={classes.label}></Grid>
                 <Grid item xs={8} className={classes.content}>
-                  <button className={classes.saveBtn} onClick={handleOpen}>SAVE</button> Cancel
+                  <button className={classes.saveBtn} onClick={handleOpen}>SAVE</button> <span className={classes.cancelBtn}>Cancel</span>
                 </Grid>
               </Grid>
           </Card>
@@ -84,7 +84,7 @@ function Incentives({items, onSelectItem, confirmItems}: selectedStepItem) {
             }}
         >
             <Fade in={open}>
-            <div style={{width: '50%'}}>
+            <div style={{width: '60%'}}>
                 <DesignPreview />
             </div>
             </Fade>

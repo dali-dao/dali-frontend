@@ -72,7 +72,7 @@ export const useStyles = makeStyles((theme: Theme) =>
     },
     itemTitle: {
       fontSize: 13,
-      fontFamily: 'CerebriSanPro-Bold',
+      fontFamily: 'CerebriSansPro-Bold',
       fontWeight: 'bold',
       padding: '5px 0 5px 0'
     },

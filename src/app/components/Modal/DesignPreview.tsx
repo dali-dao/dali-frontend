@@ -48,7 +48,6 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
   project_info_1: {
     background: theme.palette.background.paper,
-    borderBottom: `1px solid ${theme.palette.info.main}`,
     padding: '25px 40px',
   },
   project_title: {
