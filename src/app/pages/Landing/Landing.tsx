@@ -35,7 +35,7 @@ function Landing() {
           <Grid className={classes.bannerList}>
             <PlayCircleFilledIcon className={classes.playIcon}/> Open source businesses
           </Grid>
-          <Grid>
+          <Grid item xs={6}>
             <Link to="/design" style={{textDecoration: 'none'}}>
               <div className={classes.designForBtn}>design your project</div>
             </Link>

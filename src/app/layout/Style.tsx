@@ -34,7 +34,8 @@ export const useStyles = makeStyles((theme: Theme) =>
     menu: {
         textDecoration: 'none',
         color: theme.palette.success.main,
-        textTransform: 'uppercase'
+        textTransform: 'uppercase',
+        padding: '30px 0px'
     },
     activeMenu: {
         textDecoration: 'none',
