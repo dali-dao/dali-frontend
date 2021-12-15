@@ -1,29 +1,33 @@
-import React from "react";
-import { render } from "react-dom";
-import Highcharts from "highcharts/highstock";
-import HighchartsReact from "highcharts-react-official";
+import React, { Component } from 'react';
+import Highcharts from 'highcharts';
+import {
+  HighchartsChart, Chart, withHighcharts, XAxis, YAxis, Title, Subtitle, Legend, LineSeries, Caption
+} from 'react-jsx-highcharts';
 
-const options = {
-  title: {
-    text: "My stock chart"
-  },
-  series: [
-    {
-      data: [1, 2, 1, 4, 3, 6, 7, 3, 8, 6, 9]
-    }
-  ],
-  colors: ['#2f7ed8']
+const plotOptions = {
+  series: {
+    pointStart: 2010
+  }
 };
 
-export const VolumeCurrencyChart = () => (
-  <div>
-    <HighchartsReact
-      colors='red'
-      style={{background: 'grey'}}
-      highcharts={Highcharts}
-      options={options}
-    />
+const App = ({bgColor}: any) => (
+  <div className="app">
+    <HighchartsChart plotOptions={plotOptions}>
+      <Chart backgroundColor={bgColor}/>
+      <Title></Title>
+      <Subtitle></Subtitle>
+      <XAxis>
+        <XAxis.Title></XAxis.Title>
+      </XAxis>
+
+      <YAxis>
+        <YAxis.Title></YAxis.Title>
+          <LineSeries name="Installation" data={[43934, 52503, 57177, 69658, 97031, 119931, 137133, 154175]} />
+        </YAxis>
+      <Caption align="center"></Caption>
+    </HighchartsChart>
+
   </div>
 );
 
-render(<VolumeCurrencyChart />, document.getElementById("root"));
+export default withHighcharts(App, Highcharts);

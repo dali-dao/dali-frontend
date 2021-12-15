@@ -5,12 +5,14 @@ import { useStyles } from "./styles";
 import { Icon } from '@iconify/react'; 
 import { Grid, FormControl, OutlinedInput, InputAdornment, FormHelperText, Button } from '@material-ui/core';
 import ButtonGroup from '../../components/ButtonGroup';
-import {VolumeCurrencyChart} from '../../components/VolumeCurrencyChart';
+import VolumeCurrencyChart from '../../components/VolumeCurrencyChart';
 import FundingCycle from '../../components/FundingCycle';
 import Activity from '../../components/Activity';
+import { theme } from 'highcharts';
 
 function ProjectDetail() {
   const classes = useStyles();
+  const curThemeName = localStorage.getItem("appTheme") || "darkTheme";
 
   return (
     <Grid container className={classes.project_detail_container}>
@@ -73,7 +75,7 @@ function ProjectDetail() {
           </Grid>
 
           <Grid item className={classes.volume_currency_content}>
-            <VolumeCurrencyChart />
+            <VolumeCurrencyChart bgColor={curThemeName === 'darkTheme' ? '#10141b' : '#f5f6fa'}/>
           </Grid>
           
           <Grid container>
@@ -142,7 +144,7 @@ function ProjectDetail() {
                   <FormHelperText className={classes.helper_text} id="outlined-weight-helper-text">Receive 0 tokens/$</FormHelperText>
                 </FormControl>
               </Grid>
-              <Grid item xs={12} md={4} sm={12} xl={12} className={classes.pay_button_content}>
+              <Grid item xs={12} md={4} sm={12} xl={4} className={classes.pay_button_content}>
                 <Button className={classes.pay_button_style} >PAY</Button>
               </Grid>
             </Grid>

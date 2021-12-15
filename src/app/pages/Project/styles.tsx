@@ -510,8 +510,6 @@ export const useStyles = makeStyles((theme: Theme) =>
       height: 'auto'
     },
     volume_currency_content: {
-      border: '1px solid #323e50', 
-      backgroundColor: '#1a1d24', 
       borderRadius: 5, 
       marginBottom: 30, 
       height: 'auto'
