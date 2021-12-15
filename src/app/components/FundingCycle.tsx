@@ -40,8 +40,8 @@ const useStyles = makeStyles((theme: Theme) => ({
   distribute_button: {
     borderRadius: 5,
     border: `1px solid ${theme.palette.info.main}`,
-    background: theme.palette.background.default,
-    color: theme.palette.info.main
+    background: theme.palette.background.paper,
+    color: theme.palette.success.main
   },
   app_bar_style: {
     backgroundColor: theme.palette.background.default,
