@@ -82,7 +82,7 @@ function Header() {
                 <Grid item xs={12} md={2}>
                     <img src={curThemeName === 'darkTheme' ? Logo : LogoBlack} alt="logo"/>
                 </Grid>
-                <Grid container xs={12} md={7} className={classes.menuItems}>
+                <Grid container item xs={12} md={7} className={classes.menuItems}>
                     <Grid item xs={2} md={1}>
                         <Link to="/" className={(location_path.pathname === '/') ? classes.activeMenu : classes.menu}>
                             Home
