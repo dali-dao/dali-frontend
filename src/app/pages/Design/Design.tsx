@@ -33,14 +33,14 @@ function Design() {
 
   return (
     <div className={classes.root}>
-        <Grid className={classes.container}>
-            { selectedStep[0] && <Appearance items={selectedStep} onSelectItem={onSelectItem} confirmItems={confirmStep} />}
-            { selectedStep[1] && <Funding items={selectedStep} onSelectItem={onSelectItem} confirmItems={confirmStep} />}
-            { selectedStep[2] && <Distribution items={selectedStep} onSelectItem={onSelectItem} confirmItems={confirmStep} />}
-            { selectedStep[3] && <ReservedTokens items={selectedStep} onSelectItem={onSelectItem} confirmItems={confirmStep} />}
-            { selectedStep[4] && <Reconfiguration items={selectedStep} onSelectItem={onSelectItem} confirmItems={confirmStep} />}
-            { selectedStep[5] && <Incentives items={selectedStep} onSelectItem={onSelectItem} confirmItems={confirmStep} />}
-        </Grid>
+      <Grid className={classes.container}>
+        { selectedStep[0] && <Appearance items={selectedStep} onSelectItem={onSelectItem} confirmItems={confirmStep} />}
+        { selectedStep[1] && <Funding items={selectedStep} onSelectItem={onSelectItem} confirmItems={confirmStep} />}
+        { selectedStep[2] && <Distribution items={selectedStep} onSelectItem={onSelectItem} confirmItems={confirmStep} />}
+        { selectedStep[3] && <ReservedTokens items={selectedStep} onSelectItem={onSelectItem} confirmItems={confirmStep} />}
+        { selectedStep[4] && <Reconfiguration items={selectedStep} onSelectItem={onSelectItem} confirmItems={confirmStep} />}
+        { selectedStep[5] && <Incentives items={selectedStep} onSelectItem={onSelectItem} confirmItems={confirmStep} />}
+      </Grid>
     </div>
   );
 }

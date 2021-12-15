@@ -5,8 +5,8 @@ import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import Card1 from '../../assets/Landing/card1.jpg';
 import MenuIcon from '@material-ui/icons/Menu';
-import PermContactCalendarIcon from '@material-ui/icons/PermContactCalendar';
 import Grid from '@material-ui/core/Grid';
+import { Icon } from '@iconify/react'; 
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -65,7 +65,7 @@ export default function MediaCard() {
             ConstitutionDAO
           </Typography>
           <Grid container className={classes.constitution}>
-            @constitutiondao <PermContactCalendarIcon fontSize="small" style={{marginLeft: 10}} />Discord
+            @constitutiondao <Icon icon="fa-brands:discord" width="15px" style={{marginLeft: 10, marginRight: 5}}/>Discord
           </Grid>
           <Grid container className={classes.value}>
             <MenuIcon fontSize="small"/> <span className={classes.price}>77,789</span> since 11-15-21 

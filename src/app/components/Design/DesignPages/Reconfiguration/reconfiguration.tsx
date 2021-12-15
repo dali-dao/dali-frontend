@@ -15,12 +15,12 @@ function Reconfiguration({items, onSelectItem, confirmItems}: selectedStepItem) 
   const classes = useStyles();
 
   return (
-    <div className={classes.root}>
+    <div>
         <Grid className={classes.title}>DESIGN YOUR PROJECT - RECONFIGURATION</Grid>
         <Grid><DesignStep selectedStepItem={items} onSelectItem={onSelectItem} confirmStepItem={confirmItems}/></Grid>
         <Grid>
           <Card className={classes.card}>
-            <CardHeader title="5. RECONFIGURATION" className={classes.cardHeader}></CardHeader>
+            <CardHeader title="5. RECONFIGURATION" classes={{ title: classes.titleFontFamily }} className={classes.cardHeader}></CardHeader>
               <Grid container>
                 <Grid item xs={4} className={classes.label}>Keyword here</Grid>
                 <Grid item xs={8} className={classes.content}>
@@ -66,7 +66,7 @@ function Reconfiguration({items, onSelectItem, confirmItems}: selectedStepItem) 
                     </Grid>
                     <Grid item xs={10}>
                       <Grid className={classes.delayContentTitle}>Custom strategy</Grid>
-                      <BootstrapInput id="bootstrap-input" placeholder="564897564123654899631456632466"/>
+                      <BootstrapInput id="bootstrap-input" placeholder="564897564123654899631456632466" style={{margin: '5px 0px'}}/>
                       <Grid className={classes.delayContentValue}>The address of any smart contract deployed on that implements this interface.</Grid>
                     </Grid>
                   </Grid>
@@ -75,7 +75,7 @@ function Reconfiguration({items, onSelectItem, confirmItems}: selectedStepItem) 
               <Grid container>
                 <Grid item xs={4} className={classes.label}></Grid>
                 <Grid item xs={8} className={classes.content}>
-                  <button className={classes.saveBtn}>SAVE</button> Cancel
+                  <button className={classes.saveBtn}>SAVE</button> <span className={classes.cancelBtn}>Cancel</span>
                 </Grid>
               </Grid>
           </Card>
