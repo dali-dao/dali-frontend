@@ -30,7 +30,7 @@ const useStyles = makeStyles((theme: Theme) => ({
   detail_title: {
     padding: '20px',
     fontSize: 14,
-    color: theme.palette.success.main
+    color: theme.palette.error.light,
   },
   available_container: {
     border: `1px solid ${theme.palette.info.main}`,
@@ -38,10 +38,12 @@ const useStyles = makeStyles((theme: Theme) => ({
     marginTop: 15,
   },
   distribute_button: {
+    padding: '5px 25px',
     borderRadius: 5,
     border: `1px solid ${theme.palette.info.main}`,
     background: theme.palette.background.paper,
-    color: theme.palette.success.main
+    color: theme.palette.success.main,
+    textTransform: 'none'
   },
   app_bar_style: {
     backgroundColor: theme.palette.background.default,
@@ -62,7 +64,7 @@ const useStyles = makeStyles((theme: Theme) => ({
   duration_content: {
     marginLeft: 20, 
     marginBottom: 20,
-    color: theme.palette.success.main
+    color: theme.palette.error.light,
   },
   fontSize12: {
     fontSize: 12
@@ -80,6 +82,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     marginLeft: 20, 
     marginBottom: 20, 
     fontSize: 12,
+    fontWeight: 'bold',
     color: theme.palette.success.main
   },
   price_available: {
@@ -139,6 +142,7 @@ const useStyles = makeStyles((theme: Theme) => ({
   eth_content: {
     padding: '20px 20px 20px 20px', 
     fontSize: 13,
+    fontWeight: 'bold',
     textAlign: 'left',
     color: theme.palette.error.light
   },
@@ -158,6 +162,9 @@ const useStyles = makeStyles((theme: Theme) => ({
     color: theme.palette.success.contrastText,
     width: 80,
     minWidth: 50
+  },
+  verticalMiddle: {
+    verticalAlign: 'middle'
   }
 }));
 
@@ -187,10 +194,10 @@ export default function LabTabs() {
                 <strong>Duration: Not set</strong>
               </Grid>
               <Grid item xs={12} md={3} className={classes.fontSize12}>
-                <strong>Reserved</strong><Icon icon="si-glyph:circle-info" className={classes.icon_style}/><strong>: 0%</strong>
+                <strong>Reserved</strong><Icon icon="si-glyph:circle-info" className={classes.icon_style}/><strong className={classes.verticalMiddle}>: 0%</strong>
               </Grid>
               <Grid item xs={12} md={6} className={classes.fontSize12}>
-                <strong>Reconfiguration strategy</strong> <Icon icon="si-glyph:circle-info" className={classes.icon_style}/><strong>: 0%</strong>
+                <strong>Reconfiguration strategy</strong> <Icon icon="si-glyph:circle-info" className={classes.icon_style}/><strong className={classes.verticalMiddle}>: 0%</strong>
               </Grid>
             </Grid>
             <Grid className={classes.address_desc_title}>

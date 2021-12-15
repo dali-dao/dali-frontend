@@ -96,7 +96,8 @@ export const useStyles = makeStyles((theme: Theme) =>
     project_banner_description: {
       fontSize: '14.1px',
       color: theme.palette.success.main,
-      textAlign: 'left'
+      textAlign: 'left',
+      height: 60
     },
     project_banner_button_content: {
       textAlign: 'center',
@@ -359,6 +360,7 @@ export const useStyles = makeStyles((theme: Theme) =>
       textAlign: 'right'
     },
     detail_address: {
+      fontFamily: 'CerebriSansPro-Heavy',
       color: '#9b9c9e',
       textAlign: 'left',
       fontSize: 13,
@@ -379,6 +381,7 @@ export const useStyles = makeStyles((theme: Theme) =>
       marginLeft: 10,
     },
     detail_supply: {
+      fontFamily: 'CerebriSansPro-Heavy',
       color: '#9b9c9e',
       textAlign: 'left',
       fontSize: 13,
@@ -395,14 +398,15 @@ export const useStyles = makeStyles((theme: Theme) =>
       marginLeft: 10
     },
     detail_claimable_value: {
-      marginLeft: 105,
+      marginLeft: 113,
       fontSize: 13
     },
     detail_total_value: {
-      marginLeft: 105,
+      marginLeft: 113,
       fontSize: 13
     },
     detail_balance: {
+      fontFamily: 'CerebriSansPro-Heavy',
       color: '#9b9c9e',
       textAlign: 'left',
       fontSize: 13,
