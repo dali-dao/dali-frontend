@@ -30,7 +30,7 @@ function ProjectDetail() {
                 <Icon icon="el:twitter" className={classes.detail_banner_icon}  color="white" /> <span className={classes.detail_banner_user_info}>@TheSpiceDAO</span>
                 <Icon icon="akar-icons:discord-fill" className={classes.detail_banner_icon}  color="white" /> <span className={classes.detail_banner_icon_style}>Discord</span>
               </p>
-              <Grid item xs={12} md={9} className={classes.project_banner_description} justifyContent="center">
+              <Grid item container xs={12} md={9} className={classes.project_banner_description} justifyContent="center">
                   <span className={classes.font13}>
                     Pellentesque neque risus, auctor ac nisl in, dictum rhoncus libero. 
                     Cras eget rhoncus dolor, commodo pharetra leo. 
