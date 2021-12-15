@@ -50,24 +50,24 @@ function ProjectDetail() {
           <Grid item className={classes.volume_content}>
             <Grid xs={12} md={12} className={classes.detail_first_row}>
               <span className={classes.detail_info_left}>Volume    
-              <Icon icon="si-glyph:circle-info" className={classes.verticalMiddle}/>
+              <Icon icon="si-glyph:circle-info" className={classes.circl_info_font}/>
               </span>
               <span className={classes.detail_info_right}>Ξ45,5689</span>
             </Grid>
             <Grid xs={12} md={12} className={classes.detail_row}>
               <span className={classes.detail_info_left}>
-                In Juicebox   <Icon icon="si-glyph:circle-info" className={classes.verticalMiddle}/>
+                In Juicebox   <Icon icon="si-glyph:circle-info" className={classes.circl_info_font}/>
               </span>
               <span className={classes.detail_info_right}>Ξ0<span className={classes.detail_info_price}>$45678.56</span></span>
             </Grid>
             <Grid xs={12} md={12} className={classes.detail_row}>
               <span className={classes.detail_info_left}>
-                In wallet   <Icon icon="si-glyph:circle-info" className={classes.verticalMiddle}/>
+                In wallet   <Icon icon="si-glyph:circle-info" className={classes.circl_info_font}/>
               </span>
               <span className={classes.detail_info_right}>0 JBX + Ξ45678 5.563</span>
             </Grid>
             <Grid xs={12} md={12} className={classes.detail_last_row}>
-              <span className={classes.detail_info_right}>ALL ASSETS   <Icon icon="si-glyph:circle-info" className={classes.verticalMiddle}/>
+              <span className={classes.detail_info_right}>ALL ASSETS   <Icon icon="si-glyph:circle-info" className={classes.circl_info_font}/>
               </span>
             </Grid>
           </Grid>

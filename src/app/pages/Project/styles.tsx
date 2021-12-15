@@ -271,6 +271,7 @@ export const useStyles = makeStyles((theme: Theme) =>
       padding: '10px 10px',
       borderRadius: '5px',
       color: '#fff',
+      fontFamily: 'CerebriSansPro-ExtraBold',
       textAlign: 'center',
       "@media (max-width: 960px)": {
         marginTop: 10,
@@ -291,6 +292,10 @@ export const useStyles = makeStyles((theme: Theme) =>
       float: 'right',
       width: '48%'
     },
+    circl_info_font: {
+      color: theme.palette.success.main,
+      verticalAlign: 'middle'
+    },
     detail_info: {
       width: '100%',
       border: '1px solid grey',
@@ -303,11 +308,13 @@ export const useStyles = makeStyles((theme: Theme) =>
       fontSize: '14px',
       float: 'left',
       display: 'block',
+      color: theme.palette.error.light,
       fontFamily: 'Roboto-Medium'
     },
     detail_info_right: {
       textAlign: 'right',
       fontSize: '14px',
+      color: theme.palette.error.light,
       display: 'block',
       fontFamily: 'Roboto-Medium'
     },
@@ -512,6 +519,7 @@ export const useStyles = makeStyles((theme: Theme) =>
     spice_token_title: {
       marginBottom: 20,
       textAlign: 'left',
+      fontFamily: 'CerebriSansPro-ExtraBold',
       color: theme.palette.error.light
     },
     holder_buttn_style: {

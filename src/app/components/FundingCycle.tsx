@@ -47,8 +47,9 @@ const useStyles = makeStyles((theme: Theme) => ({
     backgroundColor: theme.palette.background.default,
   },
   tab_title: {
+    fontFamily: 'CerebriSansPro-ExtraBold',
     color: theme.palette.error.light,
-    paddingTop: 15, 
+    paddingTop: 20, 
   },
   icon_style:{
     verticalAlign: 'middle', 

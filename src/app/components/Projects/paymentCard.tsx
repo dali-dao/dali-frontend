@@ -34,6 +34,7 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     walletName: {
         fontSize: 15,
+        fontFamily: 'CerebriSansPro-ExtraBold',
         color: theme.palette.error.light,
         textAlign: 'left',
         paddingLeft: 10

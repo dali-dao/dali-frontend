@@ -48,8 +48,9 @@ const useStyles = makeStyles((theme: Theme) => ({
     borderBottom: '1px solid grey'
   },
   activity_title: {
+    fontFamily: 'CerebriSansPro-ExtraBold',
     color: theme.palette.error.light,
-    paddingTop: 15, 
+    paddingTop: 20, 
     fontSize: 16,
     width: '100%',
     textAlign: 'left'
