@@ -5,7 +5,6 @@ import Tab from '@material-ui/core/Tab';
 import TabContext from '@material-ui/lab/TabContext';
 import TabList from '@material-ui/lab/TabList';
 import TabPanel from '@material-ui/lab/TabPanel';
-import { Icon } from '@iconify/react'; 
 import { Grid } from '@material-ui/core';
 import PaymentCard from './Projects/paymentCard';
 import Pagination from '@material-ui/lab/Pagination';
@@ -50,10 +49,12 @@ const useStyles = makeStyles((theme: Theme) => ({
   activity_title: {
     fontFamily: 'CerebriSansPro-ExtraBold',
     color: theme.palette.error.light,
-    paddingTop: 20, 
-    fontSize: 16,
-    width: '100%',
-    textAlign: 'left'
+    padding: 0,
+    display: 'block',
+    textAlign: 'left',
+    '& .MuiTab-wrapper ': {
+      display: 'block'
+    }
   },
   icon_info_1: {
     verticalAlign: 'middle', 
@@ -61,6 +62,7 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
   pay_tab_title: {
     minWidth: 30, 
+    marginLeft: 'auto',
     fontSize: '12.8px',
     color: theme.palette.success.contrastText,
   },
@@ -92,7 +94,7 @@ export default function LabTabs() {
       <TabContext value={value}>
         <AppBar position="static" elevation={0} className={classes.app_bar}>
           <TabList onChange={handleChange} aria-label="Tab" classes={{ indicator: classes.indicator}}>
-            <span className={classes.activity_title}>ACTIVITY <Icon icon="si-glyph:circle-info" className={classes.icon_info_1}/></span>
+            <Tab label="ACTIVITY" disabled className={classes.activity_title} />
             <Tab label="PAY" value="1" className={classes.pay_tab_title} />
             <Tab label="REDEEM" value="2" className={classes.tab_label}  />
             <Tab label="WITHDRAW" value="3" className={classes.tab_label}  />

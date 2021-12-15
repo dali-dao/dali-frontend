@@ -51,7 +51,12 @@ const useStyles = makeStyles((theme: Theme) => ({
   tab_title: {
     fontFamily: 'CerebriSansPro-ExtraBold',
     color: theme.palette.error.light,
-    paddingTop: 20, 
+    padding: 0,
+    display: 'block',
+    textAlign: 'left',
+    '& .MuiTab-wrapper ': {
+      display: 'block'
+    }
   },
   icon_style:{
     verticalAlign: 'middle', 
@@ -181,7 +186,7 @@ export default function LabTabs() {
       <TabContext value={value}>
         <AppBar position="static" elevation={0} className={classes.app_bar_style}>
           <TabList onChange={handleChange} aria-label="Tab" classes={{ indicator: classes.indicator }}>
-            <span className={classes.tab_title}>FUNDING CYCLE <Icon icon="si-glyph:circle-info" className={classes.icon_style}/></span>
+            <Tab label="FUNDING CYCLE" className={classes.tab_title} disabled/>
             <Tab label="CURRENT" className={classes.tab_style_current} value="1" />
             <Tab label="HISTORY" className={classes.tab_style_history} value="2" />
           </TabList>
