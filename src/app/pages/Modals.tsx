@@ -25,8 +25,6 @@ function Moals() {
     const classes = useStyles();
     return (
     <div style={{margin: '0px 260px'}}>
-      <DesignPreview />
-      <Grid className={classes.divider}></Grid>
       <HeadsUp />
       <Grid className={classes.divider}></Grid>
       <PayDAOTailFung />

@@ -8,7 +8,8 @@ const useStyles = makeStyles((theme: Theme) => ({
     flexGrow: 1,
     color: '#fff',
     margin: 'auto',
-    boxShadow: '0px 0px 10px 10px #0c0f16'
+    boxShadow: `0px 0px 10px 10px ${theme.palette.primary.dark}`,
+    borderRadius: 5,
   },
   //common class
   textRight: {
@@ -31,7 +32,8 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
   //component class
   modal_header: {
-    background: '#2c333f',
+    border: `1px solid ${theme.palette.info.main}`,
+    background: theme.palette.primary.main,
     textAlign: 'left',
     borderTopRightRadius: 5,
     borderTopLeftRadius: 5,
@@ -40,23 +42,30 @@ const useStyles = makeStyles((theme: Theme) => ({
     padding: '25px 40px',
     display: 'block',
     fontSize: 20,
-    fontFamily: 'CerebriSansPro-ExtraBold'
+    fontFamily: 'CerebriSansPro-ExtraBold',
+    color: theme.palette.error.light
   },
   project_info_1: {
-    background: '#1c222d',
-    border: '1px solid #2f3540',
     padding: '25px 40px',
+    background: theme.palette.background.paper,
+    border: `1px solid ${theme.palette.info.main}`,
+    display: 'block',
+    textAlign: 'left',
+    borderTop: 0,
+    borderBottom: 0,
+    color: theme.palette.success.main
   },
   
   button_content:{
-    background: '#1c222d',
-    border: '1px solid #2f3540',
+    background: theme.palette.background.paper,
+    border: `1px solid ${theme.palette.info.main}`,
     padding: '25px 40px',
     borderBottomRightRadius: 5, 
-    borderBottomLeftRadius: 5,
+    borderBottomLeftRadius: 5
   },
   left_button: {
-    color: '#fff', 
+    color: theme.palette.error.light,
+    background: theme.palette.primary.main,
     border: '1px solid #596275', 
     borderRadius: 5, 
     marginRight: 20, 
@@ -91,7 +100,9 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
   max_button: {
     borderRadius: 0, 
-    background: '#2f3542'
+    color: theme.palette.error.light,
+    border: '1px solid #596275', 
+    background: theme.palette.primary.main,
   },
   jbx_fee_input_info: {
     marginBottom: 20, 

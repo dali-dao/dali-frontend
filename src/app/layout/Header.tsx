@@ -83,6 +83,8 @@ function Header() {
                     <img src={curThemeName === 'darkTheme' ? Logo : LogoBlack} alt="logo"/>
                 </Grid>
                 <Grid container item xs={12} md={7} className={classes.menuItems}>
+                    <Grid item xs={1}>
+                    </Grid>
                     <Grid item xs={2} md={1}>
                         <Link to="/" className={(location_path.pathname === '/') ? classes.activeMenu : classes.menu}>
                             Home
@@ -107,6 +109,8 @@ function Header() {
                         <Link to="/discord" className={(location_path.pathname === '/discord') ? classes.activeMenu : classes.menu}>
                             Discord
                         </Link>
+                    </Grid>
+                    <Grid item xs={1}>
                     </Grid>
                     {/* <Link to="/" className={classes.menu}>
                         Blog

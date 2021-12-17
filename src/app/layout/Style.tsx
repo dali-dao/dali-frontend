@@ -48,8 +48,8 @@ export const useStyles = makeStyles((theme: Theme) =>
         display: 'flex',
         alignItems: 'center',
         textAlign: 'center',
-        marginTop: 20,
-        marginBottom: 20,
+        marginTop: '20px !important',
+        marginBottom: '20px !important',
         fontFamily: 'CerebriSansPro-ExtraBold',
     },
     connectBtn: {

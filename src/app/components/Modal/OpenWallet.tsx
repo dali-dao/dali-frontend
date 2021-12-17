@@ -8,14 +8,16 @@ const useStyles = makeStyles((theme: Theme) => ({
     flexGrow: 1,
     color: '#fff',
     margin: 'auto',
-    boxShadow: '0px 0px 10px 10px #0c0f16'
+    boxShadow: `0px 0px 10px 10px ${theme.palette.primary.dark}`,
+    borderRadius: 5,
   },
   //common class
   marginBottom30:{
     marginBottom: 30
   },
   modal_header: {
-    background: '#2c333f',
+    border: `1px solid ${theme.palette.info.main}`,
+    background: theme.palette.primary.main,
     textAlign: 'left',
     borderTopRightRadius: 5,
     borderTopLeftRadius: 5,
@@ -24,17 +26,21 @@ const useStyles = makeStyles((theme: Theme) => ({
     padding: '25px 40px',
     display: 'block',
     fontSize: 20,
-    fontFamily: 'CerebriSansPro-ExtraBold'
+    fontFamily: 'CerebriSansPro-ExtraBold',
+    color: theme.palette.error.light
   },
   project_info_1: {
-    background: '#1c222d',
-    border: '1px solid #2f3540',
     padding: '25px 40px',
-    
+    background: theme.palette.background.paper,
+    border: `1px solid ${theme.palette.info.main}`,
+    display: 'block',
+    textAlign: 'left',
+    borderTop: 0,
+    borderBottom: 0,
   },
   button_content:{
-    background: '#1c222d',
-    border: '1px solid #2f3540',
+    background: theme.palette.background.paper,
+    border: `1px solid ${theme.palette.info.main}`,
     padding: '25px 40px',
     borderBottomRightRadius: 5, 
     borderBottomLeftRadius: 5
@@ -42,18 +48,20 @@ const useStyles = makeStyles((theme: Theme) => ({
   wallet_name: {
     marginLeft: 10, 
     marginTop: 10, 
-    fontFamily: 'CerebriSansPro-ExtraBold'
+    fontFamily: 'CerebriSansPro-ExtraBold',
+    color: theme.palette.error.light
   },
   des_font_color: {
-    color: '#919398', 
+    color: theme.palette.success.main,
     textAlign: 'left'
   },
   refreshPage:{
-    color: '#eed332',
+    color: theme.palette.success.dark,
     marginLeft: 5
   },
   back_button: {
-    color: '#fff', 
+    color: theme.palette.error.light,
+    background: theme.palette.primary.main,
     border: '1px solid #596275', 
     borderRadius: 5, 
     marginRight: 20, 
