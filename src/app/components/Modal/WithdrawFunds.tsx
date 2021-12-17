@@ -46,7 +46,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     color: theme.palette.error.light
   },
   project_info_1: {
-    padding: '25px 40px',
+    padding: '40px',
     background: theme.palette.background.paper,
     border: `1px solid ${theme.palette.info.main}`,
     display: 'block',

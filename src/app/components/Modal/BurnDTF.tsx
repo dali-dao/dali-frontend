@@ -5,12 +5,14 @@ import { Grid, Button } from '@material-ui/core';
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
     flexGrow: 1,
-    margin: 'auto',
     color: '#fff',
-    boxShadow: '0px 0px 10px 10px #0c0f16'
+    margin: 'auto',
+    boxShadow: `0px 0px 10px 10px ${theme.palette.primary.dark}`,
+    borderRadius: 5,
   },
   modal_header: {
-    background: '#2c333f',
+    border: `1px solid ${theme.palette.info.main}`,
+    background: theme.palette.primary.main,
     textAlign: 'left',
     borderTopRightRadius: 5,
     borderTopLeftRadius: 5,
@@ -19,22 +21,30 @@ const useStyles = makeStyles((theme: Theme) => ({
     padding: '25px 40px',
     display: 'block',
     fontSize: 20,
-    fontFamily: 'CerebriSansPro-ExtraBold'
+    fontFamily: 'CerebriSansPro-ExtraBold',
+    color: theme.palette.error.light
   },
   project_info_1: {
-    background: '#1c222d',
-    border: '1px solid #2f3540',
-    padding: '25px 40px',
+    padding: '40px',
+    background: theme.palette.background.paper,
+    border: `1px solid ${theme.palette.info.main}`,
+    display: 'block',
+    textAlign: 'left',
+    borderTop: 0,
+    borderBottom: 0,
+    color: theme.palette.success.main
   },
   
   button_content:{
-    background: '#1c222d',
-    border: '1px solid #2f3540',
+    background: theme.palette.background.paper,
+    border: `1px solid ${theme.palette.info.main}`,
     padding: '25px 40px',
-    borderBottomRightRadius: 5, borderBottomLeftRadius: 5,
+    borderBottomRightRadius: 5, 
+    borderBottomLeftRadius: 5
   },
   left_button: {
-    color: '#fff', 
+    color: theme.palette.error.light,
+    background: theme.palette.primary.main,
     border: '1px solid #596275', 
     borderRadius: 5, 
     marginRight: 20, 
@@ -52,6 +62,11 @@ const useStyles = makeStyles((theme: Theme) => ({
   }, 
   balance_content: {
     textAlign: 'left', 
+    marginBottom: 5
+  },
+  balance_content_desc: {
+    textAlign: 'left', 
+    color: theme.palette.success.contrastText,
     marginBottom: 5
   },
   dft_first_line: {
@@ -99,7 +114,7 @@ export default function BurnDTF() {
 
         <Grid className={classes.tokens_desc}>
           <span>Tokens can be redeemed for a portion of this project’s ETH overflow, according to the bonding curve rate of the current funding cycle.</span>
-          <span className={classes.balance_content}>Tokens are burned when they are redeemed.</span>
+          <span className={classes.balance_content_desc}>Tokens are burned when they are redeemed.</span>
         </Grid>
         <Grid className={classes.balance_desc_line}>
           You can redeem tokens once this project has overflow.
