@@ -8,6 +8,8 @@ const useStyles = makeStyles((theme: Theme) => ({
     color: '#fff',
     margin: 'auto',
     boxShadow: '0px 0px 10px 10px #0c0f16',
+    marginTop: 450,
+    marginBottom: 50
   },
   width100: {
     width: '100%',

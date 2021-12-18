@@ -7,6 +7,10 @@ import TabList from '@material-ui/lab/TabList'
 import TabPanel from '@material-ui/lab/TabPanel'
 import { Icon } from '@iconify/react'
 import { Grid, Button } from '@material-ui/core'
+import WithdrawFunds from '../components/Modal/WithdrawFunds'
+import Modal from '@material-ui/core/Modal'
+import Backdrop from '@material-ui/core/Backdrop'
+import Fade from '@material-ui/core/Fade'
 
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
@@ -171,6 +175,12 @@ const useStyles = makeStyles((theme: Theme) => ({
   verticalMiddle: {
     verticalAlign: 'middle',
   },
+  modal: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    overflow: 'auto',
+  },
 }))
 
 export default function LabTabs() {
@@ -179,6 +189,16 @@ export default function LabTabs() {
 
   const handleChange = (event: React.ChangeEvent<{}>, newValue: string) => {
     setValue(newValue)
+  }
+
+  const [open, setOpen] = React.useState(false)
+
+  const handleOpen = () => {
+    setOpen(true)
+  }
+
+  const handleClose = () => {
+    setOpen(false)
   }
 
   return (
@@ -235,7 +255,7 @@ export default function LabTabs() {
               </span>
             </Grid>
             <Grid item xs={12} md={5} className={classes.distribute_button_content}>
-              <Button className={classes.distribute_button}>Distribute</Button>
+              <Button className={classes.distribute_button} onClick={handleOpen}>Distribute</Button>
             </Grid>
             <Grid item xs={12} md={12} className={classes.withdrawn_cotent}>
               $11,511,594 withdrawn
@@ -276,12 +296,30 @@ export default function LabTabs() {
               <span className={classes.available_style}>SPICE</span>
             </Grid>
             <Grid item xs={12} md={5} className={classes.distribute_button_content}>
-              <Button className={classes.distribute_button}>Distribute</Button>
+              <Button className={classes.distribute_button} onClick={handleOpen}>Distribute</Button>
             </Grid>
           </Grid>
         </TabPanel>
         <TabPanel value="2">Item Two</TabPanel>
       </TabContext>
+      <Modal
+        aria-labelledby="transition-modal-title"
+        aria-describedby="transition-modal-description"
+        className={classes.modal}
+        open={open}
+        onClose={handleClose}
+        closeAfterTransition
+        BackdropComponent={Backdrop}
+        BackdropProps={{
+          timeout: 500,
+        }}
+      >
+        <Fade in={open}>
+          <div style={{ width: '50%' }}>
+            <WithdrawFunds />
+          </div>
+        </Fade>
+      </Modal>
     </div>
   )
 }

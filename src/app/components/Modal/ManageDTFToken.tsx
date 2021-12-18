@@ -1,6 +1,11 @@
 import React from 'react'
 import { makeStyles, Theme } from '@material-ui/core/styles'
 import { Grid, Button } from '@material-ui/core'
+import Modal from '@material-ui/core/Modal'
+import Backdrop from '@material-ui/core/Backdrop'
+import Fade from '@material-ui/core/Fade'
+import BurnDTF from './BurnDTF'
+import ClaimDTF from './ClaimDTF'
 
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
@@ -69,10 +74,35 @@ const useStyles = makeStyles((theme: Theme) => ({
     background: theme.palette.primary.main,
     border: '1px solid #596275',
   },
+  modal: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    overflow: 'auto',
+  },
 }))
 
 export default function ManageDTFToken() {
   const classes = useStyles()
+  const [open, setOpen] = React.useState(false)
+
+  const handleOpen = () => {
+    setOpen(true)
+  }
+
+  const handleClose = () => {
+    setOpen(false)
+  }
+
+  const [claimDTFOpen, setClaimDTFOpen] = React.useState(false)
+
+  const handleClaimDTFOpen = () => {
+    setClaimDTFOpen(true)
+  }
+
+  const handleClaimDTFClose = () => {
+    setClaimDTFOpen(false)
+  }
 
   return (
     <div className={classes.root}>
@@ -80,12 +110,49 @@ export default function ManageDTFToken() {
         <strong className={classes.modal_header_title}>Manage DTF tokens</strong>
       </Grid>
       <Grid container className={classes.project_info_1}>
-        <Button className={classes.return_button}>Return my ETh</Button>
-        <Button className={classes.claim_button}>Claim DTF as ERC20</Button>
+        <Button className={classes.return_button} onClick={handleOpen}>Return my ETh</Button>
+        <Button className={classes.claim_button} onClick={handleClaimDTFOpen}>Claim DTF as ERC20</Button>
       </Grid>
       <Grid container className={classes.button_content}>
         <Button className={classes.left_button}>CANCEL</Button>
       </Grid>
+      <Modal
+        aria-labelledby="transition-modal-title"
+        aria-describedby="transition-modal-description"
+        className={classes.modal}
+        open={open}
+        onClose={handleClose}
+        closeAfterTransition
+        BackdropComponent={Backdrop}
+        BackdropProps={{
+          timeout: 500,
+        }}
+      >
+        <Fade in={open}>
+          <div style={{ width: '50%' }}>
+            <BurnDTF />
+          </div>
+        </Fade>
+      </Modal>
+
+      <Modal
+        aria-labelledby="transition-modal-title"
+        aria-describedby="transition-modal-description"
+        className={classes.modal}
+        open={claimDTFOpen}
+        onClose={handleClaimDTFClose}
+        closeAfterTransition
+        BackdropComponent={Backdrop}
+        BackdropProps={{
+          timeout: 500,
+        }}
+      >
+        <Fade in={claimDTFOpen}>
+          <div style={{ width: '50%' }}>
+            <ClaimDTF />
+          </div>
+        </Fade>
+      </Modal>
     </div>
   )
 }

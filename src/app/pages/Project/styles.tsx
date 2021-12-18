@@ -272,6 +272,7 @@ export const useStyles = makeStyles((theme: Theme) =>
       color: '#fff',
       fontFamily: 'CerebriSansPro-ExtraBold',
       textAlign: 'center',
+      cursor: 'pointer',
       '@media (max-width: 960px)': {
         marginTop: 10,
       },
@@ -525,6 +526,13 @@ export const useStyles = makeStyles((theme: Theme) =>
     holder_buttn_style: {
       marginBottom: 10,
       textAlign: 'right',
+    },
+    // For Detail page
+    modal: {
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      overflow: 'auto',
     },
   }),
 )

@@ -8,10 +8,56 @@ import ButtonGroup from '../../components/ButtonGroup'
 import VolumeCurrencyChart from '../../components/VolumeCurrencyChart'
 import FundingCycle from '../../components/FundingCycle'
 import Activity from '../../components/Activity'
+import Modal from '@material-ui/core/Modal'
+import Backdrop from '@material-ui/core/Backdrop'
+import Fade from '@material-ui/core/Fade'
+import Headsup from '../../components/Modal/HeadsUp'
+import Tools from '../../components/Modal/Tools'
+import Holders from '../../components/Modal/SpiceHolders'
+import ManageDTFToken from '../../components/Modal/ManageDTFToken'
 
 function ProjectDetail() {
   const classes = useStyles()
   const curThemeName = localStorage.getItem('appTheme') || 'darkTheme'
+  const [open, setOpen] = React.useState(false)
+
+  const handleOpen = () => {
+    setOpen(true)
+  }
+
+  const handleClose = () => {
+    setOpen(false)
+  }
+
+  const [toolsOpen, setToolsOpen] = React.useState(false)
+
+  const handleToolsOpen = () => {
+    setToolsOpen(true)
+  }
+
+  const handleToolsClose = () => {
+    setToolsOpen(false)
+  }
+
+  const [holdersOpen, setHoldersOpen] = React.useState(false)
+
+  const handleHoldersOpen = () => {
+    setHoldersOpen(true)
+  }
+
+  const handleHoldersClose = () => {
+    setHoldersOpen(false)
+  }
+
+  const [manageDTFTokenOpen, setManageDTFTokenOpen] = React.useState(false)
+
+  const handleManageDTFTokenOpen = () => {
+    setManageDTFTokenOpen(true)
+  }
+
+  const handleManageDTFTokenClose = () => {
+    setManageDTFTokenOpen(false)
+  }
 
   return (
     <Grid container className={classes.project_detail_container}>
@@ -49,7 +95,7 @@ function ProjectDetail() {
               </Grid>
             </Grid>
             <Grid item xs={12} md={2} className={classes.marginTopAuto}>
-              <Grid className={classes.detail_banner_right}>
+              <Grid className={classes.detail_banner_right} onClick={handleToolsOpen}>
                 ID:5246794565 <Icon icon="dashicons:admin-tools" color="white" />
               </Grid>
             </Grid>
@@ -120,10 +166,10 @@ function ProjectDetail() {
             </Grid>
             <Grid container item xs={12} md={2}>
               <Grid item xs={12} md={12} className={classes.holder_button_content}>
-                <Button className={classes.holders_button}>Holders</Button>
+                <Button className={classes.holders_button} onClick={handleHoldersOpen}>Holders</Button>
               </Grid>
               <Grid item xs={12} md={12} className={classes.TextRight}>
-                <Button className={classes.manage_button}>Manage</Button>
+                <Button className={classes.manage_button} onClick={handleManageDTFTokenOpen}>Manage</Button>
               </Grid>
             </Grid>
           </Grid>
@@ -162,7 +208,7 @@ function ProjectDetail() {
                 </FormControl>
               </Grid>
               <Grid item xs={12} md={4} sm={12} xl={4} className={classes.pay_button_content}>
-                <Button className={classes.pay_button_style}>PAY</Button>
+                <Button className={classes.pay_button_style} onClick={handleOpen}>PAY</Button>
               </Grid>
             </Grid>
           </Grid>
@@ -171,6 +217,80 @@ function ProjectDetail() {
           </Grid>
         </Grid>
       </Grid>
+      <Modal
+        aria-labelledby="transition-modal-title"
+        aria-describedby="transition-modal-description"
+        className={classes.modal}
+        open={open}
+        onClose={handleClose}
+        closeAfterTransition
+        BackdropComponent={Backdrop}
+        BackdropProps={{
+          timeout: 500,
+        }}
+      >
+        <Fade in={open}>
+          <div style={{ width: '50%' }}>
+            <Headsup />
+          </div>
+        </Fade>
+      </Modal>
+      <Modal
+        aria-labelledby="transition-modal-title"
+        aria-describedby="transition-modal-description"
+        className={classes.modal}
+        open={toolsOpen}
+        onClose={handleToolsClose}
+        closeAfterTransition
+        BackdropComponent={Backdrop}
+        BackdropProps={{
+          timeout: 500,
+        }}
+      >
+        <Fade in={toolsOpen}>
+          <div style={{ width: '50%' }}>
+            <Tools />
+          </div>
+        </Fade>
+      </Modal>
+
+      <Modal
+        aria-labelledby="transition-modal-title"
+        aria-describedby="transition-modal-description"
+        className={classes.modal}
+        open={holdersOpen}
+        onClose={handleHoldersClose}
+        closeAfterTransition
+        BackdropComponent={Backdrop}
+        BackdropProps={{
+          timeout: 500,
+        }}
+      >
+        <Fade in={holdersOpen}>
+          <div style={{ width: '50%' }}>
+            <Holders />
+          </div>
+        </Fade>
+      </Modal>
+
+      <Modal
+        aria-labelledby="transition-modal-title"
+        aria-describedby="transition-modal-description"
+        className={classes.modal}
+        open={manageDTFTokenOpen}
+        onClose={handleManageDTFTokenClose}
+        closeAfterTransition
+        BackdropComponent={Backdrop}
+        BackdropProps={{
+          timeout: 500,
+        }}
+      >
+        <Fade in={manageDTFTokenOpen}>
+          <div style={{ width: '50%' }}>
+            <ManageDTFToken />
+          </div>
+        </Fade>
+      </Modal>
     </Grid>
   )
 }
