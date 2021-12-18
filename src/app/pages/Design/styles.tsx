@@ -1,8 +1,8 @@
 //material-ui
-import { createStyles, makeStyles, Theme, withStyles, alpha } from "@material-ui/core/styles";
-import InputBase from '@material-ui/core/InputBase';
-import Switch, { SwitchClassKey, SwitchProps } from '@material-ui/core/Switch';
-import Banner from '../../assets/Projects/banner_2.jpg';
+import { createStyles, makeStyles, Theme, withStyles, alpha } from '@material-ui/core/styles'
+import InputBase from '@material-ui/core/InputBase'
+import Switch, { SwitchClassKey, SwitchProps } from '@material-ui/core/Switch'
+import Banner from '../../assets/Projects/banner_2.jpg'
 
 //style
 export const useStyles = makeStyles((theme: Theme) =>
@@ -16,15 +16,15 @@ export const useStyles = makeStyles((theme: Theme) =>
     container: {
       padding: '0 160px 10px 160px',
       textAlign: 'left',
-      "@media (max-width: 1205px)": {
+      '@media (max-width: 1205px)': {
         padding: '0px 10px 0px 10px',
-      }
+      },
     },
     title: {
       fontFamily: 'CerebriSansPro-Heavy',
       fontSize: 25,
       paddingTop: 50,
-      color: 'white' // no change by theme
+      color: 'white', // no change by theme
     },
     cardHeader: {
       backgroundColor: theme.palette.primary.main,
@@ -39,19 +39,19 @@ export const useStyles = makeStyles((theme: Theme) =>
       backgroundColor: theme.palette.common.white,
       fontSize: 18,
       color: theme.palette.error.light,
-      fontFamily: 'Roboto-Bold'
+      fontFamily: 'Roboto-Bold',
     },
     content: {
       backgroundColor: theme.palette.background.paper,
       padding: '25px 40px 25px 40px',
       borderBottom: `1px solid ${theme.palette.info.main}`,
       fontSize: 12,
-      color: theme.palette.success.main
+      color: theme.palette.success.main,
     },
     card: {
       marginBottom: 80,
       boxShadow: `0 0 10px 10px ${theme.palette.primary.dark}`,
-      borderRadius: 10
+      borderRadius: 10,
     },
     itemDescription: {
       fontSize: 13,
@@ -64,12 +64,12 @@ export const useStyles = makeStyles((theme: Theme) =>
       fontWeight: 'bold',
       cursor: 'pointer',
       boxShadow: '1px 1px 1px 1px #10141b',
-      backgroundImage: 'linear-gradient(to right, rgb(238 221 14) 0%, rgb(24 216 211) 100%, rgb(247, 157, 0) 100%)'
+      backgroundImage: 'linear-gradient(to right, rgb(238 221 14) 0%, rgb(24 216 211) 100%, rgb(247, 157, 0) 100%)',
     },
     cancelBtn: {
       fontFamily: 'Roboto-Bold',
       marginLeft: 25,
-      fontSize: 16
+      fontSize: 16,
     },
     logoContent: {
       borderRadius: 4,
@@ -88,18 +88,18 @@ export const useStyles = makeStyles((theme: Theme) =>
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'center',
-      height: 40
+      height: 40,
     },
     logoTitle: {
       display: 'flex',
-      alignItems: 'center'
+      alignItems: 'center',
     },
     percentLabel: {
       // color: 'white',
       paddingTop: 10,
       width: '100%',
       display: 'flex',
-      justifyContent: 'space-between'
+      justifyContent: 'space-between',
     },
     payoutBtn: {
       backgroundColor: theme.palette.background.paper,
@@ -111,7 +111,7 @@ export const useStyles = makeStyles((theme: Theme) =>
       color: theme.palette.error.light,
       width: '200px',
       cursor: 'pointer',
-      marginBottom: 10
+      marginBottom: 10,
     },
     modal: {
       display: 'flex',
@@ -124,7 +124,7 @@ export const useStyles = makeStyles((theme: Theme) =>
       borderRadius: 5,
       padding: '30px 20px 30px 0',
       marginTop: 24,
-      backgroundColor: theme.palette.common.white
+      backgroundColor: theme.palette.common.white,
     },
     delayContentLeft: {
       display: 'flex',
@@ -133,25 +133,25 @@ export const useStyles = makeStyles((theme: Theme) =>
     delayContentTitle: {
       fontSize: 18,
       fontFamily: 'Roboto-Bold',
-      color: theme.palette.error.light
+      color: theme.palette.error.light,
     },
     delayContentDesc: {
       fontSize: 13,
       color: '#a2a4a7',
       fontFamily: 'Roboto-Medium',
-      padding: '5px 0'
+      padding: '5px 0',
     },
     delayContentValue: {
       fontSize: 13,
       fontFamily: 'Roboto-Bold',
       color: '#c7c8ca',
-      wordBreak: 'break-all'
+      wordBreak: 'break-all',
     },
     delayContentOption: {
       width: 30,
       height: 30,
       borderRadius: '50%',
-      border: '2px solid #657992'
+      border: '2px solid #657992',
     },
     delayContentActiveOption: {
       width: 30,
@@ -162,13 +162,13 @@ export const useStyles = makeStyles((theme: Theme) =>
       color: 'black',
       display: 'flex',
       justifyContent: 'center',
-      alignItems: 'center'
+      alignItems: 'center',
     },
     titleFontFamily: {
-      fontFamily: 'CerebriSansPro-ExtraBold'
-    }
-  })
-);
+      fontFamily: 'CerebriSansPro-ExtraBold',
+    },
+  }),
+)
 
 export const BootstrapInput = withStyles((theme: Theme) =>
   createStyles({
@@ -176,7 +176,7 @@ export const BootstrapInput = withStyles((theme: Theme) =>
       'label + &': {
         marginTop: theme.spacing(3),
       },
-      width: '100%'
+      width: '100%',
     },
     input: {
       borderRadius: 4,
@@ -206,15 +206,14 @@ export const BootstrapInput = withStyles((theme: Theme) =>
       },
     },
   }),
-)(InputBase);
-
+)(InputBase)
 
 interface Styles extends Partial<Record<SwitchClassKey, string>> {
-  focusVisible?: string;
+  focusVisible?: string
 }
 
 interface Props extends SwitchProps {
-  classes: Styles;
+  classes: Styles
 }
 
 export const IOSSwitch = withStyles((theme: Theme) =>
@@ -225,7 +224,7 @@ export const IOSSwitch = withStyles((theme: Theme) =>
       padding: 0,
       margin: theme.spacing(1),
       border: '1px solid #676b72',
-      borderRadius: 15
+      borderRadius: 15,
     },
     switchBase: {
       padding: 1,
@@ -272,8 +271,8 @@ export const IOSSwitch = withStyles((theme: Theme) =>
       }}
       {...props}
     />
-  );
-});
+  )
+})
 
 export const IOSDurationSwitch = withStyles((theme: Theme) =>
   createStyles({
@@ -283,7 +282,7 @@ export const IOSDurationSwitch = withStyles((theme: Theme) =>
       padding: 0,
       margin: theme.spacing(1),
       border: '1px solid #676b72',
-      borderRadius: 15
+      borderRadius: 15,
     },
     switchBase: {
       padding: 1,
@@ -330,5 +329,5 @@ export const IOSDurationSwitch = withStyles((theme: Theme) =>
       }}
       {...props}
     />
-  );
-});
+  )
+})

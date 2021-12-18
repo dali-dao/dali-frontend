@@ -1,7 +1,7 @@
-import React from 'react';
-import { makeStyles, Theme } from '@material-ui/core/styles';
-import { Grid, FormControl, OutlinedInput, InputAdornment, FormHelperText, Button } from '@material-ui/core';
-import { Icon } from '@iconify/react'; 
+import React from 'react'
+import { makeStyles, Theme } from '@material-ui/core/styles'
+import { Grid, FormControl, OutlinedInput, InputAdornment, FormHelperText, Button } from '@material-ui/core'
+import { Icon } from '@iconify/react'
 
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
@@ -13,22 +13,22 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
   //common class
   textRight: {
-    textAlign: 'right'
-  }, 
+    textAlign: 'right',
+  },
   textCenter: {
-    textAlign: 'center'
+    textAlign: 'center',
   },
   width100: {
-    width: '100%'
+    width: '100%',
   },
-  marginBottom15:{
-    marginBottom: 15
+  marginBottom15: {
+    marginBottom: 15,
   },
-  marginRight10:{
-    marginRight: 10
+  marginRight10: {
+    marginRight: 10,
   },
   floatLeft: {
-    float: 'left'
+    float: 'left',
   },
   //component class
   modal_header: {
@@ -43,7 +43,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     display: 'block',
     fontSize: 20,
     fontFamily: 'CerebriSansPro-ExtraBold',
-    color: theme.palette.error.light
+    color: theme.palette.error.light,
   },
   project_info_1: {
     padding: '40px',
@@ -53,86 +53,86 @@ const useStyles = makeStyles((theme: Theme) => ({
     textAlign: 'left',
     borderTop: 0,
     borderBottom: 0,
-    color: theme.palette.success.main
+    color: theme.palette.success.main,
   },
-  
-  button_content:{
+
+  button_content: {
     background: theme.palette.background.paper,
     border: `1px solid ${theme.palette.info.main}`,
     padding: '25px 40px',
-    borderBottomRightRadius: 5, 
-    borderBottomLeftRadius: 5
+    borderBottomRightRadius: 5,
+    borderBottomLeftRadius: 5,
   },
   left_button: {
     color: theme.palette.error.light,
     background: theme.palette.primary.main,
-    border: '1px solid #596275', 
-    borderRadius: 5, 
-    marginRight: 20, 
-    width: 145, 
-    height: 50
+    border: '1px solid #596275',
+    borderRadius: 5,
+    marginRight: 20,
+    width: 145,
+    height: 50,
   },
   right_button: {
-    backgroundImage: 'linear-gradient(to right, rgb(238 221 14) 0%, rgb(24 216 211) 100%, rgb(247, 157, 0) 100%)', 
-    width: 230, 
-    height: 50, 
-    color: '#000'
+    backgroundImage: 'linear-gradient(to right, rgb(238 221 14) 0%, rgb(24 216 211) 100%, rgb(247, 157, 0) 100%)',
+    width: 230,
+    height: 50,
+    color: '#000',
   },
   project_price_info: {
-    fontSize: 13
-  }, 
+    fontSize: 13,
+  },
   input_outline: {
     paddingRight: 0,
     height: 40,
     borderRadius: 0,
   },
   total_funds_content: {
-    marginTop: 10, 
-    textAlign: 'left'
+    marginTop: 10,
+    textAlign: 'left',
   },
   jbx_fee_content: {
-    marginBottom: 5, 
-    textAlign: 'left'
+    marginBottom: 5,
+    textAlign: 'left',
   },
   after_fee_content: {
-    textAlign: 'left', 
-    marginBottom: 20
+    textAlign: 'left',
+    marginBottom: 20,
   },
   max_button: {
-    borderRadius: 0, 
+    borderRadius: 0,
     color: theme.palette.error.light,
-    border: '1px solid #596275', 
+    border: '1px solid #596275',
     background: theme.palette.primary.main,
   },
   jbx_fee_input_info: {
-    marginBottom: 20, 
-    marginLeft: 0, 
-    color: 'grey'
+    marginBottom: 20,
+    marginLeft: 0,
+    color: 'grey',
   },
   funds_distribute_content: {
     fontFamily: 'CerebriSansPro-ExtraBold',
-    textAlign: 'left', 
+    textAlign: 'left',
     fontSize: 15,
   },
   funds_user_info_content: {
-    width: '80%', 
-    float: 'left', 
-    color: '#919398'
+    width: '80%',
+    float: 'left',
+    color: '#919398',
   },
   user_info_desc: {
-    fontSize: 13, 
-    width: 115, 
-    display: 'block'
+    fontSize: 13,
+    width: 115,
+    display: 'block',
   },
   user_info_percent: {
-    fontSize: 14, 
-    float: 'right'
-  }
-}));
+    fontSize: 14,
+    float: 'right',
+  },
+}))
 
 export default function WithdrawFunds() {
-  const classes = useStyles();
-  
+  const classes = useStyles()
+
   return (
     <div className={classes.root}>
       <Grid className={classes.modal_header}>
@@ -147,7 +147,7 @@ export default function WithdrawFunds() {
             <strong className={classes.project_price_info}>Ξ0</strong>
           </Grid>
         </Grid>
-        <Grid container xs={12} md={12} className={classes.jbx_fee_content} >
+        <Grid container xs={12} md={12} className={classes.jbx_fee_content}>
           <Grid item xs={12} md={10}>
             <strong className={classes.project_price_info}>JBX Fee (0%)</strong>
           </Grid>
@@ -168,24 +168,30 @@ export default function WithdrawFunds() {
             <OutlinedInput
               id="outlined-adornment-weight"
               className={classes.input_outline}
-              endAdornment={<InputAdornment position="end"><span className={classes.marginRight10}>ETH</span><Button className={classes.max_button}>MAX</Button></InputAdornment>}
+              endAdornment={
+                <InputAdornment position="end">
+                  <span className={classes.marginRight10}>ETH</span>
+                  <Button className={classes.max_button}>MAX</Button>
+                </InputAdornment>
+              }
               aria-describedby="outlined-weight-helper-text"
               inputProps={{
                 'aria-label': 'Ξ10.95 after 0% JBX fee',
               }}
               placeholder={'125USD'}
             />
-            <FormHelperText className={classes.jbx_fee_input_info} id="outlined-weight-helper-text">Ξ10.95 after 0% JBX fee</FormHelperText>
+            <FormHelperText className={classes.jbx_fee_input_info} id="outlined-weight-helper-text">
+              Ξ10.95 after 0% JBX fee
+            </FormHelperText>
           </FormControl>
         </Grid>
         <Grid className={classes.width100}>
-          <p  className={classes.funds_distribute_content}>Funds will be distributed to:</p>
+          <p className={classes.funds_distribute_content}>Funds will be distributed to:</p>
           <Grid className={classes.funds_user_info_content}>
-            <Icon icon="clarity:user-line" className={classes.floatLeft}/><span className={classes.user_info_desc}> daotaifung.eth: until 12-0202021</span>
+            <Icon icon="clarity:user-line" className={classes.floatLeft} />
+            <span className={classes.user_info_desc}> daotaifung.eth: until 12-0202021</span>
           </Grid>
-          <Grid className={classes.user_info_percent}>
-            100%
-          </Grid>
+          <Grid className={classes.user_info_percent}>100%</Grid>
         </Grid>
       </Grid>
       <Grid container className={classes.button_content}>
@@ -193,5 +199,5 @@ export default function WithdrawFunds() {
         <Button className={classes.right_button}>WITHDRAW</Button>
       </Grid>
     </div>
-  );
+  )
 }

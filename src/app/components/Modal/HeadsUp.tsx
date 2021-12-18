@@ -1,6 +1,6 @@
-import React from 'react';
-import { makeStyles, Theme } from '@material-ui/core/styles';
-import { Grid, Button } from '@material-ui/core';
+import React from 'react'
+import { makeStyles, Theme } from '@material-ui/core/styles'
+import { Grid, Button } from '@material-ui/core'
 
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     display: 'block',
     fontSize: 20,
     fontFamily: 'CerebriSansPro-ExtraBold',
-    color: theme.palette.error.light
+    color: theme.palette.error.light,
   },
   modal_content: {
     background: theme.palette.background.paper,
@@ -48,25 +48,26 @@ const useStyles = makeStyles((theme: Theme) => ({
     display: 'block',
     marginTop: 20,
     color: theme.palette.error.light,
-    padding: '10px 40px'
-  }
-}));
+    padding: '10px 40px',
+  },
+}))
 
 export default function HeadsUp() {
-  const classes = useStyles();
-  
+  const classes = useStyles()
+
   return (
     <div className={classes.root}>
-        <Grid className={classes.modal_header}>
-            <strong className={classes.modal_header_title}>HEADS UP</strong>
-        </Grid>
-        <Grid container className={classes.modal_content}>
-            <span className={classes.juice_box}>Juicebox </span> 
-            <span className={classes.modal_description}>
-              contracts are unaudited, and may be vulnerable to bugs or hacks. All funds moved through Juicebox could be lost or stolen. JuceboxDAO is not liable for any losses by projects or their supporters.
-            </span>
-            <Button className={classes.button_style}>I UNDERSTAND</Button>
-        </Grid>
+      <Grid className={classes.modal_header}>
+        <strong className={classes.modal_header_title}>HEADS UP</strong>
+      </Grid>
+      <Grid container className={classes.modal_content}>
+        <span className={classes.juice_box}>Juicebox </span>
+        <span className={classes.modal_description}>
+          contracts are unaudited, and may be vulnerable to bugs or hacks. All funds moved through Juicebox could be
+          lost or stolen. JuceboxDAO is not liable for any losses by projects or their supporters.
+        </span>
+        <Button className={classes.button_style}>I UNDERSTAND</Button>
+      </Grid>
     </div>
-  );
+  )
 }

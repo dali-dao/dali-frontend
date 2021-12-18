@@ -1,25 +1,25 @@
-import React from 'react';
-import { makeStyles, Theme } from '@material-ui/core/styles';
-import { Grid, FormControl, Select, Button } from '@material-ui/core';
-import { Icon } from '@iconify/react'; 
-import SpiceBalance from '../../components/SpiceBalance';
+import React from 'react'
+import { makeStyles, Theme } from '@material-ui/core/styles'
+import { Grid, FormControl, Select, Button } from '@material-ui/core'
+import { Icon } from '@iconify/react'
+import SpiceBalance from '../../components/SpiceBalance'
 
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
     flexGrow: 1,
     margin: 'auto',
     color: '#fff',
-    boxShadow: '0px 0px 10px 10px #0c0f16'
+    boxShadow: '0px 0px 10px 10px #0c0f16',
   },
   //common class
   textRight: {
-    textAlign: 'right'
+    textAlign: 'right',
   },
-  marginBottom20:{
-    marginBottom: 20
+  marginBottom20: {
+    marginBottom: 20,
   },
   fontSize25: {
-    fontSize: 25
+    fontSize: 25,
   },
   //component class
   modal_header: {
@@ -32,71 +32,71 @@ const useStyles = makeStyles((theme: Theme) => ({
     padding: '25px 40px',
     display: 'block',
     fontSize: 20,
-    fontFamily: 'CerebriSansPro-ExtraBold'
+    fontFamily: 'CerebriSansPro-ExtraBold',
   },
   project_info_1: {
     background: '#1c222d',
     border: '1px solid #2f3540',
     padding: '25px 40px',
-    textAlign: 'left'
+    textAlign: 'left',
   },
-  
-  button_content:{
+
+  button_content: {
     background: '#1c222d',
     border: '1px solid #2f3540',
     padding: '25px 40px',
-    borderBottomRightRadius: 5, 
+    borderBottomRightRadius: 5,
     borderBottomLeftRadius: 5,
   },
   left_button: {
-    color: '#fff', 
+    color: '#fff',
     border: '1px solid #596275',
-    borderRadius: 5, 
-    marginRight: 20, 
-    width: 145, 
-    height: 50
+    borderRadius: 5,
+    marginRight: 20,
+    width: 145,
+    height: 50,
   },
   right_button: {
-    backgroundImage: 'linear-gradient(to right, rgb(238 221 14) 0%, rgb(24 216 211) 100%, rgb(247, 157, 0) 100%)', 
-    width: 230, 
-    height: 50, 
-    color: '#000'
+    backgroundImage: 'linear-gradient(to right, rgb(238 221 14) 0%, rgb(24 216 211) 100%, rgb(247, 157, 0) 100%)',
+    width: 230,
+    height: 50,
+    color: '#000',
   },
   formControl: {
     width: '100%',
     marginBottom: 15,
-    marginRight: 15
+    marginRight: 15,
   },
   notice_desc: {
-    color: '#c5c5ca', 
-    fontSize: 14
+    color: '#c5c5ca',
+    fontSize: 14,
   },
   point_color: {
-    color: '#ffc926'
+    color: '#ffc926',
   },
   asset_button: {
-    borderRadius: 0, 
-    width: 50, 
-    height: 50, 
-    border: '1px solid #81899a', 
-    background: '#2c333f'
-  }
-}));
+    borderRadius: 0,
+    width: 50,
+    height: 50,
+    border: '1px solid #81899a',
+    background: '#2c333f',
+  },
+}))
 
 export default function SpiceHolders() {
-  const classes = useStyles();
+  const classes = useStyles()
   const [state, setState] = React.useState<{ age: string | number; name: string }>({
     age: '',
     name: 'hai',
-  });
+  })
 
   const handleChange = (event: React.ChangeEvent<{ name?: string; value: unknown }>) => {
-    const name = event.target.name as keyof typeof state;
+    const name = event.target.name as keyof typeof state
     setState({
       ...state,
       [name]: event.target.value,
-    });
-  };
+    })
+  }
 
   return (
     <div className={classes.root}>
@@ -105,9 +105,14 @@ export default function SpiceHolders() {
       </Grid>
       <Grid container className={classes.project_info_1}>
         <Grid container className={classes.marginBottom20}>
-          <span className={classes.notice_desc}>Notice: SPICE ERC20 tokens have not been indexed by Juicebox, meaning that the balances reflected below will be inaccurate for users who have unstaked and transfeered their tokens. This will be solved with the release of <span className={classes.point_color}>Juicebox V2</span>. If this is a big issue for your project, let us know in the <span className={classes.point_color}>Discord</span>.</span>
+          <span className={classes.notice_desc}>
+            Notice: SPICE ERC20 tokens have not been indexed by Juicebox, meaning that the balances reflected below will
+            be inaccurate for users who have unstaked and transfeered their tokens. This will be solved with the release
+            of <span className={classes.point_color}>Juicebox V2</span>. If this is a big issue for your project, let us
+            know in the <span className={classes.point_color}>Discord</span>.
+          </span>
         </Grid>
-        <Grid item  xs={12} md={10}>
+        <Grid item xs={12} md={10}>
           <FormControl variant="outlined" className={classes.formControl}>
             <Select
               native
@@ -135,8 +140,8 @@ export default function SpiceHolders() {
             <Icon className={classes.fontSize25} icon="el:download-alt" />
           </Button>
         </Grid>
-        <Grid item xs={12} md={12} >
-          <SpiceBalance/>
+        <Grid item xs={12} md={12}>
+          <SpiceBalance />
           <SpiceBalance />
           <SpiceBalance />
           <SpiceBalance />
@@ -149,5 +154,5 @@ export default function SpiceHolders() {
         <Button className={classes.right_button}>OK</Button>
       </Grid>
     </div>
-  );
+  )
 }

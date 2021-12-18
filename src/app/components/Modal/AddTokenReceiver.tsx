@@ -1,23 +1,23 @@
-import { makeStyles, Theme } from '@material-ui/core/styles';
-import { Grid, TextField, Button } from '@material-ui/core';
-import CustomSlider from '../Other/CustomSlider';
-import Calendar from '../../components/Calendar';
+import { makeStyles, Theme } from '@material-ui/core/styles'
+import { Grid, TextField, Button } from '@material-ui/core'
+import CustomSlider from '../Other/CustomSlider'
+import Calendar from '../../components/Calendar'
 
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
     flexGrow: 1,
     margin: 'auto',
     color: theme.palette.error.light,
-    boxShadow: `0px 0px 10px 10px ${theme.palette.primary.dark}`
+    boxShadow: `0px 0px 10px 10px ${theme.palette.primary.dark}`,
   },
   //common class
-  textLeft: {textAlign: 'left'}, 
-  textRight: {textAlign: 'right'}, 
-  textCenter: {textAlign: 'center'},
-  width100: {width: '100%'},
-  marginTop20:{marginTop: 20},
+  textLeft: { textAlign: 'left' },
+  textRight: { textAlign: 'right' },
+  textCenter: { textAlign: 'center' },
+  width100: { width: '100%' },
+  marginTop20: { marginTop: 20 },
   floatLeft: {
-    float: 'left'
+    float: 'left',
   },
   //component class
   modal_header: {
@@ -31,60 +31,60 @@ const useStyles = makeStyles((theme: Theme) => ({
     padding: '25px 40px',
     display: 'block',
     fontSize: 20,
-    fontFamily: 'CerebriSansPro-ExtraBold'
+    fontFamily: 'CerebriSansPro-ExtraBold',
   },
   project_info_1: {
     background: theme.palette.background.paper,
     borderBottom: `1px solid ${theme.palette.info.main}`,
     padding: '25px 40px',
-    textAlign: 'left'
+    textAlign: 'left',
   },
-  
-  button_content:{
+
+  button_content: {
     background: theme.palette.background.paper,
     padding: '25px 40px',
-    borderBottomRightRadius: 5, 
+    borderBottomRightRadius: 5,
     borderBottomLeftRadius: 5,
   },
   left_button: {
     border: '1px solid #596275',
-    borderRadius: 5, 
-    marginRight: 20, 
-    width: 145, 
+    borderRadius: 5,
+    marginRight: 20,
+    width: 145,
     height: 50,
-    color: theme.palette.error.light
+    color: theme.palette.error.light,
   },
   right_button: {
-    backgroundImage: 'linear-gradient(to right, rgb(238 221 14) 0%, rgb(24 216 211) 100%, rgb(247, 157, 0) 100%)', 
-    width: 145, 
-    height: 50, 
-    color: '#000'
+    backgroundImage: 'linear-gradient(to right, rgb(238 221 14) 0%, rgb(24 216 211) 100%, rgb(247, 157, 0) 100%)',
+    width: 145,
+    height: 50,
+    color: '#000',
   },
   formControl: {
     width: '100%',
-    marginBottom: 15
+    marginBottom: 15,
   },
   beneficiary_text: {
-    width: '100%', 
+    width: '100%',
     marginTop: 10,
-    color: theme.palette.error.light
+    color: theme.palette.error.light,
   },
   address_receive_token_desc: {
-    color: '#c5c5ca', 
-    fontSize: 15, 
-    marginTop: 10
+    color: '#c5c5ca',
+    fontSize: 15,
+    marginTop: 10,
   },
   locked_desc: {
-    color: '#c5c5ca', 
-    fontSize: 14
+    color: '#c5c5ca',
+    fontSize: 14,
   },
   calendar: {
-    padding: '10px 0px'
-  }
-}));
+    padding: '10px 0px',
+  },
+}))
 
 export default function AddTokenReceiver() {
-  const classes = useStyles();
+  const classes = useStyles()
 
   return (
     <div className={classes.root}>
@@ -99,23 +99,29 @@ export default function AddTokenReceiver() {
         </Grid>
 
         <Grid container className={classes.marginTop20}>
-          <Grid item xs={12} md={12}>Percent</Grid>
+          <Grid item xs={12} md={12}>
+            Percent
+          </Grid>
           <CustomSlider />
         </Grid>
 
         <Grid container className={classes.marginTop20}>
-          <Grid item xs={12} md={12}>Lock until</Grid>
-          <Grid item xs={12} md={3} className={classes.calendar}>
-            <Calendar/>
+          <Grid item xs={12} md={12}>
+            Lock until
           </Grid>
-          <Grid className={classes.locked_desc} item xs={12} md={12}>If locked, this can't be edited or removed until the lock expires or the funding cycle is reconfigured.</Grid>
+          <Grid item xs={12} md={3} className={classes.calendar}>
+            <Calendar />
+          </Grid>
+          <Grid className={classes.locked_desc} item xs={12} md={12}>
+            If locked, this can't be edited or removed until the lock expires or the funding cycle is reconfigured.
+          </Grid>
         </Grid>
       </Grid>
-      
+
       <Grid container className={classes.button_content}>
         <Button className={classes.left_button}>CANCEL</Button>
         <Button className={classes.right_button}>OK</Button>
       </Grid>
     </div>
-  );
+  )
 }

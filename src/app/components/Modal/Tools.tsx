@@ -1,18 +1,18 @@
-import React from 'react';
-import { makeStyles, Theme } from '@material-ui/core/styles';
-import { Grid, Button, FormControl, OutlinedInput, InputAdornment } from '@material-ui/core';
+import React from 'react'
+import { makeStyles, Theme } from '@material-ui/core/styles'
+import { Grid, Button, FormControl, OutlinedInput, InputAdornment } from '@material-ui/core'
 
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
     flexGrow: 1,
     color: '#fff',
     margin: 'auto',
-    boxShadow: '0px 0px 10px 10px #0c0f16'
+    boxShadow: '0px 0px 10px 10px #0c0f16',
   },
   width100: {
-    width: '100%'
+    width: '100%',
   },
-  marginBottom20:{marginBottom: 20},
+  marginBottom20: { marginBottom: 20 },
   //component class
   modal_header: {
     background: '#2c333f',
@@ -24,19 +24,19 @@ const useStyles = makeStyles((theme: Theme) => ({
     padding: '25px 40px',
     display: 'block',
     fontSize: 20,
-    fontFamily: 'CerebriSansPro-ExtraBold'
+    fontFamily: 'CerebriSansPro-ExtraBold',
   },
   project_info_1: {
     background: '#1c222d',
     border: '1px solid #2f3540',
     padding: '25px 40px',
-    textAlign: 'left'
+    textAlign: 'left',
   },
-  button_content:{
+  button_content: {
     background: '#1c222d',
     border: '1px solid #2f3540',
     padding: '25px 40px',
-    borderBottomRightRadius: 5, 
+    borderBottomRightRadius: 5,
     borderBottomLeftRadius: 5,
   },
   input_outline: {
@@ -45,106 +45,106 @@ const useStyles = makeStyles((theme: Theme) => ({
     borderRadius: 0,
   },
   transfer_ownership_header: {
-    fontFamily: 'CerebriSansPro-ExtraBold', 
-    width: '100%'
+    fontFamily: 'CerebriSansPro-ExtraBold',
+    width: '100%',
   },
   ownership_info: {
-    fontSize: 13, 
-    color: '#c5c6ca'
+    fontSize: 13,
+    color: '#c5c6ca',
   },
   ownership_info_addr: {
-    fontSize: 13, 
-    color: '#c5c6ca', 
-    marginLeft: 5
+    fontSize: 13,
+    color: '#c5c6ca',
+    marginLeft: 5,
   },
   trasfor_content: {
-    width: '100%', 
-    marginTop: 20, 
-    marginBottom: 10
+    width: '100%',
+    marginTop: 20,
+    marginBottom: 10,
   },
   transfor_to_header: {
-    marginBottom: 10, 
-    display: 'block'
+    marginBottom: 10,
+    display: 'block',
   },
   transfer_ownership_button: {
-    backgroundImage: 'linear-gradient(to right, rgb(238 221 14) 0%, rgb(24 216 211) 100%, rgb(247, 157, 0) 100%)', 
+    backgroundImage: 'linear-gradient(to right, rgb(238 221 14) 0%, rgb(24 216 211) 100%, rgb(247, 157, 0) 100%)',
     color: '#000',
     marginTop: 20,
-    width: 230, 
-    height: 50, 
+    width: 230,
+    height: 50,
   },
   skated_dtf_header: {
-    fontFamily: 'CerebriSansPro-ExtraBold', 
-    width: '100%'
+    fontFamily: 'CerebriSansPro-ExtraBold',
+    width: '100%',
   },
   balance_value: {
-    fontSize: 13, 
-    color: '#c5c6ca'
+    fontSize: 13,
+    color: '#c5c6ca',
   },
-  amount_label:{
-    fontFamily: 'CerebriSansPro-ExtraBold', 
-    fontSize: 14
+  amount_label: {
+    fontFamily: 'CerebriSansPro-ExtraBold',
+    fontSize: 14,
   },
   input_content: {
-    width: '90%', 
-    marginTop: 10
+    width: '90%',
+    marginTop: 10,
   },
   max_button: {
-    borderRadius: 0, 
-    background: '#2f3542'
+    borderRadius: 0,
+    background: '#2f3542',
   },
   transfer_dtf_button: {
-    backgroundImage: 'linear-gradient(to right, rgb(238 221 14) 0%, rgb(24 216 211) 100%, rgb(247, 157, 0) 100%)', 
+    backgroundImage: 'linear-gradient(to right, rgb(238 221 14) 0%, rgb(24 216 211) 100%, rgb(247, 157, 0) 100%)',
     color: '#000',
     marginTop: 20,
-    width: 230, 
-    height: 50, 
+    width: 230,
+    height: 50,
   },
   to_label: {
-    fontFamily: 'CerebriSansPro-ExtraBold', 
-    fontSize: 14
+    fontFamily: 'CerebriSansPro-ExtraBold',
+    fontSize: 14,
   },
   input_content_form: {
-    width: '100%', 
-    marginTop: 10
+    width: '100%',
+    marginTop: 10,
   },
   add_to_label: {
-    fontFamily: 'CerebriSansPro-ExtraBold', 
+    fontFamily: 'CerebriSansPro-ExtraBold',
     width: '100%',
-    textAlign: 'left'
+    textAlign: 'left',
   },
   add_funds_des: {
-    fontSize: 13, 
-    color: '#c5c6ca'
+    fontSize: 13,
+    color: '#c5c6ca',
   },
   amount_content: {
-    width: '100%', 
-    marginTop: 20, 
+    width: '100%',
+    marginTop: 20,
     marginBottom: 10,
-    textAlign: 'left'
+    textAlign: 'left',
   },
   amount_button: {
-    fontFamily: 'CerebriSansPro-ExtraBold', 
-    marginBottom: 10, 
-    display: 'block'
+    fontFamily: 'CerebriSansPro-ExtraBold',
+    marginBottom: 10,
+    display: 'block',
   },
   eth_button: {
-    borderRadius: 0, 
-    background: '#2f3542'
+    borderRadius: 0,
+    background: '#2f3542',
   },
   add_to_balance_button: {
-    backgroundImage: 'linear-gradient(to right, rgb(238 221 14) 0%, rgb(24 216 211) 100%, rgb(247, 157, 0) 100%)', 
-    color: '#000', 
+    backgroundImage: 'linear-gradient(to right, rgb(238 221 14) 0%, rgb(24 216 211) 100%, rgb(247, 157, 0) 100%)',
+    color: '#000',
     marginTop: 20,
-    width: 230, 
-    height: 50, 
-    textAlign: 'left'
-  }
-}));
+    width: 230,
+    height: 50,
+    textAlign: 'left',
+  },
+}))
 
 export default function Tools() {
-  const classes = useStyles();
-  
+  const classes = useStyles()
+
   return (
     <div className={classes.root}>
       <Grid className={classes.modal_header}>
@@ -183,7 +183,11 @@ export default function Tools() {
             <OutlinedInput
               id="outlined-adornment-weight"
               className={classes.input_outline}
-              endAdornment={<InputAdornment position="end"><Button className={classes.max_button}>MAX</Button></InputAdornment>}
+              endAdornment={
+                <InputAdornment position="end">
+                  <Button className={classes.max_button}>MAX</Button>
+                </InputAdornment>
+              }
               aria-describedby="outlined-weight-helper-text"
               inputProps={{
                 'aria-label': 'Ξ10.95 after 0% JBX fee',
@@ -191,7 +195,7 @@ export default function Tools() {
               placeholder={'125USD'}
             />
           </FormControl>
-          <Button className={classes.transfer_dtf_button} >TRANSFER DTF</Button>
+          <Button className={classes.transfer_dtf_button}>TRANSFER DTF</Button>
         </Grid>
         <Grid item xs={12} md={7}>
           <span className={classes.to_label}>TO</span>
@@ -206,7 +210,6 @@ export default function Tools() {
               placeholder={'juicebox.juicebox.juicebox.'}
             />
           </FormControl>
-          
         </Grid>
       </Grid>
 
@@ -219,7 +222,11 @@ export default function Tools() {
             <OutlinedInput
               id="outlined-adornment-weight"
               className={classes.input_outline}
-              endAdornment={<InputAdornment position="end"><Button className={classes.eth_button}>ETH</Button></InputAdornment>}
+              endAdornment={
+                <InputAdornment position="end">
+                  <Button className={classes.eth_button}>ETH</Button>
+                </InputAdornment>
+              }
               aria-describedby="outlined-weight-helper-text"
               inputProps={{
                 'aria-label': 'Ξ10.95 after 0% JBX fee',
@@ -231,5 +238,5 @@ export default function Tools() {
         </Grid>
       </Grid>
     </div>
-  );
+  )
 }

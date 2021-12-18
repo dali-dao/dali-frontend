@@ -1,18 +1,18 @@
 //material-ui
-import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
+import { createStyles, makeStyles, Theme } from '@material-ui/core/styles'
 //style
 export const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
       color: theme.palette.error.light,
       backgroundColor: theme.palette.background.default,
-      borderColor: theme.palette.info.main
+      borderColor: theme.palette.info.main,
     },
     section1: {
       position: 'relative',
     },
     banner: {
-      width: '100%'
+      width: '100%',
     },
     bannerDesc: {
       position: 'absolute',
@@ -26,26 +26,26 @@ export const useStyles = makeStyles((theme: Theme) =>
       paddingBottom: 10,
       textTransform: 'uppercase',
       color: 'white', // no change by theme
-      "@media (max-width: 1305px)": {
+      '@media (max-width: 1305px)': {
         fontSize: 20,
-        paddingBottom: 5
+        paddingBottom: 5,
       },
     },
     bannerDescription: {
       fontSize: 13,
       paddingBottom: 10,
       color: '#808193',
-      "@media (max-width: 1305px)": {
+      '@media (max-width: 1305px)': {
         fontSize: 10,
         paddingBottom: 5,
-      }
+      },
     },
     bannerList: {
       display: 'flex',
       fontFamily: 'Roboto-Bold',
       fontSize: 16,
       color: 'white',
-      "@media (max-width: 1305px)": {
+      '@media (max-width: 1305px)': {
         fontSize: 13,
       },
     },
@@ -60,30 +60,30 @@ export const useStyles = makeStyles((theme: Theme) =>
       textAlign: 'center',
       margin: '15px 0 15px 0',
       cursor: 'pointer',
-      "@media (max-width: 1305px)": {
+      '@media (max-width: 1305px)': {
         fontSize: 10,
         width: 120,
-        margin: '5px 0'
-      }
+        margin: '5px 0',
+      },
     },
-    smartContract: {  
+    smartContract: {
       paddingTop: 10,
       color: '#808193',
-      "@media (max-width: 1305px)": {
+      '@media (max-width: 1305px)': {
         fontSize: 12,
-        paddingTop: 5
-      }
+        paddingTop: 5,
+      },
     },
     ethereum: {
-      color: theme.palette.error.dark
+      color: theme.palette.error.dark,
     },
     playIcon: {
-      paddingRight: 10
+      paddingRight: 10,
     },
     section2: {
       padding: '80px 160px 100px 160px',
-      "@media (max-width: 905px)": {
-        padding: '80px 10px 100px 10px'
+      '@media (max-width: 905px)': {
+        padding: '80px 10px 100px 10px',
       },
     },
     projectTitle: {
@@ -91,28 +91,28 @@ export const useStyles = makeStyles((theme: Theme) =>
       fontSize: 21,
       fontWeight: 'bold',
       textAlign: 'left',
-      paddingBottom: 30
+      paddingBottom: 30,
     },
     exploreMore: {
-      textAlign: 'right'
+      textAlign: 'right',
     },
     exploreMoreBtn: {
       textTransform: 'uppercase',
       color: theme.palette.success.main,
-      border: `1px solid ${theme.palette.success.main}`
+      border: `1px solid ${theme.palette.success.main}`,
     },
     section3: {
       padding: '70px 160px 70px 160px',
       backgroundColor: theme.palette.info.light,
-      "@media (max-width: 905px)": {
+      '@media (max-width: 905px)': {
         padding: '70px 10px 70px 10px',
-      }
+      },
     },
     section3Title: {
       textTransform: 'uppercase',
       fontWeight: 'bold',
       fontSize: 21,
-      paddingBottom: 40
+      paddingBottom: 40,
     },
     section3Btn: {
       textTransform: 'uppercase',
@@ -121,7 +121,7 @@ export const useStyles = makeStyles((theme: Theme) =>
     section4: {
       position: 'relative',
       justifyContent: 'center',
-      display: 'flex'
+      display: 'flex',
     },
     section4Text: {
       textTransform: 'uppercase',
@@ -131,10 +131,10 @@ export const useStyles = makeStyles((theme: Theme) =>
       fontSize: 18,
       lineHeight: 1.5,
       color: 'white', // no change by theme
-      "@media (max-width: 905px)": {
+      '@media (max-width: 905px)': {
         fontSize: 13,
         lineHeight: 1,
-      }
+      },
     },
     designForBtn1: {
       padding: '15px 30px',
@@ -146,16 +146,16 @@ export const useStyles = makeStyles((theme: Theme) =>
       color: 'black',
       textAlign: 'center',
       margin: '15px 20% 25px 20%',
-      cursor: 'pointer'
+      cursor: 'pointer',
     },
     blockchainImg: {
-      width: '100%'
+      width: '100%',
     },
     section5: {
       padding: '90px 160px 90px 160px',
-      "@media (max-width: 905px)": {
+      '@media (max-width: 905px)': {
         padding: '90px 10px 90px 10px',
-      }
+      },
     },
     faq: {
       textTransform: 'uppercase',
@@ -164,13 +164,13 @@ export const useStyles = makeStyles((theme: Theme) =>
       marginBottom: 40,
     },
     viewFaqBtn: {
-      marginTop: 50
+      marginTop: 50,
     },
     faqBox: {
-      padding: '0 10px 10px 10px'
+      padding: '0 10px 10px 10px',
     },
     linkDetail: {
-      textDecoration: 'none'
-    }
-  })
-);
+      textDecoration: 'none',
+    },
+  }),
+)

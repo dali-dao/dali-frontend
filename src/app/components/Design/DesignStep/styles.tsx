@@ -1,12 +1,12 @@
 //material-ui
-import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
+import { createStyles, makeStyles, Theme } from '@material-ui/core/styles'
 //style
 export const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
-        color: 'white',
-        paddingTop: 50,
-        marginBottom: 20,
+      color: 'white',
+      paddingTop: 50,
+      marginBottom: 20,
     },
     stepSelect: {
       border: '1px solid #2d353f',
@@ -34,7 +34,7 @@ export const useStyles = makeStyles((theme: Theme) =>
         height: '20px',
         bottom: '-10px',
         transform: 'rotate(45deg)',
-      }
+      },
     },
     step: {
       border: '1px solid #2d353f',
@@ -74,15 +74,15 @@ export const useStyles = makeStyles((theme: Theme) =>
       fontSize: 13,
       fontFamily: 'CerebriSansPro-Bold',
       fontWeight: 'bold',
-      padding: '5px 0 5px 0'
+      padding: '5px 0 5px 0',
     },
     itemDesc: {
       fontSize: 11,
-      fontFamily: 'Roboto-Medium'
+      fontFamily: 'Roboto-Medium',
     },
     number: {
-      color: 'white', 
-      border: '2px solid #4b586d', 
+      color: 'white',
+      border: '2px solid #4b586d',
       borderRadius: '50%',
       backgroundColor: '#2d353f',
       width: 30,
@@ -93,11 +93,11 @@ export const useStyles = makeStyles((theme: Theme) =>
       position: 'absolute',
       top: '-15px',
       right: '42%',
-      fontSize: 15
+      fontSize: 15,
     },
     selectedNumber: {
-      color: 'black', 
-      border: '2px solid #4b586d', 
+      color: 'black',
+      border: '2px solid #4b586d',
       borderRadius: '50%',
       backgroundColor: '#f7db0e',
       // backgroundColor: theme.palette.error.dark,
@@ -109,7 +109,7 @@ export const useStyles = makeStyles((theme: Theme) =>
       position: 'absolute',
       top: '-15px',
       right: '42%',
-      fontSize: 15
-    }
-  })
-);
+      fontSize: 15,
+    },
+  }),
+)

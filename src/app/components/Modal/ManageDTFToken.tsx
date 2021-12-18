@@ -1,6 +1,6 @@
-import React from 'react';
-import { makeStyles, Theme } from '@material-ui/core/styles';
-import { Grid, Button } from '@material-ui/core';
+import React from 'react'
+import { makeStyles, Theme } from '@material-ui/core/styles'
+import { Grid, Button } from '@material-ui/core'
 
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     display: 'block',
     fontSize: 20,
     fontFamily: 'CerebriSansPro-ExtraBold',
-    color: theme.palette.error.light
+    color: theme.palette.error.light,
   },
   project_info_1: {
     padding: '40px',
@@ -33,48 +33,47 @@ const useStyles = makeStyles((theme: Theme) => ({
     textAlign: 'left',
     borderTop: 0,
     borderBottom: 0,
-    color: theme.palette.success.main
+    color: theme.palette.success.main,
   },
-  
-  button_content:{
+
+  button_content: {
     background: theme.palette.background.paper,
     border: `1px solid ${theme.palette.info.main}`,
     padding: '25px 40px',
-    borderBottomRightRadius: 5, 
-    borderBottomLeftRadius: 5
+    borderBottomRightRadius: 5,
+    borderBottomLeftRadius: 5,
   },
   left_button: {
     color: theme.palette.error.light,
     background: theme.palette.primary.main,
-    border: '1px solid #596275', 
-    borderRadius: 5, 
-    marginRight: 20, 
-    width: 145, 
-    height: 50
+    border: '1px solid #596275',
+    borderRadius: 5,
+    marginRight: 20,
+    width: 145,
+    height: 50,
   },
   return_button: {
-    width: '100%', 
+    width: '100%',
     color: theme.palette.error.light,
-    // color: '#fff', 
-    // background: '#131524', 
+    // color: '#fff',
+    // background: '#131524',
     background: theme.palette.primary.main,
-    border: '1px solid #596275', 
-    marginBottom: 20
+    border: '1px solid #596275',
+    marginBottom: 20,
   },
   claim_button: {
-    width: '100%', 
+    width: '100%',
     color: theme.palette.error.light,
-    // color: '#fff', 
-    // background: '#131524', 
+    // color: '#fff',
+    // background: '#131524',
     background: theme.palette.primary.main,
-    border: '1px solid #596275'
+    border: '1px solid #596275',
   },
-  
-}));
+}))
 
 export default function ManageDTFToken() {
-  const classes = useStyles();
-  
+  const classes = useStyles()
+
   return (
     <div className={classes.root}>
       <Grid className={classes.modal_header}>
@@ -88,5 +87,5 @@ export default function ManageDTFToken() {
         <Button className={classes.left_button}>CANCEL</Button>
       </Grid>
     </div>
-  );
+  )
 }
