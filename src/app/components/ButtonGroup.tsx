@@ -13,18 +13,18 @@ import { makeStyles, Theme } from '@material-ui/core/styles'
 
 const useStyles = makeStyles((theme: Theme) => ({
   button_style: {
-    background: '#454d5c',
     borderRadius: 0,
-    borderColor: '#454d5c !important',
+    border: `1px solid ${theme.palette.info.main}`,
+    background: theme.palette.primary.main,
     color: 'grey',
   },
   button_toggle_style: {
-    background: '#454d5c',
     borderRadius: 0,
-    borderColor: '#454d5c !important',
+    color: theme.palette.error.light,
+    border: `1px solid ${theme.palette.info.main}`,
+    background: theme.palette.primary.main,
     width: 25,
     minWidth: 20,
-    color: 'grey',
   },
 }))
 
@@ -60,7 +60,7 @@ export default function SplitButton() {
   return (
     <Grid container direction="column" alignItems="center">
       <Grid item xs={12}>
-        <ButtonGroup variant="contained" color="primary" ref={anchorRef} aria-label="split button">
+        <ButtonGroup color="primary" ref={anchorRef} aria-label="split button">
           <Button className={classes.button_style} onClick={handleClick}>
             {options[selectedIndex]}
           </Button>

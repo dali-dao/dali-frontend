@@ -18,6 +18,9 @@ export const useStyles = makeStyles((theme: Theme) =>
       '@media (max-width: 710px)': {
         minHeight: '320px',
       },
+      '@media (max-width: 540px)': {
+        minHeight: '260px',
+      },
     },
     banner_text_content: {
       width: '100%',
@@ -33,9 +36,18 @@ export const useStyles = makeStyles((theme: Theme) =>
         paddingLeft: 20,
         paddingRight: 20,
       },
+      '@media (max-width: 600px)': {
+        top: '5%',
+      },
     },
     banner_content_child: {
-      marginBottom: 22,
+      height: 145,
+      '@media (max-width: 960px)': {
+        height: 137,
+      },
+      '@media (max-width: 540px)': {
+        height: 70,
+      },
     },
     project_banner_title: {
       marginTop: '5px',
@@ -53,7 +65,10 @@ export const useStyles = makeStyles((theme: Theme) =>
       fontSize: '14.1px',
       color: theme.palette.success.main,
       textAlign: 'left',
-      height: 60,
+      height: 'auto',
+      '@media (max-width: 540px)': {
+        display: 'none',
+      },
     },
     circle_info: {
       verticalAlign: 'middle',
@@ -69,6 +84,9 @@ export const useStyles = makeStyles((theme: Theme) =>
     project_banner_button_content: {
       textAlign: 'center',
       width: '54%',
+      '@media (max-width: 960px)': {
+        width: '100%',
+      },
     },
     create_project_button: {
       fontSize: 13,
@@ -93,6 +111,9 @@ export const useStyles = makeStyles((theme: Theme) =>
       color: '#fff',
       fontSize: 14,
       fontFamily: 'CerebriSansPro-Bold',
+      '@media (max-width: 600px)': {
+        height: 20,
+      },
     },
     project_banner_tab: {
       marginTop: '5px',
@@ -112,6 +133,10 @@ export const useStyles = makeStyles((theme: Theme) =>
       border: '1px solid #535b73',
       borderRadius: 5,
       color: '#9b9da0',
+      '@media (max-width: 600px)': {
+        width: '100%',
+        marginTop: 15,
+      },
     },
     volume_select_tag: {
       color: '#9b9da0',
@@ -141,6 +166,9 @@ export const useStyles = makeStyles((theme: Theme) =>
     },
     pagination_content: {
       padding: '20px 0px',
+    },
+    volume_select_content: {
+      textAlign: 'right',
     },
     // Project Detail
     project_detail_container: {
@@ -464,7 +492,7 @@ export const useStyles = makeStyles((theme: Theme) =>
       paddingRight: 0,
       height: 40,
       borderRadius: 0,
-      border: '1px solid #474f5f',
+      border: `1px solid ${theme.palette.info.main}`,
     },
     chart_content: {
       marginTop: 20,

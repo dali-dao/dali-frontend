@@ -30,10 +30,11 @@ const useStyles = makeStyles((theme: Theme) => ({
   detail_container: {
     border: `1px solid ${theme.palette.info.main}`,
     backgroundColor: theme.palette.common.white,
+    padding: 15,
   },
   detail_title: {
-    padding: '20px',
     fontSize: 14,
+    marginBottom: 20,
     color: theme.palette.error.light,
   },
   available_container: {
@@ -71,7 +72,6 @@ const useStyles = makeStyles((theme: Theme) => ({
     textAlign: 'left',
   },
   duration_content: {
-    marginLeft: 20,
     marginBottom: 20,
     color: theme.palette.error.light,
   },
@@ -88,8 +88,8 @@ const useStyles = makeStyles((theme: Theme) => ({
     marginLeft: 20,
   },
   address_desc_title: {
-    marginLeft: 20,
     marginBottom: 20,
+    wordBreak: 'break-all',
     fontSize: 12,
     fontWeight: 'bold',
     color: theme.palette.success.main,
@@ -99,7 +99,6 @@ const useStyles = makeStyles((theme: Theme) => ({
     paddingRight: 5,
   },
   address_desc: {
-    marginLeft: 20,
     marginBottom: 20,
     fontSize: 12,
     color: '#9fa0a4',
@@ -111,7 +110,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     color: theme.palette.error.light,
   },
   distribute_button_content: {
-    padding: 10,
+    padding: 15,
     textAlign: 'right',
   },
   available_style: {
@@ -142,7 +141,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     color: '#858594',
   },
   percent_value: {
-    paddingRight: 10,
+    paddingRight: 15,
     textAlign: 'right',
     fontSize: 12,
     paddingTop: 20,
@@ -231,8 +230,10 @@ export default function LabTabs() {
                 <strong className={classes.verticalMiddle}>: 0%</strong>
               </Grid>
             </Grid>
-            <Grid className={classes.address_desc_title}>Address : 0x0000000000000000000000000000000000000000</Grid>
-            <Grid className={classes.address_desc}>
+            <Grid item xs={12} className={classes.address_desc_title}>
+              Address : 0x0000000000000000000000000000000000000000
+            </Grid>
+            <Grid item xs={12} className={classes.address_desc}>
               Any reconfiguration to an upcoming funding cycle will take effect once the current cycle ends. A project
               with no strategy may be vulnerable to being Any reconfiguration to an upcoming funding cycle will take
               effect once the current cycle ends. A project with no strategy may be vulnerable to being Any
@@ -255,7 +256,9 @@ export default function LabTabs() {
               </span>
             </Grid>
             <Grid item xs={12} md={5} className={classes.distribute_button_content}>
-              <Button className={classes.distribute_button} onClick={handleOpen}>Distribute</Button>
+              <Button className={classes.distribute_button} onClick={handleOpen}>
+                Distribute
+              </Button>
             </Grid>
             <Grid item xs={12} md={12} className={classes.withdrawn_cotent}>
               $11,511,594 withdrawn
@@ -296,7 +299,9 @@ export default function LabTabs() {
               <span className={classes.available_style}>SPICE</span>
             </Grid>
             <Grid item xs={12} md={5} className={classes.distribute_button_content}>
-              <Button className={classes.distribute_button} onClick={handleOpen}>Distribute</Button>
+              <Button className={classes.distribute_button} onClick={handleOpen}>
+                Distribute
+              </Button>
             </Grid>
           </Grid>
         </TabPanel>

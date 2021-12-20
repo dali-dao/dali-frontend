@@ -58,34 +58,31 @@ function Projects() {
             </Grid>
           </Grid>
           <Grid item xs={12} md={8} sm={6}>
-            <Grid container>
-              <Link to="/projects" className={classes.project_banner_tab_active}>
-                ACTIVE
-              </Link>
-              <Link to="/projects" className={classes.project_banner_tab}>
-                ARCHIVED
-              </Link>
-            </Grid>
+            <Link to="/projects" className={classes.project_banner_tab_active}>
+              ACTIVE
+            </Link>
+            <Link to="/projects" className={classes.project_banner_tab}>
+              ARCHIVED
+            </Link>
           </Grid>
-          <Grid item xs={12} md={4} sm={6}>
-            <Grid container justifyContent="flex-end">
-              <FormControl variant="outlined" className={classes.formControl}>
-                <Select
-                  native
-                  value={state.age}
-                  onChange={handleChange}
-                  inputProps={{
-                    name: 'age',
-                    id: 'outlined-age-native-simple',
-                  }}
-                >
-                  <option value={0}>Volume</option>
-                  <option value={10}>Ten</option>
-                  <option value={20}>Twenty</option>
-                  <option value={30}>Thirty</option>
-                </Select>
-              </FormControl>
-            </Grid>
+          <Grid item xs={12} md={4} sm={6} className={classes.volume_select_content}>
+            <FormControl variant="outlined" className={classes.formControl}>
+              <Select
+                native
+                value={state.age}
+                onChange={handleChange}
+                className={classes.volume_select_tag}
+                inputProps={{
+                  name: 'age',
+                  id: 'outlined-age-native-simple',
+                }}
+              >
+                <option value={0}>Volume</option>
+                <option value={10}>Ten</option>
+                <option value={20}>Twenty</option>
+                <option value={30}>Thirty</option>
+              </Select>
+            </FormControl>
           </Grid>
         </Grid>
       </Grid>
