@@ -104,9 +104,6 @@ export const useStyles = makeStyles((theme: Theme) =>
     titleDesc: {
       textAlign: 'left',
       marginBottom: 20,
-      '@media (max-width: 960px)': {
-        textAlign: 'center',
-      },
     },
     title: {
       fontSize: 20,
@@ -143,25 +140,16 @@ export const useStyles = makeStyles((theme: Theme) =>
       fontSize: 20,
       fontWeight: 'bold',
       paddingBottom: 15,
-      '@media (max-width: 960px)': {
-        textAlign: 'center',
-      },
     },
     sign_input_content: {
       justifyContent: 'left',
-      '@media (max-width: 960px)': {
-        justifyContent: 'center',
-        marginLeft: 50,
-      },
+      '@media (max-width: 960px)': {},
     },
     footerMiddle: {
       paddingTop: 60,
       textAlign: 'left',
       paddingBottom: 40,
       borderBottom: `1px solid ${theme.palette.info.main}`,
-      '@media (max-width: 960px)': {
-        textAlign: 'center',
-      },
     },
     footerMiddleTitle: {
       fontSize: 20,
@@ -179,7 +167,7 @@ export const useStyles = makeStyles((theme: Theme) =>
     },
     followIcons: {
       display: 'flex',
-      justifyContent: 'center',
+      justifyContent: 'left',
       alignItems: 'center',
     },
     footerBottomLeft: {

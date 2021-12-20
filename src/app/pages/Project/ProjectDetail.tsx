@@ -166,10 +166,14 @@ function ProjectDetail() {
             </Grid>
             <Grid container item xs={12} md={2}>
               <Grid item xs={12} md={12} className={classes.holder_button_content}>
-                <Button className={classes.holders_button} onClick={handleHoldersOpen}>Holders</Button>
+                <Button className={classes.holders_button} onClick={handleHoldersOpen}>
+                  Holders
+                </Button>
               </Grid>
               <Grid item xs={12} md={12} className={classes.TextRight}>
-                <Button className={classes.manage_button} onClick={handleManageDTFTokenOpen}>Manage</Button>
+                <Button className={classes.manage_button} onClick={handleManageDTFTokenOpen}>
+                  Manage
+                </Button>
               </Grid>
             </Grid>
           </Grid>
@@ -208,7 +212,9 @@ function ProjectDetail() {
                 </FormControl>
               </Grid>
               <Grid item xs={12} md={4} sm={12} xl={4} className={classes.pay_button_content}>
-                <Button className={classes.pay_button_style} onClick={handleOpen}>PAY</Button>
+                <Button className={classes.pay_button_style} onClick={handleOpen}>
+                  PAY
+                </Button>
               </Grid>
             </Grid>
           </Grid>

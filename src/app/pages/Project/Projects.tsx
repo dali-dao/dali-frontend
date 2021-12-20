@@ -9,7 +9,7 @@ import { Icon } from '@iconify/react'
 
 function Projects() {
   const classes = useStyles()
-  const projectItem = new Array(24).fill({
+  const projectItem = new Array(1).fill({
     image: '',
     name: 'ConstitutionDAO',
     id: '@constitutiondao',
@@ -34,7 +34,7 @@ function Projects() {
       <Grid container className={classes.banner_content}>
         <img alt="banner" src={Banner} className={classes.image_banner}></img>
         <Grid container className={classes.banner_text_content}>
-          <Grid item xs={12} md={8} style={{ marginBottom: 22 }}>
+          <Grid item xs={12} md={8} className={classes.banner_content_child}>
             <Grid item>
               <span className={classes.project_banner_title}>PROJECTS ON $DALI</span>
               <p className={classes.project_banner_description}>
@@ -78,7 +78,6 @@ function Projects() {
                     name: 'age',
                     id: 'outlined-age-native-simple',
                   }}
-                  style={{ color: '#9b9da0' }}
                 >
                   <option value={0}>Volume</option>
                   <option value={10}>Ten</option>

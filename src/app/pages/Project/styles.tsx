@@ -5,33 +5,19 @@ import { createStyles, makeStyles, Theme } from '@material-ui/core/styles'
 //style
 export const useStyles = makeStyles((theme: Theme) =>
   createStyles({
-    banner_content: {
-      position: 'relative',
-    },
-    project_content: {
-      paddingLeft: 150,
-      paddingRight: 150,
-      '@media (max-width: 1280px)': {
-        paddingLeft: 50,
-        paddingRight: 50,
-      },
-      '@media (max-width: 1120px)': {
-        paddingLeft: 20,
-        paddingRight: 20,
-      },
-    },
-    width100: {
+    // Project List
+    image_banner: {
       width: '100%',
-    },
-    banner_left: {
-      marginTop: 45,
-      position: 'absolute',
-    },
-    banner_right: {
-      position: 'absolute',
-      height: 200,
-      right: '160px',
-      top: 55,
+      height: 230,
+      '@media (max-width: 1105px)': {
+        minHeight: '250px',
+      },
+      '@media (max-width: 960px)': {
+        minHeight: '300px',
+      },
+      '@media (max-width: 710px)': {
+        minHeight: '320px',
+      },
     },
     banner_text_content: {
       width: '100%',
@@ -48,38 +34,8 @@ export const useStyles = makeStyles((theme: Theme) =>
         paddingRight: 20,
       },
     },
-    create_button_content: {
-      justifyContent: 'flex-end',
-
-      '@media (max-width: 960px)': {
-        justifyContent: 'center',
-        marginBottom: 20,
-      },
-    },
-    project_detail_banner: {
-      position: 'absolute',
-      top: '15%',
-      paddingLeft: 150,
-      paddingRight: 150,
-      '@media (max-width: 1280px)': {
-        paddingLeft: 50,
-        paddingRight: 50,
-      },
-      '@media (max-width: 1120px)': {
-        paddingLeft: 20,
-        paddingRight: 20,
-      },
-    },
-    banner: {
-      width: '100%',
-      position: 'relative',
-    },
-    description: {
-      position: 'absolute',
-      top: '-15px',
-      textAlign: 'left',
-      left: '200px',
-      width: '750px',
+    banner_content_child: {
+      marginBottom: 22,
     },
     project_banner_title: {
       marginTop: '5px',
@@ -99,6 +55,17 @@ export const useStyles = makeStyles((theme: Theme) =>
       textAlign: 'left',
       height: 60,
     },
+    circle_info: {
+      verticalAlign: 'middle',
+      marginRight: 10,
+    },
+    create_button_content: {
+      justifyContent: 'flex-end',
+      '@media (max-width: 960px)': {
+        justifyContent: 'center',
+        marginBottom: 20,
+      },
+    },
     project_banner_button_content: {
       textAlign: 'center',
       width: '54%',
@@ -114,30 +81,9 @@ export const useStyles = makeStyles((theme: Theme) =>
       color: '#000',
       backgroundImage: 'linear-gradient(to right, rgb(238 221 14) 0%, rgb(24 216 211) 100%, rgb(247, 157, 0) 100%)',
     },
-    image_banner: {
-      width: '100%',
-      height: 230,
-      '@media (max-width: 1105px)': {
-        minHeight: '250px',
-      },
-      '@media (max-width: 960px)': {
-        minHeight: '300px',
-      },
-      '@media (max-width: 710px)': {
-        minHeight: '320px',
-      },
-    },
-    detail_image_banner: {
-      width: '100%',
-      height: 230,
-      '@media (max-width: 960px)': {
-        minHeight: '400px',
-      },
-      '@media (max-width: 710px)': {
-        minHeight: '420px',
-      },
-    },
-    project_banner_tab: {
+    project_banner_tab_active: {
+      borderBottom: '3px solid #d3dc26',
+      height: 50,
       marginTop: '5px',
       marginRight: '50px',
       display: 'block',
@@ -148,9 +94,7 @@ export const useStyles = makeStyles((theme: Theme) =>
       fontSize: 14,
       fontFamily: 'CerebriSansPro-Bold',
     },
-    project_banner_tab_active: {
-      borderBottom: '3px solid #d3dc26',
-      height: 50,
+    project_banner_tab: {
       marginTop: '5px',
       marginRight: '50px',
       display: 'block',
@@ -169,19 +113,93 @@ export const useStyles = makeStyles((theme: Theme) =>
       borderRadius: 5,
       color: '#9b9da0',
     },
-    selectEmpty: {
-      marginTop: theme.spacing(2),
-    },
-    project_list_container: {},
-    margin_bottom_10: {
-      marginBottom: '10px',
+    volume_select_tag: {
+      color: '#9b9da0',
     },
     list_content: {
       background: theme.palette.background.default,
       paddingTop: 30,
     },
+    project_content: {
+      paddingLeft: 150,
+      paddingRight: 150,
+      '@media (max-width: 1280px)': {
+        paddingLeft: 50,
+        paddingRight: 50,
+      },
+      '@media (max-width: 1120px)': {
+        paddingLeft: 20,
+        paddingRight: 20,
+      },
+    },
+    project_list_container: {},
+    margin_bottom_10: {
+      marginBottom: '10px',
+    },
+    project_detail_link: {
+      textDecoration: 'none',
+    },
     pagination_content: {
       padding: '20px 0px',
+    },
+    // Project Detail
+    project_detail_container: {
+      background: theme.palette.background.default,
+    },
+    banner_content: {
+      position: 'relative',
+    },
+    detail_image_banner: {
+      width: '100%',
+      height: 230,
+      '@media (max-width: 960px)': {
+        minHeight: '400px',
+      },
+      '@media (max-width: 710px)': {
+        minHeight: '420px',
+      },
+    },
+    project_detail_banner: {
+      position: 'absolute',
+      top: '15%',
+      paddingLeft: 150,
+      paddingRight: 150,
+      '@media (max-width: 1280px)': {
+        paddingLeft: 50,
+        paddingRight: 50,
+      },
+      '@media (max-width: 1120px)': {
+        paddingLeft: 20,
+        paddingRight: 20,
+      },
+    },
+
+    width100: {
+      width: '100%',
+    },
+    banner_left: {
+      marginTop: 45,
+      position: 'absolute',
+    },
+    banner_right: {
+      position: 'absolute',
+      height: 200,
+      right: '160px',
+      top: 55,
+    },
+    banner: {
+      width: '100%',
+      position: 'relative',
+    },
+    description: {
+      position: 'absolute',
+      top: '-15px',
+      textAlign: 'left',
+      left: '200px',
+      width: '750px',
+    },
+    selectEmpty: {
+      marginTop: theme.spacing(2),
     },
     banner_left_description: {
       position: 'relative',
@@ -455,13 +473,7 @@ export const useStyles = makeStyles((theme: Theme) =>
     funding_cycle: {
       marginTop: 30,
     },
-    circle_info: {
-      verticalAlign: 'middle',
-      marginRight: 10,
-    },
-    project_detail_link: {
-      textDecoration: 'none',
-    },
+
     breakWord: {
       wordBreak: 'break-all',
     },
@@ -502,9 +514,7 @@ export const useStyles = makeStyles((theme: Theme) =>
       fontWeight: 'bold',
       fontSize: 14,
     },
-    project_detail_container: {
-      background: theme.palette.background.default,
-    },
+
     volume_content: {
       border: `1px solid ${theme.palette.info.main}`,
       backgroundColor: theme.palette.secondary.main,
