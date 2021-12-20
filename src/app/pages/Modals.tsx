@@ -17,6 +17,7 @@ function Moals() {
   const classes = useStyles()
   return (
     <div style={{ margin: '0px 260px' }}>
+      <SpiceHolders />
       <Grid className={classes.divider}></Grid>
       <ClaimDTF />
       <Grid className={classes.divider}></Grid>
@@ -28,7 +29,6 @@ function Moals() {
       <Grid className={classes.divider}></Grid>
       <AddTokenReceiver />
       <Grid className={classes.divider}></Grid>
-      <SpiceHolders />
     </div>
   )
 }

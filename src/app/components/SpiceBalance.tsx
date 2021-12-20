@@ -7,7 +7,8 @@ const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
       display: 'flex',
-      background: '#2c333f',
+      background: theme.palette.primary.main,
+      border: `1px solid ${theme.palette.info.main}`,
       padding: 10,
       borderRadius: 5,
       marginBottom: 10,
@@ -21,7 +22,7 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     address: {
       fontSize: 14,
-      color: '#fff',
+      color: theme.palette.error.light,
       textAlign: 'right',
     },
     total: {
@@ -38,7 +39,7 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     walletName: {
       fontSize: 15,
-      color: '#fff',
+      color: theme.palette.error.light,
       textAlign: 'left',
       paddingLeft: 10,
       fontFamily: 'CerebriSansPro-ExtraBold',

@@ -48,31 +48,9 @@ const useStyles = makeStyles((theme: Theme) => ({
     borderBottom: 0,
     color: theme.palette.success.main,
   },
-
-  button_content: {
-    background: theme.palette.background.paper,
-    border: `1px solid ${theme.palette.info.main}`,
-    padding: '25px 40px',
-    borderBottomRightRadius: 5,
-    borderBottomLeftRadius: 5,
-  },
-  left_button: {
-    color: theme.palette.error.light,
-    background: theme.palette.primary.main,
-    border: '1px solid #596275',
-    borderRadius: 5,
-    marginRight: 20,
-    width: 145,
-    height: 50,
-  },
-  right_button: {
-    backgroundImage: 'linear-gradient(to right, rgb(238 221 14) 0%, rgb(24 216 211) 100%, rgb(247, 157, 0) 100%)',
-    width: 230,
-    height: 50,
-    color: '#000',
-  },
   formControl: {
-    width: '100%',
+    width: '98%',
+    border: `1px solid ${theme.palette.info.main}`,
     marginBottom: 15,
     marginRight: 15,
   },
@@ -86,9 +64,13 @@ const useStyles = makeStyles((theme: Theme) => ({
   asset_button: {
     borderRadius: 0,
     width: 50,
-    height: 50,
+    height: 53,
+    color: theme.palette.error.light,
     border: '1px solid #81899a',
-    background: '#2c333f',
+    background: theme.palette.primary.main,
+  },
+  select_tag: {
+    borderRadius: 0,
   },
 }))
 
@@ -127,6 +109,7 @@ export default function SpiceHolders() {
               native
               value={state.age}
               onChange={handleChange}
+              className={classes.select_tag}
               inputProps={{
                 name: 'age',
                 id: 'outlined-age-native-simple',
