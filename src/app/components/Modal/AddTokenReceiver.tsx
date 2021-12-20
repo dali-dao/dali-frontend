@@ -8,6 +8,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     flexGrow: 1,
     margin: 'auto',
     color: theme.palette.error.light,
+    borderRadius: 5,
     boxShadow: `0px 0px 10px 10px ${theme.palette.primary.dark}`,
   },
   //common class

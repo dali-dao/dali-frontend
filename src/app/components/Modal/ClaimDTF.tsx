@@ -63,6 +63,7 @@ const useStyles = makeStyles((theme: Theme) => ({
   input_outline: {
     paddingRight: 0,
     height: 40,
+    border: `1px solid ${theme.palette.info.main}`,
     borderRadius: 0,
   },
   content_desc_1: {
@@ -72,16 +73,22 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
   content_desc_2: {
     fontSize: 15,
+    color: theme.palette.success.dark,
     width: '100%',
   },
   content_desc_3: {
     fontSize: 13,
+    color: theme.palette.success.dark,
     width: '100%',
+  },
+  content_desc_4: {
+    fontSize: 13,
+    color: theme.palette.error.light,
   },
   max_button: {
     borderRadius: 0,
     color: theme.palette.error.light,
-    border: '1px solid #596275',
+    border: `1px solid ${theme.palette.info.main}`,
     background: theme.palette.primary.main,
   },
 }))
@@ -107,7 +114,7 @@ export default function ClaimDTF() {
         <p className={classes.content_desc_1}>Your unclaimed DTF tokens: 0</p>
         <p className={classes.content_desc_3}>DTF ERC20 address: 0x1B5C...2BaBdD</p>
         <Grid container>
-          <p className={classes.content_desc_2}>Amount of ERC20 tokens to claim</p>
+          <p className={classes.content_desc_4}>Amount of ERC20 tokens to claim</p>
           <FormControl className={classes.width100} variant="outlined">
             <OutlinedInput
               id="outlined-adornment-weight"

@@ -12,6 +12,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     boxShadow: `0px 0px 10px 10px ${theme.palette.primary.dark}`,
     marginTop: 150,
     marginBottom: 50,
+    borderRadius: 5,
   },
   //common class
   textLeft: { textAlign: 'left' },
