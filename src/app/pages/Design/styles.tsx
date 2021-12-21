@@ -160,6 +160,7 @@ export const useStyles = makeStyles((theme: Theme) =>
       color: '#a2a4a7',
       fontFamily: 'Roboto-Medium',
       padding: '5px 0',
+      lineHeight: 1.5
     },
     delayContentValue: {
       fontSize: 13,

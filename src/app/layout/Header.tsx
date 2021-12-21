@@ -152,9 +152,9 @@ function Header() {
       onClose={toggleDrawer}
     >
       <Grid container>
-        <Grid item xs={12} className={classes.logoSectionSidebar}>
+        {/* <Grid item xs={12} className={classes.logoSectionSidebar}>
           <img src={curThemeName === 'darkTheme' ? Logo : LogoBlack} alt="logo" style={{width: '30%'}}/>
-        </Grid>
+        </Grid> */}
         <Grid item xs={12} className={classes.menuResTitle}>
           <span>QUICK LINK</span> <CloseIcon onClick={toggleDrawer} style={{cursor: 'pointer'}}/>
         </Grid>
