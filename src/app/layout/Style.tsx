@@ -220,10 +220,10 @@ export const useStyles = makeStyles((theme: Theme) =>
     },
     drawer: {
       flexShrink: 0,
-      width: 400
+      width: 250
     },
     drawerPaper: {
-      width: 400,
+      width: 250,
       backgroundColor: theme.palette.background.default,
       textAlign: 'left',
       lineHeight: 3,
