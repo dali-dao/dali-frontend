@@ -16,6 +16,8 @@ import { providers } from 'ethers'
 import Web3Modal from 'web3modal'
 import { useMediaQuery } from 'react-responsive'
 import Drawer from "@material-ui/core/Drawer";
+import CloseIcon from '@material-ui/icons/Close';
+import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 
 function Header() {
   const classes = useStyles()
@@ -151,41 +153,50 @@ function Header() {
     >
       <Grid container>
         <Grid item xs={12} className={classes.logoSectionSidebar}>
-          <img src={curThemeName === 'darkTheme' ? Logo : LogoBlack} alt="logo" style={{width: '60%'}}/>
+          <img src={curThemeName === 'darkTheme' ? Logo : LogoBlack} alt="logo" style={{width: '30%'}}/>
         </Grid>
-        <Grid item xs={12} style={{marginTop: 20}}>
-          <Link to="/" className={location_path.pathname === '/' ? classes.activeMenuSidebar : classes.menuSidebar}>
-            Home
+        <Grid item xs={12} className={classes.menuResTitle}>
+          <span>QUICK LINK</span> <CloseIcon onClick={toggleDrawer} style={{cursor: 'pointer'}}/>
+        </Grid>
+        <Grid item xs={12} className={classes.menuRes}>
+          <Link to="/" className={classes.menuSidebar}>
+            <span>Home</span> 
           </Link>
+          <ArrowForwardIosIcon fontSize='small'/>
         </Grid>
-        <Grid item xs={12}>
-          <Link
-            to="/projects"
-            className={
-              location_path.pathname === '/projects' ||
-              location_path.pathname === '/detail' ||
-              location_path.pathname === '/design'
-                ? classes.activeMenuSidebar
-                : classes.menuSidebar
-            }
-          >
+        <Grid item xs={12} className={classes.menuRes}>
+          <Link to="/projects" className={classes.menuSidebar}>
             Projects
           </Link>
+          <ArrowForwardIosIcon fontSize='small'/>
         </Grid>
-        <Grid item xs={12}>
-          <Link to="/faq" className={location_path.pathname === '/faq' ? classes.activeMenuSidebar : classes.menuSidebar}>
+        <Grid item xs={12} className={classes.menuRes}>
+          <Link to="/faq" className={classes.menuSidebar}>
             Faq
           </Link>
+          <ArrowForwardIosIcon fontSize='small'/>
         </Grid>
-        <Grid item xs={12}>
-          <Link to="/docs" className={location_path.pathname === '/docs' ? classes.activeMenuSidebar : classes.menuSidebar}>
+        <Grid item xs={12} className={classes.menuRes}>
+          <Link to="/docs" className={classes.menuSidebar}>
             Docs
           </Link>
+          <ArrowForwardIosIcon fontSize='small' />
         </Grid>
-        <Grid item xs={12}>
-          <Link to="/discord" className={location_path.pathname === '/discord' ? classes.activeMenuSidebar : classes.menuSidebar}>
+        <Grid item xs={12} className={classes.menuRes}>
+          <Link to="/discord" className={classes.menuSidebar}>
             Discord
           </Link>
+          <ArrowForwardIosIcon fontSize='small' />
+        </Grid>
+        <Grid container item xs={12} className={classes.menuResTitle}>
+          <Grid item xs={12}>
+            CHOOSE THE THEME
+          </Grid>
+          <Grid item xs={12} className={classes.settingTheme}>
+            <Icon icon="bi:moon-fill" className={classes.moon_style} onClick={handleToggleTheme} />
+            <Icon icon="bx:bxs-sun" className={classes.sun_style} onClick={handleToggleTheme} />
+            <span className={classes.settingThemeLabel}>BLACK THEME</span>
+          </Grid>
         </Grid>
       </Grid>
     </Drawer>
