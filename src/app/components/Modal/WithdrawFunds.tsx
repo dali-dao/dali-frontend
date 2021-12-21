@@ -54,6 +54,9 @@ const useStyles = makeStyles((theme: Theme) => ({
     borderTop: 0,
     borderBottom: 0,
     color: theme.palette.success.main,
+    '@media(max-width: 600px)': {
+      padding: '40px 10px',
+    },
   },
 
   button_content: {
@@ -139,7 +142,7 @@ export default function WithdrawFunds() {
         <strong className={classes.modal_header_title}>Withdraw funds</strong>
       </Grid>
       <Grid container className={classes.project_info_1}>
-        <Grid container xs={12} md={12} className={classes.total_funds_content}>
+        <Grid container item xs={12} md={12} className={classes.total_funds_content}>
           <Grid item xs={12} md={10} className={classes.marginBottom15}>
             <strong className={classes.project_price_info}>Total funds:</strong>
           </Grid>
@@ -147,7 +150,7 @@ export default function WithdrawFunds() {
             <strong className={classes.project_price_info}>Ξ0</strong>
           </Grid>
         </Grid>
-        <Grid container xs={12} md={12} className={classes.jbx_fee_content}>
+        <Grid container item xs={12} md={12} className={classes.jbx_fee_content}>
           <Grid item xs={12} md={10}>
             <strong className={classes.project_price_info}>JBX Fee (0%)</strong>
           </Grid>
@@ -155,7 +158,7 @@ export default function WithdrawFunds() {
             <strong className={classes.project_price_info}>Ξ0 0$</strong>
           </Grid>
         </Grid>
-        <Grid container xs={12} md={12} className={classes.after_fee_content}>
+        <Grid container item xs={12} md={12} className={classes.after_fee_content}>
           <Grid item xs={12} md={10}>
             <strong className={classes.project_price_info}>Available after fee:</strong>
           </Grid>

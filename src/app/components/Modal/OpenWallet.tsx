@@ -37,6 +37,9 @@ const useStyles = makeStyles((theme: Theme) => ({
     textAlign: 'left',
     borderTop: 0,
     borderBottom: 0,
+    '@media(max-width: 600px)': {
+      padding: '25px 10px',
+    },
   },
   button_content: {
     background: theme.palette.background.paper,
@@ -44,6 +47,9 @@ const useStyles = makeStyles((theme: Theme) => ({
     padding: '25px 40px',
     borderBottomRightRadius: 5,
     borderBottomLeftRadius: 5,
+    '@media(max-width: 600px)': {
+      padding: '25px 10px',
+    },
   },
   wallet_name: {
     marginLeft: 10,
@@ -85,7 +91,7 @@ export default function OpenWallet() {
         <strong className={classes.modal_header_title}>Select a Wallet</strong>
       </Grid>
       <Grid container className={classes.project_info_1}>
-        <Grid container xs={12} md={3} className={classes.marginBottom30}>
+        <Grid container item xs={12} md={3} className={classes.marginBottom30}>
           <img alt="metamask" src={MetaMask}></img>
           <span className={classes.wallet_name}>Metamask</span>
         </Grid>

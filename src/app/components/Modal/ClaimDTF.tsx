@@ -36,6 +36,9 @@ const useStyles = makeStyles((theme: Theme) => ({
     borderTop: 0,
     borderBottom: 0,
     color: theme.palette.success.main,
+    '@media(max-width: 600px)': {
+      padding: '25px 10px',
+    },
   },
 
   button_content: {

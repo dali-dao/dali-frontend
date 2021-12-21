@@ -30,6 +30,9 @@ const useStyles = makeStyles((theme: Theme) => ({
     display: 'block',
     textAlign: 'left',
     padding: '25px 40px',
+    '@media(max-width: 600px)': {
+      padding: '25px 10px',
+    },
     borderBottomRightRadius: 5,
     borderBottomLeftRadius: 5,
   },

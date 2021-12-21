@@ -16,8 +16,9 @@ const useStyles = makeStyles((theme: Theme) => ({
     color: theme.palette.error.light,
     margin: 'auto',
     boxShadow: `0px 0px 10px 10px ${theme.palette.primary.dark}`,
-    marginTop: 1050,
+    // marginTop: 1050,
     marginBottom: 50,
+    borderRadius: 5,
   },
   //common class
   textLeft: { textAlign: 'left' },
@@ -49,6 +50,15 @@ const useStyles = makeStyles((theme: Theme) => ({
   project_info_1: {
     background: theme.palette.background.paper,
     padding: '25px 40px',
+    '@media(max-width: 600px)': {
+      padding: '25px 10px',
+    },
+  },
+  project_info_detail: {
+    paddingLeft: 15,
+    '@media(max-width: 960px)': {
+      paddingLeft: 0,
+    },
   },
   project_title: {
     fontFamily: 'CerebriSansPro-Bold',
@@ -71,11 +81,15 @@ const useStyles = makeStyles((theme: Theme) => ({
     padding: '25px 40px',
     borderBottom: `1px solid ${theme.palette.info.main}`,
     background: theme.palette.common.white,
+    '@media(max-width: 600px)': {
+      padding: '25px 10px',
+    },
   },
   input_outline: {
     paddingRight: 0,
     height: 40,
     borderRadius: 0,
+    border: `1px solid ${theme.palette.info.main}`,
   },
   toke_info_content: {
     marginBottom: 30,
@@ -85,6 +99,10 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
   holders_button: {
     marginRight: 20,
+    border: `1px solid ${theme.palette.info.main}`,
+    '@media(max-width: 450px)': {
+      float: 'left',
+    },
   },
   manage_button: {
     background: '#454d5c',
@@ -105,6 +123,9 @@ const useStyles = makeStyles((theme: Theme) => ({
     border: `1px solid ${theme.palette.info.main}`,
     background: theme.palette.common.white,
     padding: 20,
+    '@media(max-width: 400px)': {
+      padding: 10,
+    },
   },
   detail_title: {
     fontSize: 14,
@@ -115,18 +136,34 @@ const useStyles = makeStyles((theme: Theme) => ({
     background: theme.palette.common.white,
     marginTop: 15,
     padding: 20,
+    '@media(max-width: 400px)': {
+      padding: 10,
+    },
   },
   distribute_button: {
     border: `1px solid ${theme.palette.info.main}`,
     background: '#272c36',
     borderRadius: 5,
+    '@media(max-width: 320px)': {
+      marginTop: 10,
+      marginBottom: 10,
+      width: '100%',
+    },
   },
   tab_current: {
     marginLeft: 'auto',
     fontFamily: 'CerebriSansPro-Bold',
+    '@media(max-width: 450px)': {
+      fontSize: 12,
+      minWidth: 50,
+    },
   },
   tab_history: {
     fontFamily: 'CerebriSansPro-Bold',
+    '@media(max-width: 450px)': {
+      fontSize: 12,
+      minWidth: 50,
+    },
   },
   no_activity: {
     border: `1px solid ${theme.palette.info.main}`,
@@ -165,9 +202,18 @@ const useStyles = makeStyles((theme: Theme) => ({
     fontSize: 13,
   },
   funding_cycle_title: {
-    fontFamily: 'CerebriSansPro-Bold',
+    fontFamily: 'CerebriSansPro-ExtraBold',
     color: theme.palette.error.light,
-    paddingTop: 15,
+    padding: 0,
+    display: 'block',
+    textAlign: 'left',
+    '& .MuiTab-wrapper ': {
+      display: 'block',
+    },
+    '@media(max-width: 450px)': {
+      fontSize: 12,
+      minWidth: 50,
+    },
   },
   icon_style: {
     verticalAlign: 'middle',
@@ -185,6 +231,7 @@ const useStyles = makeStyles((theme: Theme) => ({
   address_info: {
     marginBottom: 20,
     fontSize: 12,
+    wordBreak: 'break-all',
   },
   funding_cycle_description: {
     marginBottom: 20,
@@ -251,16 +298,23 @@ const useStyles = makeStyles((theme: Theme) => ({
     color: '#858594',
   },
   activity_header: {
-    textAlign: 'left',
+    fontFamily: 'CerebriSansPro-ExtraBold',
     color: theme.palette.error.light,
-    width: '80%',
-    paddingTop: 15,
-    marginRight: '100px',
-    fontSize: 16,
+    padding: 0,
+    display: 'block',
+    textAlign: 'left',
+    '& .MuiTab-wrapper ': {
+      display: 'block',
+    },
   },
   tab_style: {
     minWidth: 50,
     fontSize: '12.8px',
+  },
+  tab_pay_style: {
+    minWidth: 50,
+    fontSize: '12.8px',
+    marginLeft: 'auto',
   },
   activity_content: {
     padding: '0px 0px',
@@ -271,7 +325,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     paddingRight: 10,
     textAlign: 'right',
     fontSize: 12,
-    paddingTop: 20,
+    paddingTop: 12,
   },
   project_detail_value: {
     textAlign: 'left',
@@ -297,6 +351,15 @@ const useStyles = makeStyles((theme: Theme) => ({
     marginLeft: 10,
     marginRight: 10,
   },
+  displayBlock: {
+    display: 'block',
+  },
+  token_action_content: {
+    textAlign: 'right',
+    '@media(max-width: 450px)': {
+      marginTop: 20,
+    },
+  },
 }))
 
 export default function DesignPreview() {
@@ -313,11 +376,11 @@ export default function DesignPreview() {
         <strong className={classes.modal_header_title}>DESIGN PREVIEW</strong>
       </Grid>
       <Grid container>
-        <Grid container item className={classes.project_info_1}>
+        <Grid container className={classes.project_info_1}>
           <Grid item xs={12} md={2} className={classes.textLeft}>
             <img src={DesignPreviewImg} className={classes.project_image} alt="design_preview" />
           </Grid>
-          <Grid container xs={12} md={10} className={classes.paddingLeft15}>
+          <Grid container item xs={12} md={10} className={classes.project_info_detail}>
             <Grid item xs={12} md={12} className={classes.textLeft}>
               <strong className={classes.project_title}>UNTITLED PROJECT</strong>
             </Grid>
@@ -328,7 +391,7 @@ export default function DesignPreview() {
                 dolor, commodo pharetra leo.{' '}
               </span>
             </Grid>
-            <Grid container xs={12} md={12} className={classes.project_detail_value}>
+            <Grid container item xs={12} md={12} className={classes.project_detail_value}>
               <Grid item xs={12} md={10} className={classes.marginBottom5}>
                 <strong className={classes.project_price_info}>Volume</strong>
                 <Icon icon="si-glyph:circle-info" className={classes.icon_info} />
@@ -337,7 +400,7 @@ export default function DesignPreview() {
                 <strong className={classes.project_price_info}>Ξ0</strong>
               </Grid>
             </Grid>
-            <Grid container xs={12} md={12} className={classes.injuicebox}>
+            <Grid container item xs={12} md={12} className={classes.injuicebox}>
               <Grid item xs={12} md={10}>
                 <strong className={classes.project_price_info}>In Juicebox</strong>
                 <Icon icon="si-glyph:circle-info" className={classes.icon_info} />
@@ -346,7 +409,7 @@ export default function DesignPreview() {
                 <strong className={classes.project_price_info}>Ξ0 0$</strong>
               </Grid>
             </Grid>
-            <Grid container xs={12} md={12} className={classes.inwallet}>
+            <Grid container item xs={12} md={12} className={classes.inwallet}>
               <Grid item xs={12} md={10}>
                 <strong className={classes.project_price_info}>In wallet</strong>
                 <Icon icon="si-glyph:circle-info" className={classes.icon_info} />
@@ -405,12 +468,12 @@ export default function DesignPreview() {
               <span>:</span> <span className={classes.supply_value}>0</span>
               <strong>(0% of supply)</strong>
             </Grid>
-            <Grid item xs={12} md={4} className={classes.textRight}>
+            <Grid item xs={12} md={4} className={classes.token_action_content}>
               <Button className={classes.holders_button}>Holders</Button>
               <Button className={classes.manage_button}>Manage</Button>
             </Grid>
           </Grid>
-          <Grid container>
+          <Grid container className={classes.displayBlock}>
             <TabContext value={value}>
               <AppBar position="static" elevation={0} className={classes.app_bar_background}>
                 <TabList
@@ -418,9 +481,7 @@ export default function DesignPreview() {
                   aria-label="simple tabs example"
                   classes={{ indicator: classes.indicator }}
                 >
-                  <span className={classes.funding_cycle_title}>
-                    FUNDING CYCLE <Icon icon="si-glyph:circle-info" className={classes.icon_style} />
-                  </span>
+                  <Tab label="FUNDING CYCLE" className={classes.funding_cycle_title} disabled />
                   <Tab label="CURRENT" value="1" className={classes.tab_current} />
                   <Tab label="HISTORY" value="2" className={classes.tab_history} />
                 </TabList>
@@ -487,10 +548,10 @@ export default function DesignPreview() {
                       Distribution <Icon icon="si-glyph:circle-info" className={classes.circle_info} />
                     </strong>
                   </Grid>
-                  <Grid item xs={12} md={7} className={classes.user_info_content}>
+                  <Grid item xs={6} md={7} className={classes.user_info_content}>
                     <Icon icon="websymbol:user" className={classes.bottom_icon_user} />
                   </Grid>
-                  <Grid item xs={12} md={5} className={classes.user_info_value}>
+                  <Grid item xs={6} md={5} className={classes.user_info_value}>
                     <strong>100%</strong>
                   </Grid>
                 </Grid>
@@ -515,10 +576,8 @@ export default function DesignPreview() {
             <TabContext value={value}>
               <AppBar position="static" elevation={0} className={classes.app_bar_background}>
                 <TabList onChange={handleChange} aria-label="tabs" classes={{ indicator: classes.indicator }}>
-                  <span className={classes.activity_header}>
-                    ACTIVITY <Icon icon="si-glyph:circle-info" className={classes.icon_style} />
-                  </span>
-                  <Tab label="PAY" value="1" className={classes.tab_style} />
+                  <Tab label="ACTIVITY" value="0" disabled className={classes.activity_header} />
+                  <Tab label="PAY" value="1" className={classes.tab_pay_style} />
                   <Tab label="REDEEM" value="2" className={classes.tab_style} />
                   <Tab label="WITHDRAW" value="3" className={classes.tab_style} />
                   <Tab label="RESERVES" value="4" className={classes.tab_style} />

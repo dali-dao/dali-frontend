@@ -31,6 +31,9 @@ const useStyles = makeStyles((theme: Theme) => ({
     display: 'block',
     textAlign: 'left',
     padding: '25px 40px',
+    '@media(max-width: 600px)': {
+      padding: '25px 10px',
+    },
   },
   modal_description_header: {
     color: '#919398',
@@ -108,6 +111,7 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
   notice_addr: {
     fontSize: 13,
+    wordBreak: 'break-all',
     color: '#919398',
     textAlign: 'left',
     marginTop: 10,

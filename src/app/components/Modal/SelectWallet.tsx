@@ -55,6 +55,9 @@ const useStyles = makeStyles((theme: Theme) => ({
     borderBottomLeftRadius: 5,
     background: theme.palette.background.paper,
     padding: '25px 40px',
+    '@media(max-width: 600px)': {
+      padding: '25px 10px',
+    },
   },
   wallet_header_title: {
     textAlign: 'left',

@@ -45,6 +45,9 @@ const useStyles = makeStyles((theme: Theme) => ({
     borderTop: 0,
     borderBottom: 0,
     color: theme.palette.success.main,
+    '@media(max-width: 600px)': {
+      padding: '25px 10px',
+    },
   },
 
   button_content: {
@@ -108,7 +111,7 @@ export default function DistributeReserved() {
         <strong className={classes.modal_header_title}>Distribute reserved DTF</strong>
       </Grid>
       <Grid container className={classes.project_info_1}>
-        <Grid container xs={12} md={12} className={classes.available_content}>
+        <Grid container item xs={12} md={12} className={classes.available_content}>
           <Grid item xs={12} md={10}>
             <strong className={classes.project_price_info}>Available after fee:</strong>
           </Grid>

@@ -39,6 +39,9 @@ const useStyles = makeStyles((theme: Theme) => ({
     borderBottom: `1px solid ${theme.palette.info.main}`,
     padding: '25px 40px',
     textAlign: 'left',
+    '@media(max-width: 600px)': {
+      padding: '25px 10px',
+    },
   },
 
   button_content: {

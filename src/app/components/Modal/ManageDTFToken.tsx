@@ -39,6 +39,9 @@ const useStyles = makeStyles((theme: Theme) => ({
     borderTop: 0,
     borderBottom: 0,
     color: theme.palette.success.main,
+    '@media(max-width: 600px)': {
+      padding: '25px 10px',
+    },
   },
 
   button_content: {
@@ -110,8 +113,12 @@ export default function ManageDTFToken() {
         <strong className={classes.modal_header_title}>Manage DTF tokens</strong>
       </Grid>
       <Grid container className={classes.project_info_1}>
-        <Button className={classes.return_button} onClick={handleOpen}>Return my ETh</Button>
-        <Button className={classes.claim_button} onClick={handleClaimDTFOpen}>Claim DTF as ERC20</Button>
+        <Button className={classes.return_button} onClick={handleOpen}>
+          Return my ETh
+        </Button>
+        <Button className={classes.claim_button} onClick={handleClaimDTFOpen}>
+          Claim DTF as ERC20
+        </Button>
       </Grid>
       <Grid container className={classes.button_content}>
         <Button className={classes.left_button}>CANCEL</Button>

@@ -33,6 +33,9 @@ const useStyles = makeStyles((theme: Theme) => ({
     borderTop: 0,
     borderBottom: 0,
     color: theme.palette.success.main,
+    '@media(max-width: 600px)': {
+      padding: '25px 10px',
+    },
   },
 
   button_content: {
@@ -101,14 +104,14 @@ export default function BurnDTF() {
         <strong className={classes.modal_header_title}>Burn DTF tokens for ETH</strong>
       </Grid>
       <Grid container className={classes.project_info_1}>
-        <Grid container xs={12} md={12} className={classes.balance_content}>
+        <Grid container item xs={12} md={12} className={classes.balance_content}>
           <Grid item xs={12} md={10}>
             <strong className={classes.project_price_info}>
               Balance<span className={classes.dft_first_line}>:</span>0 DTF
             </strong>
           </Grid>
         </Grid>
-        <Grid container xs={12} md={12} className={classes.dft_second_line}>
+        <Grid container item xs={12} md={12} className={classes.dft_second_line}>
           <Grid item xs={12} md={10}>
             <strong className={classes.project_price_info}>
               Currently worth<span className={classes.dft_first_line}>:</span>Ξ0

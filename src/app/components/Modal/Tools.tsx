@@ -38,6 +38,9 @@ const useStyles = makeStyles((theme: Theme) => ({
     textAlign: 'left',
     borderTop: 0,
     color: theme.palette.success.main,
+    '@media(max-width: 600px)': {
+      padding: '25px 10px',
+    },
   },
   button_content: {
     background: theme.palette.background.paper,
@@ -64,6 +67,7 @@ const useStyles = makeStyles((theme: Theme) => ({
   ownership_info_addr: {
     fontSize: 13,
     color: '#c5c6ca',
+    wordBreak: 'break-all',
     marginLeft: 5,
   },
   trasfor_content: {
