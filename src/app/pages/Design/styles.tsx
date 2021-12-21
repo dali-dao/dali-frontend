@@ -12,12 +12,13 @@ export const useStyles = makeStyles((theme: Theme) =>
       backgroundRepeat: 'no-repeat',
       backgroundColor: theme.palette.background.default,
       color: theme.palette.error.light,
+      position: 'relative'
     },
     container: {
       padding: '0 160px 10px 160px',
       textAlign: 'left',
       '@media (max-width: 1205px)': {
-        padding: '0px 10px 0px 10px',
+        padding: '0px 10px 10px 10px',
       },
     },
     title: {
@@ -56,6 +57,7 @@ export const useStyles = makeStyles((theme: Theme) =>
     itemDescription: {
       fontSize: 13,
       color: '#727285',
+      lineHeight: 1.5
       // borderBottom: `1px solid ${theme.palette.info.main}`,
     },
     saveBtn: {
@@ -93,9 +95,10 @@ export const useStyles = makeStyles((theme: Theme) =>
     logoTitle: {
       display: 'flex',
       alignItems: 'center',
+      color: '#727285'
     },
     percentLabel: {
-      // color: 'white',
+      // color: '#727285',
       paddingTop: 10,
       width: '100%',
       display: 'flex',
@@ -166,7 +169,32 @@ export const useStyles = makeStyles((theme: Theme) =>
     },
     titleFontFamily: {
       fontFamily: 'CerebriSansPro-ExtraBold',
+      fontSize: 25
     },
+    bannerTop: {
+      height: 200
+    },
+    banner: {
+      width: '100%'
+    },
+    paragrap: {
+      padding: '20px 0',
+      lineHeight: 2.5
+    },
+    subTitle: {
+      fontFamily: 'Roboto-Bold',
+    },
+    saveBtnResponsive: {
+      paddingTop: 20,
+      borderTop: `1px solid ${theme.palette.info.main}`,
+    },
+    responsiveStep: {
+      padding: '0 20px'
+    },
+    subDescription: {
+      fontSize: 14,
+      fontFamily: 'Roboto-Bold',
+    }
   }),
 )
 

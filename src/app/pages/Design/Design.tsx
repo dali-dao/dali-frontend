@@ -1,12 +1,19 @@
 import { useStyles } from './styles'
 import Appearance from '../../components/Design/DesignPages/Appearance/appearance'
+import AppearanceResponsive from '../../components/Design/DesignPages/Appearance/appearanceResponsive'
 import Funding from '../../components/Design/DesignPages/Funding/funding'
+import FundingResponsive from '../../components/Design/DesignPages/Funding/fundingResponsive'
 import Distribution from '../../components/Design/DesignPages/Distribution/distribution'
+import DistributionResponsive from '../../components/Design/DesignPages/Distribution/distributionResponsive'
 import ReservedTokens from '../../components/Design/DesignPages/ReservedTokens/reservedTokens'
+import ReservedTokensResponsive from '../../components/Design/DesignPages/ReservedTokens/reservedTokensResponsive'
 import Reconfiguration from '../../components/Design/DesignPages/Reconfiguration/reconfiguration'
+import ReconfigurationResponsive from '../../components/Design/DesignPages/Reconfiguration/reconfigurationResponsive'
 import Incentives from '../../components/Design/DesignPages/Incentives/incentives'
+import IncentivesResponsive from '../../components/Design/DesignPages/Incentives/incentivesResponsive'
 import Grid from '@material-ui/core/Grid'
 import { useState } from 'react'
+import { useMediaQuery } from 'react-responsive'
 
 function Design() {
   const classes = useStyles()
@@ -31,21 +38,17 @@ function Design() {
     setConfirmStep(setConfirmArray(index))
   }
 
+  const isTablet = useMediaQuery({ query: '(max-width: 1000px)' });
+
   return (
     <div className={classes.root}>
       <Grid className={classes.container}>
-        {selectedStep[0] && <Appearance items={selectedStep} onSelectItem={onSelectItem} confirmItems={confirmStep} />}
-        {selectedStep[1] && <Funding items={selectedStep} onSelectItem={onSelectItem} confirmItems={confirmStep} />}
-        {selectedStep[2] && (
-          <Distribution items={selectedStep} onSelectItem={onSelectItem} confirmItems={confirmStep} />
-        )}
-        {selectedStep[3] && (
-          <ReservedTokens items={selectedStep} onSelectItem={onSelectItem} confirmItems={confirmStep} />
-        )}
-        {selectedStep[4] && (
-          <Reconfiguration items={selectedStep} onSelectItem={onSelectItem} confirmItems={confirmStep} />
-        )}
-        {selectedStep[5] && <Incentives items={selectedStep} onSelectItem={onSelectItem} confirmItems={confirmStep} />}
+        {selectedStep[0] && (isTablet ? <AppearanceResponsive items={selectedStep} onSelectItem={onSelectItem} confirmItems={confirmStep} /> : <Appearance items={selectedStep} onSelectItem={onSelectItem} confirmItems={confirmStep} />)}
+        {selectedStep[1] && (isTablet ? <FundingResponsive items={selectedStep} onSelectItem={onSelectItem} confirmItems={confirmStep} /> : <Funding items={selectedStep} onSelectItem={onSelectItem} confirmItems={confirmStep} />)}
+        {selectedStep[2] && (isTablet ? <DistributionResponsive items={selectedStep} onSelectItem={onSelectItem} confirmItems={confirmStep} /> : <Distribution items={selectedStep} onSelectItem={onSelectItem} confirmItems={confirmStep} />)}
+        {selectedStep[3] && (isTablet ? <ReservedTokensResponsive items={selectedStep} onSelectItem={onSelectItem} confirmItems={confirmStep} /> : <ReservedTokens items={selectedStep} onSelectItem={onSelectItem} confirmItems={confirmStep} />)}
+        {selectedStep[4] && (isTablet ? <ReconfigurationResponsive items={selectedStep} onSelectItem={onSelectItem} confirmItems={confirmStep} /> : <Reconfiguration items={selectedStep} onSelectItem={onSelectItem} confirmItems={confirmStep} />)}
+        {selectedStep[5] && (isTablet ? <IncentivesResponsive items={selectedStep} onSelectItem={onSelectItem} confirmItems={confirmStep} /> : <Incentives items={selectedStep} onSelectItem={onSelectItem} confirmItems={confirmStep} />)}
       </Grid>
     </div>
   )

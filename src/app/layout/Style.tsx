@@ -9,6 +9,8 @@ export const useStyles = makeStyles((theme: Theme) =>
       // height: 'calc(100% - 50px)',
       fontSize: 12,
       color: theme.palette.success.main,
+      padding: '0 10px',
+      display: 'flex'
     },
     footer: {
       backgroundColor: theme.palette.background.paper,
@@ -43,6 +45,19 @@ export const useStyles = makeStyles((theme: Theme) =>
       borderBottom: '2px solid #f7db0e',
       padding: '25px 0',
     },
+    menuSidebar: {
+      textDecoration: 'none',
+      color: theme.palette.success.main,
+      textTransform: 'uppercase',
+      marginTop: 10
+    },
+    activeMenuSidebar: {
+      textDecoration: 'none',
+      color: theme.palette.success.main,
+      textTransform: 'uppercase',
+      borderBottom: '2px solid #f7db0e',
+      marginTop: 10
+    },
     menuItems: {
       display: 'flex',
       alignItems: 'center',
@@ -50,6 +65,19 @@ export const useStyles = makeStyles((theme: Theme) =>
       marginTop: '20px !important',
       marginBottom: '20px !important',
       fontFamily: 'CerebriSansPro-ExtraBold',
+    },
+    toggleIcon: {
+      cursor: 'pointer',
+      paddingLeft: 10
+    },
+    logoSection: {
+      display: 'flex',
+      alignItems: 'center',
+    },
+    logoSectionSidebar: {
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center'
     },
     connectBtn: {
       background: '#f7db0e', // no change by theme
@@ -188,6 +216,16 @@ export const useStyles = makeStyles((theme: Theme) =>
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
+    },
+    drawer: {
+      flexShrink: 0,
+      width: 200
+    },
+    drawerPaper: {
+      width: 200,
+      backgroundColor: theme.palette.common.black,
+      textAlign: 'center',
+      lineHeight: 3
     },
   }),
 )
