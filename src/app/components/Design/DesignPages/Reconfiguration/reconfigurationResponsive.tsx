@@ -14,11 +14,11 @@ function Reconfiguration({ items, onSelectItem, confirmItems }: selectedStepItem
 
   return (
     <div className={classes.responsiveStep}>
-      <Grid className={classes.title}>DESIGN YOUR PROJECT</Grid>
+      <Grid className={classes.titleRes}>DESIGN YOUR PROJECT</Grid>
       <Grid>
         <DesignStep selectedStepItem={items} onSelectItem={onSelectItem} confirmStepItem={confirmItems} />
       </Grid>
-      <Grid className={classes.titleFontFamily}>
+      <Grid className={classes.titleFontFamilyRes}>
         5. RECONFIGURATION
         <Grid className={classes.subDescription}>Rules for how changes can be made to your project.</Grid>
       </Grid>

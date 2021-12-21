@@ -227,6 +227,9 @@ export const useStyles = makeStyles((theme: Theme) =>
       textAlign: 'center',
       lineHeight: 3
     },
+    background: {
+      backgroundColor: theme.palette.background.default,
+    }
   }),
 )
 

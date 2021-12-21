@@ -12,7 +12,10 @@ export const useStyles = makeStyles((theme: Theme) =>
       backgroundRepeat: 'no-repeat',
       backgroundColor: theme.palette.background.default,
       color: theme.palette.error.light,
-      position: 'relative'
+      position: 'relative',
+      display: 'inline-block',
+      backgroundSize: 'cover',
+      height: 230
     },
     container: {
       padding: '0 160px 10px 160px',
@@ -20,12 +23,26 @@ export const useStyles = makeStyles((theme: Theme) =>
       '@media (max-width: 1205px)': {
         padding: '0px 10px 10px 10px',
       },
+      '@media (max-width: 1000px)': {
+        padding: '0px 10px 10px 10px',
+        marginTop: '-170px',
+      },
+      '@media (max-width: 700px)': {
+        padding: '0px 10px 10px 10px',
+        marginTop: '-150px',
+      },
     },
     title: {
       fontFamily: 'CerebriSansPro-Heavy',
       fontSize: 25,
       paddingTop: 50,
       color: 'white', // no change by theme
+    },
+    titleRes: {
+      fontFamily: 'CerebriSansPro-Heavy',
+      fontSize: 25,
+      paddingTop: 50,
+      color: theme.palette.error.light,
     },
     cardHeader: {
       backgroundColor: theme.palette.primary.main,
@@ -169,7 +186,14 @@ export const useStyles = makeStyles((theme: Theme) =>
     },
     titleFontFamily: {
       fontFamily: 'CerebriSansPro-ExtraBold',
-      fontSize: 25
+      fontSize: 25,
+    },
+    titleFontFamilyRes: {
+      fontFamily: 'CerebriSansPro-ExtraBold',
+      fontSize: 25,
+      padding: '40px 0',
+      lineHeight: 2,
+      color: 'white' // no change
     },
     bannerTop: {
       height: 200
@@ -194,6 +218,14 @@ export const useStyles = makeStyles((theme: Theme) =>
     subDescription: {
       fontSize: 14,
       fontFamily: 'Roboto-Bold',
+    },
+    stepPageRes: {
+      height: 200, 
+      backgroundColor: theme.palette.background.default, 
+      display: 'none',
+      '@media (max-width: 1000px)': {
+        display: 'block',
+      },
     }
   }),
 )

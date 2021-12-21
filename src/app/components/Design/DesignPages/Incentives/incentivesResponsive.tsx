@@ -29,11 +29,11 @@ function Incentives({ items, onSelectItem, confirmItems }: selectedStepItem) {
 
   return (
     <div className={classes.responsiveStep}>
-      <Grid className={classes.title}>DESIGN YOUR PROJECT</Grid>
+      <Grid className={classes.titleRes}>DESIGN YOUR PROJECT</Grid>
       <Grid>
         <DesignStep selectedStepItem={items} onSelectItem={onSelectItem} confirmStepItem={confirmItems} />
       </Grid>
-      <Grid className={classes.titleFontFamily}>
+      <Grid className={classes.titleFontFamilyRes}>
         6. INCENTIVES
         <Grid className={classes.subDescription}>Adjust incentivizes for paying your project.</Grid>
       </Grid>

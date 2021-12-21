@@ -25,11 +25,11 @@ function Funding({ items, onSelectItem, confirmItems }: selectedStepItem) {
 
   return (
     <div className={classes.responsiveStep}>
-      <Grid className={classes.title}>DESIGN YOUR PROJECT</Grid>
+      <Grid className={classes.titleRes}>DESIGN YOUR PROJECT</Grid>
       <Grid>
         <DesignStep selectedStepItem={items} onSelectItem={onSelectItem} confirmStepItem={confirmItems} />
       </Grid>
-      <Grid className={classes.titleFontFamily}>
+      <Grid className={classes.titleFontFamilyRes}>
         2. FUNDING
         <Grid className={classes.subDescription}>How your project will earn and manage funds.</Grid>
       </Grid>
