@@ -49,7 +49,7 @@ export const useStyles = makeStyles((theme: Theme) =>
       textDecoration: 'none',
       color: theme.palette.success.main,
       textTransform: 'uppercase',
-      marginTop: 10
+      marginTop: 10,
     },
     activeMenuSidebar: {
       textDecoration: 'none',
@@ -77,7 +77,8 @@ export const useStyles = makeStyles((theme: Theme) =>
     logoSectionSidebar: {
       display: 'flex',
       alignItems: 'center',
-      justifyContent: 'center'
+      justifyContent: 'left',
+      padding: '10px 20px 20px 10px'
     },
     connectBtn: {
       background: '#f7db0e', // no change by theme
@@ -219,16 +220,40 @@ export const useStyles = makeStyles((theme: Theme) =>
     },
     drawer: {
       flexShrink: 0,
-      width: 200
+      width: 400
     },
     drawerPaper: {
-      width: 200,
-      backgroundColor: theme.palette.common.black,
-      textAlign: 'center',
-      lineHeight: 3
+      width: 400,
+      backgroundColor: theme.palette.background.default,
+      textAlign: 'left',
+      lineHeight: 3,
     },
     background: {
       backgroundColor: theme.palette.background.default,
+    },
+    menuRes: {
+      borderBottom: `1px solid ${theme.palette.info.main}`,
+      display: 'flex',
+      justifyContent: 'space-between',
+      alignItems: 'center',
+      padding: '0 20px'
+    },
+    menuResTitle: {
+      color: theme.palette.error.light,
+      padding: '10px 20px',
+      borderBottom: `1px solid ${theme.palette.info.main}`,
+      display: 'flex',
+      justifyContent: 'space-between',
+      alignItems: 'center'
+    },
+    settingTheme: {
+      display: 'flex',
+      alignItems: 'center',
+    },
+    settingThemeLabel: {
+      color: theme.palette.success.dark, 
+      marginLeft: 10,
+      fontSize: 12,
     }
   }),
 )
