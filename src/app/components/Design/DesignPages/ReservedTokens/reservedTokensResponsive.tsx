@@ -76,6 +76,7 @@ function ReservedTokens({ items, onSelectItem, confirmItems }: selectedStepItem)
       <Grid className={classes.saveBtnResponsive}>
         <button className={classes.saveBtn}>SAVE</button> <span className={classes.cancelBtn}>Cancel</span>
       </Grid>
+      <Grid style={{height: 20, display: 'flex'}}><span></span></Grid>
       <Modal
         aria-labelledby="transition-modal-title"
         aria-describedby="transition-modal-description"

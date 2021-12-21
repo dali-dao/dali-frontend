@@ -49,14 +49,12 @@ export const useStyles = makeStyles((theme: Theme) =>
       textDecoration: 'none',
       color: theme.palette.success.main,
       textTransform: 'uppercase',
-      marginTop: 10,
     },
     activeMenuSidebar: {
       textDecoration: 'none',
       color: theme.palette.success.main,
       textTransform: 'uppercase',
       borderBottom: '2px solid #f7db0e',
-      marginTop: 10
     },
     menuItems: {
       display: 'flex',
@@ -220,10 +218,10 @@ export const useStyles = makeStyles((theme: Theme) =>
     },
     drawer: {
       flexShrink: 0,
-      width: 250
+      width: 320
     },
     drawerPaper: {
-      width: 250,
+      width: 320,
       backgroundColor: theme.palette.background.default,
       textAlign: 'left',
       lineHeight: 3,
