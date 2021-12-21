@@ -14,11 +14,11 @@ function Appearance({ items, onSelectItem, confirmItems }: selectedStepItem) {
 
   return (
     <div className={classes.responsiveStep}>
-      <Grid className={classes.title}>DESIGN YOUR PROJECT</Grid>
+      <Grid className={classes.titleRes}>DESIGN YOUR PROJECT</Grid>
       <Grid>
         <DesignStep selectedStepItem={items} onSelectItem={onSelectItem} confirmStepItem={confirmItems} />
       </Grid>
-      <Grid className={classes.titleFontFamily}>
+      <Grid className={classes.titleFontFamilyRes}>
         1. APPEARANCE
         <Grid className={classes.subDescription}>Project name, handle, links, and other details.</Grid>
       </Grid>

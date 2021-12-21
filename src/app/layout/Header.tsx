@@ -98,7 +98,7 @@ function Header() {
   const isMobile = useMediaQuery({ query: '(max-width: 500px)' });
 
   let generalMenu = (
-    <Grid container item xs={12} md={7} className={classes.menuItems}>
+    <Grid container item xs={12} md={8} className={classes.menuItems}>
       {/* <Grid item xs={1}></Grid> */}
       <Grid item xs={2} md={1}>
         <Link to="/" className={location_path.pathname === '/' ? classes.activeMenu : classes.menu}>
@@ -198,10 +198,10 @@ function Header() {
           {isTablet ? <ReorderIcon fontSize="large" onClick={toggleDrawer} className={classes.toggleIcon}/> : ''}  
           <img src={curThemeName === 'darkTheme' ? Logo : LogoBlack} alt="logo" />
         </Grid>
-        { isTablet ? <Grid item md={7} xs={4}></Grid> : generalMenu }
+        { isTablet ? <Grid item md={8} xs={4}></Grid> : generalMenu }
         { tabletMenu }
-        <Grid item xs={isMobile? 12 : 4} md={3} container className={classes.rightItems}>
-          <Grid item xs={6} md={4} sm={6}>
+        <Grid item xs={isMobile? 12 : 4} md={2} container className={classes.rightItems}>
+          <Grid item xs={6} md={5} sm={6}>
             <span>
               <Icon icon="bi:moon-fill" className={classes.moon_style} onClick={handleToggleTheme} />
             </span>
@@ -212,7 +212,7 @@ function Header() {
           <Grid
             item
             xs={6}
-            md={8}
+            md={7}
             sm={6}
             className={classes.connectBtn}
             onClick={connectState === false ? handleOpen : disconnect}

@@ -41,16 +41,19 @@ function Design() {
   const isTablet = useMediaQuery({ query: '(max-width: 1000px)' });
 
   return (
-    <div className={classes.root}>
-      <Grid className={classes.container}>
-        {selectedStep[0] && (isTablet ? <AppearanceResponsive items={selectedStep} onSelectItem={onSelectItem} confirmItems={confirmStep} /> : <Appearance items={selectedStep} onSelectItem={onSelectItem} confirmItems={confirmStep} />)}
-        {selectedStep[1] && (isTablet ? <FundingResponsive items={selectedStep} onSelectItem={onSelectItem} confirmItems={confirmStep} /> : <Funding items={selectedStep} onSelectItem={onSelectItem} confirmItems={confirmStep} />)}
-        {selectedStep[2] && (isTablet ? <DistributionResponsive items={selectedStep} onSelectItem={onSelectItem} confirmItems={confirmStep} /> : <Distribution items={selectedStep} onSelectItem={onSelectItem} confirmItems={confirmStep} />)}
-        {selectedStep[3] && (isTablet ? <ReservedTokensResponsive items={selectedStep} onSelectItem={onSelectItem} confirmItems={confirmStep} /> : <ReservedTokens items={selectedStep} onSelectItem={onSelectItem} confirmItems={confirmStep} />)}
-        {selectedStep[4] && (isTablet ? <ReconfigurationResponsive items={selectedStep} onSelectItem={onSelectItem} confirmItems={confirmStep} /> : <Reconfiguration items={selectedStep} onSelectItem={onSelectItem} confirmItems={confirmStep} />)}
-        {selectedStep[5] && (isTablet ? <IncentivesResponsive items={selectedStep} onSelectItem={onSelectItem} confirmItems={confirmStep} /> : <Incentives items={selectedStep} onSelectItem={onSelectItem} confirmItems={confirmStep} />)}
-      </Grid>
-    </div>
+    <>
+      <div className={classes.stepPageRes}></div>
+      <div className={classes.root}>
+        <Grid className={classes.container}>
+          {selectedStep[0] && (isTablet ? <AppearanceResponsive items={selectedStep} onSelectItem={onSelectItem} confirmItems={confirmStep} /> : <Appearance items={selectedStep} onSelectItem={onSelectItem} confirmItems={confirmStep} />)}
+          {selectedStep[1] && (isTablet ? <FundingResponsive items={selectedStep} onSelectItem={onSelectItem} confirmItems={confirmStep} /> : <Funding items={selectedStep} onSelectItem={onSelectItem} confirmItems={confirmStep} />)}
+          {selectedStep[2] && (isTablet ? <DistributionResponsive items={selectedStep} onSelectItem={onSelectItem} confirmItems={confirmStep} /> : <Distribution items={selectedStep} onSelectItem={onSelectItem} confirmItems={confirmStep} />)}
+          {selectedStep[3] && (isTablet ? <ReservedTokensResponsive items={selectedStep} onSelectItem={onSelectItem} confirmItems={confirmStep} /> : <ReservedTokens items={selectedStep} onSelectItem={onSelectItem} confirmItems={confirmStep} />)}
+          {selectedStep[4] && (isTablet ? <ReconfigurationResponsive items={selectedStep} onSelectItem={onSelectItem} confirmItems={confirmStep} /> : <Reconfiguration items={selectedStep} onSelectItem={onSelectItem} confirmItems={confirmStep} />)}
+          {selectedStep[5] && (isTablet ? <IncentivesResponsive items={selectedStep} onSelectItem={onSelectItem} confirmItems={confirmStep} /> : <Incentives items={selectedStep} onSelectItem={onSelectItem} confirmItems={confirmStep} />)}
+        </Grid>  
+      </div>
+    </>
   )
 }
 
