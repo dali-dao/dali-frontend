@@ -30,6 +30,13 @@ export const useStyles = makeStyles((theme: Theme) =>
         fontSize: 20,
         paddingBottom: 5,
       },
+      '@media (max-width: 800px)': {
+        fontSize: 15,
+        paddingBottom: 5,
+      },
+      '@media (max-width: 400px)': {
+        display: 'none'
+      },
     },
     bannerDescription: {
       fontSize: 13,
@@ -39,6 +46,13 @@ export const useStyles = makeStyles((theme: Theme) =>
         fontSize: 10,
         paddingBottom: 5,
       },
+      '@media (max-width: 800px)': {
+        fontSize: 10,
+        paddingBottom: 5,
+      },
+      '@media (max-width: 600px)': {
+        display: 'none'
+      },
     },
     bannerList: {
       display: 'flex',
@@ -47,6 +61,9 @@ export const useStyles = makeStyles((theme: Theme) =>
       color: 'white',
       '@media (max-width: 1305px)': {
         fontSize: 13,
+      },
+      '@media (max-width: 800px)': {
+        display: 'none'
       },
     },
     designForBtn: {
@@ -65,12 +82,22 @@ export const useStyles = makeStyles((theme: Theme) =>
         width: 120,
         margin: '5px 0',
       },
+      '@media (max-width: 400px)': {
+        fontSize: 10,
+        width: 80,
+        margin: '5px 0',
+        padding: '10px 20px'
+      },
     },
     smartContract: {
       paddingTop: 10,
       color: '#808193',
       '@media (max-width: 1305px)': {
         fontSize: 12,
+        paddingTop: 5,
+      },
+      '@media (max-width: 800px)': {
+        fontSize: 10,
         paddingTop: 5,
       },
     },

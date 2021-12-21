@@ -35,6 +35,14 @@ export const useStyles = makeStyles((theme: Theme) =>
         bottom: '-10px',
         transform: 'rotate(45deg)',
       },
+      '@media (max-width: 1000px)': {
+        width: 100,
+        height: 100
+      },
+      '@media (max-width: 700px)': {
+        width: 70,
+        height: 70
+      },
     },
     step: {
       border: '1px solid #2d353f',
@@ -53,6 +61,14 @@ export const useStyles = makeStyles((theme: Theme) =>
       padding: 10,
       cursor: 'pointer',
       wordBreak: 'break-all',
+      '@media (max-width: 1000px)': {
+        width: 100,
+        height: 100
+      },
+      '@media (max-width: 700px)': {
+        width: 70,
+        height: 70
+      },
     },
     stepComplete: {
       border: '1px solid #2d353f',
@@ -75,10 +91,16 @@ export const useStyles = makeStyles((theme: Theme) =>
       fontFamily: 'CerebriSansPro-Bold',
       fontWeight: 'bold',
       padding: '5px 0 5px 0',
+      '@media (max-width: 1000px)': {
+        display: 'none'
+      },
     },
     itemDesc: {
       fontSize: 11,
       fontFamily: 'Roboto-Medium',
+      '@media (max-width: 1000px)': {
+        display: 'none'
+      },
     },
     number: {
       color: 'white',
@@ -94,6 +116,12 @@ export const useStyles = makeStyles((theme: Theme) =>
       top: '-15px',
       right: '42%',
       fontSize: 15,
+      '@media (max-width: 1000px)': {
+        right: '35%'
+      },
+      '@media (max-width: 700px)': {
+        right: '28%'
+      },
     },
     selectedNumber: {
       color: 'black',
@@ -110,6 +138,12 @@ export const useStyles = makeStyles((theme: Theme) =>
       top: '-15px',
       right: '42%',
       fontSize: 15,
+      '@media (max-width: 1000px)': {
+        right: '35%'
+      },
+      '@media (max-width: 700px)': {
+        right: '28%'
+      },
     },
   }),
 )

@@ -48,7 +48,7 @@ export default function CustomSlider() {
 
   return (
     <Grid container>
-      <Grid item xs={12} md={11}>
+      <Grid item xs={11} md={11}>
         <ThemeProvider theme={muiTheme}>
           <Slider
             style={{ width: '97%' }}
@@ -58,7 +58,7 @@ export default function CustomSlider() {
           />
         </ThemeProvider>
       </Grid>
-      <Grid item xs={12} md={1}>
+      <Grid item xs={1} md={1}>
         <TextField
           id="outlined-basic"
           variant="outlined"
