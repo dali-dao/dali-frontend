@@ -1,5 +1,8 @@
 //material-ui
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles'
+
+import Banner_1 from '../../assets/MainPage/banner_img_1.png'
+import Banner_2 from '../../assets/MainPage/banner_img_2.png'
 //style
 export const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -30,13 +33,6 @@ export const useStyles = makeStyles((theme: Theme) =>
         fontSize: 20,
         paddingBottom: 5,
       },
-      '@media (max-width: 800px)': {
-        fontSize: 15,
-        paddingBottom: 5,
-      },
-      '@media (max-width: 400px)': {
-        display: 'none'
-      },
     },
     bannerDescription: {
       fontSize: 13,
@@ -46,13 +42,6 @@ export const useStyles = makeStyles((theme: Theme) =>
         fontSize: 10,
         paddingBottom: 5,
       },
-      '@media (max-width: 800px)': {
-        fontSize: 10,
-        paddingBottom: 5,
-      },
-      '@media (max-width: 600px)': {
-        display: 'none'
-      },
     },
     bannerList: {
       display: 'flex',
@@ -61,9 +50,6 @@ export const useStyles = makeStyles((theme: Theme) =>
       color: 'white',
       '@media (max-width: 1305px)': {
         fontSize: 13,
-      },
-      '@media (max-width: 800px)': {
-        display: 'none'
       },
     },
     designForBtn: {
@@ -82,22 +68,12 @@ export const useStyles = makeStyles((theme: Theme) =>
         width: 120,
         margin: '5px 0',
       },
-      '@media (max-width: 400px)': {
-        fontSize: 10,
-        width: 80,
-        margin: '5px 0',
-        padding: '10px 20px'
-      },
     },
     smartContract: {
       paddingTop: 10,
       color: '#808193',
       '@media (max-width: 1305px)': {
         fontSize: 12,
-        paddingTop: 5,
-      },
-      '@media (max-width: 800px)': {
-        fontSize: 10,
         paddingTop: 5,
       },
     },
@@ -198,6 +174,30 @@ export const useStyles = makeStyles((theme: Theme) =>
     },
     linkDetail: {
       textDecoration: 'none',
+    },
+    // Main Page Style
+    header_content: {},
+    banner_content: {
+      background: '#f5f6fa',
+    },
+    about_dali_content: {},
+    what_do_content: {},
+    slide_content: {},
+    team_content: {},
+    value_in_vision: {},
+    load_map_content: {},
+    white_paper_content: {},
+    join_us_content: {},
+    footer_content: {},
+    banner_background_1: {
+      backgroundImage: `url(${Banner_1})`,
+      height: 500,
+      backgroundRepeat: 'round',
+    },
+    banner_background_2: {
+      backgroundImage: `url(${Banner_2})`,
+      height: 500,
+      backgroundRepeat: 'round',
     },
   }),
 )
