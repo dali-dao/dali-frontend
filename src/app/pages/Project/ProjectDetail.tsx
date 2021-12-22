@@ -240,7 +240,7 @@ function ProjectDetail() {
           }}
         >
           <Fade in={open}>
-            <div style={{ width: '50%' }}>
+            <div style={{ width: '60%' }}>
               <Headsup />
             </div>
           </Fade>
@@ -258,7 +258,7 @@ function ProjectDetail() {
           }}
         >
           <Fade in={toolsOpen}>
-            <div style={{ width: '50%' }}>
+            <div style={{ width: '60%' }}>
               <Tools />
             </div>
           </Fade>
@@ -277,7 +277,7 @@ function ProjectDetail() {
           }}
         >
           <Fade in={holdersOpen}>
-            <div style={{ width: '50%' }}>
+            <div style={{ width: '60%' }}>
               <Holders />
             </div>
           </Fade>
@@ -296,7 +296,7 @@ function ProjectDetail() {
           }}
         >
           <Fade in={manageDTFTokenOpen}>
-            <div style={{ width: '50%' }}>
+            <div style={{ width: '60%' }}>
               <ManageDTFToken />
             </div>
           </Fade>
