@@ -118,6 +118,7 @@ export const useStyles = makeStyles((theme: Theme) =>
     about_title: {
       fontSize: 45,
       color: '#fff',
+      fontWeight: 'bold',
     },
     about_desc_1: {
       fontSize: 18,
@@ -150,6 +151,7 @@ export const useStyles = makeStyles((theme: Theme) =>
     },
     what_we_do_title: {
       fontSize: 40,
+      fontWeight: 'bold',
     },
     what_we_do_title_1: {
       fontSize: 18,
@@ -205,6 +207,7 @@ export const useStyles = makeStyles((theme: Theme) =>
     vision_title: {
       fontSize: 45,
       color: '#fff',
+      fontWeight: 'bold',
     },
     vision_desc_1: {
       fontSize: 18,
@@ -223,13 +226,40 @@ export const useStyles = makeStyles((theme: Theme) =>
     },
     road_map_title: {
       fontSize: 85,
+      fontWeight: 'bold',
+      '@media(max-width: 1360px)': {
+        fontSize: 70,
+      },
+      '@media(max-width: 1000px)': {
+        fontSize: 60,
+      },
+      '@media(max-width: 950px)': {
+        fontSize: 50,
+      },
+    },
+    white_paper_title: {
+      fontSize: 85,
+      fontWeight: 'bold',
+      '@media(max-width: 1360px)': {
+        fontSize: 70,
+      },
+      '@media(max-width: 1000px)': {
+        fontSize: 60,
+      },
+      '@media(max-width: 950px)': {
+        fontSize: 50,
+      },
     },
     comming_soon: {
       fontSize: 35,
+      '@media(max-width: 1360px)': {
+        fontSize: 25,
+      },
     },
     join_us_title: {
       fontSize: 45,
       color: '#fff',
+      fontWeight: 'bold',
     },
     join_us_desc_1: {
       fontSize: 18,
@@ -252,10 +282,11 @@ export const useStyles = makeStyles((theme: Theme) =>
     textArea_content: {
       background: '#141821',
       height: 175,
-      border: `1px solid ${theme.palette.info.main}`,
       color: theme.palette.error.light,
       resize: 'none',
-      width: '99.5%',
+      width: '98%',
+      padding: '1%',
+      borderRadius: 5,
     },
     submit_message_button: {
       backgroundImage: 'linear-gradient(to right, rgb(238 221 14) 0%, rgb(24 216 211) 100%, rgb(247, 157, 0) 100%)',
@@ -269,8 +300,15 @@ export const useStyles = makeStyles((theme: Theme) =>
       textAlign: 'left',
     },
     header_link: {
+      width: '12.5%',
       color: '#000',
       fontSize: 14,
+      '@media(max-width: 1130px)': {
+        fontSize: 12,
+      },
+      '@media(max-width: 590px)': {
+        fontSize: 10,
+      },
     },
     header_container: {
       marginTop: '30px !important',
@@ -282,6 +320,9 @@ export const useStyles = makeStyles((theme: Theme) =>
       borderRadius: 50,
       fontWeight: 'bold',
       marginTop: 15,
+      '@media(max-width: 1130px)': {
+        padding: '10px 30px',
+      },
     },
     followIcons: {
       display: 'flex',
@@ -291,6 +332,7 @@ export const useStyles = makeStyles((theme: Theme) =>
     footer_info: {
       color: '#6d7186',
       textAlign: 'left',
+      padding: 10,
     },
     icon_button_content: {
       color: '#13204c',
@@ -298,6 +340,9 @@ export const useStyles = makeStyles((theme: Theme) =>
     link_tab: {
       textDecoration: 'none',
       color: '#13204c',
+    },
+    design_project_button_content: {
+      marginTop: 30,
     },
   }),
 )
@@ -312,32 +357,18 @@ function MainPage() {
           <img src={LogoBlack} alt="logo" />
         </Grid>
         <Grid container item xs={12} md={8} className={classes.header_container}>
-          <Grid item xs={12} md={1} className={classes.header_link}>
+          <Grid className={classes.header_link}>
             <Link to="/home" className={classes.link_tab}>
               HOME
             </Link>
           </Grid>
-          <Grid item xs={12} md={1} className={classes.header_link}>
-            ABOUT
-          </Grid>
-          <Grid item xs={12} md={2} className={classes.header_link}>
-            WHAT WE DO
-          </Grid>
-          <Grid item xs={12} md={1} className={classes.header_link}>
-            GALLERY
-          </Grid>
-          <Grid item xs={12} md={2} className={classes.header_link}>
-            OUR TEAM
-          </Grid>
-          <Grid item xs={12} md={1} className={classes.header_link}>
-            VISION
-          </Grid>
-          <Grid item xs={12} md={2} className={classes.header_link}>
-            ROAD MAP
-          </Grid>
-          <Grid item xs={12} md={2} className={classes.header_link}>
-            CONTACT US
-          </Grid>
+          <Grid className={classes.header_link}>ABOUT</Grid>
+          <Grid className={classes.header_link}>WHAT WE DO</Grid>
+          <Grid className={classes.header_link}>GALLERY</Grid>
+          <Grid className={classes.header_link}>OUR TEAM</Grid>
+          <Grid className={classes.header_link}>VISION</Grid>
+          <Grid className={classes.header_link}>ROAD MAP</Grid>
+          <Grid className={classes.header_link}>CONTACT US</Grid>
         </Grid>
         <Grid item xs={12} md={2}>
           <Button className={classes.join_us_button}>JOIN US NOW</Button>
@@ -357,10 +388,10 @@ function MainPage() {
           <Grid item xs={12} md={5} className={classes.padding10}>
             <Grid item className={classes.banner_background_4}></Grid>
           </Grid>
-          <Grid item xs={12} md={5} className={classes.padding10}>
+          <Grid item xs={12} md={6} className={classes.padding10}>
             <Grid item className={classes.banner_background_5}></Grid>
           </Grid>
-          <Grid item xs={12} md={7} className={classes.padding10}>
+          <Grid item xs={12} md={6} className={classes.padding10}>
             <Grid item className={classes.banner_background_6}></Grid>
           </Grid>
         </Grid>
@@ -387,7 +418,7 @@ function MainPage() {
           LECTUS. ALIQUAM UT STUR ERAT QE LECTUS. ALIQUAM UT STUR ERAT QUIS, TRISTIQUE LECTUS. ALIQUAM UT SUSCIPIT ODIO.
           SUSP TRISTIQUE LECTUS. ALIQUAM UT SUSCIPIT ODIO. SUSP TRISTIQUE LECTUS. ALIQUAM UT SUSCIPIT ODIO.
         </Grid>
-        <Grid item xs={12} md={6}>
+        <Grid item xs={12} md={6} className={classes.design_project_button_content}>
           <Link to="/design" className={classes.design_project_button}>
             DESIGN YOUR PROJECT
           </Link>
@@ -499,7 +530,7 @@ function MainPage() {
         </Grid>
       </Grid>
       <Grid container className={classes.white_paper_content}>
-        <Grid item xs={12} className={classes.vision_title}>
+        <Grid item xs={12} className={classes.white_paper_title}>
           WHITE PAPER<p className={classes.comming_soon}>COMMING SOON</p>
         </Grid>
       </Grid>
