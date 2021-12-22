@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Header from './Header'
+import MainPage from '../pages/Landing/MainPage'
 import Landing from '../pages/Landing/Landing'
 import Projects from '../pages/Project/Projects'
 import ProjectDetail from '../pages/Project/ProjectDetail'
@@ -13,7 +14,8 @@ function Layout() {
       <Router>
         <Header />
         <Routes>
-          <Route path="/" element={<Landing />} />
+          <Route path="/" element={<MainPage />} />
+          <Route path="/home" element={<Landing />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/detail" element={<ProjectDetail />} />
           <Route path="/design" element={<Design />} />
