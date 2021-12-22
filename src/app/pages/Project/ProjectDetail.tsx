@@ -297,7 +297,7 @@ function ProjectDetail() {
         >
           <Fade in={manageDTFTokenOpen}>
             <div style={{ width: '60%' }}>
-              <ManageDTFToken />
+              <ManageDTFToken handleManageDTFTokenClose={handleManageDTFTokenClose}/>
             </div>
           </Fade>
         </Modal>

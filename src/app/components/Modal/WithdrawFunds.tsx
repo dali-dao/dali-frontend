@@ -140,7 +140,11 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
 }))
 
-export default function WithdrawFunds() {
+interface withdrawFunds {
+  handleClose: () => void
+}
+
+export default function WithdrawFunds({handleClose} : withdrawFunds) {
   const classes = useStyles()
 
   return (
@@ -205,7 +209,7 @@ export default function WithdrawFunds() {
         </Grid>
       </Grid>
       <Grid container className={classes.button_content}>
-        <Button className={classes.left_button}>CANCEL</Button>
+        <Button className={classes.left_button} onClick={handleClose}>CANCEL</Button>
         <Button className={classes.right_button}>WITHDRAW</Button>
       </Grid>
     </div>

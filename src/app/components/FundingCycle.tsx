@@ -321,7 +321,7 @@ export default function LabTabs() {
       >
         <Fade in={open}>
           <div style={{ width: '60%' }}>
-            <WithdrawFunds />
+            <WithdrawFunds handleClose={handleClose}/>
           </div>
         </Fade>
       </Modal>

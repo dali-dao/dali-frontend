@@ -92,7 +92,11 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
 }))
 
-export default function ManageDTFToken() {
+interface manageDTFToken {
+  handleManageDTFTokenClose: () => void
+}
+
+export default function ManageDTFToken({handleManageDTFTokenClose} : manageDTFToken) {
   const classes = useStyles()
   const [open, setOpen] = React.useState(false)
 
@@ -128,7 +132,7 @@ export default function ManageDTFToken() {
         </Button>
       </Grid>
       <Grid container className={classes.button_content}>
-        <Button className={classes.left_button}>CANCEL</Button>
+        <Button className={classes.left_button} onClick={handleManageDTFTokenClose}>CANCEL</Button>
       </Grid>
       <Modal
         aria-labelledby="transition-modal-title"
@@ -163,7 +167,7 @@ export default function ManageDTFToken() {
       >
         <Fade in={claimDTFOpen}>
           <div style={{ width: '60%' }}>
-            <ClaimDTF />
+            <ClaimDTF handleClaimDTFClose={handleClaimDTFClose}/>
           </div>
         </Fade>
       </Modal>

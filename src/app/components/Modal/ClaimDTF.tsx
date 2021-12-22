@@ -103,7 +103,11 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
 }))
 
-export default function ClaimDTF() {
+interface claimDTF {
+  handleClaimDTFClose: () => void
+}
+
+export default function ClaimDTF({handleClaimDTFClose} : claimDTF) {
   const classes = useStyles()
 
   return (
@@ -144,7 +148,7 @@ export default function ClaimDTF() {
         </Grid>
       </Grid>
       <Grid container className={classes.button_content}>
-        <Button className={classes.left_button}>CANCEL</Button>
+        <Button className={classes.left_button} onClick={handleClaimDTFClose}>CANCEL</Button>
         <Button className={classes.right_button}>CLAIM</Button>
       </Grid>
     </div>

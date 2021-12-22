@@ -91,7 +91,7 @@ function ReservedTokens({ items, onSelectItem, confirmItems }: selectedStepItem)
       >
         <Fade in={open}>
           <div style={{ width: '90%' }}>
-            <AddTokenReceiver />
+            <AddTokenReceiver handleClose={handleClose}/>
           </div>
         </Fade>
       </Modal>
