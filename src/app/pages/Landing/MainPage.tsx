@@ -1,4 +1,3 @@
-import { useStyles } from './styles'
 import { Grid, Button, TextField } from '@material-ui/core'
 import WhatWeDo_1 from '../../assets/MainPage/what_we_do_1.png'
 import WhatWeDo_2 from '../../assets/MainPage/what_we_do_2.png'
@@ -15,11 +14,299 @@ import InstagramIcon from '@material-ui/icons/Instagram'
 import { Icon } from '@iconify/react'
 import { Link } from 'react-router-dom'
 
+import Banner_1 from '../../assets/MainPage/banner_img_1.png'
+import Banner_2 from '../../assets/MainPage/banner_img_2.png'
+import Banner_3 from '../../assets/MainPage/banner_img_3.png'
+import Banner_4 from '../../assets/MainPage/banner_img_4.png'
+import Banner_5 from '../../assets/MainPage/banner_img_5.png'
+import Banner_6 from '../../assets/MainPage/banner_img_6.png'
+import WhatDoBack from '../../assets/MainPage/what_we_do_background.png'
+import Value_Background from '../../assets/MainPage/vision_background.png'
+import WhitePaperBack from '../../assets/MainPage/white_paper_back.png'
+import JoinUsBack from '../../assets/MainPage/join_us_back.png'
+import { Theme } from '@material-ui/core/styles'
+import { createStyles } from '@material-ui/core/styles'
+import { makeStyles } from '@material-ui/core/styles'
+
+export const useStyles = makeStyles((theme: Theme) =>
+  createStyles({
+    root: {
+      color: theme.palette.error.light,
+      backgroundColor: theme.palette.background.default,
+    },
+    // Main Page Style
+    header_content: {
+      background: '#f5f6fa',
+    },
+    banner_content: {
+      background: '#f5f6fa',
+    },
+    about_dali_content: {
+      padding: '5%',
+      background: '#0b0b15',
+    },
+    what_do_content: {
+      backgroundImage: `url(${WhatDoBack})`,
+      height: 'auto',
+      backgroundRepeat: 'round',
+    },
+    slide_content: {
+      height: 'auto',
+      display: 'block',
+    },
+    team_content: {
+      background: '#0b0b15',
+      textAlign: 'left',
+      padding: '5%',
+    },
+    value_in_vision: {
+      backgroundImage: `url(${Value_Background})`,
+      padding: 30,
+      width: '100%',
+      backgroundSize: 'cover',
+      height: 'auto',
+    },
+    road_map_content: {
+      padding: '5%',
+      background: '#0b0b15',
+    },
+    white_paper_content: {
+      backgroundImage: `url(${WhitePaperBack})`,
+      backgroundSize: 'cover',
+      padding: '5%',
+    },
+    join_us_content: {
+      padding: '5%',
+      backgroundImage: `url(${JoinUsBack})`,
+      height: 'auto',
+    },
+    footer_content: {
+      padding: '1% 5%',
+      background: '#f5f6fa',
+      height: 'auto',
+    },
+    banner_background_1: {
+      backgroundImage: `url(${Banner_1})`,
+      height: 500,
+      backgroundRepeat: 'round',
+    },
+    banner_background_2: {
+      backgroundImage: `url(${Banner_2})`,
+      height: 500,
+      backgroundRepeat: 'round',
+    },
+    banner_background_3: {
+      backgroundImage: `url(${Banner_3})`,
+      height: 200,
+      backgroundRepeat: 'round',
+    },
+    banner_background_4: {
+      backgroundImage: `url(${Banner_4})`,
+      height: 200,
+      backgroundRepeat: 'round',
+    },
+    banner_background_5: {
+      backgroundImage: `url(${Banner_5})`,
+      height: 200,
+      backgroundRepeat: 'round',
+    },
+    banner_background_6: {
+      backgroundImage: `url(${Banner_6})`,
+      height: 200,
+      backgroundRepeat: 'round',
+    },
+    about_title: {
+      fontSize: 45,
+      color: '#fff',
+    },
+    about_desc_1: {
+      fontSize: 18,
+      color: '#fff',
+      marginBottom: 20,
+    },
+    about_desc_2: {
+      fontSize: 17,
+      color: '#7e7e80',
+    },
+    about_desc_3: {
+      fontSize: 17,
+      marginTop: 20,
+      marginBottom: 20,
+      color: '#7e7e80',
+    },
+    design_project_button: {
+      backgroundImage: 'linear-gradient(to right, rgb(238 221 14) 0%, rgb(24 216 211) 100%, rgb(247, 157, 0) 100%)',
+      color: '#000',
+      padding: '15px 50px',
+      borderRadius: '50px',
+      textDecoration: 'none',
+      fontWeight: 'bold',
+    },
+    what_we_do_padding_content: {
+      padding: '5% 130px',
+      '@media(max-width: 960px)': {
+        padding: '5% 10px',
+      },
+    },
+    what_we_do_title: {
+      fontSize: 40,
+    },
+    what_we_do_title_1: {
+      fontSize: 18,
+    },
+    what_we_do_image: {
+      padding: 10,
+    },
+    what_we_do_card_image_content_1: {
+      width: '100%',
+    },
+    what_we_do_card_image_content_2: {
+      width: '100%',
+    },
+    what_we_do_card_image_content_3: {
+      width: '100%',
+    },
+    what_do_image_desc: {
+      fontSize: 18,
+    },
+    what_we_do_desc: {
+      padding: 10,
+      fontSize: 16,
+      color: '#7e7e80',
+    },
+    learn_more_button: {
+      backgroundImage: 'linear-gradient(to right, rgb(238 221 14) 0%, rgb(24 216 211) 100%, rgb(247, 157, 0) 100%)',
+      color: '#000',
+      padding: '10px 50px',
+      borderRadius: 50,
+      marginTop: 20,
+      fontWeight: 'bold',
+    },
+    the_team: {
+      fontWeight: 'bold',
+      fontSize: 35,
+      marginBottom: 20,
+    },
+    team_left_content: {
+      maxWidth: 1600,
+    },
+    team_name_description: {
+      fontSize: 15,
+      padding: 10,
+    },
+    team_image: {
+      width: '100%',
+      height: 225,
+      backgroundRepeat: 'round',
+    },
+    padding10: {
+      padding: 10,
+    },
+    vision_title: {
+      fontSize: 45,
+      color: '#fff',
+    },
+    vision_desc_1: {
+      fontSize: 18,
+      color: '#fff',
+      marginBottom: 20,
+    },
+    vision_desc_2: {
+      fontSize: 17,
+      color: '#7e7e80',
+    },
+    vision_desc_3: {
+      fontSize: 17,
+      marginTop: 20,
+      marginBottom: 20,
+      color: '#7e7e80',
+    },
+    road_map_title: {
+      fontSize: 85,
+    },
+    comming_soon: {
+      fontSize: 35,
+    },
+    join_us_title: {
+      fontSize: 45,
+      color: '#fff',
+    },
+    join_us_desc_1: {
+      fontSize: 18,
+      color: '#fff',
+      marginBottom: 20,
+    },
+    input_lb: {
+      width: '100%',
+      marginTop: 10,
+      background: '#141821',
+    },
+    input_content: {
+      textAlign: 'left',
+      padding: 10,
+    },
+    text_message_title: {
+      color: theme.palette.error.light,
+      marginBottom: 10,
+    },
+    textArea_content: {
+      background: '#141821',
+      height: 175,
+      border: `1px solid ${theme.palette.info.main}`,
+      color: theme.palette.error.light,
+      resize: 'none',
+      width: '99.5%',
+    },
+    submit_message_button: {
+      backgroundImage: 'linear-gradient(to right, rgb(238 221 14) 0%, rgb(24 216 211) 100%, rgb(247, 157, 0) 100%)',
+      color: '#000',
+      padding: '10px 50px',
+      borderRadius: 50,
+      fontWeight: 'bold',
+    },
+    submit_button_content: {
+      padding: 10,
+      textAlign: 'left',
+    },
+    header_link: {
+      color: '#000',
+      fontSize: 14,
+    },
+    header_container: {
+      marginTop: '30px !important',
+    },
+    join_us_button: {
+      backgroundImage: 'linear-gradient(to right, rgb(238 221 14) 0%, rgb(24 216 211) 100%, rgb(247, 157, 0) 100%)',
+      color: '#000',
+      padding: '10px 50px',
+      borderRadius: 50,
+      fontWeight: 'bold',
+      marginTop: 15,
+    },
+    followIcons: {
+      display: 'flex',
+      justifyContent: 'flex-end',
+      alignItems: 'center',
+    },
+    footer_info: {
+      color: '#6d7186',
+      textAlign: 'left',
+    },
+    icon_button_content: {
+      color: '#13204c',
+    },
+    link_tab: {
+      textDecoration: 'none',
+      color: '#13204c',
+    },
+  }),
+)
+
 function MainPage() {
   const classes = useStyles()
 
   return (
-    <div className={classes.main_page_content}>
+    <div className={classes.root}>
       <Grid container className={classes.header_content}>
         <Grid item xs={12} md={2}>
           <img src={LogoBlack} alt="logo" />
