@@ -14,6 +14,8 @@ import IncentivesResponsive from '../../components/Design/DesignPages/Incentives
 import Grid from '@material-ui/core/Grid'
 import { useState } from 'react'
 import { useMediaQuery } from 'react-responsive'
+import Header from '../../layout/Header'
+import Footer from '../../layout/Footer'
 
 function Design() {
   const classes = useStyles()
@@ -38,21 +40,53 @@ function Design() {
     setConfirmStep(setConfirmArray(index))
   }
 
-  const isTablet = useMediaQuery({ query: '(max-width: 1000px)' });
+  const isTablet = useMediaQuery({ query: '(max-width: 1000px)' })
 
   return (
     <>
+      <Header />
       <div className={classes.stepPageRes}></div>
       <div className={classes.root}>
         <Grid className={classes.container}>
-          {selectedStep[0] && (isTablet ? <AppearanceResponsive items={selectedStep} onSelectItem={onSelectItem} confirmItems={confirmStep} /> : <Appearance items={selectedStep} onSelectItem={onSelectItem} confirmItems={confirmStep} />)}
-          {selectedStep[1] && (isTablet ? <FundingResponsive items={selectedStep} onSelectItem={onSelectItem} confirmItems={confirmStep} /> : <Funding items={selectedStep} onSelectItem={onSelectItem} confirmItems={confirmStep} />)}
-          {selectedStep[2] && (isTablet ? <DistributionResponsive items={selectedStep} onSelectItem={onSelectItem} confirmItems={confirmStep} /> : <Distribution items={selectedStep} onSelectItem={onSelectItem} confirmItems={confirmStep} />)}
-          {selectedStep[3] && (isTablet ? <ReservedTokensResponsive items={selectedStep} onSelectItem={onSelectItem} confirmItems={confirmStep} /> : <ReservedTokens items={selectedStep} onSelectItem={onSelectItem} confirmItems={confirmStep} />)}
-          {selectedStep[4] && (isTablet ? <ReconfigurationResponsive items={selectedStep} onSelectItem={onSelectItem} confirmItems={confirmStep} /> : <Reconfiguration items={selectedStep} onSelectItem={onSelectItem} confirmItems={confirmStep} />)}
-          {selectedStep[5] && (isTablet ? <IncentivesResponsive items={selectedStep} onSelectItem={onSelectItem} confirmItems={confirmStep} /> : <Incentives items={selectedStep} onSelectItem={onSelectItem} confirmItems={confirmStep} />)}
-        </Grid>  
+          {selectedStep[0] &&
+            (isTablet ? (
+              <AppearanceResponsive items={selectedStep} onSelectItem={onSelectItem} confirmItems={confirmStep} />
+            ) : (
+              <Appearance items={selectedStep} onSelectItem={onSelectItem} confirmItems={confirmStep} />
+            ))}
+          {selectedStep[1] &&
+            (isTablet ? (
+              <FundingResponsive items={selectedStep} onSelectItem={onSelectItem} confirmItems={confirmStep} />
+            ) : (
+              <Funding items={selectedStep} onSelectItem={onSelectItem} confirmItems={confirmStep} />
+            ))}
+          {selectedStep[2] &&
+            (isTablet ? (
+              <DistributionResponsive items={selectedStep} onSelectItem={onSelectItem} confirmItems={confirmStep} />
+            ) : (
+              <Distribution items={selectedStep} onSelectItem={onSelectItem} confirmItems={confirmStep} />
+            ))}
+          {selectedStep[3] &&
+            (isTablet ? (
+              <ReservedTokensResponsive items={selectedStep} onSelectItem={onSelectItem} confirmItems={confirmStep} />
+            ) : (
+              <ReservedTokens items={selectedStep} onSelectItem={onSelectItem} confirmItems={confirmStep} />
+            ))}
+          {selectedStep[4] &&
+            (isTablet ? (
+              <ReconfigurationResponsive items={selectedStep} onSelectItem={onSelectItem} confirmItems={confirmStep} />
+            ) : (
+              <Reconfiguration items={selectedStep} onSelectItem={onSelectItem} confirmItems={confirmStep} />
+            ))}
+          {selectedStep[5] &&
+            (isTablet ? (
+              <IncentivesResponsive items={selectedStep} onSelectItem={onSelectItem} confirmItems={confirmStep} />
+            ) : (
+              <Incentives items={selectedStep} onSelectItem={onSelectItem} confirmItems={confirmStep} />
+            ))}
+        </Grid>
       </div>
+      <Footer />
     </>
   )
 }

@@ -6,10 +6,12 @@ import { FormControl, Select, Grid } from '@material-ui/core'
 import Pagination from '@material-ui/lab/Pagination'
 import ProjectItem from '../../components/Projects/projectItem'
 import { Icon } from '@iconify/react'
+import Header from '../../layout/Header'
+import Footer from '../../layout/Footer'
 
 function Projects() {
   const classes = useStyles()
-  const projectItem = new Array(1).fill({
+  const projectItem = new Array(24).fill({
     image: '',
     name: 'ConstitutionDAO',
     id: '@constitutiondao',
@@ -31,6 +33,7 @@ function Projects() {
   }
   return (
     <div>
+      <Header />
       <Grid container className={classes.banner_content}>
         <img alt="banner" src={Banner} className={classes.image_banner}></img>
         <Grid container className={classes.banner_text_content}>
@@ -119,6 +122,7 @@ function Projects() {
           </Grid>
         </Grid>
       </Grid>
+      <Footer />
     </div>
   )
 }

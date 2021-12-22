@@ -1,10 +1,8 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import Header from './Header'
 import MainPage from '../pages/Landing/MainPage'
 import Landing from '../pages/Landing/Landing'
 import Projects from '../pages/Project/Projects'
 import ProjectDetail from '../pages/Project/ProjectDetail'
-import Footer from './Footer'
 import Design from '../pages/Design/Design'
 import Modals from '../pages/Modals'
 import { useStyles } from './Style'
@@ -15,7 +13,6 @@ function Layout() {
   return (
     <div className={classes.background}>
       <Router>
-        <Header />
         <Routes>
           <Route path="/" element={<MainPage />} />
           <Route path="/home" element={<Landing />} />
@@ -24,7 +21,6 @@ function Layout() {
           <Route path="/design" element={<Design />} />
           <Route path="/modals" element={<Modals />} />
         </Routes>
-        <Footer />
       </Router>
     </div>
   )
