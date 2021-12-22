@@ -13,19 +13,22 @@ import TwitterIcon from '@material-ui/icons/Twitter'
 import GitHubIcon from '@material-ui/icons/GitHub'
 import InstagramIcon from '@material-ui/icons/Instagram'
 import { Icon } from '@iconify/react'
+import { Link } from 'react-router-dom'
 
 function MainPage() {
   const classes = useStyles()
 
   return (
-    <div className={classes.root}>
+    <div className={classes.main_page_content}>
       <Grid container className={classes.header_content}>
         <Grid item xs={12} md={2}>
           <img src={LogoBlack} alt="logo" />
         </Grid>
         <Grid container item xs={12} md={8} className={classes.header_container}>
           <Grid item xs={12} md={1} className={classes.header_link}>
-            HOME
+            <Link to="/home" className={classes.link_tab}>
+              HOME
+            </Link>
           </Grid>
           <Grid item xs={12} md={1} className={classes.header_link}>
             ABOUT
@@ -98,7 +101,9 @@ function MainPage() {
           SUSP TRISTIQUE LECTUS. ALIQUAM UT SUSCIPIT ODIO. SUSP TRISTIQUE LECTUS. ALIQUAM UT SUSCIPIT ODIO.
         </Grid>
         <Grid item xs={12} md={6}>
-          <Button className={classes.design_project_button}>DESIGN YOUR PROJECT</Button>
+          <Link to="/design" className={classes.design_project_button}>
+            DESIGN YOUR PROJECT
+          </Link>
         </Grid>
       </Grid>
       <Grid container className={classes.what_do_content}>
@@ -147,7 +152,7 @@ function MainPage() {
             <img src={Team_1} alt="team_1" className={classes.team_image} />
           </Grid>
           <Grid item xs={12} md={8} sm={8} className={classes.padding10}>
-            <img src={Team_2} alt="team_1" className={classes.team_image} />
+            <img src={Team_2} alt="team_2" className={classes.team_image} />
           </Grid>
         </Grid>
         <Grid container item xs={12} md={5} className={classes.team_name_description}>
@@ -159,10 +164,10 @@ function MainPage() {
         </Grid>
         <Grid container item xs={12} md={7} className={classes.team_left_content}>
           <Grid item xs={12} md={8} sm={8} className={classes.padding10}>
-            <img src={Team_3} alt="team_1" className={classes.team_image} />
+            <img src={Team_3} alt="team_3" className={classes.team_image} />
           </Grid>
           <Grid item xs={12} md={4} sm={4} className={classes.padding10}>
-            <img src={Team_4} alt="team_1" className={classes.team_image} />
+            <img src={Team_4} alt="team_4" className={classes.team_image} />
           </Grid>
         </Grid>
         <Grid item xs={12} md={5} className={classes.team_name_description}>

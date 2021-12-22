@@ -212,6 +212,13 @@ export const useStyles = makeStyles((theme: Theme) =>
       textDecoration: 'none',
     },
     // Main Page Style
+    main_page_content: {
+      maxWidth: 1600,
+      margin: 'auto',
+      color: theme.palette.error.light,
+      backgroundColor: theme.palette.background.default,
+      borderColor: theme.palette.info.main,
+    },
     header_content: {
       background: '#f5f6fa',
     },
@@ -258,7 +265,7 @@ export const useStyles = makeStyles((theme: Theme) =>
       height: 'auto',
     },
     footer_content: {
-      padding: '2% 5%',
+      padding: '1% 5%',
       background: '#f5f6fa',
       height: 'auto',
     },
@@ -314,8 +321,9 @@ export const useStyles = makeStyles((theme: Theme) =>
     design_project_button: {
       backgroundImage: 'linear-gradient(to right, rgb(238 221 14) 0%, rgb(24 216 211) 100%, rgb(247, 157, 0) 100%)',
       color: '#000',
-      padding: '10px 50px',
+      padding: '15px 50px',
       borderRadius: 50,
+      textDecoration: 'none',
       fontWeight: 'bold',
     },
     what_we_do_padding_content: {
@@ -363,7 +371,9 @@ export const useStyles = makeStyles((theme: Theme) =>
       fontSize: 35,
       marginBottom: 20,
     },
-    team_left_content: {},
+    team_left_content: {
+      maxWidth: 1600,
+    },
     team_name_description: {
       fontSize: 15,
       padding: 10,
@@ -467,6 +477,10 @@ export const useStyles = makeStyles((theme: Theme) =>
       textAlign: 'left',
     },
     icon_button_content: {
+      color: '#13204c',
+    },
+    link_tab: {
+      textDecoration: 'none',
       color: '#13204c',
     },
   }),
