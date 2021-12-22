@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "3d-react-carousal": "^4.0.2",
     "@date-io/date-fns": "^2.11.0",
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
     "@fortawesome/react-fontawesome": "^0.1.16",
@@ -20,7 +21,6 @@
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0",
     "@types/react-redux": "^7.1.7",
-    "3d-react-carousal": "^4.0.2",
     "date-fns": "^2.8.1",
     "ethers": "^5.5.2",
     "highcharts": "^9.3.2",
