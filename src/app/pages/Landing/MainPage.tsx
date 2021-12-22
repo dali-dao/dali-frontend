@@ -31,6 +31,7 @@ import { makeStyles } from '@material-ui/core/styles'
 export const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
+      fontFamily: 'HelveticaNeueLTStd-HvCn',
       color: theme.palette.error.light,
       backgroundColor: theme.palette.background.default,
     },
@@ -339,7 +340,7 @@ export const useStyles = makeStyles((theme: Theme) =>
     },
     link_tab: {
       textDecoration: 'none',
-      color: '#13204c',
+      color: '#000',
     },
     design_project_button_content: {
       marginTop: 30,

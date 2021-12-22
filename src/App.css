@@ -41,7 +41,8 @@
 body {
   font-family: 'Roboto', 'Roboto-Regular', 'Roboto-Bold', 'Roboto-Black', 'Roboto-Italic', 'Roboto-Light',
     'Roboto-Medium', 'Roboto-Thin', 'CerebriSansPro-Bold', 'CerebriSansPro-Italic', 'CerebriSansPro-Light',
-    'CerebriSansPro-Medium', 'CerebriSansPro-Regular', 'CerebriSansPro-Thin' 'CerebriSansPro-ExtraBold';
+    'CerebriSansPro-Medium', 'CerebriSansPro-Regular', 'CerebriSansPro-Thin' 'CerebriSansPro-ExtraBold',
+    'HelveticaNeueLTStd-HvCn';
 }
 
 @font-face {
@@ -127,4 +128,9 @@ body {
 @font-face {
   font-family: 'CerebriSansPro-Thin';
   src: url(./app/assets/FONTS/CerebriSansPro-Thin.ttf);
+}
+
+@font-face {
+  font-family: 'HelveticaNeueLTStd-HvCn';
+  src: url(./app/assets/FONTS/HelveticaNeueLTStd-HvCn.otf);
 }
