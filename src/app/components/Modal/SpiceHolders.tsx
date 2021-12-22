@@ -11,8 +11,12 @@ const useStyles = makeStyles((theme: Theme) => ({
     color: '#fff',
     boxShadow: `0px 0px 10px 10px ${theme.palette.primary.dark}`,
     borderRadius: 5,
-    marginTop: 450,
-    marginBottom: 50,
+    position: 'absolute',
+    width: '50%',
+    top: 20,
+    '@media(max-width: 1000px)': {
+      width: '90%'
+    },
   },
   //common class
   textRight: {
