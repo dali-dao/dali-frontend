@@ -7,10 +7,13 @@ import ProjectDetail from '../pages/Project/ProjectDetail'
 import Footer from './Footer'
 import Design from '../pages/Design/Design'
 import Modals from '../pages/Modals'
+import { useStyles } from './Style'
 
 function Layout() {
+  const classes = useStyles()
+
   return (
-    <div>
+    <div className={classes.background}>
       <Router>
         <Header />
         <Routes>

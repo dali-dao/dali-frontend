@@ -28,11 +28,11 @@ function Distribution({ items, onSelectItem, confirmItems }: selectedStepItem) {
 
   return (
     <div className={classes.responsiveStep}>
-      <Grid className={classes.title}>DESIGN YOUR PROJECT</Grid>
+      <Grid className={classes.titleRes}>DESIGN YOUR PROJECT</Grid>
       <Grid>
         <DesignStep selectedStepItem={items} onSelectItem={onSelectItem} confirmStepItem={confirmItems} />
       </Grid>
-      <Grid className={classes.titleFontFamily}>
+      <Grid className={classes.titleFontFamilyRes}>
         3. DISTRIBUTION
         <Grid className={classes.subDescription}>How your project will distribute funds.</Grid>
       </Grid>
@@ -60,6 +60,7 @@ function Distribution({ items, onSelectItem, confirmItems }: selectedStepItem) {
       <Grid className={classes.saveBtnResponsive}>
         <button className={classes.saveBtn}>SAVE</button> <span className={classes.cancelBtn}>Cancel</span>
       </Grid>
+      <Grid style={{height: 20, display: 'flex'}}><span></span></Grid>
       <Modal
         aria-labelledby="transition-modal-title"
         aria-describedby="transition-modal-description"

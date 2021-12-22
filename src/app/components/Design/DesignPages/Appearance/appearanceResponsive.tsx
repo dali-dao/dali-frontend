@@ -2,6 +2,7 @@ import { useStyles, BootstrapInput } from '../../../../pages/Design/styles'
 import DesignStep from '../../DesignStep/designStep'
 import Grid from '@material-ui/core/Grid'
 import noImage from '../../../../assets/Popup/no_image.png'
+import { useMediaQuery } from 'react-responsive'
 
 interface selectedStepItem {
   items: boolean[]
@@ -12,13 +13,15 @@ interface selectedStepItem {
 function Appearance({ items, onSelectItem, confirmItems }: selectedStepItem) {
   const classes = useStyles()
 
+  const isMobile = useMediaQuery({ query: '(max-width: 500px)' });
+
   return (
     <div className={classes.responsiveStep}>
-      <Grid className={classes.title}>DESIGN YOUR PROJECT</Grid>
+      <Grid className={classes.titleRes}>DESIGN YOUR PROJECT</Grid>
       <Grid>
         <DesignStep selectedStepItem={items} onSelectItem={onSelectItem} confirmStepItem={confirmItems} />
       </Grid>
-      <Grid className={classes.titleFontFamily}>
+      <Grid className={classes.titleFontFamilyRes}>
         1. APPEARANCE
         <Grid className={classes.subDescription}>Project name, handle, links, and other details.</Grid>
       </Grid>
@@ -80,18 +83,18 @@ function Appearance({ items, onSelectItem, confirmItems }: selectedStepItem) {
       <Grid className={classes.paragrap}>
         <span className={classes.subTitle}>Logo *</span>
         <Grid className={classes.logoContent} container>
-          <Grid item xs={2} md={2}>
+          <Grid item xs={isMobile ? 12: 2} md={2}>
             <img src={noImage} alt="noImage" style={{ width: 70 }} />
           </Grid>
-          <Grid item xs={10} md={10} container>
+          <Grid item xs={isMobile ? 12 : 10} md={10} container>
             <Grid item xs={12} className={classes.logoTitle}>
               Add logo image
             </Grid>
             <Grid item xs={12} container>
-              <Grid item xs={4} className={classes.uploadBtn}>
-                Upload logo image
+              <Grid item xs={isMobile ? 12 : 4} >
+                <button className={classes.uploadBtn}>Upload logo image</button>
               </Grid>
-              <Grid item xs={7} className={classes.logoTitle}>
+              <Grid item xs={isMobile ? 12 : 7} className={classes.logoTitle}>
                 upload image style like jpg / png images are supported
               </Grid>
             </Grid>
@@ -104,6 +107,7 @@ function Appearance({ items, onSelectItem, confirmItems }: selectedStepItem) {
       <Grid className={classes.saveBtnResponsive}>
         <button className={classes.saveBtn}>SAVE</button> <span className={classes.cancelBtn}>Cancel</span>
       </Grid>
+      <Grid style={{height: 20, display: 'flex'}}><span></span></Grid>
     </div>
   )
 }

@@ -28,11 +28,11 @@ function ReservedTokens({ items, onSelectItem, confirmItems }: selectedStepItem)
 
   return (
     <div className={classes.responsiveStep}>
-      <Grid className={classes.title}>DESIGN YOUR PROJECT</Grid>
+      <Grid className={classes.titleRes}>DESIGN YOUR PROJECT</Grid>
       <Grid>
         <DesignStep selectedStepItem={items} onSelectItem={onSelectItem} confirmStepItem={confirmItems} />
       </Grid>
-      <Grid className={classes.titleFontFamily}>
+      <Grid className={classes.titleFontFamilyRes}>
         4. RESERVED TOKENS
         <Grid className={classes.subDescription}>Reward specific community members with tokens.</Grid>
       </Grid>
@@ -76,6 +76,7 @@ function ReservedTokens({ items, onSelectItem, confirmItems }: selectedStepItem)
       <Grid className={classes.saveBtnResponsive}>
         <button className={classes.saveBtn}>SAVE</button> <span className={classes.cancelBtn}>Cancel</span>
       </Grid>
+      <Grid style={{height: 20, display: 'flex'}}><span></span></Grid>
       <Modal
         aria-labelledby="transition-modal-title"
         aria-describedby="transition-modal-description"
