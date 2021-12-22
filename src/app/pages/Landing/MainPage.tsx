@@ -8,12 +8,51 @@ import Team_2 from '../../assets/MainPage/the_team_2.png'
 import Team_3 from '../../assets/MainPage/the_team_3.png'
 import Team_4 from '../../assets/MainPage/the_team_4.png'
 import MultiCarousel from '../../components/MultiCurosel'
+import LogoBlack from '../../assets/Landing/logo_black.png'
+import TwitterIcon from '@material-ui/icons/Twitter'
+import GitHubIcon from '@material-ui/icons/GitHub'
+import InstagramIcon from '@material-ui/icons/Instagram'
+import { Icon } from '@iconify/react'
+
 function MainPage() {
   const classes = useStyles()
 
   return (
     <div className={classes.root}>
-      <Grid container className={classes.header_content}></Grid>
+      <Grid container className={classes.header_content}>
+        <Grid item xs={12} md={2}>
+          <img src={LogoBlack} alt="logo" />
+        </Grid>
+        <Grid container item xs={12} md={8} className={classes.header_container}>
+          <Grid item xs={12} md={1} className={classes.header_link}>
+            HOME
+          </Grid>
+          <Grid item xs={12} md={1} className={classes.header_link}>
+            ABOUT
+          </Grid>
+          <Grid item xs={12} md={2} className={classes.header_link}>
+            WHAT WE DO
+          </Grid>
+          <Grid item xs={12} md={1} className={classes.header_link}>
+            GALLERY
+          </Grid>
+          <Grid item xs={12} md={2} className={classes.header_link}>
+            OUR TEAM
+          </Grid>
+          <Grid item xs={12} md={1} className={classes.header_link}>
+            VISION
+          </Grid>
+          <Grid item xs={12} md={2} className={classes.header_link}>
+            ROAD MAP
+          </Grid>
+          <Grid item xs={12} md={2} className={classes.header_link}>
+            CONTACT US
+          </Grid>
+        </Grid>
+        <Grid item xs={12} md={2}>
+          <Button className={classes.join_us_button}>JOIN US NOW</Button>
+        </Grid>
+      </Grid>
       <Grid container className={classes.banner_content}>
         <Grid container justifyContent="center">
           <Grid item xs={12} md={4} className={classes.padding10}>
@@ -203,7 +242,19 @@ function MainPage() {
           <Button className={classes.submit_message_button}>SUBMIT A MESSAGE</Button>
         </Grid>
       </Grid>
-      <Grid container className={classes.footer_content}></Grid>
+      <Grid container className={classes.footer_content}>
+        <Grid item xs={12} md={9} className={classes.footer_info}>
+          2021 $ DALI.com All rights reserved. Privacy Policy | Terms & Conditions
+        </Grid>
+        <Grid item xs={12} md={3} className={classes.icon_button_content}>
+          <Grid className={classes.followIcons}>
+            <GitHubIcon fontSize="large" style={{ marginRight: 20 }} />
+            <Icon icon="fa-brands:discord" width="40px" style={{ marginRight: 20 }} />
+            <TwitterIcon fontSize="large" style={{ marginRight: 20 }} />
+            <InstagramIcon fontSize="large" style={{ marginRight: 20 }} />
+          </Grid>
+        </Grid>
+      </Grid>
     </div>
   )
 }

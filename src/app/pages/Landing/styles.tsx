@@ -47,7 +47,7 @@ export const useStyles = makeStyles((theme: Theme) =>
         paddingBottom: 5,
       },
       '@media (max-width: 400px)': {
-        display: 'none'
+        display: 'none',
       },
     },
     bannerDescription: {
@@ -63,7 +63,7 @@ export const useStyles = makeStyles((theme: Theme) =>
         paddingBottom: 5,
       },
       '@media (max-width: 600px)': {
-        display: 'none'
+        display: 'none',
       },
     },
     bannerList: {
@@ -75,7 +75,7 @@ export const useStyles = makeStyles((theme: Theme) =>
         fontSize: 13,
       },
       '@media (max-width: 800px)': {
-        display: 'none'
+        display: 'none',
       },
     },
     designForBtn: {
@@ -98,7 +98,7 @@ export const useStyles = makeStyles((theme: Theme) =>
         fontSize: 10,
         width: 80,
         margin: '5px 0',
-        padding: '10px 20px'
+        padding: '10px 20px',
       },
     },
     smartContract: {
@@ -212,7 +212,9 @@ export const useStyles = makeStyles((theme: Theme) =>
       textDecoration: 'none',
     },
     // Main Page Style
-    header_content: {},
+    header_content: {
+      background: '#f5f6fa',
+    },
     banner_content: {
       background: '#f5f6fa',
     },
@@ -225,7 +227,10 @@ export const useStyles = makeStyles((theme: Theme) =>
       height: 'auto',
       backgroundRepeat: 'round',
     },
-    slide_content: {},
+    slide_content: {
+      height: 'auto',
+      display: 'block',
+    },
     team_content: {
       background: '#0b0b15',
       textAlign: 'left',
@@ -235,7 +240,7 @@ export const useStyles = makeStyles((theme: Theme) =>
       backgroundImage: `url(${Value_Background})`,
       padding: 30,
       width: '100%',
-      backgroundRepeat: 'no-repeat',
+      backgroundSize: 'cover',
       height: 'auto',
     },
     road_map_content: {
@@ -244,6 +249,7 @@ export const useStyles = makeStyles((theme: Theme) =>
     },
     white_paper_content: {
       backgroundImage: `url(${WhitePaperBack})`,
+      backgroundSize: 'cover',
       padding: '5%',
     },
     join_us_content: {
@@ -251,7 +257,11 @@ export const useStyles = makeStyles((theme: Theme) =>
       backgroundImage: `url(${JoinUsBack})`,
       height: 'auto',
     },
-    footer_content: {},
+    footer_content: {
+      padding: '2% 5%',
+      background: '#f5f6fa',
+      height: 'auto',
+    },
     banner_background_1: {
       backgroundImage: `url(${Banner_1})`,
       height: 500,
@@ -403,7 +413,7 @@ export const useStyles = makeStyles((theme: Theme) =>
     input_lb: {
       width: '100%',
       marginTop: 10,
-      color: '#c5c5ca',
+      background: '#141821',
     },
     input_content: {
       textAlign: 'left',
@@ -414,7 +424,7 @@ export const useStyles = makeStyles((theme: Theme) =>
       marginBottom: 10,
     },
     textArea_content: {
-      backgroundColor: theme.palette.primary.main,
+      background: '#141821',
       height: 175,
       border: `1px solid ${theme.palette.info.main}`,
       color: theme.palette.error.light,
@@ -431,6 +441,33 @@ export const useStyles = makeStyles((theme: Theme) =>
     submit_button_content: {
       padding: 10,
       textAlign: 'left',
+    },
+    header_link: {
+      color: '#000',
+      fontSize: 14,
+    },
+    header_container: {
+      marginTop: 30,
+    },
+    join_us_button: {
+      backgroundImage: 'linear-gradient(to right, rgb(238 221 14) 0%, rgb(24 216 211) 100%, rgb(247, 157, 0) 100%)',
+      color: '#000',
+      padding: '10px 50px',
+      borderRadius: 50,
+      fontWeight: 'bold',
+      marginTop: 15,
+    },
+    followIcons: {
+      display: 'flex',
+      justifyContent: 'flex-end',
+      alignItems: 'center',
+    },
+    footer_info: {
+      color: '#6d7186',
+      textAlign: 'left',
+    },
+    icon_button_content: {
+      color: '#13204c',
     },
   }),
 )
