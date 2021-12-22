@@ -320,7 +320,7 @@ export default function LabTabs() {
         }}
       >
         <Fade in={open}>
-          <div style={{ width: '50%' }}>
+          <div style={{ width: '60%' }}>
             <WithdrawFunds />
           </div>
         </Fade>

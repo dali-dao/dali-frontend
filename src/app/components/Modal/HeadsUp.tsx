@@ -9,6 +9,13 @@ const useStyles = makeStyles((theme: Theme) => ({
     margin: 'auto',
     boxShadow: `0px 0px 10px 10px ${theme.palette.primary.dark}`,
     borderRadius: 5,
+    position: 'absolute',
+    width: '90%',
+    top: 20,
+    '@media(max-width: 1000px)': {
+      width: '90%',
+      left: '4%'
+    },
   },
   modal_header: {
     border: `1px solid ${theme.palette.info.main}`,

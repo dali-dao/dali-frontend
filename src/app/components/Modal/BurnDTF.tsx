@@ -9,6 +9,13 @@ const useStyles = makeStyles((theme: Theme) => ({
     margin: 'auto',
     boxShadow: `0px 0px 10px 10px ${theme.palette.primary.dark}`,
     borderRadius: 5,
+    position: 'absolute',
+    width: '60%',
+    top: 20,
+    '@media(max-width: 1000px)': {
+      width: '90%',
+      left: '4%'
+    },
   },
   modal_header: {
     border: `1px solid ${theme.palette.info.main}`,
@@ -95,7 +102,11 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
 }))
 
-export default function BurnDTF() {
+interface burnDTF {
+  handleClose: () => void
+}
+
+export default function BurnDTF({handleClose}: burnDTF) {
   const classes = useStyles()
 
   return (
@@ -130,7 +141,7 @@ export default function BurnDTF() {
       </Grid>
 
       <Grid container className={classes.button_content}>
-        <Button className={classes.left_button}>CANCEL</Button>
+        <Button className={classes.left_button} onClick={handleClose}>CANCEL</Button>
         <Button className={classes.right_button}>BURN 0 DTF FOR ETH</Button>
       </Grid>
     </div>
