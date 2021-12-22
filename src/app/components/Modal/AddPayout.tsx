@@ -95,7 +95,11 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
 }))
 
-export default function AddPayout() {
+interface addPayout {
+  handleClose: () => void
+}
+
+export default function AddPayout({handleClose} : addPayout) {
   const classes = useStyles()
   const [state, setState] = React.useState<{ age: string | number; name: string }>({
     age: '',
@@ -173,7 +177,7 @@ export default function AddPayout() {
       </Grid>
 
       <Grid container className={classes.button_content}>
-        <Button className={classes.left_button}>CANCEL</Button>
+        <Button className={classes.left_button} onClick={handleClose}>CANCEL</Button>
         <Button className={classes.right_button}>OK</Button>
       </Grid>
     </div>

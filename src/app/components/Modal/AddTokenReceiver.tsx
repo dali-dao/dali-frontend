@@ -93,7 +93,11 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
 }))
 
-export default function AddTokenReceiver() {
+interface addTokenReceiver {
+  handleClose: () => void
+}
+
+export default function AddTokenReceiver({handleClose} : addTokenReceiver) {
   const classes = useStyles()
 
   return (
@@ -129,7 +133,7 @@ export default function AddTokenReceiver() {
       </Grid>
 
       <Grid container className={classes.button_content}>
-        <Button className={classes.left_button}>CANCEL</Button>
+        <Button className={classes.left_button} onClick={handleClose}>CANCEL</Button>
         <Button className={classes.right_button}>OK</Button>
       </Grid>
     </div>

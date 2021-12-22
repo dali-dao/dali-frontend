@@ -156,7 +156,7 @@ function Header() {
           <span>QUICK LINK</span> <CloseIcon onClick={toggleDrawer} style={{ cursor: 'pointer' }} />
         </Grid>
         <Grid item xs={12} className={classes.menuRes}>
-          <Link to="/" className={classes.menuSidebar}>
+          <Link to="/home" className={classes.menuSidebar}>
             <span>Home</span>
           </Link>
           <ArrowForwardIosIcon fontSize="small" />
