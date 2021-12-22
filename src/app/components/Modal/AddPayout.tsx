@@ -10,9 +10,13 @@ const useStyles = makeStyles((theme: Theme) => ({
     margin: 'auto',
     color: theme.palette.error.light,
     boxShadow: `0px 0px 10px 10px ${theme.palette.primary.dark}`,
-    marginTop: 150,
-    marginBottom: 50,
     borderRadius: 5,
+    position: 'absolute',
+    width: '50%',
+    top: 20,
+    '@media(max-width: 1000px)': {
+      width: '90%'
+    },
   },
   //common class
   textLeft: { textAlign: 'left' },
