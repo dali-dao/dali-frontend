@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     width: '60%',
     top: 20,
     '@media(max-width: 1000px)': {
-      width: '90%'
+      width: '90%',
     },
   },
   //common class
@@ -145,8 +145,10 @@ const useStyles = makeStyles((theme: Theme) => ({
     },
   },
   distribute_button: {
+    background: theme.palette.background.paper,
+    color: theme.palette.success.main,
+    textTransform: 'none',
     border: `1px solid ${theme.palette.info.main}`,
-    background: '#272c36',
     borderRadius: 5,
     '@media(max-width: 320px)': {
       marginTop: 10,
@@ -157,6 +159,7 @@ const useStyles = makeStyles((theme: Theme) => ({
   tab_current: {
     marginLeft: 'auto',
     fontFamily: 'CerebriSansPro-Bold',
+    color: theme.palette.error.light,
     '@media(max-width: 450px)': {
       fontSize: 12,
       minWidth: 50,
@@ -164,6 +167,7 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
   tab_history: {
     fontFamily: 'CerebriSansPro-Bold',
+    color: theme.palette.error.light,
     '@media(max-width: 450px)': {
       fontSize: 12,
       minWidth: 50,
@@ -312,10 +316,12 @@ const useStyles = makeStyles((theme: Theme) => ({
     },
   },
   tab_style: {
+    color: theme.palette.error.light,
     minWidth: 50,
     fontSize: '12.8px',
   },
   tab_pay_style: {
+    color: theme.palette.error.light,
     minWidth: 50,
     fontSize: '12.8px',
     marginLeft: 'auto',

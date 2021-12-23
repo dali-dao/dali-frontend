@@ -1,6 +1,7 @@
 import React from 'react'
 import { Grid, TextField, Slider, ThemeProvider } from '@material-ui/core'
 import { createTheme } from '@material-ui/core/styles'
+import { createStyles, makeStyles, Theme } from '@material-ui/core/styles'
 
 const muiTheme = createTheme({
   overrides: {
@@ -10,26 +11,40 @@ const muiTheme = createTheme({
         height: 30,
         width: 30,
         border: '2px solid #000',
+        marginTop: '-10px',
       },
       track: {
         color: '#425064',
         height: 10,
         borderRadius: 5,
-        marginTop: 5,
       },
       rail: {
         color: '#2c333f',
         height: 10,
         borderRadius: 5,
-        marginTop: 4,
-        border: '1px solid #425064',
       },
     },
   },
 })
 
+const useStyles = makeStyles((theme: Theme) =>
+  createStyles({
+    custom_slider: {
+      width: '92%',
+      padding: '0px 10px',
+      '@media(max-width: 800px)': {
+        width: '90%',
+      },
+      '@media(max-width: 520px)': {
+        width: '85%',
+      },
+    },
+  }),
+)
+
 export default function CustomSlider() {
   const [value, setValue] = React.useState<number | string | Array<number | string>>(0)
+  const classes = useStyles()
 
   const handleSliderChange = (event: any, newValue: number | number[]) => {
     setValue(newValue)
@@ -51,7 +66,7 @@ export default function CustomSlider() {
       <Grid item xs={11} md={11}>
         <ThemeProvider theme={muiTheme}>
           <Slider
-            style={{ width: '97%' }}
+            className={classes.custom_slider}
             value={typeof value === 'number' ? value : 0}
             onChange={handleSliderChange}
             aria-labelledby="input-slider"

@@ -54,6 +54,9 @@ const useStyles = makeStyles((theme: Theme) =>
       marginRight: 10,
     },
     textLeft: {},
+    since_date: {
+      verticalAlign: 'middle',
+    },
   }),
 )
 
@@ -94,7 +97,7 @@ export default function ProjectItem({ image, name, id, price, date, desc }: Item
             <span className={classes.price}>{price}</span>
           </Grid>
           <Grid item xs={5} md={5} sm={5} className={classes.project_date}>
-            <span>since {date}</span>
+            <span className={classes.since_date}>since {date}</span>
           </Grid>
         </Grid>
         <Grid container item xs={12} className={classes.paddingTop10}>

@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     width: '60%',
     top: 20,
     '@media(max-width: 1000px)': {
-      width: '90%'
+      width: '90%',
     },
   },
   //common class
@@ -64,22 +64,35 @@ const useStyles = makeStyles((theme: Theme) => ({
     width: 145,
     height: 50,
     color: theme.palette.error.light,
+    '@media(max-width: 435px)': {
+      width: '100%',
+      marginBottom: 20,
+      marginRight: 0,
+    },
   },
   right_button: {
     backgroundImage: 'linear-gradient(to right, rgb(238 221 14) 0%, rgb(24 216 211) 100%, rgb(247, 157, 0) 100%)',
     width: 145,
     height: 50,
     color: '#000',
+    '@media(max-width: 435px)': {
+      width: '100%',
+      marginBottom: 20,
+    },
   },
   formControl: {
     width: '100%',
     marginBottom: 15,
+    border: `1px solid ${theme.palette.info.main}`,
+    borderRadius: 5,
   },
   selectEmpty: {},
   project_handle_lb: {
     width: '100%',
     marginTop: 10,
     color: '#c5c5ca',
+    border: `1px solid ${theme.palette.info.main}`,
+    borderRadius: 5,
   },
   lock_until_desc: {
     color: '#c5c5ca',
@@ -99,7 +112,7 @@ interface addPayout {
   handleClose: () => void
 }
 
-export default function AddPayout({handleClose} : addPayout) {
+export default function AddPayout({ handleClose }: addPayout) {
   const classes = useStyles()
   const [state, setState] = React.useState<{ age: string | number; name: string }>({
     age: '',
@@ -177,7 +190,9 @@ export default function AddPayout({handleClose} : addPayout) {
       </Grid>
 
       <Grid container className={classes.button_content}>
-        <Button className={classes.left_button} onClick={handleClose}>CANCEL</Button>
+        <Button className={classes.left_button} onClick={handleClose}>
+          CANCEL
+        </Button>
         <Button className={classes.right_button}>OK</Button>
       </Grid>
     </div>

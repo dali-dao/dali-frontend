@@ -9,9 +9,9 @@ const useStyles = makeStyles((theme: Theme) =>
       flexWrap: 'wrap',
     },
     textField: {
-      marginLeft: theme.spacing(1),
-      marginRight: theme.spacing(1),
       width: 200,
+      border: `1px solid ${theme.palette.info.main}`,
+      borderRadius: 5,
     },
   }),
 )
@@ -22,6 +22,7 @@ export default function DatePickers() {
   return (
     <form className={classes.container} noValidate>
       <TextField
+        variant="outlined"
         id="date"
         type="date"
         defaultValue="2021-12-12"

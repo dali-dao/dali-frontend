@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     top: 20,
     '@media(max-width: 1000px)': {
       width: '90%',
-      left: '4%'
+      left: '4%',
     },
   },
   //common class
