@@ -64,7 +64,7 @@ export const useStyles = makeStyles((theme: Theme) =>
     },
     value_in_vision: {
       backgroundImage: `url(${Value_Background})`,
-      padding: 30,
+      padding: '5%',
       width: '100%',
       backgroundSize: 'cover',
       height: 'auto',
