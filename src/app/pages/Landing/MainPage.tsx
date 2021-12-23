@@ -37,6 +37,8 @@ export const useStyles = makeStyles((theme: Theme) =>
     },
     // Main Page Style
     header_content: {
+      position: 'fixed',
+      zIndex: 99,
       background: '#f5f6fa',
     },
     banner_content: {
@@ -135,6 +137,9 @@ export const useStyles = makeStyles((theme: Theme) =>
       marginTop: 20,
       marginBottom: 20,
       color: '#7e7e80',
+    },
+    lunch_pad: {
+      textDecoration: 'none',
     },
     design_project_button: {
       backgroundImage: 'linear-gradient(to right, rgb(238 221 14) 0%, rgb(24 216 211) 100%, rgb(247, 157, 0) 100%)',
@@ -355,27 +360,59 @@ function MainPage() {
     <div className={classes.root}>
       <Grid container className={classes.header_content}>
         <Grid item xs={12} md={2}>
-          <img src={LogoBlack} alt="logo" />
+          <Link to="/">
+            <img src={LogoBlack} alt="logo" />
+          </Link>
         </Grid>
         <Grid container item xs={12} md={8} className={classes.header_container}>
           <Grid className={classes.header_link}>
-            <Link to="/home" className={classes.link_tab}>
+            <a href="#home" className={classes.link_tab}>
               HOME
-            </Link>
+            </a>
           </Grid>
-          <Grid className={classes.header_link}>ABOUT</Grid>
-          <Grid className={classes.header_link}>WHAT WE DO</Grid>
-          <Grid className={classes.header_link}>GALLERY</Grid>
-          <Grid className={classes.header_link}>OUR TEAM</Grid>
-          <Grid className={classes.header_link}>VISION</Grid>
-          <Grid className={classes.header_link}>ROAD MAP</Grid>
-          <Grid className={classes.header_link}>CONTACT US</Grid>
+          <Grid className={classes.header_link}>
+            <a href="#about" className={classes.link_tab}>
+              ABOUT
+            </a>
+          </Grid>
+          <Grid className={classes.header_link}>
+            <a href="#what_we_do" className={classes.link_tab}>
+              WHAT WE DO
+            </a>
+          </Grid>
+          <Grid className={classes.header_link}>
+            <a href="#gallery" className={classes.link_tab}>
+              GALLERY
+            </a>
+          </Grid>
+          <Grid className={classes.header_link}>
+            <a href="#our_team" className={classes.link_tab}>
+              OUR TEAM
+            </a>
+          </Grid>
+          <Grid className={classes.header_link}>
+            <a href="#vision" className={classes.link_tab}>
+              VISION
+            </a>
+          </Grid>
+          <Grid className={classes.header_link}>
+            <a href="#road_map" className={classes.link_tab}>
+              ROAD MAP
+            </a>
+          </Grid>
+          <Grid className={classes.header_link}>
+            <a href="#contact_us" className={classes.link_tab}>
+              CONTACT US
+            </a>
+          </Grid>
         </Grid>
         <Grid item xs={12} md={2}>
-          <Button className={classes.join_us_button}>JOIN US NOW</Button>
+          <Link to="/home" className={classes.lunch_pad}>
+            <Button className={classes.join_us_button}>LAUNCH PAD</Button>
+          </Link>
         </Grid>
       </Grid>
-      <Grid container className={classes.banner_content}>
+      <Grid container id="home" className={classes.banner_content}>
         <Grid container justifyContent="center">
           <Grid item xs={12} md={4} className={classes.padding10}>
             <Grid item className={classes.banner_background_1}></Grid>
@@ -397,7 +434,7 @@ function MainPage() {
           </Grid>
         </Grid>
       </Grid>
-      <Grid container justifyContent="center" className={classes.about_dali_content}>
+      <Grid container justifyContent="center" id="about" className={classes.about_dali_content}>
         <Grid item xs={12} className={classes.about_title}>
           ABOUT $DALI
         </Grid>
@@ -425,7 +462,7 @@ function MainPage() {
           </Link>
         </Grid>
       </Grid>
-      <Grid container className={classes.what_do_content}>
+      <Grid container id="what_we_do" className={classes.what_do_content}>
         <Grid container justifyContent="center" className={classes.what_we_do_padding_content}>
           <Grid item xs={12} className={classes.what_we_do_title}>
             WHAT WE DO
@@ -459,10 +496,10 @@ function MainPage() {
           </Grid>
         </Grid>
       </Grid>
-      <Grid container className={classes.slide_content}>
+      <Grid container id="gallery" className={classes.slide_content}>
         <MultiCarousel />
       </Grid>
-      <Grid container className={classes.team_content}>
+      <Grid container id="our_team" className={classes.team_content}>
         <Grid item xs={12} className={classes.the_team}>
           THE TEAM
         </Grid>
@@ -500,7 +537,7 @@ function MainPage() {
           </Grid>
         </Grid>
       </Grid>
-      <Grid container justifyContent="center" className={classes.value_in_vision}>
+      <Grid container id="vision" justifyContent="center" className={classes.value_in_vision}>
         <Grid item xs={12} className={classes.vision_title}>
           VALUES IN VISION
         </Grid>
@@ -525,17 +562,17 @@ function MainPage() {
           <Button className={classes.learn_more_button}>LEARN MORE</Button>
         </Grid>
       </Grid>
-      <Grid container className={classes.road_map_content}>
+      <Grid container id="road_map" className={classes.road_map_content}>
         <Grid item xs={12} className={classes.road_map_title}>
           ROAD MAP<p className={classes.comming_soon}>COMMING SOON</p>
         </Grid>
       </Grid>
-      <Grid container className={classes.white_paper_content}>
+      <Grid container id="white_paper" className={classes.white_paper_content}>
         <Grid item xs={12} className={classes.white_paper_title}>
           WHITE PAPER<p className={classes.comming_soon}>COMMING SOON</p>
         </Grid>
       </Grid>
-      <Grid container className={classes.join_us_content}>
+      <Grid container id="contact_us" className={classes.join_us_content}>
         <Grid item xs={12} className={classes.join_us_title}>
           JOIN US NOW
         </Grid>
