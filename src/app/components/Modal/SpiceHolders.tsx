@@ -1,6 +1,6 @@
 import React from 'react'
 import { makeStyles, Theme } from '@material-ui/core/styles'
-import { Grid, FormControl, Select, Button } from '@material-ui/core'
+import { Grid, FormControl, Select } from '@material-ui/core'
 import { Icon } from '@iconify/react'
 import SpiceBalance from '../../components/SpiceBalance'
 
@@ -26,8 +26,8 @@ const useStyles = makeStyles((theme: Theme) => ({
   marginBottom20: {
     marginBottom: 20,
   },
-  fontSize25: {
-    fontSize: 25,
+  fontSize20: {
+    fontSize: 20,
   },
   //component class
   modal_header: {
@@ -61,6 +61,9 @@ const useStyles = makeStyles((theme: Theme) => ({
     border: `1px solid ${theme.palette.info.main}`,
     marginBottom: 15,
     marginRight: 15,
+    '@media(max-width: 960px)': {
+      width: '100%',
+    },
   },
   notice_desc: {
     color: '#c5c5ca',
@@ -71,11 +74,19 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
   asset_button: {
     borderRadius: 0,
-    width: 50,
+    width: '90%',
     height: 53,
     color: theme.palette.error.light,
     border: '1px solid #81899a',
     background: theme.palette.primary.main,
+    verticalAlign: 'middle',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    '@media(max-width: 960px)': {
+      width: '100%',
+      marginBottom: 20,
+    },
   },
   select_tag: {
     borderRadius: 0,
@@ -111,7 +122,7 @@ export default function SpiceHolders() {
             know in the <span className={classes.point_color}>Discord</span>.
           </span>
         </Grid>
-        <Grid item xs={12} md={10}>
+        <Grid item xs={12} md={8}>
           <FormControl variant="outlined" className={classes.formControl}>
             <Select
               native
@@ -130,15 +141,15 @@ export default function SpiceHolders() {
             </Select>
           </FormControl>
         </Grid>
-        <Grid item xs={12} md={1} className={classes.textRight}>
-          <Button className={classes.asset_button}>
-            <Icon className={classes.fontSize25} icon="bi:sort-alpha-down" />
-          </Button>
+        <Grid item xs={12} md={2}>
+          <Grid className={classes.asset_button}>
+            <Icon className={classes.fontSize20} icon="bi:sort-alpha-down" />
+          </Grid>
         </Grid>
-        <Grid item xs={12} md={1} className={classes.textRight}>
-          <Button className={classes.asset_button}>
-            <Icon className={classes.fontSize25} icon="el:download-alt" />
-          </Button>
+        <Grid item xs={12} md={2}>
+          <Grid className={classes.asset_button}>
+            <Icon className={classes.fontSize20} icon="el:download-alt" />
+          </Grid>
         </Grid>
         <Grid item xs={12} md={12}>
           <SpiceBalance />

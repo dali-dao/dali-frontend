@@ -32,6 +32,7 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     price: {
       fontSize: 12,
+      color: theme.palette.error.light,
       textAlign: 'left',
       paddingLeft: 10,
       display: 'flex',
@@ -39,6 +40,7 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     walletName: {
       fontSize: 15,
+      alignSelf: 'center',
       color: theme.palette.error.light,
       textAlign: 'left',
       paddingLeft: 10,
@@ -49,7 +51,6 @@ const useStyles = makeStyles((theme: Theme) =>
 
 export default function MediaControlCard() {
   const classes = useStyles()
-  //   const theme = useTheme();
 
   return (
     <Card className={classes.root}>
@@ -58,18 +59,18 @@ export default function MediaControlCard() {
       </Grid>
       <Grid className={classes.details} item xs={12}>
         <Grid container item xs={12}>
-          <Grid item xs={3} className={classes.walletName}>
+          <Grid item xs={12} md={4} sm={6} className={classes.walletName}>
             demelain.eth
           </Grid>
-          <Grid item xs={9} className={classes.address}>
+          <Grid item xs={12} md={8} sm={6} className={classes.address}>
             200,000,000 SPICE (7.96%)
           </Grid>
         </Grid>
         <Grid container item xs={12}>
-          <Grid item xs={3} className={classes.price}>
+          <Grid item xs={12} md={4} sm={6} className={classes.price}>
             Last paid a day ago
           </Grid>
-          <Grid item xs={9} className={classes.total}>
+          <Grid item xs={12} md={8} sm={6} className={classes.total}>
             Ξ200 total contributed
           </Grid>
         </Grid>

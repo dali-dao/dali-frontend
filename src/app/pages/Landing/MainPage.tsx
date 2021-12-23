@@ -467,10 +467,10 @@ function MainPage() {
           THE TEAM
         </Grid>
         <Grid container item xs={12} md={7} className={classes.team_left_content}>
-          <Grid item xs={12} md={4} sm={4} className={classes.padding10}>
+          <Grid item xs={12} md={5} sm={5} className={classes.padding10}>
             <img src={Team_1} alt="team_1" className={classes.team_image} />
           </Grid>
-          <Grid item xs={12} md={8} sm={8} className={classes.padding10}>
+          <Grid item xs={12} md={7} sm={7} className={classes.padding10}>
             <img src={Team_2} alt="team_2" className={classes.team_image} />
           </Grid>
         </Grid>
@@ -482,10 +482,10 @@ function MainPage() {
           TRISTIQUE AC DAPIBUS ID, ORNARE ET LECTUS. PROIN IN DIAM FINIBUS, EFFICITUR ERAT QUIS, TRISTIQUE LECTUS.{' '}
         </Grid>
         <Grid container item xs={12} md={7} className={classes.team_left_content}>
-          <Grid item xs={12} md={8} sm={8} className={classes.padding10}>
+          <Grid item xs={12} md={7} sm={7} className={classes.padding10}>
             <img src={Team_3} alt="team_3" className={classes.team_image} />
           </Grid>
-          <Grid item xs={12} md={4} sm={4} className={classes.padding10}>
+          <Grid item xs={12} md={5} sm={5} className={classes.padding10}>
             <img src={Team_4} alt="team_4" className={classes.team_image} />
           </Grid>
         </Grid>

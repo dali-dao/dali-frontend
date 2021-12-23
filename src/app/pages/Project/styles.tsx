@@ -299,10 +299,17 @@ export const useStyles = makeStyles((theme: Theme) =>
     },
     pay_button_style: {
       width: '90%',
-      background: 'rgb(247 219 14)',
       height: 40,
       color: '#000',
       borderRadius: 0,
+      background: '#f7db0e', // no change by theme
+      textTransform: 'uppercase',
+      fontWeight: 700,
+      alignItems: 'center',
+      cursor: 'pointer',
+      '&:hover': {
+        backgroundImage: 'linear-gradient(to right, rgb(238 221 14) 0%, rgb(24 216 211) 100%, rgb(247, 157, 0) 100%)',
+      },
     },
     activity_content: {
       backgroundColor: '#1a1d24',
