@@ -400,6 +400,9 @@ export const useStyles = makeStyles((theme: Theme) =>
     logoSection: {
       display: 'flex',
       alignItems: 'center'
+    },
+    section: {
+      paddingTop: '5%',
     }
   }),
 )
@@ -672,6 +675,7 @@ function MainPage() {
           </Grid>
         </Grid>
       </Grid>
+      
       <Grid container id="vision" justifyContent="center" className={classes.value_in_vision}>
         <Grid item xs={12} className={classes.vision_title}>
           VALUES IN VISION
