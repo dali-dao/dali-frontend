@@ -55,7 +55,7 @@ function Footer() {
         </Grid>
         <Grid item md={1}></Grid>
         <Grid item xs={4} md={2}>
-          <Grid className={classes.footerMiddleTitle}>QUIK LIKNKS</Grid>
+          <Grid className={classes.footerMiddleTitle}>QUIK LINKS</Grid>
           <Grid className={classes.footerMiddleDesc}>
             Aave Protocol
             <br />

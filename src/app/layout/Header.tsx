@@ -100,7 +100,7 @@ function Header() {
     <Grid container item xs={12} md={8} className={classes.menuItems}>
       {/* <Grid item xs={1}></Grid> */}
       <Grid item xs={2} md={1}>
-        <Link to="/" className={location_path.pathname === '/home' ? classes.activeMenu : classes.menu}>
+        <Link to="/home" className={location_path.pathname === '/home' ? classes.activeMenu : classes.menu}>
           Home
         </Link>
       </Grid>
@@ -140,7 +140,6 @@ function Header() {
   let tabletMenu = (
     <Drawer
       className={classes.drawer}
-      // variant={isTablet ? "permanent" : "temporary"}
       classes={{
         paper: classes.drawerPaper,
       }}
@@ -149,14 +148,11 @@ function Header() {
       onClose={toggleDrawer}
     >
       <Grid container>
-        {/* <Grid item xs={12} className={classes.logoSectionSidebar}>
-          <img src={curThemeName === 'darkTheme' ? Logo : LogoBlack} alt="logo" style={{width: '30%'}}/>
-        </Grid> */}
         <Grid item xs={12} className={classes.menuResTitle}>
           <span>QUICK LINK</span> <CloseIcon onClick={toggleDrawer} style={{ cursor: 'pointer' }} />
         </Grid>
         <Grid item xs={12} className={classes.menuRes}>
-          <Link to="/" className={classes.menuSidebar}>
+          <Link to="/home" className={classes.menuSidebar}>
             <span>Home</span>
           </Link>
           <ArrowForwardIosIcon fontSize="small" />
@@ -168,19 +164,19 @@ function Header() {
           <ArrowForwardIosIcon fontSize="small" />
         </Grid>
         <Grid item xs={12} className={classes.menuRes}>
-          <Link to="/faq" className={classes.menuSidebar}>
+          <Link to="#" className={classes.menuSidebar}>
             Faq
           </Link>
           <ArrowForwardIosIcon fontSize="small" />
         </Grid>
         <Grid item xs={12} className={classes.menuRes}>
-          <Link to="/docs" className={classes.menuSidebar}>
+          <Link to="#" className={classes.menuSidebar}>
             Docs
           </Link>
           <ArrowForwardIosIcon fontSize="small" />
         </Grid>
         <Grid item xs={12} className={classes.menuRes}>
-          <Link to="/discord" className={classes.menuSidebar}>
+          <Link to="#" className={classes.menuSidebar}>
             Discord
           </Link>
           <ArrowForwardIosIcon fontSize="small" />
@@ -203,10 +199,8 @@ function Header() {
     <div className={classes.header}>
       <Grid container>
         <Grid item xs={4} md={2} className={classes.logoSection}>
-          <Link to="/">
-            {isTablet ? <ReorderIcon fontSize="large" onClick={toggleDrawer} className={classes.toggleIcon} /> : ''}
-            <img src={curThemeName === 'darkTheme' ? Logo : LogoBlack} alt="logo" />
-          </Link>
+          {isTablet ? <ReorderIcon fontSize="large" onClick={toggleDrawer} className={classes.toggleIcon} /> : ''}
+          <img src={curThemeName === 'darkTheme' ? Logo : LogoBlack} alt="logo" style={{padding: 10}} />
         </Grid>
         {isTablet ? <Grid item md={8} xs={4}></Grid> : generalMenu}
         {tabletMenu}

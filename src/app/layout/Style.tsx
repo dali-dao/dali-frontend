@@ -182,6 +182,12 @@ export const useStyles = makeStyles((theme: Theme) =>
       fontSize: 20,
       fontWeight: 'bold',
       paddingBottom: 25,
+      '@media (max-width: 490px)' : {
+        fontSize: 14
+      },
+      '@media (max-width: 350px)' : {
+        fontSize: 12
+      }
     },
     footerMiddleDesc1: {
       color: '#9e9fa2',
