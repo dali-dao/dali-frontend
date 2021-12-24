@@ -327,7 +327,13 @@ export const useStyles = makeStyles((theme: Theme) =>
       },
     },
     header_container: {
-      marginTop: '30px !important',
+      display: 'flex',
+      alignItems: 'center',
+    },
+    launch_pad_content: {
+      display: 'flex',
+      justifyContent: 'right',
+      alignItems: 'center',
     },
     join_us_button: {
       backgroundImage: 'linear-gradient(to right, rgb(238 221 14) 0%, rgb(24 216 211) 100%, rgb(247, 157, 0) 100%)',
@@ -542,7 +548,7 @@ function MainPage() {
         </Grid>
         {isTablet ? <Grid item xs={4} md={8}></Grid> : generalMenu}
         {tabletMenu}
-        <Grid item xs={4} md={2}>
+        <Grid item xs={4} md={2} className={classes.launch_pad_content}>
           <Link to="/home" className={classes.lunch_pad}>
             <Button className={classes.join_us_button}>LAUNCH PAD</Button>
           </Link>
