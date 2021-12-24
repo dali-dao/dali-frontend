@@ -66,7 +66,11 @@ export const useStyles = makeStyles((theme: Theme) =>
     },
     toggleIcon: {
       cursor: 'pointer',
-      paddingLeft: 10
+      paddingLeft: 10,
+      '@media (max-width: 500px)': {
+        position: 'absolute',
+        right: 10
+      },
     },
     logoSection: {
       display: 'flex',
