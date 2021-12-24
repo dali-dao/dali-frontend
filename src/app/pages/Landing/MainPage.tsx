@@ -40,6 +40,7 @@ export const useStyles = makeStyles((theme: Theme) =>
       position: 'fixed',
       zIndex: 99,
       background: '#f5f6fa',
+      padding: 10,
     },
     banner_content: {
       background: '#f5f6fa',
