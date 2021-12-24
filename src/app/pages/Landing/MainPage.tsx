@@ -319,12 +319,6 @@ export const useStyles = makeStyles((theme: Theme) =>
       width: '12.5%',
       color: '#000',
       fontSize: 14,
-      '@media(max-width: 1130px)': {
-        fontSize: 12,
-      },
-      '@media(max-width: 590px)': {
-        fontSize: 10,
-      },
     },
     header_container: {
       display: 'flex',
@@ -425,7 +419,7 @@ function MainPage() {
     setMenuOpen(!menuOpen)
   }
 
-  const isTablet = useMediaQuery({ query: '(max-width: 1200px)' })
+  const isTablet = useMediaQuery({ query: '(max-width: 1000px)' })
 
   const scrollTo = (id: string) => {
     const element = document.getElementById(id) as HTMLDivElement;
@@ -440,7 +434,7 @@ function MainPage() {
   };
 
   let generalMenu = (
-    <Grid container item xs={12} md={8} className={classes.header_container}>
+    <Grid container item xs={9} md={8} className={classes.header_container}>
       <Grid className={classes.header_link} onClick={() => scrollTo("home")}>
         <span className={classes.link_tab}>
           HOME
@@ -553,13 +547,13 @@ function MainPage() {
   return (
     <div className={classes.root}>
       <Grid container className={classes.header_content}>
-        <Grid item xs={4} md={2} className={classes.logoSection}>
+        <Grid item xs={3} md={2} className={classes.logoSection}>
           {isTablet ? <ReorderIcon fontSize="large" onClick={toggleDrawer} className={classes.toggleIcon} /> : ''}
           <Link to="/">
             <img src={LogoBlack} alt="logo" />
           </Link>
         </Grid>
-        {isTablet ? <Grid item xs={4} md={8}></Grid> : generalMenu}
+        {isTablet ? <Grid item xs={5} md={8}></Grid> : generalMenu}
         {tabletMenu}
         <Grid item xs={4} md={2} className={classes.launch_pad_content}>
           <Link to="/home" className={classes.lunch_pad}>
