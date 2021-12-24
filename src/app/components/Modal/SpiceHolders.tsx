@@ -1,6 +1,6 @@
 import React from 'react'
 import { makeStyles, Theme } from '@material-ui/core/styles'
-import { Grid, FormControl, Select } from '@material-ui/core'
+import { Grid, FormControl, Select, Button } from '@material-ui/core'
 import { Icon } from '@iconify/react'
 import SpiceBalance from '../../components/SpiceBalance'
 
@@ -91,6 +91,11 @@ const useStyles = makeStyles((theme: Theme) => ({
   select_tag: {
     borderRadius: 0,
   },
+  load_more_button: {
+    width: '100%',
+    color: theme.palette.error.light,
+    background: theme.palette.primary.main,
+  },
 }))
 
 export default function SpiceHolders() {
@@ -158,6 +163,9 @@ export default function SpiceHolders() {
           <SpiceBalance />
           <SpiceBalance />
           <SpiceBalance />
+        </Grid>
+        <Grid item xs={12}>
+          <Button className={classes.load_more_button}>LOAD MORE</Button>
         </Grid>
       </Grid>
     </div>
