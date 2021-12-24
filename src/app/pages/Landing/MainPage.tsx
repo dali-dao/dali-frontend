@@ -27,6 +27,12 @@ import JoinUsBack from '../../assets/MainPage/join_us_back.png'
 import { Theme } from '@material-ui/core/styles'
 import { createStyles } from '@material-ui/core/styles'
 import { makeStyles } from '@material-ui/core/styles'
+import { useMediaQuery } from 'react-responsive'
+import Drawer from '@material-ui/core/Drawer'
+import CloseIcon from '@material-ui/icons/Close'
+import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos'
+import React from 'react'
+import ReorderIcon from '@material-ui/icons/Reorder'
 
 export const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -141,6 +147,9 @@ export const useStyles = makeStyles((theme: Theme) =>
     },
     lunch_pad: {
       textDecoration: 'none',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'right'
     },
     design_project_button: {
       backgroundImage: 'linear-gradient(to right, rgb(238 221 14) 0%, rgb(24 216 211) 100%, rgb(247, 157, 0) 100%)',
@@ -326,7 +335,6 @@ export const useStyles = makeStyles((theme: Theme) =>
       padding: '10px 50px',
       borderRadius: 50,
       fontWeight: 'bold',
-      marginTop: 15,
       '@media(max-width: 1130px)': {
         padding: '10px 30px',
       },
@@ -351,63 +359,189 @@ export const useStyles = makeStyles((theme: Theme) =>
     design_project_button_content: {
       marginTop: 30,
     },
+    // side bar
+    drawer: {
+      flexShrink: 0,
+      width: 320
+    },
+    drawerPaper: {
+      width: 320,
+      backgroundColor: theme.palette.background.default,
+      textAlign: 'left',
+      lineHeight: 3,
+    },
+    menuRes: {
+      borderBottom: `1px solid ${theme.palette.info.main}`,
+      display: 'flex',
+      justifyContent: 'space-between',
+      alignItems: 'center',
+      padding: '0 20px'
+    },
+    menuResTitle: {
+      color: theme.palette.error.light,
+      padding: '10px 20px',
+      borderBottom: `1px solid ${theme.palette.info.main}`,
+      display: 'flex',
+      justifyContent: 'space-between',
+      alignItems: 'center'
+    },
+    menuSidebar: {
+      textDecoration: 'none',
+      color: theme.palette.success.main,
+      textTransform: 'uppercase',
+    },
+    toggleIcon: {
+      cursor: 'pointer',
+      paddingLeft: 10,
+      color: '#10141b',
+      display: 'flex',
+      alignItems: 'center'
+    },
+    logoSection: {
+      display: 'flex',
+      alignItems: 'center'
+    }
   }),
 )
 
 function MainPage() {
   const classes = useStyles()
 
+  const [menuOpen, setMenuOpen] = React.useState(false)
+
+  const toggleDrawer = (event: any) => {
+    if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
+      return
+    }
+
+    setMenuOpen(!menuOpen)
+  }
+
+  const isTablet = useMediaQuery({ query: '(max-width: 1200px)' })
+
+  let generalMenu = (
+    <Grid container item xs={12} md={8} className={classes.header_container}>
+      <Grid className={classes.header_link}>
+        <a href="#home" className={classes.link_tab}>
+          HOME
+        </a>
+      </Grid>
+      <Grid className={classes.header_link}>
+        <a href="#about" className={classes.link_tab}>
+          ABOUT
+        </a>
+      </Grid>
+      <Grid className={classes.header_link}>
+        <a href="#what_we_do" className={classes.link_tab}>
+          WHAT WE DO
+        </a>
+      </Grid>
+      <Grid className={classes.header_link}>
+        <a href="#gallery" className={classes.link_tab}>
+          GALLERY
+        </a>
+      </Grid>
+      <Grid className={classes.header_link}>
+        <a href="#our_team" className={classes.link_tab}>
+          OUR TEAM
+        </a>
+      </Grid>
+      <Grid className={classes.header_link}>
+        <a href="#vision" className={classes.link_tab}>
+          VISION
+        </a>
+      </Grid>
+      <Grid className={classes.header_link}>
+        <a href="#road_map" className={classes.link_tab}>
+          ROAD MAP
+        </a>
+      </Grid>
+      <Grid className={classes.header_link}>
+        <a href="#contact_us" className={classes.link_tab}>
+          CONTACT US
+        </a>
+      </Grid>
+    </Grid>
+  )
+
+  let tabletMenu = (
+    <Drawer
+      className={classes.drawer}
+      classes={{
+        paper: classes.drawerPaper,
+      }}
+      anchor="left"
+      open={menuOpen}
+      onClose={toggleDrawer}
+    >
+      <Grid container>
+        <Grid item xs={12} className={classes.menuResTitle}>
+          <span>QUICK LINK</span> <CloseIcon onClick={toggleDrawer} style={{ cursor: 'pointer' }} />
+        </Grid>
+        <Grid item xs={12} className={classes.menuRes}>
+          <a href="#home" className={classes.menuSidebar}>
+            <span>Home</span>
+          </a>
+          <ArrowForwardIosIcon fontSize="small" />
+        </Grid>
+        <Grid item xs={12} className={classes.menuRes}>
+          <a href="#about" className={classes.menuSidebar}>
+            ABOUT
+          </a>
+          <ArrowForwardIosIcon fontSize="small" />
+        </Grid>
+        <Grid item xs={12} className={classes.menuRes}>
+          <a href="#what_we_do" className={classes.menuSidebar}>
+            WHAT WE DO
+          </a>
+          <ArrowForwardIosIcon fontSize="small" />
+        </Grid>
+        <Grid item xs={12} className={classes.menuRes}>
+          <a href="#gallery" className={classes.menuSidebar}>
+            GALLERY
+          </a>
+          <ArrowForwardIosIcon fontSize="small" />
+        </Grid>
+        <Grid item xs={12} className={classes.menuRes}>
+          <a href="#our_team" className={classes.menuSidebar}>
+            OUR TEAM
+          </a>
+          <ArrowForwardIosIcon fontSize="small" />
+        </Grid>
+        <Grid item xs={12} className={classes.menuRes}>
+          <a href="#vision" className={classes.menuSidebar}>
+            VISION
+          </a>
+          <ArrowForwardIosIcon fontSize="small" />
+        </Grid>
+        <Grid item xs={12} className={classes.menuRes}>
+          <a href="#road_map" className={classes.menuSidebar}>
+            ROAD MAP
+          </a>
+          <ArrowForwardIosIcon fontSize="small" />
+        </Grid>
+        <Grid item xs={12} className={classes.menuRes}>
+          <a href="#contact_us" className={classes.menuSidebar}>
+            CONTACT US
+          </a>
+          <ArrowForwardIosIcon fontSize="small" />
+        </Grid>
+      </Grid>
+    </Drawer>
+  )
+
   return (
     <div className={classes.root}>
       <Grid container className={classes.header_content}>
-        <Grid item xs={12} md={2}>
+        <Grid item xs={4} md={2} className={classes.logoSection}>
+          {isTablet ? <ReorderIcon fontSize="large" onClick={toggleDrawer} className={classes.toggleIcon} /> : ''}
           <Link to="/">
             <img src={LogoBlack} alt="logo" />
           </Link>
         </Grid>
-        <Grid container item xs={12} md={8} className={classes.header_container}>
-          <Grid className={classes.header_link}>
-            <a href="#home" className={classes.link_tab}>
-              HOME
-            </a>
-          </Grid>
-          <Grid className={classes.header_link}>
-            <a href="#about" className={classes.link_tab}>
-              ABOUT
-            </a>
-          </Grid>
-          <Grid className={classes.header_link}>
-            <a href="#what_we_do" className={classes.link_tab}>
-              WHAT WE DO
-            </a>
-          </Grid>
-          <Grid className={classes.header_link}>
-            <a href="#gallery" className={classes.link_tab}>
-              GALLERY
-            </a>
-          </Grid>
-          <Grid className={classes.header_link}>
-            <a href="#our_team" className={classes.link_tab}>
-              OUR TEAM
-            </a>
-          </Grid>
-          <Grid className={classes.header_link}>
-            <a href="#vision" className={classes.link_tab}>
-              VISION
-            </a>
-          </Grid>
-          <Grid className={classes.header_link}>
-            <a href="#road_map" className={classes.link_tab}>
-              ROAD MAP
-            </a>
-          </Grid>
-          <Grid className={classes.header_link}>
-            <a href="#contact_us" className={classes.link_tab}>
-              CONTACT US
-            </a>
-          </Grid>
-        </Grid>
-        <Grid item xs={12} md={2}>
+        {isTablet ? <Grid item xs={4} md={8}></Grid> : generalMenu}
+        {tabletMenu}
+        <Grid item xs={4} md={2}>
           <Link to="/home" className={classes.lunch_pad}>
             <Button className={classes.join_us_button}>LAUNCH PAD</Button>
           </Link>
