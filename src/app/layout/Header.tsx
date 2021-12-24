@@ -200,7 +200,9 @@ function Header() {
       <Grid container>
         <Grid item xs={4} md={2} className={classes.logoSection}>
           {isTablet ? <ReorderIcon fontSize="large" onClick={toggleDrawer} className={classes.toggleIcon} /> : ''}
-          <img src={curThemeName === 'darkTheme' ? Logo : LogoBlack} alt="logo" style={{padding: 10}} />
+          <Link to="/">
+            <img src={curThemeName === 'darkTheme' ? Logo : LogoBlack} alt="logo" style={{padding: 10}} />
+          </Link>
         </Grid>
         {isTablet ? <Grid item md={8} xs={4}></Grid> : generalMenu}
         {tabletMenu}
