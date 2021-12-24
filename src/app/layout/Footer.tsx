@@ -6,6 +6,7 @@ import InstagramIcon from '@material-ui/icons/Instagram'
 import Logo from '../assets/Landing/logo.png'
 import LogoBlack from '../assets/Landing/logo_black.png'
 import { Icon } from '@iconify/react'
+import { Link } from 'react-router-dom'
 
 function Footer() {
   const classes = useStyles()
@@ -44,7 +45,9 @@ function Footer() {
       </Grid>
       <Grid className={classes.footerMiddle} container>
         <Grid item xs={12} md={4}>
-          <img src={curThemeName === 'darkTheme' ? Logo : LogoBlack} alt="logo" />
+          <Link to="/">
+            <img src={curThemeName === 'darkTheme' ? Logo : LogoBlack} alt="logo" />
+          </Link>
           <p className={classes.footerMiddleDesc1}>
             Users fund your project by paying to use your app or service, or as a patron or investor by making a payment
             directly to your project’s smart contract (like on this app). For users paying through your app, you should
