@@ -149,7 +149,7 @@ export const useStyles = makeStyles((theme: Theme) =>
       textDecoration: 'none',
       display: 'flex',
       alignItems: 'center',
-      justifyContent: 'right'
+      justifyContent: 'right',
     },
     design_project_button: {
       backgroundImage: 'linear-gradient(to right, rgb(238 221 14) 0%, rgb(24 216 211) 100%, rgb(247, 157, 0) 100%)',
@@ -327,7 +327,13 @@ export const useStyles = makeStyles((theme: Theme) =>
       },
     },
     header_container: {
-      marginTop: '30px !important',
+      display: 'flex',
+      alignItems: 'center',
+    },
+    launch_pad_content: {
+      display: 'flex',
+      justifyContent: 'right',
+      alignItems: 'center',
     },
     join_us_button: {
       backgroundImage: 'linear-gradient(to right, rgb(238 221 14) 0%, rgb(24 216 211) 100%, rgb(247, 157, 0) 100%)',
@@ -362,7 +368,7 @@ export const useStyles = makeStyles((theme: Theme) =>
     // side bar
     drawer: {
       flexShrink: 0,
-      width: 320
+      width: 320,
     },
     drawerPaper: {
       width: 320,
@@ -375,7 +381,7 @@ export const useStyles = makeStyles((theme: Theme) =>
       display: 'flex',
       justifyContent: 'space-between',
       alignItems: 'center',
-      padding: '0 20px'
+      padding: '0 20px',
     },
     menuResTitle: {
       color: theme.palette.error.light,
@@ -383,27 +389,25 @@ export const useStyles = makeStyles((theme: Theme) =>
       borderBottom: `1px solid ${theme.palette.info.main}`,
       display: 'flex',
       justifyContent: 'space-between',
-      alignItems: 'center'
+      alignItems: 'center',
     },
     menuSidebar: {
       textDecoration: 'none',
       color: theme.palette.success.main,
       textTransform: 'uppercase',
+      width: '100%',
     },
     toggleIcon: {
       cursor: 'pointer',
       paddingLeft: 10,
       color: '#10141b',
       display: 'flex',
-      alignItems: 'center'
+      alignItems: 'center',
     },
     logoSection: {
       display: 'flex',
-      alignItems: 'center'
+      alignItems: 'center',
     },
-    section: {
-      paddingTop: '5%',
-    }
   }),
 )
 
@@ -544,7 +548,7 @@ function MainPage() {
         </Grid>
         {isTablet ? <Grid item xs={4} md={8}></Grid> : generalMenu}
         {tabletMenu}
-        <Grid item xs={4} md={2}>
+        <Grid item xs={4} md={2} className={classes.launch_pad_content}>
           <Link to="/home" className={classes.lunch_pad}>
             <Button className={classes.join_us_button}>LAUNCH PAD</Button>
           </Link>
@@ -675,7 +679,6 @@ function MainPage() {
           </Grid>
         </Grid>
       </Grid>
-      
       <Grid container id="vision" justifyContent="center" className={classes.value_in_vision}>
         <Grid item xs={12} className={classes.vision_title}>
           VALUES IN VISION
