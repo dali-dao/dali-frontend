@@ -93,11 +93,11 @@ function Header() {
     setConnectState(false)
   }
 
-  const isTablet = useMediaQuery({ query: '(max-width: 1200px)' })
+  const isTablet = useMediaQuery({ query: '(max-width: 750px)' })
   const isMobile = useMediaQuery({ query: '(max-width: 500px)' })
 
   let generalMenu = (
-    <Grid container item xs={12} md={8} className={classes.menuItems}>
+    <Grid container item xs={6} md={8} className={classes.menuItems}>
       {/* <Grid item xs={1}></Grid> */}
       <Grid item xs={2} md={1}>
         <Link to="/home" className={location_path.pathname === '/home' ? classes.activeMenu : classes.menu}>
@@ -198,13 +198,13 @@ function Header() {
   return (
     <div className={classes.header}>
       <Grid container>
-        <Grid item xs={4} md={2} className={classes.logoSection}>
+        <Grid item xs={2} md={2} className={classes.logoSection}>
           {isTablet ? <ReorderIcon fontSize="large" onClick={toggleDrawer} className={classes.toggleIcon} /> : ''}
           <Link to="/">
             <img src={curThemeName === 'darkTheme' ? Logo : LogoBlack} alt="logo" style={{padding: 10}} />
           </Link>
         </Grid>
-        {isTablet ? <Grid item md={8} xs={4}></Grid> : generalMenu}
+        {isTablet ? <Grid item md={8} xs={6}></Grid> : generalMenu}
         {tabletMenu}
         <Grid item xs={isMobile ? 12 : 4} md={2} container className={classes.rightItems}>
           <Grid item xs={6} md={5} sm={6}>
