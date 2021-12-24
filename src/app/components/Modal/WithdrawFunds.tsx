@@ -103,6 +103,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     paddingRight: 0,
     height: 40,
     borderRadius: 0,
+    border: '1px solid #81899a',
   },
   total_funds_content: {
     marginTop: 10,

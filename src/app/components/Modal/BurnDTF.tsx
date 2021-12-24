@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     top: 20,
     '@media(max-width: 1000px)': {
       width: '90%',
-      left: '4%'
+      left: '4%',
     },
   },
   modal_header: {
@@ -60,12 +60,20 @@ const useStyles = makeStyles((theme: Theme) => ({
     marginRight: 20,
     width: 145,
     height: 50,
+    '@media(max-width: 530px)': {
+      width: '100%',
+      marginBottom: 20,
+      marginRight: 0,
+    },
   },
   right_button: {
     backgroundImage: 'linear-gradient(to right, rgb(238 221 14) 0%, rgb(24 216 211) 100%, rgb(247, 157, 0) 100%)',
     width: 230,
     height: 50,
     color: '#000',
+    '@media(max-width: 530px)': {
+      width: '100%',
+    },
   },
   project_price_info: {
     fontSize: 13,
@@ -106,7 +114,7 @@ interface burnDTF {
   handleClose: () => void
 }
 
-export default function BurnDTF({handleClose}: burnDTF) {
+export default function BurnDTF({ handleClose }: burnDTF) {
   const classes = useStyles()
 
   return (
@@ -141,7 +149,9 @@ export default function BurnDTF({handleClose}: burnDTF) {
       </Grid>
 
       <Grid container className={classes.button_content}>
-        <Button className={classes.left_button} onClick={handleClose}>CANCEL</Button>
+        <Button className={classes.left_button} onClick={handleClose}>
+          CANCEL
+        </Button>
         <Button className={classes.right_button}>BURN 0 DTF FOR ETH</Button>
       </Grid>
     </div>

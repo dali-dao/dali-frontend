@@ -512,7 +512,7 @@ export default function DesignPreview() {
                         : <span className={classes.marginLeft10}>0%</span>
                       </strong>
                     </Grid>
-                    <Grid item xs={12} md={4} className={classes.fontSize12}>
+                    <Grid item xs={12} md={6} className={classes.fontSize12}>
                       <strong>Reconfiguration strategy</strong>{' '}
                       <Icon icon="si-glyph:circle-info" className={classes.icon_style} />
                       <strong>
