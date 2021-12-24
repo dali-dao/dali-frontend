@@ -361,6 +361,7 @@ export const useStyles = makeStyles((theme: Theme) =>
     link_tab: {
       textDecoration: 'none',
       color: '#000',
+      cursor: 'pointer'
     },
     design_project_button_content: {
       marginTop: 30,
@@ -426,47 +427,59 @@ function MainPage() {
 
   const isTablet = useMediaQuery({ query: '(max-width: 1200px)' })
 
+  const scrollTo = (id: string) => {
+    const element = document.getElementById(id) as HTMLDivElement;
+    var elementPosition = element.getBoundingClientRect().top;
+    var headerOffset = 90;
+    var offsetPosition = elementPosition + headerOffset;
+    
+    window.scrollTo({
+      behavior: "smooth",
+      top: window.scrollY + offsetPosition - headerOffset * 2
+    });
+  };
+
   let generalMenu = (
     <Grid container item xs={12} md={8} className={classes.header_container}>
-      <Grid className={classes.header_link}>
-        <a href="#home" className={classes.link_tab}>
+      <Grid className={classes.header_link} onClick={() => scrollTo("home")}>
+        <span className={classes.link_tab}>
           HOME
-        </a>
+        </span>
       </Grid>
-      <Grid className={classes.header_link}>
-        <a href="#about" className={classes.link_tab}>
+      <Grid className={classes.header_link} onClick={() => scrollTo("about")}>
+        <span className={classes.link_tab}>
           ABOUT
-        </a>
+        </span>
       </Grid>
-      <Grid className={classes.header_link}>
-        <a href="#what_we_do" className={classes.link_tab}>
+      <Grid className={classes.header_link} onClick={() => scrollTo("what_we_do")}>
+        <span className={classes.link_tab}>
           WHAT WE DO
-        </a>
+        </span>
       </Grid>
-      <Grid className={classes.header_link}>
-        <a href="#gallery" className={classes.link_tab}>
+      <Grid className={classes.header_link} onClick={() => scrollTo("gallery")}>
+        <span className={classes.link_tab}>
           GALLERY
-        </a>
+        </span>
       </Grid>
-      <Grid className={classes.header_link}>
-        <a href="#our_team" className={classes.link_tab}>
+      <Grid className={classes.header_link} onClick={() => scrollTo("our_team")}>
+        <span className={classes.link_tab}>
           OUR TEAM
-        </a>
+        </span>
       </Grid>
-      <Grid className={classes.header_link}>
-        <a href="#vision" className={classes.link_tab}>
+      <Grid className={classes.header_link} onClick={() => scrollTo("vision")}>
+        <span className={classes.link_tab}>
           VISION
-        </a>
+        </span>
       </Grid>
-      <Grid className={classes.header_link}>
-        <a href="#road_map" className={classes.link_tab}>
+      <Grid className={classes.header_link} onClick={() => scrollTo("road_map")}>
+        <span className={classes.link_tab}>
           ROAD MAP
-        </a>
+        </span>
       </Grid>
-      <Grid className={classes.header_link}>
-        <a href="#contact_us" className={classes.link_tab}>
+      <Grid className={classes.header_link} onClick={() => scrollTo("contact_us")}>
+        <span className={classes.link_tab}>
           CONTACT US
-        </a>
+        </span>
       </Grid>
     </Grid>
   )
@@ -485,52 +498,52 @@ function MainPage() {
         <Grid item xs={12} className={classes.menuResTitle}>
           <span>QUICK LINK</span> <CloseIcon onClick={toggleDrawer} style={{ cursor: 'pointer' }} />
         </Grid>
-        <Grid item xs={12} className={classes.menuRes}>
-          <a href="#home" className={classes.menuSidebar}>
+        <Grid item xs={12} className={classes.menuRes} onClick={() => scrollTo("home")}>
+          <span className={classes.menuSidebar}>
             <span>Home</span>
-          </a>
+          </span>
           <ArrowForwardIosIcon fontSize="small" />
         </Grid>
-        <Grid item xs={12} className={classes.menuRes}>
-          <a href="#about" className={classes.menuSidebar}>
+        <Grid item xs={12} className={classes.menuRes} onClick={() => scrollTo("about")}>
+          <span className={classes.menuSidebar}>
             ABOUT
-          </a>
+          </span>
           <ArrowForwardIosIcon fontSize="small" />
         </Grid>
-        <Grid item xs={12} className={classes.menuRes}>
-          <a href="#what_we_do" className={classes.menuSidebar}>
+        <Grid item xs={12} className={classes.menuRes} onClick={() => scrollTo("what_we_do")}>
+          <span className={classes.menuSidebar}>
             WHAT WE DO
-          </a>
+          </span>
           <ArrowForwardIosIcon fontSize="small" />
         </Grid>
-        <Grid item xs={12} className={classes.menuRes}>
-          <a href="#gallery" className={classes.menuSidebar}>
+        <Grid item xs={12} className={classes.menuRes} onClick={() => scrollTo("gallery")}>
+          <span className={classes.menuSidebar}>
             GALLERY
-          </a>
+          </span>
           <ArrowForwardIosIcon fontSize="small" />
         </Grid>
-        <Grid item xs={12} className={classes.menuRes}>
-          <a href="#our_team" className={classes.menuSidebar}>
+        <Grid item xs={12} className={classes.menuRes} onClick={() => scrollTo("our_team")}>
+          <span className={classes.menuSidebar}>
             OUR TEAM
-          </a>
+          </span>
           <ArrowForwardIosIcon fontSize="small" />
         </Grid>
-        <Grid item xs={12} className={classes.menuRes}>
-          <a href="#vision" className={classes.menuSidebar}>
+        <Grid item xs={12} className={classes.menuRes} onClick={() => scrollTo("vision")}>
+          <span className={classes.menuSidebar}>
             VISION
-          </a>
+          </span>
           <ArrowForwardIosIcon fontSize="small" />
         </Grid>
-        <Grid item xs={12} className={classes.menuRes}>
-          <a href="#road_map" className={classes.menuSidebar}>
+        <Grid item xs={12} className={classes.menuRes} onClick={() => scrollTo("road_map")}>
+          <span className={classes.menuSidebar}>
             ROAD MAP
-          </a>
+          </span>
           <ArrowForwardIosIcon fontSize="small" />
         </Grid>
-        <Grid item xs={12} className={classes.menuRes}>
-          <a href="#contact_us" className={classes.menuSidebar}>
+        <Grid item xs={12} className={classes.menuRes} onClick={() => scrollTo("contact_us")}>
+          <span className={classes.menuSidebar}>
             CONTACT US
-          </a>
+          </span>
           <ArrowForwardIosIcon fontSize="small" />
         </Grid>
       </Grid>
