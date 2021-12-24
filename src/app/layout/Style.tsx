@@ -10,7 +10,7 @@ export const useStyles = makeStyles((theme: Theme) =>
       fontSize: 12,
       color: theme.palette.success.main,
       padding: '0 10px',
-      display: 'flex'
+      display: 'flex',
     },
     footer: {
       backgroundColor: theme.palette.background.paper,
@@ -49,6 +49,7 @@ export const useStyles = makeStyles((theme: Theme) =>
       textDecoration: 'none',
       color: theme.palette.success.main,
       textTransform: 'uppercase',
+      width: '100%',
     },
     activeMenuSidebar: {
       textDecoration: 'none',
@@ -69,7 +70,7 @@ export const useStyles = makeStyles((theme: Theme) =>
       paddingLeft: 10,
       '@media (max-width: 500px)': {
         position: 'absolute',
-        right: 10
+        right: 10,
       },
     },
     logoSection: {
@@ -80,7 +81,7 @@ export const useStyles = makeStyles((theme: Theme) =>
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'left',
-      padding: '10px 20px 20px 10px'
+      padding: '10px 20px 20px 10px',
     },
     connectBtn: {
       background: '#f7db0e', // no change by theme
@@ -186,12 +187,12 @@ export const useStyles = makeStyles((theme: Theme) =>
       fontSize: 20,
       fontWeight: 'bold',
       paddingBottom: 25,
-      '@media (max-width: 490px)' : {
-        fontSize: 14
+      '@media (max-width: 490px)': {
+        fontSize: 14,
       },
-      '@media (max-width: 350px)' : {
-        fontSize: 12
-      }
+      '@media (max-width: 350px)': {
+        fontSize: 12,
+      },
     },
     footerMiddleDesc1: {
       color: '#9e9fa2',
@@ -228,7 +229,7 @@ export const useStyles = makeStyles((theme: Theme) =>
     },
     drawer: {
       flexShrink: 0,
-      width: 320
+      width: 320,
     },
     drawerPaper: {
       width: 320,
@@ -244,7 +245,7 @@ export const useStyles = makeStyles((theme: Theme) =>
       display: 'flex',
       justifyContent: 'space-between',
       alignItems: 'center',
-      padding: '0 20px'
+      padding: '0 20px',
     },
     menuResTitle: {
       color: theme.palette.error.light,
@@ -252,17 +253,17 @@ export const useStyles = makeStyles((theme: Theme) =>
       borderBottom: `1px solid ${theme.palette.info.main}`,
       display: 'flex',
       justifyContent: 'space-between',
-      alignItems: 'center'
+      alignItems: 'center',
     },
     settingTheme: {
       display: 'flex',
       alignItems: 'center',
     },
     settingThemeLabel: {
-      color: theme.palette.success.dark, 
+      color: theme.palette.success.dark,
       marginLeft: 10,
       fontSize: 12,
-    }
+    },
   }),
 )
 
