@@ -152,7 +152,7 @@ export const useStyles = makeStyles((theme: Theme) =>
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'right',
-      paddingLeft: 10
+      paddingLeft: 10,
     },
     design_project_button: {
       backgroundImage: 'linear-gradient(to right, rgb(238 221 14) 0%, rgb(24 216 211) 100%, rgb(247, 157, 0) 100%)',
@@ -171,11 +171,11 @@ export const useStyles = makeStyles((theme: Theme) =>
     what_we_do_title: {
       fontSize: 40,
       fontWeight: 'bold',
-      color: 'white'
+      color: 'white',
     },
     what_we_do_title_1: {
       fontSize: 18,
-      color: 'white'
+      color: 'white',
     },
     what_we_do_image: {
       padding: 10,
@@ -191,7 +191,7 @@ export const useStyles = makeStyles((theme: Theme) =>
     },
     what_do_image_desc: {
       fontSize: 18,
-      color: 'white'
+      color: 'white',
     },
     what_we_do_desc: {
       padding: 10,
@@ -210,7 +210,7 @@ export const useStyles = makeStyles((theme: Theme) =>
       fontWeight: 'bold',
       fontSize: 35,
       marginBottom: 20,
-      color: 'white'
+      color: 'white',
     },
     team_left_content: {
       maxWidth: 1600,
@@ -218,15 +218,30 @@ export const useStyles = makeStyles((theme: Theme) =>
     team_name_description: {
       fontSize: 15,
       padding: 10,
-      color: 'white'
+      color: 'white',
     },
-    team_image: {
+    team_image_1: {
       width: '100%',
-      height: 225,
+      backgroundRepeat: 'round',
+    },
+    team_image_2: {
+      width: '100%',
+      backgroundRepeat: 'round',
+    },
+    team_image_3: {
+      width: '100%',
+      backgroundRepeat: 'round',
+    },
+    team_image_4: {
+      width: '100%',
       backgroundRepeat: 'round',
     },
     padding10: {
       padding: 10,
+    },
+    team_img_content: {
+      padding: 10,
+      textAlign: 'right',
     },
     vision_title: {
       fontSize: 45,
@@ -340,7 +355,7 @@ export const useStyles = makeStyles((theme: Theme) =>
       justifyContent: 'right',
       alignItems: 'center',
       '@media(max-width: 500px)': {
-        justifyContent: 'center'
+        justifyContent: 'center',
       },
     },
     join_us_button: {
@@ -369,7 +384,7 @@ export const useStyles = makeStyles((theme: Theme) =>
     link_tab: {
       textDecoration: 'none',
       color: theme.palette.background.default,
-      cursor: 'pointer'
+      cursor: 'pointer',
     },
     design_project_button_content: {
       marginTop: 30,
@@ -466,7 +481,6 @@ function MainPage() {
     setMenuOpen(!menuOpen)
   }
 
-  
   const darkTheme = 'darkTheme'
   const lightTheme = 'lightTheme'
   const curThemeName = localStorage.getItem('appTheme') || 'darkTheme'
@@ -487,58 +501,42 @@ function MainPage() {
   const isMobile = useMediaQuery({ query: '(max-width: 500px)' })
 
   const scrollTo = (id: string) => {
-    const element = document.getElementById(id) as HTMLDivElement;
-    var elementPosition = element.getBoundingClientRect().top;
-    var headerOffset = 90;
-    var offsetPosition = elementPosition + headerOffset;
-    
+    const element = document.getElementById(id) as HTMLDivElement
+    var elementPosition = element.getBoundingClientRect().top
+    var headerOffset = 90
+    var offsetPosition = elementPosition + headerOffset
+
     window.scrollTo({
-      behavior: "smooth",
-      top: window.scrollY + offsetPosition - headerOffset * 2
-    });
-  };
+      behavior: 'smooth',
+      top: window.scrollY + offsetPosition - headerOffset * 2,
+    })
+  }
 
   let generalMenu = (
     <Grid container item xs={9} md={7} className={classes.header_container}>
-      <Grid className={classes.header_link} onClick={() => scrollTo("home")}>
-        <span className={classes.link_tab}>
-          HOME
-        </span>
+      <Grid className={classes.header_link} onClick={() => scrollTo('home')}>
+        <span className={classes.link_tab}>HOME</span>
       </Grid>
-      <Grid className={classes.header_link} onClick={() => scrollTo("about")}>
-        <span className={classes.link_tab}>
-          ABOUT
-        </span>
+      <Grid className={classes.header_link} onClick={() => scrollTo('about')}>
+        <span className={classes.link_tab}>ABOUT</span>
       </Grid>
-      <Grid className={classes.header_link} onClick={() => scrollTo("what_we_do")}>
-        <span className={classes.link_tab}>
-          WHAT WE DO
-        </span>
+      <Grid className={classes.header_link} onClick={() => scrollTo('what_we_do')}>
+        <span className={classes.link_tab}>WHAT WE DO</span>
       </Grid>
-      <Grid className={classes.header_link} onClick={() => scrollTo("gallery")}>
-        <span className={classes.link_tab}>
-          GALLERY
-        </span>
+      <Grid className={classes.header_link} onClick={() => scrollTo('gallery')}>
+        <span className={classes.link_tab}>GALLERY</span>
       </Grid>
-      <Grid className={classes.header_link} onClick={() => scrollTo("our_team")}>
-        <span className={classes.link_tab}>
-          OUR TEAM
-        </span>
+      <Grid className={classes.header_link} onClick={() => scrollTo('our_team')}>
+        <span className={classes.link_tab}>OUR TEAM</span>
       </Grid>
-      <Grid className={classes.header_link} onClick={() => scrollTo("vision")}>
-        <span className={classes.link_tab}>
-          VISION
-        </span>
+      <Grid className={classes.header_link} onClick={() => scrollTo('vision')}>
+        <span className={classes.link_tab}>VISION</span>
       </Grid>
-      <Grid className={classes.header_link} onClick={() => scrollTo("road_map")}>
-        <span className={classes.link_tab}>
-          ROAD MAP
-        </span>
+      <Grid className={classes.header_link} onClick={() => scrollTo('road_map')}>
+        <span className={classes.link_tab}>ROAD MAP</span>
       </Grid>
-      <Grid className={classes.header_link} onClick={() => scrollTo("contact_us")}>
-        <span className={classes.link_tab}>
-          CONTACT US
-        </span>
+      <Grid className={classes.header_link} onClick={() => scrollTo('contact_us')}>
+        <span className={classes.link_tab}>CONTACT US</span>
       </Grid>
     </Grid>
   )
@@ -557,52 +555,38 @@ function MainPage() {
         <Grid item xs={12} className={classes.menuResTitle}>
           <span>QUICK LINK</span> <CloseIcon onClick={toggleDrawer} style={{ cursor: 'pointer' }} />
         </Grid>
-        <Grid item xs={12} className={classes.menuRes} onClick={() => scrollTo("home")}>
+        <Grid item xs={12} className={classes.menuRes} onClick={() => scrollTo('home')}>
           <span className={classes.menuSidebar}>
             <span>Home</span>
           </span>
           <ArrowForwardIosIcon fontSize="small" />
         </Grid>
-        <Grid item xs={12} className={classes.menuRes} onClick={() => scrollTo("about")}>
-          <span className={classes.menuSidebar}>
-            ABOUT
-          </span>
+        <Grid item xs={12} className={classes.menuRes} onClick={() => scrollTo('about')}>
+          <span className={classes.menuSidebar}>ABOUT</span>
           <ArrowForwardIosIcon fontSize="small" />
         </Grid>
-        <Grid item xs={12} className={classes.menuRes} onClick={() => scrollTo("what_we_do")}>
-          <span className={classes.menuSidebar}>
-            WHAT WE DO
-          </span>
+        <Grid item xs={12} className={classes.menuRes} onClick={() => scrollTo('what_we_do')}>
+          <span className={classes.menuSidebar}>WHAT WE DO</span>
           <ArrowForwardIosIcon fontSize="small" />
         </Grid>
-        <Grid item xs={12} className={classes.menuRes} onClick={() => scrollTo("gallery")}>
-          <span className={classes.menuSidebar}>
-            GALLERY
-          </span>
+        <Grid item xs={12} className={classes.menuRes} onClick={() => scrollTo('gallery')}>
+          <span className={classes.menuSidebar}>GALLERY</span>
           <ArrowForwardIosIcon fontSize="small" />
         </Grid>
-        <Grid item xs={12} className={classes.menuRes} onClick={() => scrollTo("our_team")}>
-          <span className={classes.menuSidebar}>
-            OUR TEAM
-          </span>
+        <Grid item xs={12} className={classes.menuRes} onClick={() => scrollTo('our_team')}>
+          <span className={classes.menuSidebar}>OUR TEAM</span>
           <ArrowForwardIosIcon fontSize="small" />
         </Grid>
-        <Grid item xs={12} className={classes.menuRes} onClick={() => scrollTo("vision")}>
-          <span className={classes.menuSidebar}>
-            VISION
-          </span>
+        <Grid item xs={12} className={classes.menuRes} onClick={() => scrollTo('vision')}>
+          <span className={classes.menuSidebar}>VISION</span>
           <ArrowForwardIosIcon fontSize="small" />
         </Grid>
-        <Grid item xs={12} className={classes.menuRes} onClick={() => scrollTo("road_map")}>
-          <span className={classes.menuSidebar}>
-            ROAD MAP
-          </span>
+        <Grid item xs={12} className={classes.menuRes} onClick={() => scrollTo('road_map')}>
+          <span className={classes.menuSidebar}>ROAD MAP</span>
           <ArrowForwardIosIcon fontSize="small" />
         </Grid>
-        <Grid item xs={12} className={classes.menuRes} onClick={() => scrollTo("contact_us")}>
-          <span className={classes.menuSidebar}>
-            CONTACT US
-          </span>
+        <Grid item xs={12} className={classes.menuRes} onClick={() => scrollTo('contact_us')}>
+          <span className={classes.menuSidebar}>CONTACT US</span>
           <ArrowForwardIosIcon fontSize="small" />
         </Grid>
         <Grid container item xs={12} className={classes.menuResTitle}>
@@ -630,7 +614,7 @@ function MainPage() {
         </Grid>
         {isTablet ? <Grid item xs={isTablet ? 3 : 5} md={7}></Grid> : generalMenu}
         {tabletMenu}
-        <Grid item xs={isMobile ? 12 : (isTablet ? 6 : 4)} md={3} className={classes.launch_pad_content}>
+        <Grid item xs={isMobile ? 12 : isTablet ? 6 : 4} md={3} className={classes.launch_pad_content}>
           <Icon icon="bi:moon-fill" className={classes.moon_style} onClick={handleToggleTheme} />
           <Icon icon="bx:bxs-sun" className={classes.sun_style} onClick={handleToggleTheme} />
           <Link to="/home" className={classes.lunch_pad}>
@@ -729,30 +713,30 @@ function MainPage() {
         <Grid item xs={12} className={classes.the_team}>
           THE TEAM
         </Grid>
-        <Grid container item xs={12} md={7} className={classes.team_left_content}>
+        <Grid container item xs={12} md={6} className={classes.team_left_content}>
           <Grid item xs={12} md={5} sm={5} className={classes.padding10}>
-            <img src={Team_1} alt="team_1" className={classes.team_image} />
+            <img src={Team_1} alt="team_1" className={classes.team_image_1} />
           </Grid>
-          <Grid item xs={12} md={7} sm={7} className={classes.padding10}>
-            <img src={Team_2} alt="team_2" className={classes.team_image} />
+          <Grid item xs={12} md={7} sm={7} className={classes.team_img_content}>
+            <img src={Team_2} alt="team_2" className={classes.team_image_2} />
           </Grid>
         </Grid>
-        <Grid container item xs={12} md={5} className={classes.team_name_description}>
+        <Grid container item xs={12} md={6} className={classes.team_name_description}>
           PROIN A METUS LIBERO. CRAS TEMPOR TEMPOR SAPIEN, AT ELEMENTUM QUAM PORTA BLANDIT. PELLENTESQUE HABITANT MORBI
           TRISTIQUE SENECTUS ET NETUS ET MALESUADA FAMES AC TURPIS EGESTAS. ETIAM A TEMPOR LECTUS. PHASELLUS HENDRERIT
           MATTIS MAURIS, ET MATTIS NEQUE VEHICULA VEL. MAURIS INTERDUM URNA A MI BLANDIT MATTIS. ALIQUAM UT SUSQUE
           VEHICULA VEL. MAURIS INTERDUM URNA A MI BLANDIT MATTIS. ALIQUAM UT SUSCIPIT ODIO. SUSPENDISSE LECTUS QUAM,
           TRISTIQUE AC DAPIBUS ID, ORNARE ET LECTUS. PROIN IN DIAM FINIBUS, EFFICITUR ERAT QUIS, TRISTIQUE LECTUS.{' '}
         </Grid>
-        <Grid container item xs={12} md={7} className={classes.team_left_content}>
+        <Grid container item xs={12} md={6} className={classes.team_left_content}>
           <Grid item xs={12} md={7} sm={7} className={classes.padding10}>
-            <img src={Team_3} alt="team_3" className={classes.team_image} />
+            <img src={Team_3} alt="team_3" className={classes.team_image_3} />
           </Grid>
-          <Grid item xs={12} md={5} sm={5} className={classes.padding10}>
-            <img src={Team_4} alt="team_4" className={classes.team_image} />
+          <Grid item xs={12} md={5} sm={5} className={classes.team_img_content}>
+            <img src={Team_4} alt="team_4" className={classes.team_image_4} />
           </Grid>
         </Grid>
-        <Grid item xs={12} md={5} className={classes.team_name_description}>
+        <Grid item xs={12} md={6} className={classes.team_name_description}>
           PROIN A METUS LIBERO. CRAS TEMPOR TEMPOR SAPIPROIN A METUS LIBERO. CRAS TEMPOR TEMPOR SAPIPROIN A METUS
           LIBERO. CRAS TEMPOR TEMPOR SAPIEN, AT ELEMENTUM QUAM PORTA BLANDIT.PELLENTESQUE HABITANT MORBI TRISTIQUE
           SENECTUS ET NETUS ET MALESUADA FAMES AC TURPIS EGESTAS. ETIAM A TEMPOR LECTUS. PHASELLUS HENDRERIT MATTIS
