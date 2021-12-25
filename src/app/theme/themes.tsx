@@ -44,18 +44,21 @@ const lightTheme = createTheme({
       main: '#f5f6fa', // step content header title
       dark: '#d7deed', // box shadow
       light: '#2c333f', // step conent number
+      contrastText: ''
     },
     // project Detail
     secondary: {
       main: '#fff', // detail volume
       dark: '#fff', // activity project detail
       light: '#fff', // contribute
+      contrastText: ''
     },
     warning: {
       main: '#fff', // funding cycle
       // landing page
       contrastText: '#f5f6fa', // latest payments, faq card foreground
       dark: '#13204c', // moon background
+      light: '#0b0b15' // landing page background (Top)
     },
     /*
      * Border
@@ -65,6 +68,7 @@ const lightTheme = createTheme({
       dark: '#f7db0e', // yellow
       // landing page / latest payment background
       light: '#fff', // latest payment background
+      contrastText: ''
     },
     /*
      * Font
@@ -101,7 +105,7 @@ const darkTheme = createTheme({
   palette: {
     type: 'dark',
     /*
-     * Background
+     * Backgroundf5f6fa
      */
     background: {
       default: '#10141b', // main background
@@ -115,18 +119,21 @@ const darkTheme = createTheme({
       main: '#2c333f', // step content header title
       dark: '#0b0c13', // box shadow
       light: '#f7db0e', // step conent number
+      contrastText: ''
     },
     // project Detail
     secondary: {
       main: '#1a1d24', // detail volume
       dark: '#131720', // activity project detail
       light: '#212630', // contribute
+      contrastText: ''
     },
     warning: {
       main: '#222733', // funding cycle
       // landing page
       contrastText: '#151a22', // latest payments, faq card foreground
       dark: '#29303d', // moon background
+      light: '#f5f6fa' // landing page background (Top)
     },
     /*
      * Border Color
@@ -136,6 +143,7 @@ const darkTheme = createTheme({
       dark: '#f7db0e', // yellow
       // landing page / latest payment background
       light: '#151a22', // latest payment background
+      contrastText: ''
     },
     /*
      * Font Color
