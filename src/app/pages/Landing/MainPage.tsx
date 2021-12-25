@@ -8,6 +8,7 @@ import Team_3 from '../../assets/MainPage/the_team_3.png'
 import Team_4 from '../../assets/MainPage/the_team_4.png'
 import MultiCarousel from '../../components/MultiCurosel'
 import LogoBlack from '../../assets/Landing/logo_black.png'
+import Logo from '../../assets/Landing/logo.png'
 import TwitterIcon from '@material-ui/icons/Twitter'
 import GitHubIcon from '@material-ui/icons/GitHub'
 import InstagramIcon from '@material-ui/icons/Instagram'
@@ -33,6 +34,7 @@ import CloseIcon from '@material-ui/icons/Close'
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos'
 import React from 'react'
 import ReorderIcon from '@material-ui/icons/Reorder'
+import { ThemeContext } from '../../theme/ThemeProvider'
 
 export const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -45,11 +47,11 @@ export const useStyles = makeStyles((theme: Theme) =>
     header_content: {
       position: 'fixed',
       zIndex: 99,
-      background: '#f5f6fa',
+      background: theme.palette.warning.light,
       padding: 10,
     },
     banner_content: {
-      background: '#f5f6fa',
+      background: theme.palette.warning.light,
     },
     about_dali_content: {
       padding: '5%',
@@ -168,9 +170,11 @@ export const useStyles = makeStyles((theme: Theme) =>
     what_we_do_title: {
       fontSize: 40,
       fontWeight: 'bold',
+      color: 'white'
     },
     what_we_do_title_1: {
       fontSize: 18,
+      color: 'white'
     },
     what_we_do_image: {
       padding: 10,
@@ -186,6 +190,7 @@ export const useStyles = makeStyles((theme: Theme) =>
     },
     what_do_image_desc: {
       fontSize: 18,
+      color: 'white'
     },
     what_we_do_desc: {
       padding: 10,
@@ -204,6 +209,7 @@ export const useStyles = makeStyles((theme: Theme) =>
       fontWeight: 'bold',
       fontSize: 35,
       marginBottom: 20,
+      color: 'white'
     },
     team_left_content: {
       maxWidth: 1600,
@@ -211,6 +217,7 @@ export const useStyles = makeStyles((theme: Theme) =>
     team_name_description: {
       fontSize: 15,
       padding: 10,
+      color: 'white'
     },
     team_image: {
       width: '100%',
@@ -242,6 +249,7 @@ export const useStyles = makeStyles((theme: Theme) =>
     },
     road_map_title: {
       fontSize: 85,
+      color: 'white',
       fontWeight: 'bold',
       '@media(max-width: 1360px)': {
         fontSize: 70,
@@ -255,6 +263,7 @@ export const useStyles = makeStyles((theme: Theme) =>
     },
     white_paper_title: {
       fontSize: 85,
+      color: 'white',
       fontWeight: 'bold',
       '@media(max-width: 1360px)': {
         fontSize: 70,
@@ -290,9 +299,10 @@ export const useStyles = makeStyles((theme: Theme) =>
     input_content: {
       textAlign: 'left',
       padding: 10,
+      color: 'white',
     },
     text_message_title: {
-      color: theme.palette.error.light,
+      color: 'white',
       marginBottom: 10,
     },
     textArea_content: {
@@ -328,6 +338,9 @@ export const useStyles = makeStyles((theme: Theme) =>
       display: 'flex',
       justifyContent: 'right',
       alignItems: 'center',
+      '@media(max-width: 500px)': {
+        justifyContent: 'center'
+      },
     },
     join_us_button: {
       backgroundImage: 'linear-gradient(to right, rgb(238 221 14) 0%, rgb(24 216 211) 100%, rgb(247, 157, 0) 100%)',
@@ -354,7 +367,7 @@ export const useStyles = makeStyles((theme: Theme) =>
     },
     link_tab: {
       textDecoration: 'none',
-      color: '#000',
+      color: theme.palette.background.default,
       cursor: 'pointer'
     },
     design_project_button_content: {
@@ -395,13 +408,46 @@ export const useStyles = makeStyles((theme: Theme) =>
     toggleIcon: {
       cursor: 'pointer',
       paddingLeft: 10,
-      color: '#10141b',
+      color: theme.palette.background.default,
       display: 'flex',
       alignItems: 'center',
+      '@media (max-width: 500px)': {
+        position: 'absolute',
+        right: 10,
+      },
+    },
+    settingTheme: {
+      display: 'flex',
+      alignItems: 'center',
+    },
+    settingThemeLabel: {
+      color: theme.palette.success.dark,
+      marginLeft: 10,
+      fontSize: 12,
     },
     logoSection: {
       display: 'flex',
       alignItems: 'center',
+    },
+    // day / night theme
+    moon_style: {
+      cursor: 'pointer',
+      border: '1px solid #4b4b56',
+      padding: 5,
+      borderTopLeftRadius: 20,
+      borderBottomLeftRadius: 20,
+      paddingLeft: 10,
+      color: 'white', // no change by theme
+      background: theme.palette.warning.dark,
+    },
+    sun_style: {
+      cursor: 'pointer',
+      border: '1px solid #4b4b56',
+      padding: 5,
+      borderTopRightRadius: 20,
+      borderBottomRightRadius: 20,
+      paddingRight: 10,
+      backgroundColor: theme.palette.background.default,
     },
   }),
 )
@@ -419,7 +465,25 @@ function MainPage() {
     setMenuOpen(!menuOpen)
   }
 
+  
+  const darkTheme = 'darkTheme'
+  const lightTheme = 'lightTheme'
+  const curThemeName = localStorage.getItem('appTheme') || 'darkTheme'
+  const setThemeName = React.useContext(ThemeContext)
+  const [theme, setTheme] = React.useState(curThemeName)
+
+  const handleToggleTheme = () => {
+    if (theme === lightTheme) {
+      setThemeName(darkTheme)
+      setTheme(darkTheme)
+    } else {
+      setThemeName(lightTheme)
+      setTheme(lightTheme)
+    }
+  }
+
   const isTablet = useMediaQuery({ query: '(max-width: 1000px)' })
+  const isMobile = useMediaQuery({ query: '(max-width: 500px)' })
 
   const scrollTo = (id: string) => {
     const element = document.getElementById(id) as HTMLDivElement;
@@ -434,7 +498,7 @@ function MainPage() {
   };
 
   let generalMenu = (
-    <Grid container item xs={9} md={8} className={classes.header_container}>
+    <Grid container item xs={9} md={7} className={classes.header_container}>
       <Grid className={classes.header_link} onClick={() => scrollTo("home")}>
         <span className={classes.link_tab}>
           HOME
@@ -540,6 +604,16 @@ function MainPage() {
           </span>
           <ArrowForwardIosIcon fontSize="small" />
         </Grid>
+        <Grid container item xs={12} className={classes.menuResTitle}>
+          <Grid item xs={12}>
+            CHOOSE THE THEME
+          </Grid>
+          <Grid item xs={12} className={classes.settingTheme}>
+            <Icon icon="bi:moon-fill" className={classes.moon_style} onClick={handleToggleTheme} />
+            <Icon icon="bx:bxs-sun" className={classes.sun_style} onClick={handleToggleTheme} />
+            <span className={classes.settingThemeLabel}>BLACK THEME</span>
+          </Grid>
+        </Grid>
       </Grid>
     </Drawer>
   )
@@ -550,12 +624,14 @@ function MainPage() {
         <Grid item xs={3} md={2} className={classes.logoSection}>
           {isTablet ? <ReorderIcon fontSize="large" onClick={toggleDrawer} className={classes.toggleIcon} /> : ''}
           <Link to="/">
-            <img src={LogoBlack} alt="logo" />
+            <img src={curThemeName === 'darkTheme' ? LogoBlack : Logo} alt="logo" />
           </Link>
         </Grid>
-        {isTablet ? <Grid item xs={5} md={8}></Grid> : generalMenu}
+        {isTablet ? <Grid item xs={isTablet ? 3 : 5} md={7}></Grid> : generalMenu}
         {tabletMenu}
-        <Grid item xs={4} md={2} className={classes.launch_pad_content}>
+        <Grid item xs={isMobile ? 12 : (isTablet ? 6 : 4)} md={3} className={classes.launch_pad_content}>
+          <Icon icon="bi:moon-fill" className={classes.moon_style} onClick={handleToggleTheme} />
+          <Icon icon="bx:bxs-sun" className={classes.sun_style} onClick={handleToggleTheme} />
           <Link to="/home" className={classes.lunch_pad}>
             <Button className={classes.join_us_button}>LAUNCH PAD</Button>
           </Link>
