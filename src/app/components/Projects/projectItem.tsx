@@ -23,7 +23,6 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     project_description: {
       color: theme.palette.success.light,
-      marginTop: 5,
     },
     price: {
       color: theme.palette.success.dark,
@@ -37,7 +36,7 @@ const useStyles = makeStyles((theme: Theme) =>
       color: theme.palette.error.light,
       fontFamily: 'CerebriSansPro-ExtraBold',
       marginBottom: 10,
-      marginTop: 10,
+      marginTop: 5,
     },
     image_content: {
       margin: 'auto',
@@ -46,9 +45,7 @@ const useStyles = makeStyles((theme: Theme) =>
       width: '100%',
     },
     padding10: {},
-    paddingTop10: {
-      paddingTop: 10,
-    },
+    paddingTop10: {},
     icon_style: {
       color: '#a3a5a7',
       marginRight: 10,
@@ -74,10 +71,10 @@ export default function ProjectItem({ image, name, id, price, date, desc }: Item
 
   return (
     <Grid container className={classes.root}>
-      <Grid item xs={12} md={3} className={classes.image_content}>
+      <Grid item xs={3} md={3} className={classes.image_content}>
         <img src={ProjectImage} alt="project_image" className={classes.project_image} />
       </Grid>
-      <Grid className={classes.details} item xs={12} md={9}>
+      <Grid className={classes.details} item xs={9} md={9}>
         <Grid container item xs={12}>
           <Grid item xs={12} className={classes.project_name}>
             {name}
