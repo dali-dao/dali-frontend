@@ -345,6 +345,9 @@ export const useStyles = makeStyles((theme: Theme) =>
       width: '12.5%',
       color: '#000',
       fontSize: 14,
+      '@media(max-width: 1050px)': {
+        fontSize: 12
+      },
     },
     header_container: {
       display: 'flex',
