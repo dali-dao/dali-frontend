@@ -423,6 +423,7 @@ export const useStyles = makeStyles((theme: Theme) =>
       color: theme.palette.success.main,
       textTransform: 'uppercase',
       width: '100%',
+      cursor: 'pointer'
     },
     toggleIcon: {
       cursor: 'pointer',
